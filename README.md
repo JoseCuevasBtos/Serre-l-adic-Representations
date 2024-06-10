@@ -1,2 +1,93 @@
 # Serre-l-adic-Representations
-This is a project for TeXing Serre's monograph "Abelian l-adic representations and elliptic curves" (1989)
+
+This is a project for TeXing Serre's monograph "Abelian l-adic representations
+and elliptic curves" (Addison-Wesley, 1989) into modern LaTeX.
+
+Here's an indepth list of the chapters and sections, and their current status:
+
+- [ ] Chapter I. l-adic Representations
+    - [x] 1 The notion of an /-adic representation
+        - [x] 1.1 Definition
+        - [x] 1.2 Examples
+    - [ ] 2 l-adic representations of number fields
+        - [x] 2.1 Preliminaries
+        - [ ] 2.2 Cebotarev's density theorem
+        - [ ] 2.3 Rational l-adic representations
+        - [x] 2.4 Representations with values in a linear algebraic group
+        - [ ] 2.5 L-functions attached to rational representations
+    - [ ] A. Equipartition and L-functions
+        - [x] A.l Equipartition
+        - [x] A.2 The connection with L-functions
+        - [ ] A.3 Proof of theorem 1
+- [ ] Chapter II. The Groups Sm
+    - [ ] 1 Preliminaries
+        - [ ] 1.1 The torus T
+        - [ ] 1.2 Cutting down T
+        - [ ] 1.3 Enlarging groups
+    - [ ] 2 Construction of Tm and Sm
+        - [ ] 2.1 Ideles and idele-classes
+        - [ ] 2.2 The groups Tm and Sm
+        - [ ] 2.3 The canonical l-adic representation with values in Sm
+        - [ ] 2.4 Linear representations of Sm
+        - [ ] 2.5 l-adic representations associated to a linear representation ofSm
+        - [ ] 2.6 Alternative construction
+        - [ ] 2.7 The real case
+        - [ ] 2.8 An example: complex multiplication of abelian varieties
+    - [ ] 3 Structure of Tm and applications
+        - [ ] 3.1 Structure of X(Tm)
+        - [ ] 3.2 The morphism j
+        - [ ] 3.3 Structure of Tm
+        - [ ] 3.4 How to compute Frobeniuses
+    - [ ] A. Killing arithmetic groups in tori
+        - [ ] A.l Arithmetic groups in tori
+        - [ ] A.2 Killing arithmetic subgroups
+- [ ] Chapter III. Locally Algebraic Abelian Representations
+    - [ ] 1 The local case mi
+        - [ ] 1.1 Definitions
+        - [ ] 1.2 Alternative definition of "locally algebraic" via Hodge-Tate modules
+    - [ ] 2 The global case
+        - [ ] 2.1 Definitions
+        - [ ] 2.2 Modulus of a locally algebraic abelian representation
+        - [ ] 2.3 Back to Sm
+        - [ ] 2.4 A mild generalization
+        - [ ] 2.5 The function field case
+    - [ ] 3 The case of a composite of quadratic fields
+        - [ ] 3.1 Statement of the result
+        - [ ] 3.2 A criterion for local algebraicity
+        - [ ] 3.3 An auxiliary result on tori
+        - [ ] 3.4 Proof of the theorem
+    - [ ] A. Hodge-Tate decompositions and locally algebraic representations
+        - [ ] A.1 Invariance of Hodge-Tate decompositions
+        - [ ] A.2 Admissible characters
+        - [ ] A.3 A criterion for local triviality
+        - [ ] A.4 The character xi
+        - [ ] A.5 Characters associated with Hodge-Tate decompositions
+        - [ ] A.6 Locally compact case
+        - [ ] A.7 Tate's theorem
+- [ ] Chapter IV. l-adic Representations Attached to Elliptic Curves
+    - [ ] 1 Preliminaries
+        - [x] 1.1 Elliptic curves
+        - [x] 1.2 Good reduction
+        - [x] 1.3 Properties of Vl related to good reduction
+        - [ ] 1.4 Safarevic's theorem
+    - [ ] 2 The Galois modules attached to E
+        - [ ] 2.1 The irreducibility theorem
+        - [ ] 2.2 Determination of the Lie algebra of Gl
+        - [ ] 2.3 The isogeny theorem
+    - [ ] 3 Variation of Gl and Gl with l
+        - [ ] 3.1 Preliminaries
+        - [ ] 3.2 The case of a non integral j
+        - [ ] 3.3 Numerical example
+        - [ ] 3.4 Proof of the main lemma of 3.1
+    - [ ] Appendix Local results
+        - [ ] A.1 The case v(j) < 0
+            - [ ] A.1.1 The elliptic curves of Tate
+            - [ ] A.1.2 An exact sequence
+            - [ ] A.1.3 Determination of gl and il
+            - [ ] A.1.4 Application to isogenies
+            - [ ] A.1.5 Existence of transvections in the inertia group
+        - [ ] A.2 The case v(j) > 0
+            - [ ] A.2.1 The case l = p
+            - [ ] A.2.2 The case l != p with good reduction of height 2
+            - [ ] A.2.3 Auxiliary results on abelian varieties
+            - [ ] A.2.4 The case l = p with good reduction of height 1
