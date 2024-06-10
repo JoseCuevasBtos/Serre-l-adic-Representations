@@ -1,0 +1,36 @@
+\RequirePackage{general}
+
+%%% TO DO
+% \newcommand{\nota}[1]{\todo[inline, linecolor= rosamorado!70, backgroundcolor= rosamorado!40, bordercolor= rosamorado!70]{#1}}
+\setuptodonotes{inline}
+
+\theoremstyle{definition}
+%%con caja
+% \newtheorem{thmi}{\color{rosaclaro!90} Teorema}
+%%sin caja
+\newtheorem{thm}{Theorem}[chapter]
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{lem}[thm]{Lemma}
+% \renewcommand{\theslem}{\thethm.\Alph{slem}}
+\newtheorem{cor}{Corollary}[thm]
+\newtheorem*{obs}{Remark}
+\newtheorem{con}[thm]{Conjecture}
+% \newtheorem{sit}[thm]{\color{rosaclaro} Situación} % Sirve para evitar reiteración de notación
+
+%%% DISEÑO CAJAS %%%
+
+%%sin cursivas
+% \newtheorem*{obs}{\color{verde} \normalfont{\it{Observación}}}
+\newtheorem{mydef}[thm]{Definition}
+\newtheorem*{ex}{Examples}
+
+\tcbset{
+	teostyle/.style={enhanced, breakable, colback=rosaclaro!15!white, colframe=rosaclaro!50, boxrule=1pt, leftrule=1.5mm, rightrule=1.5mm, sharp corners},
+	brstyle/.style={enhanced jigsaw, colframe=rosaclaro, interior hidden, breakable, before skip=10pt, after skip=10pt, sharp corners}
+	boxstyle/.style={enhanced, breakable, colback=verdeclaro!30!white, colframe=verdeclaro!50!white, boxrule=1pt, leftrule=1.5mm, rightrule=1.5mm, sharp corners},
+	}
+
+\newtcolorbox{hlbox}{width=7.5cm, halign=flush center, enhanced, breakable, colback=rosaclaro!30!white,colframe=rosaclaro!50!white, boxrule=1pt, leftrule=1.5mm, rightrule=1.5mm, sharp corners}
+% \newtcolorbox[thm]{thmi}[2][]{teostyle, width=7.5cm, halign=flush center}
+
+\tcolorboxenvironment{thmi}{teostyle}

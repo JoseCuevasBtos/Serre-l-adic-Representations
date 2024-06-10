@@ -1,0 +1,204 @@
+\chapter{\texorpdfstring{$\ell$}{l}-adic representations attached to elliptic curves}
+
+Let $K$ be a number field and let $E$ be an elliptic curve over $K$. If $\ell$
+is a prime number, let
+\[
+	\rho_\ell \colon \Gal(\algcl K/K) \longrightarrow \Aut(V_\ell(E))
+\]
+be the corresponding $\ell$-adic representation of $K$, cf.\ chap.~\ref{ch:i},
+\ref{sec:I_12}.  The main result of this Chapter is the determination of the
+Lie algebra of the $\ell$-adic Lie group $G_\ell = \Img(\rho_\ell)$. This is
+based on a finiteness theorem of \v Safarevi\v c (1.4) combined with the
+properties of locally algebraic abelian representations (chap.\ III) and Tate's
+local theory of elliptic curves with non-integral modular invariant (Appendix,
+Al). The variation of $G_\ell$ with $\ell$ is studied in \S\ref{sec:IV3}.
+
+The Appendix gives analogous results in the local case (i.e.\ when $K$ is a
+local field).
+
+\section{Preliminaries}
+\subsection[Elliptic curves]{Elliptic curves \textmd{(cf.\
+\citeauthor{5}~\cite{5}, \citeauthor{9}~\cite{9}, \citeauthor{10}~\cite{10})}}
+By an elliptic curve, we mean an abelian variety of dimension
+1, i.e.\ a complete, non singular, connected curve of genus 1 with a
+given rational point $P_0$, taken as an origin for the composition law
+(and often written $o$).
+
+Let $E$ be such a curve. It is well known that $E$ may be embedded, as a
+non-singular cubic, in the projective plane $\PP^2_K$, in such a way that $P_0$
+becomes a \textquote{flex} (one takes the projective embedding defined by the
+complete linear series containing the divisor $3\cdot P_0$). In this embedding,
+three points $P_1$, $P_2$, $P_3$ have sum $0$ if and only if the divisor $P_1 +
+P_2 + P_3$ is the intersection of $E$ with a line. By choosing a suitable
+coordinate system, the equation of $E$ can be written in Weierstrass form
+\[
+	y^2 = 4x^3 - g_2x - g_3
+\]
+where $x$, $y$ are non-homogeneous coordinates and the origin $P_0$ is
+the point at infinity on the $y$-axis. The discriminant
+\[
+	\Delta = g_2^3 - 27g_3^2
+\]
+is non-zero.
+
+The coefficients $g_2$, $g_3$ are determined up to the transformations $g_2
+\mapsto u^4 g_2$, $g_3 \mapsto u^6 g_3$, $u \in K^\times$. The modular
+invariant $j$ of $E$ is
+\[
+	j = 2^6 \, 3^3 \, \frac{g_2^3}{g_2^3 - 27g_3^2}
+	= 2^6 \, 3^3 \, \frac{g_2^3}{\Delta}.
+\]
+Two elliptic curves have the same $j$ invariant if and only if they become
+isomorphic over the algebraic closure of $K$.
+
+(All this remains valid over an arbitrary field, except that, when the
+characteristic is 2 or 3, the equation of $E$ has to be written in the more
+general form
+\[
+	y^2 + a_1xy + a_3y + x^3 + a_2x^2 + a_4x + a_6 = 0.
+\]
+Here again, 0 is the point at infinity on the $y$-axis and the 
+corresponding tangent is the line at infinity. There are corresponding
+definitions for $\Delta$ and $j$, for which we refer to \citeauthor{9}~\cite{9}
+or \citeauthor{20}~\cite{20}; note, however, that there is a misprint in Ogg's
+formula for $\Delta$: the coefficient of $\beta_4^3$ should be $-8$ instead of
+$-1$.)
+
+\subsection{Good reduction}
+Let $v \in M_K^0$ be a finite place of the number field $K$. We denote by
+$\mathcal{O}_v$ (resp.\ $\mathfrak{m}_v$, $k_v$) the corresponding local ring
+in $K$ (resp.\ its maximal ideal, its residue field).
+
+Let $E$ be an elliptic curve over $K$. One says that $E$ has \strong{good
+reduction at $v$} if one can find a coordinate system in $\PP^2_K$ such that
+the corresponding equation $f$ for $E$ has coefficient in $\mathcal{O}_v$ and
+its reduction $\tilde f \mod{\mathfrak{m}_v}$ defines a non-singular cubic
+$\widetilde{E}_v$ (hence an elliptic curve) over the residue field $k_v$ (in
+other words, the discriminant $\Delta(f)$ of $f$ must be an invertible element
+of $\mathcal{O}_v$). The curve $\widetilde{E}_v$ is called the
+\strong{reduction} of $E$ at $v$; it does not depend on the choice of $f$,
+provided, of course, that $\Delta(f) \in \mathcal{O}_v^\times$.
+
+One can prove that the above definition is equivalent to the following one:
+there is an abelian scheme $E_v$ over $\Spec(\mathcal{O}_v)$, in the sense of
+\citeauthor{19}~\cite{19}, chap.\ VI, whose generic fiber is $E$; this scheme
+is then unique, and its special fiber is $\widetilde{E}_v$. Note that
+$\widetilde{E}_v$ is defined over the finite field $k_v$; we denote its
+\strong{Frobenius endomorphism} by $F_v$.
+
+On either definition, one sees that $E$ has \strong{good reduction for
+almost all places of $K$}.
+
+If $E$ has good reduction at a given place $v$, its $j$ invariant is
+\strong{integral at $v$} (i.e.\ belongs to $\mathcal{O}_v$) and its reduction
+$\tilde\jmath \mod{\mathfrak{m}_v}$ is the $j$ invariant of the reduced curve
+$\widetilde{E}_v$.
+
+The converse is almost true, but not quite: if $j$ belongs to $\mathcal{O}_v$,
+there is a finite extension $L$ of $K$ such that $E \otimes_K L$ has good
+reduction at all the places of $L$ dividing $v$ (this is the ``potential good
+reduction'' of \citeauthor{32}~\cite{32}, \S 2). For the proof of this, see
+\citeauthor{29}~\cite{29}, \S 4, n\textsuperscript{o}~3.
+
+\begin{obs}
+The definitions and results of this section have nothing to do with number
+fields. They apply to every field with a discrete valuation.
+\end{obs}
+
+\subsection{Properties of $V_\ell$ related to good reduction}
+Let $\ell$ be a prime number. We define, as in chap.~\ref{ch:i},
+\ref{sec:I_12}, the Galois modules $T_\ell$ and $V_\ell$ by:
+\[
+	V_\ell = T_\ell \otimes \Q_\ell, \qquad T_\ell = \invlim_n E_{\ell^n}
+\]
+where $E_{\ell^n}$ is the kernel of $\ell^n \colon E(\algcl K) \to E(\algcl K)$.
+
+We denote by $\rho_\ell$ the corresponding homomorphism of $\Gal(\algcl K/K)$
+into $\Aut(T_\ell)$. Recall that $E_{\ell^n}$, $T_\ell$ and $V_\ell$ are of
+rank 2 over $\Z/\ell^n\Z$, $\Z_\ell$ and $\Q_\ell$, respectively.
+
+Let now $v$ be a place of $K$, with $p_v \ne \ell$ and let $v$ be some
+extension of $v$ to $\algcl K$; let $D$ (resp.\ $I$) be the corresponding
+decomposition group (resp.\ inertia group), cf.\ chap.~\ref{ch:i}, 2.1. If $E$
+has good reduction at $v$, one easily sees that reduction at $v$ defines an
+\emph{isomorphism} of $E_{\ell^n}$ onto the corresponding module for the
+reduced curve $\widetilde{E}_v$. In particular, $E_{\ell^n}$, $T_\ell$,
+$V_\ell$ are \emph{unramified at $v$} (chap.~\ref{ch:i}, 2.1) and the Frobenius
+automorphism $F_{v, \rho_\ell}$ of $T_\ell$ corresponds to the Frobenius
+endomorphism $F_v$ of $\widetilde{E}_v$. Hence: 
+$$ \det(F_{v, \rho_\ell}) = \det(F_v) = \numnorm v $$
+and
+$$ \det(1 - F_{v, \rho_\ell}) = \det(1 - F_v) = 1 - \tr(F_v) + \numnorm v $$
+is equal to the number of $k_v$-points of $\widetilde{E}_v$.
+
+Conversely:
+\begin{thm}[Criterion of Néron-Ogg-\v Safarevi\v c]
+If $V$ is unramified at $v$ for some $\ell \ne p_v$, then $E$ has good
+reduction at $v$.
+\end{thm}
+For the proof, see \citeauthor{32}~\cite{32}, \S 1.
+
+\begin{cor}
+Let $E$ and $E'$ be two elliptic curves which are isogenous (over $K$). If one
+of them has good reduction at a place $v$, the same is true for the other one.
+\end{cor}
+(Recall that $E$ and $E'$ are said to be \strong{isogenous} if there
+exists a non-trivial morphism $E \to E'$.)
+
+This follows from the theorem, since the $\ell$-adic representations associated
+with $E$ and $E'$ are isomorphic.
+
+\begin{obs}
+For a direct proof of this corollary, see \citeauthor{11}~\cite{11}.
+\end{obs}
+
+\subsubsection*{Exercise}
+Let $S$ be the finite set of places where $E$ does not have good reduction. If
+$v \in M_K^0 \setminus S$, we denote by $t_v$ the number of $k_v$-points of the
+reduced curve $\widetilde{E}_v$.
+\begin{enumerate}[(a)]
+	\item Let $\ell$ be a prime number and let $m$ be a positive integer.
+		Show that the following properties are equivalent:
+	\begin{enumerate}[(i)]
+		\item\label{exr:cebotarev_i}
+			$t_v \equiv 0 \mod{\ell^m}$ for all $v \in M_K^0 \setminus S$, $p_v \ne \ell$.
+		\item\label{exr:cebotarev_ii}
+			The set of $v \in M_K^0 \setminus S$ such that $t_v
+			\equiv 0 \mod{\ell^m}$ has density one (cf.\ 
+			chap.~\ref{ch:i}, 2.2).
+		\item\label{exr:cebotarev_iii}
+			For all $s \in \Img(\rho)$, one has $\det(1-s) \equiv 0 \mod{\ell^m}$.
+	\end{enumerate}
+	(The equivalence of \ref{exr:cebotarev_ii} and \ref{exr:cebotarev_iii}
+	follows from \v Cebotarev's density theorem. The implications
+	\ref{exr:cebotarev_i} $\implies$ \ref{exr:cebotarev_ii} and
+	\ref{exr:cebotarev_iii} $\implies$ \ref{exr:cebotarev_i} are easy.)
+
+	\item We take now $m = 1$. Show that the properties
+		\ref{exr:cebotarev_i}, \ref{exr:cebotarev_ii} and
+		\ref{exr:cebotarev_iii} are equivalent to:
+	\begin{enumerate}[resume*]
+		\item\label{exr:cebotarev_iv}
+			There exists an elliptic curve $E'$ over $K$ such that:
+		\begin{itemize}
+			\item[$(\alpha)$]
+				Either $E'$ is isomorphic to $E$, or there
+				exist an isogeny $E' \to E$ of degree $\ell$.
+			\item[$(\beta)$]
+				The group $E'(K)$ contains an element of order
+				$\ell$.
+		\end{itemize}
+	\end{enumerate}
+	(The implication \ref{exr:cebotarev_iv} $\implies$
+	\ref{exr:cebotarev_iii} is easy. For the proof of the converse, use
+	Exer.~\ref{ex:I11_ex2} of chap.~\ref{ch:i}, \ref{sec:I_11}.)
+	[For $m > 2$, see \citeauthor{64}~\cite{64}.]
+\end{enumerate}
+
+\subsection{\v Safarevi\v c's theorem}
+It is the following (cf.\ \cite{23}):
+\begin{thm}
+Let $S$ be a finite set of places of $K$. The set of isomorphism classes of
+elliptic curves over $K$, with good reduction at all places not in $S$, is
+finite.
+\end{thm}

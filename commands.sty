@@ -1,0 +1,151 @@
+\NeedsTeXFormat{LaTeX2e}[1994/06/01]
+%\ProvidesPackage{comandos}[2023/05/01 v1]
+
+%SIMBOLOS MATEMATICOS
+\RequirePackage{amsmath, ragged2e, mathrsfs, amsfonts, dsfont, amssymb, amsthm, mathtools}
+%\RequirePackage{dsfont}
+
+
+
+%%%%%%%%%%%%%%%%
+%%% COMANDOS %%%
+%%%%%%%%%%%%%%%%
+
+% ======== Comandos genéricos =======
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\D}{\mathbb{D}}
+\newcommand{\Fp}[1][p]{\mathbb{F}_{#1}}
+\newcommand{\ui}{\mathrm{i}}
+\newcommand{\uj}{\mathrm{j}}
+\newcommand{\uk}{\mathrm{k}}
+% \newcommand{\demo}{\hfill\ensuremath{\square}}
+
+\newcommand{\tqedhere}{\tag*{\qedhere}}
+\newcommand{\strong}[1]{{\itshape\bfseries #1}}
+
+% ======== Álgebra abstracta ========
+\DeclareMathOperator{\Gal}{Gal}
+\DeclareMathOperator{\galnorm}{Nm}
+\DeclareMathOperator{\galtr}{Tr}
+\newcommand{\G}{\mathfrak{G}} % Absolute Galois group
+
+\newcommand{\algcl}[1]{#1_{\mathrm{a}}} % Algebraic closure. Use: \algcl k
+\newcommand{\sepcl}[1]{#1_{\mathrm{s}}}
+\newcommand{\Int}[1]{\mathring{#1}}
+
+\newcommand{\hencl}[1]{#1^{\mathrm{H}}}
+\newcommand{\shencl}[1]{#1^{\mathrm{sH}}}
+
+\newcommand{\nsle}{\trianglelefteq} % Ideal en anillo, $a \nsle A$
+\newcommand{\nsl}{\vartriangleleft}
+\newcommand{\nsre}{\trianglerighteq} % Ideal en anillo, $a \nsle A$
+\newcommand{\nsr}{\vartriangleright}
+
+%%DEF PARA CATEGORÍAS
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\Id}{Id}
+
+% ¡Varias flechas!
+\newcommand{\hookto}{\hookrightarrow}
+\newcommand{\epicto}{\twoheadrightarrow}
+\newcommand{\dashto}{\dashrightarrow}
+
+%%DEF PARA ÁLGEBRA
+% \DeclareMathOperator{\Disc}{Disc}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\grad}{grad}
+\newcommand{\gr}[1]{\grad{(#1)}}
+\DeclareMathOperator{\Mat}{Mat}
+\newcommand{\isom}{ \mathrel{\overset{\sim}{\longrightarrow}} }
+\DeclareMathOperator{\GL}{GL}
+\DeclareMathOperator{\SL}{SL}
+
+\newcommand{\acts}{ \mathrel{\curvearrowright} }
+
+\let\invlim\varprojlim
+\let\liminv\varprojlim
+\let\dirlim\varinjlim
+\let\limdir\varinjlim
+
+% Vectores en negritas, de pololo
+\RequirePackage{bm}
+\let\Vec\vec
+\renewcommand\vec[1]{\bm{#1}}
+
+\newcommand{\TT}{\mathbb{T}} % El toro
+\renewcommand{\SS}{\mathbb{S}} % El círculo
+\newcommand{\ud}{\mathrm{d}}
+
+%%DEF PARA TEORÍA DE NÚMEROS
+\renewcommand{\char}{\operatorname{char}}
+\DeclareMathOperator{\sgn}{sgn}
+\DeclareMathOperator{\Frob}{Frob}
+\DeclareMathOperator{\Ker}{Ker}
+
+\DeclareMathOperator{\Disc}{ \Delta } % Elemento discriminante
+\newcommand{\disc}{ {\mathfrak{d}} } % Ideal discriminante
+
+%%DEF PARA CURVAS ELIPTICAS
+\newcommand{\F}{\mathbb{F}}
+\DeclareMathOperator{\rank}{rank}
+
+%%DEF PARA GEOMETRIA ALGEBRAICA
+\newcommand{\A}{\mathbb{A}}
+\newcommand{\PP}{\mathbb{P}}
+\DeclareMathOperator{\kk}{\Bbbk}
+\newcommand{\GG}{\mathbb{G}}
+\newcommand{\Grass}{\mathrm{Grass}}
+\DeclareMathOperator{\Bl}{Bl}
+
+\DeclareMathOperator{\VV}{\mathbf{V}}
+\DeclareMathOperator{\II}{\mathbf{I}}
+\DeclareMathOperator{\DD}{\mathbf{D}}
+\DeclareMathOperator{\rad}{Rad}
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\mSpec}{mSpec}
+\DeclareMathOperator{\Proj}{Proj}
+\DeclareMathOperator{\Rad}{Rad}
+\DeclareMathOperator{\Lie}{Lie}
+\DeclareMathOperator{\numnorm}{\mathbf{N}}
+
+% Divisores como "\div" y ÷ como "\olddiv"
+\let\olddiv\div
+\renewcommand{\div}{\operatorname{div}}
+\DeclareMathOperator{\Div}{Div}
+\DeclareMathOperator{\CaDiv}{CaDiv}
+\DeclareMathOperator{\Pic}{Pic}
+\DeclareMathOperator{\bfPic}{\mathbf{Pic}}
+\DeclareMathOperator{\Supp}{Supp}
+\DeclareMathOperator{\Jac}{Jac}
+
+\DeclareMathOperator{\Func}{Func}
+
+%%%DEF PARA TOPOLOGÍA DIFERENCIAL
+%\newcommand{\dif}{\mathrm{d}}%diferencial
+%\DeclareMathOperator{\rang}{rang}
+%\newcommand{\fv}{\mathfrak{v}}
+%\newcommand{\Rproy}[1]{\R\proy^{#1}}
+%\DeclareMathOperator{\TM}{TM}
+%\newcommand{\Tg}[1]{\text{T}_{#1}}
+%\newcommand{\cV}{\mathcal{V}}
+\DeclareMathOperator{\Img}{Im}
+
+%%%%%%%%%%%%%%%%%%
+%%% OPERADORES %%%
+%%%%%%%%%%%%%%%%%%
+
+% \DeclareMathOperator{\stab}{Stab}
+% \DeclareMathOperator{\sym}{Sym}
+% \DeclareMathOperator{\rad}{Rad}
+% \DeclareMathOperator{\id}{Id}
+% \DeclareMathOperator{\Frac}{Frac}
+% \DeclareMathOperator{\ord}{ord}
+% \DeclareMathOperator{\diam}{diam}
+% \DeclareMathOperator{\fr}{fr}

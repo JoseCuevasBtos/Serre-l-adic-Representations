@@ -1,0 +1,51 @@
+\documentclass[11pt]{book}
+
+\usepackage{commands}
+\usepackage{template}
+
+\usepackage{titlesec}
+\renewcommand{\thechapter}{\Roman{chapter}}
+\titleformat{\chapter}[display]
+	{\centering\normalfont\Large\bfseries}
+	{CHAPTER \thechapter}
+	{1em}
+	{\MakeUppercase}
+\renewcommand\thesection{\arabic{section}}
+\titleformat{\section}
+	{\centering\normalfont\Large\bfseries}
+	{\textmd{\S}\thesection.}
+	{1em}
+	{}
+
+\usepackage{chngcntr}
+\usepackage{appendix}
+\counterwithout{subsubsection}{subsection}
+% \renewcommand\thesubsubsection{\arabic{subsubsection}}
+\titleformat{\subsubsection}[runin]
+	{\bfseries}
+	{\thesubsubsection. }
+	{1ex}
+	{}[.]
+\renewcommand{\urlstyle}{\color{teal}\ttfamily} % Estilo de URLs
+\usepackage{multicol}
+
+\title{Abelian $\ell$-adic Representations and Elliptic Curves}
+\author{Jean-Pierre Serre}
+
+\begin{document}
+
+\maketitle
+
+\frontmatter
+\tableofcontents
+
+% \input{intro.tex}
+
+\input{editors_note.tex}
+
+\mainmatter
+\input{I-ladic.tex}
+
+\input{IV-elliptic.tex}
+
+\end{document}
