@@ -3,10 +3,15 @@
 This is a project for TeXing Serre's monograph "Abelian l-adic representations
 and elliptic curves" (Addison-Wesley, 1989) into modern LaTeX.
 
+This was done by José Cuevas and Rocío Sepúlveda Manzo
+([magicalharuka123](https://github.com/magicalharuka123)).
+We do not claim any originality of the text, aside from slightly updating the
+notation (see "Editors' notes").
+
 Here's an indepth list of the chapters and sections, and their current status:
 
 - [ ] Chapter I. l-adic Representations
-    - [x] 1 The notion of an /-adic representation
+    - [x] 1 The notion of an l-adic representation
         - [x] 1.1 Definition
         - [x] 1.2 Examples
     - [ ] 2 l-adic representations of number fields
@@ -16,7 +21,7 @@ Here's an indepth list of the chapters and sections, and their current status:
         - [x] 2.4 Representations with values in a linear algebraic group
         - [ ] 2.5 L-functions attached to rational representations
     - [ ] A. Equipartition and L-functions
-        - [x] A.l Equipartition
+        - [x] A.1 Equipartition
         - [x] A.2 The connection with L-functions
         - [ ] A.3 Proof of theorem 1
 - [ ] Chapter II. The Groups Sm
@@ -29,7 +34,7 @@ Here's an indepth list of the chapters and sections, and their current status:
         - [ ] 2.2 The groups Tm and Sm
         - [ ] 2.3 The canonical l-adic representation with values in Sm
         - [ ] 2.4 Linear representations of Sm
-        - [ ] 2.5 l-adic representations associated to a linear representation ofSm
+        - [ ] 2.5 l-adic representations associated to a linear representation of Sm
         - [ ] 2.6 Alternative construction
         - [ ] 2.7 The real case
         - [ ] 2.8 An example: complex multiplication of abelian varieties
@@ -39,7 +44,7 @@ Here's an indepth list of the chapters and sections, and their current status:
         - [ ] 3.3 Structure of Tm
         - [ ] 3.4 How to compute Frobeniuses
     - [ ] A. Killing arithmetic groups in tori
-        - [ ] A.l Arithmetic groups in tori
+        - [ ] A.1 Arithmetic groups in tori
         - [ ] A.2 Killing arithmetic subgroups
 - [ ] Chapter III. Locally Algebraic Abelian Representations
     - [ ] 1 The local case mi
