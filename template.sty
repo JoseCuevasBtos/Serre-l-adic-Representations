@@ -1,36 +1,168 @@
-\RequirePackage{general}
+\NeedsTeXFormat{LaTeX2e}[1994/06/01]
+\ProvidesPackage{template}[2024/04/11 v1]
 
-%%% TO DO
-% \newcommand{\nota}[1]{\todo[inline, linecolor= rosamorado!70, backgroundcolor= rosamorado!40, bordercolor= rosamorado!70]{#1}}
+% Math generals
+\RequirePackage{amsmath, ragged2e, mathrsfs, amsfonts, dsfont, amssymb, mathtools}
+\allowdisplaybreaks
+
+% ======== Customizable commands ====
+\renewcommand{\emph}[1]{{\slshape #1}}
+\newcommand{\strong}[1]{{\slshape\bfseries #1}}
+
+\newcommand{\algcl}[1]{\overline{#1}} % Algebraic closure. Use: \algcl k
+\newcommand{\sepcl}[1]{#1_{\mathrm{s}}}
+\newcommand{\Int}[1]{\mathring{#1}} % Interior of a set
+\newcommand{\G}{\mathfrak{G}} % Absolute Galois group
+
+\DeclareMathOperator{\numnorm}{\mathbf{N}} % Numeric norm
+
+\RequirePackage{bm}
+\let\Vec\vec
+\renewcommand\vec[1]{\bm{#1}} % boldface vectors
+
+\newcommand{\ud}{\mathrm{d}} % derivative
+% \newcommand{\ud}{\mathit{d}}
+
+% ======== Generic commands =========
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+
+\newcommand{\A}{\mathbb{A}} % Affine space
+\newcommand{\PP}{\mathbb{P}} % Projective space
+
+\newcommand{\TT}{\mathbb{T}} % Torus
+\renewcommand{\SS}{\mathbb{S}} % Circle/spheres
+
+\DeclareMathOperator{\Gal}{Gal}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\Id}{Id}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\Mat}{Mat}
+\DeclareMathOperator{\GL}{GL}
+\DeclareMathOperator{\SL}{SL}
+\DeclareMathOperator{\SU}{SU}
+\DeclareMathOperator{\Supp}{Supp}
+
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\Proj}{Proj}
+\DeclareMathOperator{\Rad}{Rad}
+\DeclareMathOperator{\Lie}{Lie}
+\DeclareMathOperator{\Div}{Div}
+
+% \DeclareMathOperator{\sgn}{sgn}
+\DeclareMathOperator{\Frob}{Frob}
+\DeclareMathOperator{\Ker}{Ker}
+\DeclareMathOperator{\Img}{Im}
+\renewcommand{\char}{\operatorname{char}}
+
+% \newcommand{\hookto}{\hookrightarrow}
+% \newcommand{\epicto}{\twoheadrightarrow}
+% \newcommand{\dashto}{\dashrightarrow}
+
+\newcommand{\acts}{ \mathrel{\curvearrowright} }
+\let\invlim\varprojlim
+\let\liminv\varprojlim
+\let\dirlim\varinjlim
+\let\limdir\varinjlim
+
+\newcommand{\tqedhere}{\tag*{\qedhere}}
+
+% ======== General packages =========
+\RequirePackage[x11names, dvipsnames]{xcolor}
+\RequirePackage[utf8]{inputenc}
+\RequirePackage[english]{babel}
+\RequirePackage{framed}
+
+% ======== Chapter sections =========
+\RequirePackage[indentafter]{titlesec}
+\renewcommand{\thechapter}{\Roman{chapter}}
+\titleformat{\chapter}[display]
+	{\centering\normalfont\Large\bfseries}
+	{CHAPTER \thechapter}
+	{1em}
+	{\MakeUppercase}
+\renewcommand\thesection{\arabic{section}}
+\titleformat{\section}
+	{\centering\normalfont\Large\bfseries}
+	{\textmd{\S}\thesection.}
+	{1em}
+	{}
+\titleformat{\subsubsection}[runin]
+	{\bfseries}
+	{\thesubsubsection. }
+	{1ex}
+	{}[.]
+
+\usepackage{chngcntr}
+\usepackage{appendix}
+\counterwithout{subsubsection}{subsection}
+% \renewcommand\thesubsubsection{\arabic{subsubsection}}
+
+% ======== Utilities ================
+\RequirePackage{todonotes}
+\RequirePackage[shortlabels]{enumitem}
+\RequirePackage{comment}
+\RequirePackage{hyperref}
+\RequirePackage{calc}
+\RequirePackage{xpatch}
+\RequirePackage{longtable}
+\RequirePackage{multicol}
+
 \setuptodonotes{inline}
 
-\theoremstyle{definition}
-%%con caja
-% \newtheorem{thmi}{\color{rosaclaro!90} Teorema}
-%%sin caja
-\newtheorem{thm}{Theorem}[chapter]
-\newtheorem{prop}[thm]{Proposition}
-\newtheorem{lem}[thm]{Lemma}
-% \renewcommand{\theslem}{\thethm.\Alph{slem}}
-\newtheorem{cor}{Corollary}[thm]
-\newtheorem*{obs}{Remark}
+\setlist[enumerate,1]{label=\arabic*), ref=\arabic*} % Enumerate standards
+
+% ======== Graphics =================
+\RequirePackage{color}
+\RequirePackage{float}
+\RequirePackage{tikz-cd}
+\RequirePackage{bmpsize}
+\DeclareGraphicsExtensions{.bmp,.png,.pdf,.jpg}
+\usetikzlibrary{babel}
+
+\RequirePackage{csquotes}
+\RequirePackage[
+	backend=biber,
+	doi=true,
+	uniquename=init,
+	style=nature,
+	sorting=nyt,
+	defernumbers=true,
+	citestyle=numeric
+]{biblatex}
+
+% Quotations in boldface
+\DeclareFieldFormat{labelnumber}{\mkbibbold{#1}}
+\AtBeginBibliography{
+	\DeclareFieldFormat{labelnumber}{#1}
+}
+\addbibresource{reference.bib}
+\renewcommand*{\bibfont}{\small} % Smaller bibliographies
+
+% ======== Theorems =================
+\RequirePackage{amsthm}
+\newtheorem{thm}{Theorem}[section]
+\renewcommand{\thethm}{\arabic{thm}}
+\newtheorem{prop}{Proposition}[section]
+\renewcommand{\theprop}{\arabic{prop}}
+\newtheorem{lem}{Lemma}[section]
+\renewcommand{\thelem}{\arabic{lem}}
 \newtheorem{con}[thm]{Conjecture}
-% \newtheorem{sit}[thm]{\color{rosaclaro} Situación} % Sirve para evitar reiteración de notación
 
-%%% DISEÑO CAJAS %%%
+\newtheorem{cor}{Corollary}[thm] % A whole lot of corollaries
+\newtheorem{corp}{Corollary}[prop]
+\newtheorem{corl}{Corollary}[lem]
 
-%%sin cursivas
-% \newtheorem*{obs}{\color{verde} \normalfont{\it{Observación}}}
-\newtheorem{mydef}[thm]{Definition}
+\theoremstyle{definition}
+\newtheorem{mydef}{Definition}[section]
+\newtheorem*{obs}{Remark}
 \newtheorem*{ex}{Examples}
 
-\tcbset{
-	teostyle/.style={enhanced, breakable, colback=rosaclaro!15!white, colframe=rosaclaro!50, boxrule=1pt, leftrule=1.5mm, rightrule=1.5mm, sharp corners},
-	brstyle/.style={enhanced jigsaw, colframe=rosaclaro, interior hidden, breakable, before skip=10pt, after skip=10pt, sharp corners}
-	boxstyle/.style={enhanced, breakable, colback=verdeclaro!30!white, colframe=verdeclaro!50!white, boxrule=1pt, leftrule=1.5mm, rightrule=1.5mm, sharp corners},
-	}
-
-\newtcolorbox{hlbox}{width=7.5cm, halign=flush center, enhanced, breakable, colback=rosaclaro!30!white,colframe=rosaclaro!50!white, boxrule=1pt, leftrule=1.5mm, rightrule=1.5mm, sharp corners}
-% \newtcolorbox[thm]{thmi}[2][]{teostyle, width=7.5cm, halign=flush center}
-
-\tcolorboxenvironment{thmi}{teostyle}
+\RequirePackage{imakeidx}
+\makeindex[intoc]

@@ -7,10 +7,11 @@ Let $K$ be a field, and let $\sepcl K$ be a separable algebraic closure of $K$.
 Let $\G = \Gal(\sepcl K / K)$ be the Galois group of the extension
 $\sepcl K/K$.
 The group $\G$, with the Krull topology, is compact and totally disconnected.
-Let $\ell$ be a prime number, and let $V$ be a finite-dimensional vector space over the field $\Q_\ell$ of $\ell$-adic numbers.
-The full linear group $\Aut(V)$ is an $\ell$-adic Lie group, its topology being
-induced by the natural topology of $\End(V)$; if $n = \dim(V)$, we have
-$\Aut(V) \cong \GL(n, \Q_\ell)$.
+Let $\ell$ be a prime number, and let $V$ be a finite-dimensional vector space
+over the field $\Q_\ell$ of $\ell$-adic numbers.  The full linear group
+$\Aut(V)$ is an $\ell$-adic Lie group, its topology being induced by the
+natural topology of $\End(V)$; if $n = \dim(V)$, we have $\Aut(V) \cong \GL(n,
+\Q_\ell)$.
 
 \begin{mydef}
 An $\ell$-adic representation of $\G$ (or, by abuse of language, of $K$) is a
@@ -51,9 +52,9 @@ continuous homomorphism $\rho \colon \G \to \Aut(V)$.
 \begin{enumerate}
 	\item\label{ex:basis_triangular_grp}
 		Let $V$ be a vector space of dimension 2 over a field $k$
-		and let $H$ be a subgroup of $\Aut(V)$. Assume that $\det(1-h) = 0$ for
-		all $h \in H$. Show the existence of a basis of $V$ with respect to which
-		$H$ is contained either in the subgroup $
+		and let $H$ be a subgroup of $\Aut(V)$. Assume that $\det(1-h)
+		= 0$ for all $h \in H$. Show the existence of a basis of $V$
+		with respect to which $H$ is contained either in the subgroup $
 		\begin{psmallmatrix}
 			1 & * \\
 			0 & *
@@ -118,7 +119,10 @@ curve defined over $K$ with a given rational point $o$. One knows that
 there is a unique structure of group variety on $E$ with $o$ as neutral
 element. Let $E_m$ be the kernel of multiplication by $\ell^m$ in $E(\sepcl
 K)$, and let
-$$ T_\ell(E) = \invlim_m E_m, \qquad V_\ell(E) = T_\ell(E) \otimes_{\Z_\ell} \Q_\ell. $$
+\[
+	T_\ell(E) = \invlim_m E_m, \qquad V_\ell(E) = T_\ell(E)
+	\otimes_{\Z_\ell} \Q_\ell.
+\]
 The Tate module $T_\ell(E)$ is a free $\Z_\ell$-module on which $\G =
 \Gal(\sepcl K / K)$ acts (cf.\ \cite{12}, chap.\ VII). The corresponding
 homomorphism $\pi_\ell \colon \G \to \Aut(V_\ell(E))$ is an $\ell$-adic
@@ -131,7 +135,8 @@ Since we can identify $E$ with its dual (in the sense of the duality of abelian
 varieties) the symbol $(x,y)$ (cf.\ \cite{12}, \textit{loc.\ cit.}) defines
 canonical isomorphisms
 \[
-	\textstyle\bigwedge^2 T_\ell(E) = T_\ell(\mu), \qquad \bigwedge^2 V_\ell(E) = V_\ell(\mu).
+	\textstyle\bigwedge^2 T_\ell(E) = T_\ell(\mu), \qquad
+	\bigwedge^2 V_\ell(E) = V_\ell(\mu).
 \]
 Hence $\det(\pi_\ell)$ is the character $\chi_\ell$ defined in example 1.
 
@@ -142,22 +147,24 @@ The group $T_\ell(A)$ is a free $\Z_\ell$-module of rank $2d$ (cf.\ \cite{12},
 \textit{loc.\ cit.}) on which $\G = \Gal(\sepcl K/K)$ acts.
 
 \subsubsection{Cohomology representations}
-Let $X$ be an algebraic variety defined over the field $K$, and let $\sepcl X = X \times_K \sepcl K$ be the
-corresponding variety over $\sepcl K$. Let $\ell \ne \char(K)$, and let $i$ be an
-integer. Using the étale cohomology of \citeauthor{3}~\cite{3} we let
+Let $X$ be an algebraic variety defined over the field $K$, and let $\sepcl X =
+X \times_K \sepcl K$ be the corresponding variety over $\sepcl K$. Let $\ell
+\ne \char(K)$, and let $i$ be an integer. Using the étale cohomology of
+\citeauthor{3}~\cite{3} we let
 \[
-	H^i(\sepcl X, \Z_\ell) = \invlim_n H^i\big( (\sepcl X)_{\text{ét}}, \Z/\ell^n\Z \big),
-	\qquad H^i_\ell(\sepcl X) = H^i(\sepcl X, \Z_\ell) \otimes_{\Z_\ell} \Q_\ell.
+	H^i(\sepcl X, \Z_\ell) = \invlim_n H^i\big( (\sepcl X)_{\text{ét}},
+	\Z/\ell^n\Z \big),
+	\qquad H^i_\ell(\sepcl X) = H^i(\sepcl X, \Z_\ell) \otimes_{\Z_\ell}
+	\Q_\ell.
 \]
-The group $H^i_\ell(\sepcl X)$ is a vector space over $\Q_\ell$ on which $G = \Gal(\sepcl K/K)$
-acts (via the action of $G$ on $\sepcl X$). It is finite dimensional, at least if
-$\char(K) = 0$ or if $X$ is proper. We thus get an $\ell$-adic 
-representation of $G$ associated to $H^i_\ell(\sepcl X)$; by taking duals we also get homology
-$\ell$-adic representations.
-Examples 1, 2, 3 are particular cases of
-homology $\ell$-adic representations where $i = 1$ and $X$ is respectively
-the multiplicative group $\GG_m$, the elliptic curve $E$, and the abelian
-variety $A$.
+The group $H^i_\ell(\sepcl X)$ is a vector space over $\Q_\ell$ on which $G =
+\Gal(\sepcl K/K)$ acts (via the action of $G$ on $\sepcl X$). It is finite
+dimensional, at least if $\char(K) = 0$ or if $X$ is proper. We thus get an
+$\ell$-adic representation of $G$ associated to $H^i_\ell(\sepcl X)$; by taking
+duals we also get homology $\ell$-adic representations.
+Examples 1, 2, 3 are particular cases of homology $\ell$-adic representations
+where $i = 1$ and $X$ is respectively the multiplicative group $\GG_m$, the
+elliptic curve $E$, and the abelian variety $A$.
 
 \subsubsection*{Exercise}
 \begin{enumerate}[(a)]
@@ -175,9 +182,11 @@ variety $A$.
 \end{enumerate}
 
 \section{\texorpdfstring{$\ell$}{l}-adic representations of number fields}
-\subsection{Preliminaries}
-(For the basic notions concerning number fields, see for 
-instance \citeauthor{6}~\cite{6}, \citeauthor{13}~\cite{13} or \citeauthor{44}~\cite{44}.)
+\subsection{Preliminaries}%
+\label{sec:I_21}
+(For the basic notions concerning number fields, see for instance
+\citeauthor{6}~\cite{6}, \citeauthor{13}~\cite{13} or
+\citeauthor{44}~\cite{44}.)
 Let $K$ be a number field (i.e.\ a finite extension of $\Q$). Denote by $M_K^0$
 the set of all finite places of $K$, i.e., the set of all normalized discrete
 valuations of $K$ (or, alternatively, the set of prime ideals in the ring
@@ -310,14 +319,20 @@ norm $\|f\| = \sup_{x \in X} |f(x)|$. For each $x \in X$ let $\delta_x$ be the D
 measure associated to $x$; if $f \in C(X)$, we have $\delta_x(f) = f(x)$.
 
 Let $(x_n)_{n\ge 1}$ be a sequence of points of $X$. For $n \ge 1$, let
-$$ \mu_n = \frac{ \delta_{x_1} + \cdots + \delta_{x_n} }{n} $$
+\[
+	\mu_n = \frac{ \delta_{x_1} + \cdots + \delta_{x_n} }{n}
+\]
 and let $\mu$ be a Radon measure on $X$ (i.e.\ a continuous linear form
-on $C(X)$, cf.\ Bourbaki, Int., chap.~Ill, \S 1). The sequence $(x_n)$ is
-said to be \strong{$\mu$-equidistributed}, or \strong{$\mu$-uniformly distributed}, if $\mu_n \to \mu$
-\emph{weakly} as $n \to \infty$, i.e.\ if $\mu_n(f) \to \mu(f)$ as $n \to \infty$ for any
-$f \in C(X)$. Note that this implies that $\mu$ is positive and of total mass 1.
-Note also that $\mu_n(f) \to \mu(f)$ means that
-$$ \mu(f) = \lim_{n\to\infty} \frac{1}{n} \sum_{i=1}^{n} f(x_i). $$
+on $C(X)$, cf.\ Bourbaki, Int., chap.~III, \S 1). The sequence $(x_n)$ is
+said to be \strong{$\mu$-equidistributed},%
+\index{equidistributed@$\mu$-equidistributed}
+or \emph{$\mu$-uniformly distributed}, if $\mu_n \to \mu$ \emph{weakly} as $n
+\to \infty$, i.e.\ if $\mu_n(f) \to \mu(f)$ as $n \to \infty$ for any $f \in
+C(X)$. Note that this implies that $\mu$ is positive and of total mass 1.  Note
+also that $\mu_n(f) \to \mu(f)$ means that
+\[
+	\mu(f) = \lim_{n\to\infty} \frac{1}{n} \sum_{i=1}^{n} f(x_i).
+\]
 
 \begin{lem}\label{lem:IA_1}
 Let $(\varphi_\alpha)$ be a family of continuous functions on $X$ with the
@@ -376,24 +391,24 @@ space of central functions on $G$; by the Peter-Weyl theorem, the
 irreducible characters $\chi$ of $G$ generate a dense subspace of $C(X)$.
 Hence the proposition follows from lemma~\ref{lem:IA_1}.
 
-\begin{cor}
+\begin{corp}
 Let $\mu$ be the Haar measure of $G$ with $\mu(G) = 1$.
 Then a sequence $(x_n)$ of elements of $X$ is $\mu$-equidistributed if and
 only if for any irreducible character $\chi$ of $G$, $\chi \ne 1$ we have
 $$ \lim_{n\to\infty} \frac{1}{n} \sum_{i=1}^{n} \chi(x_i) = 0. $$
-\end{cor}
+\end{corp}
 This follows from Prop.~\ref{prop:IA_2} and the following facts:
 \begin{align*}
 	\mu(\chi) &= 0 \qquad \text{if $\chi$ is irreducible $\ne 1$} \\
 	\mu(1) &= 1.
 \end{align*}
 
-\begin{cor}[\citeauthor{46}~\cite{46}]
+\begin{corp}[\citeauthor{46}~\cite{46}]
 Let $G = \R/\Z$, and let $\mu$ be the normalized Haar measure on $G$. Then
 $(x_n)$ is $\mu$-equidistributed if and only if for any integer $m \ne 0$ we
 have
 $$ \sum_{n\le N} e^{2\pi mi x_n} = o(N) \qquad (N \to \infty). $$
-\end{cor}
+\end{corp}
 For the proof, it suffices to remark that the irreducible characters of $\R/\Z$
 are the mappings $x \mapsto e^{2\pi mi x}$ ($m \in \Z$).
 
@@ -403,8 +418,9 @@ of its conjugacy classes. Let $x_v$, $v \in M$, be a family of elements of $X$,
 indexed by a denumerable set $M$, and let $v \mapsto \numnorm v$ be a function
 on $M$ with values in the set of integers $\ge 2$.  We make the following
 \emph{hypotheses:}
-\begin{enumerate}[(1)]
-\item The infinite product $\prod_{v\in M} \frac{1}{1 - (\numnorm v)^{-s}}$
+\begin{enumerate}[(1), series=Lfunc_hyp]
+\item
+	The infinite product $\prod_{v\in M} \frac{1}{1 - (\numnorm v)^{-s}}$
 	converges for every $s \in \C$ with $\Re(s) > 1$, and extends to a
 	meromorphic function on $\Re(s) > 1$ having neither zero nor pole
 	except for a simple pole at $s = 1$.
@@ -414,11 +430,10 @@ on $M$ with values in the set of integers $\ge 2$.  We make the following
 		L(s, \rho) = \prod_{v\in M} \frac{1}{\det(1 -
 		\rho(x_v)(\numnorm v)^{-s})}.
 	\]
+	Then this product converges for $\Re(s) > 1$, and extends to a
+	meromorphic function on $\Re(s) > 1$ having neither zero nor pole
+	except possibly for $s = 1$.
 \end{enumerate}
-Then this product converges for $\Re(s) > 1$, and extends to a meromorphic
-function on $\Re(s) > 1$ having neither zero nor pole except possibly for $s =
-1$.
-
 The \emph{order} of $L(s, \rho)$ at $s = 1$ will be denoted by $-c_\chi$. Hence,
 if $L(s,\rho)$ has a pole (resp.\ a zero) of order $m$ at $s = 1$, one has
 $c_\chi = m$ (resp.\ $c_\chi = -m$).
@@ -438,14 +453,16 @@ Wiener-Ikehara, cf.\ \ref{sec:IA_3} below.
 Suppose now that the function $v \mapsto \numnorm v$ has the following
 property:
 
-\begin{enumerate}[(1), start=3]
+\begin{enumerate}[resume*=Lfunc_hyp]
 \item There exists a constant $C$ such that, for every $n \in \Z$, the number
 	of $v \in M$ with $\numnorm v = n$ is $\le C$.
 \end{enumerate}
 One may then arrange the elements of $M$ as a sequence
-$(v_i)_{i\ge 1}$. so that $i \le j$ implies $\numnorm v_i \le \numnorm v_j$ (in general, this is possible
-in many ways). It then makes sense to speak about the equidistribution of the sequence of $x_v$'s; using (3), one shows easily that this
-does not depend on the chosen ordering of $M$. Applying theorem 1 and proposition 2, we obtain:
+$(v_i)_{i\ge 1}$. so that $i \le j$ implies $\numnorm v_i \le \numnorm v_j$ (in
+general, this is possible in many ways). It then makes sense to speak about the
+equidistribution of the sequence of $x_v$'s; using (3), one shows easily that
+this does not depend on the chosen ordering of $M$. Applying theorem 1 and
+proposition 2, we obtain:
 \begin{thm}
 The elements $x_v$ ($v \in M$) are equidistributed in $X$
 with respect to a measure $\mu$ such that for any irreducible character
@@ -459,5 +476,222 @@ $$ \mu(\chi) = c_\chi. $$
 	$L$-functions relative to the non trivial irreducible characters of $G$
 	are holomorphic and non zero at $s = 1$.
 \end{cor}
+
+\begin{ex}
+\begin{enumerate}[series=ex_IA3]
+\item Let $G$ be the Galois group of a \emph{finite} Galois extension
+	$L/K$ of the number field $K$, let $M$ be the set of unramified places
+	of $K$, let $x_v$ be the Frobenius conjugacy class defined by $v \in M$,
+	and let $\numnorm v$ be the norm of $v$, cf.\ \S\ref{sec:I_21}.
+
+	Properties (1), (2), (3) are satisfied with $c_\chi = 0$ for all
+	irreducible $\chi \ne 1$. This is trivial for (3). For (1), one remarks that
+	$L(s,l)$ is the zeta function of $K$ (up to a finite number of terms),
+	hence has a simple pole at $s = 1$ and is holomorphic on the rest of
+	the line $\Re(s) = 1$, cf.\ for instance \citeauthor{13}~\cite{13},
+	chap.\ VII; for a proof of (2), cf.\ \citeauthor{1}~\cite[121]{1}.
+	Hence theorem 2 gives the equidistribution of the Frobenius elements,
+	i.e.\ the \v Cebotarev density theorem, cf.\ 2.2.
+
+\item Let $C$ be the idèle class group of a number field $K$, and let $\rho$ be
+	a continuous homomorphism of $C$ into a compact abelian Lie group $G$.
+	An easy argument (cf.\ ch.\ III, 2.2) shows that $\rho$ is almost
+	everywhere unramified (i.e., if $U_v$ denotes the group of units at
+	$v$, then $\rho(U_v) = 1$ for almost all $v$). Choose $\pi_v \in K$
+	with $v(\pi_v) = 1$. If $\rho$ is unramified at $v$, then $\rho(\pi_v)$
+	depends only on $v$, and we set $x_v = \rho(\pi_v)$. We make the
+	following \emph{assumption:}
+	\begin{displayquote}
+		\slshape
+		\textbf{(*)}
+		The homomorphism $\rho$ maps the group $C$ of idèles of
+		volume 1 onto $G$.
+	\end{displayquote}
+	(Recall that the \strong{volume} of an idèle $\vec a = (a_v)$ is
+	defined as the product of the normalized absolute values of its
+	components $a_v$, cf.\ \citeauthor{13}~\cite{13} or
+	\citeauthor{44}~\cite{44}.)
+
+	Then, the elements $x_v$ are \emph{uniformly distributed} in $G$ with
+	respect to the normalized Haar measure. This follows from theorem~1 and
+	the fact that the $L$-functions relative to the irreducible characters
+	$\chi$ of $G$ are Hecke $L$-functions with Grössencharakters; these
+	$L$-functions are holomorphic and non-zero for $\Re(s) \ge 1$ if $\chi
+	\ne 1$, see \cite{13}, chap.\ VII.
+\end{enumerate}
+\end{ex}
+
+\begin{obs}
+This example (essentially due to Hecke) is given in Lang
+(\emph{loc.\ cit.}, ch.\ VIII, \S 5) except that Lang has replaced the condition
+(*) by the condition ``$\rho$ is surjective'', which is insufficient. This
+led him to affirm that, for example, the sequence $(\log p)_p$ (and also
+the sequence $(\log n)_n$) is uniformly distributed modulo 1; however,
+one knows that this sequence is not uniformly distributed for any
+measure on $\R/\Z$ (cf.\ \citeauthor{22}~\cite[179-180]{22}).
+\end{obs}
+
+\begin{enumerate}[resume*=ex_IA3]
+\item (Conjectural example).
+	Let $E$ be an elliptic curve defined over a number field $K$ and let
+	$M$ be the set of finite places $v$ of $K$ such that $E$ has good
+	reduction at $v$, cf.\ 1.2 and chap.~\ref{ch:iv}.  Let $v \in M$, let
+	$\ell \ne p_v$ and let $F_v$ be the Frobenius conjugacy class of $v$ in
+	$\Aut(T_\ell(E))$. The eigenvalues of $F_v$ are algebraic numbers; when
+	embedded into $\C$ they give conjugate complex numbers $\pi_v$,
+	$\bar{\pi}_v$ with $|\pi_v| = (\numnorm v)^{1/2}$.
+	We may write then
+	\[
+		\pi_v = (\numnorm v)^{1/2} e^{i \phi_v}; \quad
+		\bar{\pi}_v = (\numnorm v)^{1/2} e^{-i \phi_v} \qquad
+		\text{with } 0 \le \phi_v \le \pi.
+	\]
+	On the other hand, let $G = \SU(2)$ be the Lie group of $2 \times 2$
+	unitary matrices with determinant 1. Any element of the space $X$ of
+	conjugacy classes of $G$ contains a unique matrix of the form
+	\[
+		\begin{pmatrix}
+			e^{i \phi} & 0 \\
+			0 & e^{-i \phi}
+		\end{pmatrix}, \qquad 0 \le \phi \le \pi.
+	\]
+	The image in $X$ of the Haar measure of $G$ is known to be
+	$\frac{2}{\pi}\sin^2 \phi \, \ud\phi$.  The irreducible
+	representations of $G$ are the $m$-th symmetric powers $\rho_m$ of the
+	natural representation $\rho_1$ of degree 2.
+
+	Take now for $x_v$ the element of $X$ corresponding to the angle
+	$\phi = \phi_v$ defined above. The corresponding $L$ function,
+	relative to $\rho_m$, is:
+	\[
+		L_{\rho_m}(s) = \prod_{v} \prod_{a=0}^{a=m} \frac{1}{ 1 -
+		e^{i(m - 2a)\phi_v} (\numnorm v)^{-s} }.
+	\]
+	If we put:
+	\[
+		L_m^1(s) = \prod_{v} \prod_{a=0}^{a=m} \frac{1}{ 1 -
+		\pi_v^{m-a} \bar{\pi}_v^a (\numnorm v)^{-s} }
+	\]
+	we have
+	\[
+		L_{\rho_m}(s) = L_m^1(s - m/2).
+	\]
+	The function $L$ has been considered by \citeauthor{36}~\cite{36}. He
+	conjectures that $L_m^1$, for $m \ge 1$, is holomorphic and non zero
+	for $\Re(s) \ge 1 + m/2$, provided that $E$ has no complex
+	multiplication. Granting this conjecture, the corollary to theorem 2
+	would yield the uniform distribution of the $x_v$'s, or, equivalently,
+	that the angles $\phi_v$ of the Frobenius elements are uniformly
+	distributed in $[0, \pi]$ with respect to the measure
+	$\frac{2}{\pi}\sin^2 \phi \, \ud\phi$ (``conjecture of
+	Sato-Tate'').
+
+	One can expect analogous results to be true for other $\ell$-adic
+	representations.
+\end{enumerate}
+
+\subsection{Proof of theorem~1}
+The logarithmic derivative of $L$ is
+\[
+	\frac{L'(s)}{L(s)} = -\sum_{\substack{v\ge 1 \\ m\ge 1}}
+	\frac{\chi(x_v^m) \log(\numnorm v)}{(\numnorm v)^{ms}},
+\]
+where $x_v^m$ is the conjugacy class consisting of the $m$-th powers of
+elements in the class $x_v$. One sees this by writing $L$ as the product
+\[
+	\prod_{j, v} \frac{1}{1 - \lambda_v^{(j)}( \numnorm v )^{-s}}
+\]
+where the $\lambda_v^{(j)}$ are the eigenvalues of $x_v$ in the given
+representation.  Now the series
+\[
+	\sum_{\substack{v\ge 1 \\ m\ge 1}} \frac{\log(\numnorm v)}{ |(\numnorm
+	v)^{ms}| },
+\]
+converges for $\Re(s) > 1/2$.  Indeed it suffices to show that
+\[
+	\sum_v \frac{\log(\numnorm v)}{ (\numnorm v)^\sigma } < \infty
+\]
+if $\sigma > 1$; but this series is majorized by
+\[
+	\text{(Constant)} \times \sum_{v} \frac{1}{(\numnorm v)^{\sigma +
+	\varepsilon}}, \qquad (\varepsilon > 0).
+\]
+On the other hand, the convergence for $\sigma > 1$ of the product
+\[
+	\prod_{v} \frac{1}{1 - (\numnorm v)^{-\sigma}}
+\]
+shows that
+\[
+	\sum_{v} \frac{1}{(\numnorm v)^\sigma} < \infty
+\]
+for $\sigma > 1$; hence our assertion. One can therefore write
+\[
+	\frac{L'(s)}{L(s)} = -\sum_{v} \frac{\chi(x_v) \log(\numnorm
+	v)}{(\numnorm v)^s} + \phi(s)
+\] 
+where $\phi(s)$ is holomorphic for $\Re(s) > \frac{1}{2}$. Moreover, by
+hypothesis, $L'/L$ can be extended to a meromorphic function on $\Re(s) \ge 1$
+which is holomorphic except possibly for a simple pole at $s = 1$ with residue
+$-c_\chi$. One may then apply the Wiener-Ikehara theorem (cf.\ \cite[123]{13}):
+\begin{thm}
+	Let $F(s) = \sum_{n=1}^\infty a_n/n^s$ be a Dirichlet series with
+	complex coefficients. Suppose there exists a Dirichlet series $F(s) =
+	\sum_n a_n^+/n^s$ with positive real coefficients such that
+\begin{enumerate}[(a)]
+	\item $|a_n| \le a_n^+$ for all $n$;
+	\item The series $F^+$ converges for $\Re(s) > 1$;
+	\item The function $F$ (resp.\ $F^+$) can be extended to a meromorphic
+		function on $\Re(s)\ge 1$ having no poles except (resp.\ except
+		possibly) for a simple pole at $s=1$ with residue $c_+ > 0$
+		(resp.\ $c$).
+\end{enumerate}
+	Then
+	\[
+		\sum_{m\le n} a_n = cn + o(n) \qquad (n \to \infty),
+	\]
+	(where $c = 0$ if $F$ is holomorphic at $s = 1$).
+\end{thm}
+One applies this theorem to
+\[
+	F(s) = -\sum_{v} \frac{\chi(x_v) \log(\numnorm v)}{(\numnorm v)^s},
+\]
+and we take for $F^+$ the series
+\[
+	d \sum_{v} \frac{\log(\numnorm v)}{(\numnorm v)^s},
+\]
+where $d$ is the degree of the given representation $\rho$; this is possible
+since $\chi(x_v)$ is a sum of $d$ complex numbers of absolute value 1,
+hence $|\chi(x_v)| \le d$; moreover, the series
+\[
+	\sum_{v} \frac{\log(\numnorm v)}{(\numnorm v)^s}
+\]
+differs from the logarithmic derivative of
+\[
+	\prod_{v} \frac{1}{1 - (\numnorm v)^{-s}}
+\]
+by a function which is holomorphic for $\Re(s) > 1/2$ as we saw above.
+Hence by the Wiener-Ikehara theorem we have
+\[
+	\sum_{\numnorm v \le n} \chi(x_v) \log(\numnorm v) = c_\chi n + o(n)
+	\qquad (n \to \infty).
+\]
+Consequently, by the Abel summation trick (cf.\ \cite[124]{13}, Prop.~1),
+\[
+	\sum_{\numnorm v \le n} \chi(x_v) = c_\chi \frac{n}{\log n} + o(n/\log
+	n) \qquad (n \to \infty).
+\]
+and in particular,
+\[
+	\sum_{\numnorm v \le n} 1 = \frac{n}{\log n} + o(n/\log n) \qquad (n
+	\to \infty).
+\]
+Hence,
+\[
+	\frac{ \sum_{\numnorm v \le n} \chi(x_v) }{ \sum_{\numnorm v \le n} 1 }
+	\longrightarrow c_\chi \qquad \text{as } n\to \infty,
+\]
+and we may apply proposition~2 to conclude the proof.
+\hfill
+q.e.d.
 
 \end{subappendices}
