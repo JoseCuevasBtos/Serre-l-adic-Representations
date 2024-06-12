@@ -1,5 +1,6 @@
 \chapter{\texorpdfstring{$\ell$}{l}-adic representations attached to elliptic
 curves}\label{ch:iv}
+\chaptermark{Elliptic curves}
 
 Let $K$ be a number field and let $E$ be an elliptic curve over $K$.
 \dpage
@@ -111,6 +112,7 @@ fields. They apply to every field with a discrete valuation.
 \end{obs}
 
 \subsection{Properties of $V_\ell$ related to good reduction}
+\label{sec:IV_13}
 Let $\ell$ be a prime number. We define, as in chap.~\ref{ch:i},
 \ref{sec:I_12}, the Galois modules $T_\ell$ and $V_\ell$ by:
 \[
@@ -202,7 +204,8 @@ reduced curve $\widetilde{E}_v$.
 	[For $m > 2$, see \citeauthor{64}~\cite{64}.]
 \end{enumerate}
 
-\subsection{\v Safarevi\v c's theorem}
+\subsection{\v Safarevi\v c's theorem}%
+\label{sec:IV_14}
 \dpage
 It is the following (cf.\ \cite{23}):
 \begin{thm}
@@ -291,4 +294,78 @@ finishes the proof of the theorem.
 \begin{obs}
 There are many ways in which one can deduce \v Safarevi\v c's theorem from
 Siegel's. The one we followed has been shown to us by Tate.
+\end{obs}
+
+\section{The Galois module attached to $E$}
+In this section, $E$ denotes an elliptic curve over $K$. We are
+interested in the structure of the Galois modules $E_{\ell^n}$, $T_\ell$, $V_\ell$
+defined in \ref{sec:IV_13}.
+
+\subsection{The irreducibility theorem}
+Recall first that the ring $\End_K(E)$ of $K$-endomorphisms of $E$
+is either $\Z$ or of rank 2 over $\Z$. In the first case, we say that $E$
+has ``no complex multiplication over $K$.'' If the same is true for any
+finite extension of $K$, we say that $E$ has ``no complex 
+multiplication.''
+
+\begin{thm}
+Assume that $E$ has no complex multiplication over $K$.
+\dpage
+Then:
+\begin{enumerate}[(a)]
+\item\label{thm:IV_21_a} $V_\ell$ is irreducible for all primes $\ell$;
+\item $E_\ell$ is irreducible for almost all primes $\ell$.
+\end{enumerate}
+\end{thm}
+
+We need the following elementary result:
+\begin{lem}
+Let $E$ be an elliptic curve defined over $K$ with $\End_K(E) = \Z$. Then, if
+$E' \to E$, $E'' \to E$ are $K$-isogenies with non-isomorphic cyclic kernels,
+the curves $E'$ and $E''$ are non-isomorphic over $K$.
+\end{lem}
+\begin{proof}
+Let $n'$ and $n''$ be respectively the orders of the kernels of
+$E' \to E$ and $E'' \to E$. Suppose that $E'$ and $E''$ are isomorphic
+over $K$, and let $E' \to E''$ be an isomorphism. If $E \to E'$ is the
+transpose of the isogeny $E' \to E$, it has a cyclic kernel of order
+$n'$, and hence the isogeny $E \to E$, obtained by composition of
+$E \to E'$, $E' \to E''$, $E'' \to E$, has for kernel an extension of
+$\Z/n''\Z$ by $\Z/n'\Z$. But, since $\End_K(E) = \Z$, this isogeny must be
+multiplication by an integer $a$, and its kernel must therefore be of
+the form $\Z/a\Z \times \Z/a\Z$. Hence $n'$ and $n''$ divide $a$. Since
+$a^2 = n'n''$, we obtain $a = n' = n''$, a contradiction.
+\end{proof}
+
+\begin{proof}[ of the theorem]
+\begin{enumerate}[(a)]
+\item It suffices to show that, if $\End_K(E) = \Z$, there is no
+	one-dimensional $\Q_\ell$-subspace of $V_\ell$ stable under
+	$\Gal(\algcl K/K)$. Suppose there were one; its intersection $X$ with
+	$T_\ell$ would be a submodule of $T_\ell$ with $X$ and $T_\ell/X$ free
+	$Z_\ell$-modules of rank 1. For $n \ge 0$, consider the image $X(n)$ of
+	$X$ in $E_{\ell^n} = T/\ell^n T$. This is a submodule of $E_\ell$ which
+	is cyclic of order $\ell^n$ and stable by $\Gal(\algcl K/K)$. Hence it
+	corresponds to a finite $K$-algebraic subgroup of
+	\dpage
+	$E$ and one can define the quotient curve $E(n) = E/X(n)$. The kernel
+	of the isogeny $E \to E(n)$ is cyclic of order $\ell^n$. The above
+	lemma then shows that the curves $E(n)$, $n \ge 0$, are pairwise
+	non-isomorphic, contradicting the corollary to \v Safarevi\v c's
+	theorem (\ref{sec:IV_14}).
+\item If $E$ is not irreducible, there exists a Galois submodule $X$ of $E$
+	which is one-dimensional over $\F_\ell$. In the same way as above, this
+	defines an isogeny $E \to E/X_\ell$ whose kernel is cyclic of order
+	$\ell$. The above lemma shows that the curves which correspond to
+	different values of $\ell$ are\break non-isomorphic, and one again applies
+	the corollary to \v Safarevi\v c's\break theorem.
+	\qedhere
+\end{enumerate}
+\end{proof}
+
+\begin{obs}
+One can prove part \ref{thm:IV_21_a} of the above theorem by a quite different
+method (cf.\ \cite{25}, \S 3.4); instead of the \v Safarevi\v c's theorem, one
+uses the properties of the decomposition and inertia subgroups of
+$\Img(\rho_\ell)$, cf.\ Appendix.
 \end{obs}
