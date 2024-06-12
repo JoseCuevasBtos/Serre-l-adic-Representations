@@ -15,6 +15,7 @@
 \newcommand{\G}{\mathfrak{G}} % Absolute Galois group
 
 \DeclareMathOperator{\numnorm}{\mathbf{N}} % Numeric norm
+\DeclareMathOperator{\WRes}{\mathfrak{R}} % Weil's restriction of scalars group
 
 \RequirePackage{bm}
 \let\Vec\vec
@@ -34,6 +35,7 @@
 \newcommand{\PP}{\mathbb{P}} % Projective space
 
 \newcommand{\TT}{\mathbb{T}} % Torus
+\newcommand{\GG}{\mathbb{G}}
 \renewcommand{\SS}{\mathbb{S}} % Circle/spheres
 
 \DeclareMathOperator{\Card}{Card}
@@ -165,6 +167,23 @@
 \newtheorem{mydef}{Definition}[section]
 \newtheorem*{obs}{Remark}
 \newtheorem*{ex}{Examples}
+
+\renewenvironment{proof}[1][]{\par
+\pushQED{\qed}%
+\normalfont \topsep6\p@\@plus6\p@\relax
+\trivlist
+\item\relax
+	{\itshape
+	\proofname #1\@addpunct{.}}\hspace\labelsep\ignorespaces
+}{%
+	\popQED\endtrivlist\@endpefalse
+}
+% \renewenvironment{proof}[1][]{\begin{oldproof}[\proofname #1]}{\end{oldproof}}
+
+% ======== Page counter =============
+\newcounter{origpage}[chapter]
+\renewcommand{\theorigpage}{\thechapter-\arabic{origpage}}
+\newcommand{\dpage}{\stepcounter{origpage}\marginpar{\small\theorigpage}}
 
 \RequirePackage{imakeidx}
 \makeindex[intoc]

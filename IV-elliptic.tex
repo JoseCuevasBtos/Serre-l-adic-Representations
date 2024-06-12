@@ -1,8 +1,9 @@
 \chapter{\texorpdfstring{$\ell$}{l}-adic representations attached to elliptic
 curves}\label{ch:iv}
 
-Let $K$ be a number field and let $E$ be an elliptic curve over $K$. If $\ell$
-is a prime number, let
+Let $K$ be a number field and let $E$ be an elliptic curve over $K$.
+\dpage
+If $\ell$ is a prime number, let
 \[
 	\rho_\ell \colon \Gal(\algcl K/K) \longrightarrow \Aut(V_\ell(E))
 \]
@@ -17,7 +18,7 @@ Al). The variation of $G_\ell$ with $\ell$ is studied in \S\ref{sec:IV3}.
 The Appendix gives analogous results in the local case (i.e.\ when $K$ is a
 local field).
 
-\section{Preliminaries}
+\section{Preliminaries}\dpage
 \subsection[Elliptic curves]{Elliptic curves \textmd{(cf.\
 \citeauthor{5}~\cite{5}, \citeauthor{9}~\cite{9}, \citeauthor{10}~\cite{10})}}
 By an elliptic curve, we mean an abelian variety of dimension
@@ -49,6 +50,7 @@ invariant $j$ of $E$ is
 	j = 2^6 \, 3^3 \, \frac{g_2^3}{g_2^3 - 27g_3^2}
 	= 2^6 \, 3^3 \, \frac{g_2^3}{\Delta}.
 \]
+\dpage
 Two elliptic curves have the same $j$ invariant if and only if they become
 isomorphic over the algebraic closure of $K$.
 
@@ -76,9 +78,11 @@ the corresponding equation $f$ for $E$ has coefficient in $\mathcal{O}_v$ and
 its reduction $\tilde f \mod{\mathfrak{m}_v}$ defines a non-singular cubic
 $\widetilde{E}_v$ (hence an elliptic curve) over the residue field $k_v$ (in
 other words, the discriminant $\Delta(f)$ of $f$ must be an invertible element
-of $\mathcal{O}_v$). The curve $\widetilde{E}_v$ is called the
-\strong{reduction} of $E$ at $v$; it does not depend on the choice of $f$,
-provided, of course, that $\Delta(f) \in \mathcal{O}_v^\times$.
+of $\mathcal{O}_v$).
+The curve $\widetilde{E}_v$ is called the \strong{reduction} of $E$ at $v$;
+\dpage
+it does not depend on the choice of $f$, provided, of course, that $\Delta(f) \in
+\mathcal{O}_v^\times$.
 
 One can prove that the above definition is equivalent to the following one:
 there is an abelian scheme $E_v$ over $\Spec(\mathcal{O}_v)$, in the sense of
@@ -113,6 +117,7 @@ Let $\ell$ be a prime number. We define, as in chap.~\ref{ch:i},
 	V_\ell = T_\ell \otimes \Q_\ell, \qquad T_\ell = \invlim_n E_{\ell^n}
 \]
 where $E_{\ell^n}$ is the kernel of $\ell^n \colon E(\algcl K) \to E(\algcl K)$.
+\dpage
 
 We denote by $\rho_\ell$ the corresponding homomorphism of $\Gal(\algcl K/K)$
 into $\Aut(T_\ell)$. Recall that $E_{\ell^n}$, $T_\ell$ and $V_\ell$ are of
@@ -144,6 +149,7 @@ Let $E$ and $E'$ be two elliptic curves which are isogenous (over $K$). If one
 of them has good reduction at a place $v$, the same is true for the other one.
 \end{cor}
 (Recall that $E$ and $E'$ are said to be \strong{isogenous} if there
+\dpage
 exists a non-trivial morphism $E \to E'$.)
 
 This follows from the theorem, since the $\ell$-adic representations associated
@@ -197,9 +203,92 @@ reduced curve $\widetilde{E}_v$.
 \end{enumerate}
 
 \subsection{\v Safarevi\v c's theorem}
+\dpage
 It is the following (cf.\ \cite{23}):
 \begin{thm}
 Let $S$ be a finite set of places of $K$. The set of isomorphism classes of
 elliptic curves over $K$, with good reduction at all places not in $S$, is
 finite.
 \end{thm}
+Since isogenous curves have the same bad reduction set (cf.\ 1.3), this implies:
+\begin{cor}
+Let $E$ be an elliptic curve over $K$. Then, up to isomorphism, there are only
+a finite number of elliptic curves which are $K$-isogenous to $E$.
+\end{cor}
+
+To prove the theorem, we use the following criterion for good reduction:
+\begin{lem}
+Let $S$ be a finite set of places of $K$ containing the divisors of 2 and 3,
+and such that the ring $\mathcal{O}_S$ of $S$-integers is principal. Then, an
+elliptic curve $E$ defined over $K$ has good reduction outside $S$ if and only
+if its equation can be put in the Weierstrass form $y^2 = 4x^3 - g_2 x - g_3$
+with $g_i \in \mathcal{O}_S$ and $\Delta = g_2^3 - 27 g_2^3 \in
+\mathcal{O}_S^\times$ (the group of units of $\mathcal{O}_S$).
+\end{lem}
+
+\begin{proof}
+The sufficiency is trivial. To prove necessity, we write the
+curve $E$ in the form
+\begin{equation}
+	y^2 = 4x^3 - g_2^\prime x - g_3^\prime
+	\tag{$*$}
+	\label{eq:safarevich_lemma}
+\end{equation}
+with $g_i^\prime \in K$. Let $v$ be a place of $K$ not in $S$. Then, since
+there is good reduction at $v$, and since the divisors of 2 and 3 do not belong
+\dpage
+to $S$, the curve $E$ can be written in the form
+\[
+	y^2 = 4x^3 - g_{2, v}^\prime x - g_{3, v}^\prime
+\]
+with $g_{i, v}$ in the local ring at $v$ and the discriminant $\Delta_v$ a unit
+in this ring. Using the properties of the Weierstrass form, there is an element
+$u_v \in K$ such that $g_{2, v} = u_v^4 g^\prime_2$, $g_{3, v} = u_v^6
+g^\prime_3$, $\Delta_v = u_v^{12} \Delta'$;\label{errata:uv12} moreover, as we
+can take $g_{i,v} = g_i^\prime$ for almost all $v$, we see that we can assume
+that $u_v = 1$ for almost all $v \notin S$. Since the ring $\mathcal{O}_S$ is
+principal, there is an element $u \in K^\times$ with $v(u) = v(u_v)$ for all $v
+\notin S$. Then, if we replace $x$ by $u^{-2} x$ and $y$ by $u^{-3} y$ in
+\eqref{eq:safarevich_lemma}, the curve $E$ takes the form
+\[
+	y^2 = 4x^3 - g_2^\prime x - g_3^\prime
+\]
+with $g_2 = u^4 g^\prime_2$, $g_3 = u^6 g^\prime_3$ and $\Delta = u^{12}
+\Delta'$. Since, by construction, $g_i \in \mathcal{O}_S$ and $\Delta \in
+\mathcal{O}_S^\times$ the lemma is established.
+\end{proof}
+
+\begin{proof}[ of the theorem]
+After possibly adding a finite number of places of $K$ to $S$, we may assume
+that $S$ contains all the divisors of 2 and 3, and that the ring
+$\mathcal{O}_S$ is principal. If $E$ is an elliptic curve defined over $K$
+having good reduction outside $S$, the above lemma tells us that we can write
+$E$ in the form
+\begin{equation}
+	y^2 = 4x^3 - g_2^\prime x - g_3^\prime
+	\tag{$*$}
+	\label{eq:wei_form_star2}
+\end{equation}
+with $g_i \in \mathcal{O}_S$ and $\Delta = g_2^3 - 27 g_2^3 \in \mathcal{O}_S$.
+But, since we are free to multiply $\Delta$ by any $u \in
+{(\mathcal{O}_S^\times)}^{12}$, and since
+$\mathcal{O}_S^\times/{(\mathcal{O}_S^\times)}^{12}$ is a finite group, we see
+that there is a finite set $X \subset \mathcal{O}_S^\times$ such that any
+elliptic
+\dpage
+curve of the above type can be written in the form \eqref{eq:wei_form_star2}
+with $g_i \in \mathcal{O}_S$ and $\Delta \in X$. But, for a given $\Delta$, the
+equation
+\[
+	U^3 - 27V^2 = \Delta
+\]
+represents an affine elliptic curve. Using a theorem of Siegel (generalized by
+Mahler and Lang, cf.\ \citeauthor{14}~\cite{14}, chap.~VII), one sees that this
+equation has only a \emph{finite} number of solutions in $\mathcal{O}_S$. This
+finishes the proof of the theorem.
+\end{proof}
+
+\begin{obs}
+There are many ways in which one can deduce \v Safarevi\v c's theorem from
+Siegel's. The one we followed has been shown to us by Tate.
+\end{obs}

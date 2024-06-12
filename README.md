@@ -27,7 +27,7 @@ Here's an indepth list of the chapters and sections, and their current status:
 - [ ] Chapter II. The Groups Sm
     - [ ] 1 Preliminaries
         - [ ] 1.1 The torus T
-        - [ ] 1.2 Cutting down T
+        - [x] 1.2 Cutting down T
         - [ ] 1.3 Enlarging groups
     - [ ] 2 Construction of Tm and Sm
         - [ ] 2.1 Ideles and idele-classes
