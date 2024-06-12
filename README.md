@@ -16,11 +16,11 @@ Here's an indepth list of the chapters and sections, and their current status:
         - [x] 1.2 Examples
     - [ ] 2 l-adic representations of number fields
         - [x] 2.1 Preliminaries
-        - [ ] 2.2 Cebotarev's density theorem
+        - [x] 2.2 Cebotarev's density theorem
         - [ ] 2.3 Rational l-adic representations
         - [x] 2.4 Representations with values in a linear algebraic group
         - [ ] 2.5 L-functions attached to rational representations
-    - [ ] A. Equipartition and L-functions
+    - [x] A. Equipartition and L-functions
         - [x] A.1 Equipartition
         - [x] A.2 The connection with L-functions
         - [x] A.3 Proof of theorem 1
@@ -70,13 +70,13 @@ Here's an indepth list of the chapters and sections, and their current status:
         - [ ] A.6 Locally compact case
         - [ ] A.7 Tate's theorem
 - [ ] Chapter IV. l-adic Representations Attached to Elliptic Curves
-    - [ ] 1 Preliminaries
+    - [x] 1 Preliminaries
         - [x] 1.1 Elliptic curves
         - [x] 1.2 Good reduction
         - [x] 1.3 Properties of Vl related to good reduction
-        - [ ] 1.4 Safarevic's theorem
+        - [x] 1.4 Safarevic's theorem
     - [ ] 2 The Galois modules attached to E
-        - [ ] 2.1 The irreducibility theorem
+        - [x] 2.1 The irreducibility theorem
         - [ ] 2.2 Determination of the Lie algebra of Gl
         - [ ] 2.3 The isogeny theorem
     - [ ] 3 Variation of Gl and Gl with l
