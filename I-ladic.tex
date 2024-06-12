@@ -243,7 +243,39 @@ one says that $P$ \strong{has density} $a$ if
 \[
 	\lim \frac{a_n(P)}{a_n(M_K^0)} = a \qquad \text{when}\quad n \to \infty.
 \]
-\todo{Belen.}
+Note that $a_n(M_K^0) \sim n/\log(n)$, by the prime number theorem (cf. Appendix, or \cite{13}, chap. VIII), so that the above relation may be rewritten:
+\[
+	a_n(P) = a \cdot \frac{n}{\log(n)} + o \left(\frac{n}{\log(n)}\right).
+\]
+\begin{ex}
+A finite set has density $0$. The set of $v \in M_K^0$ of degree $1$ (i.e. such that $\numnorm v$ is prime) has density $1$. The set of ordinary prime numbers whose first digit (in the decimal system, say) is $1$ has no density.
+\end{ex}
+
+\begin{thm}
+Let $L$ be a finite Galois extension of the number field $K$, with Galois group $G$. Let $X$ be a subset of $G$, stable by conjugation. Let $P_X$ has density equal to $\Card(X)/\Card(G)$. 
+\end{thm}
+
+For the proof, see \cite{7}, \cite{1}, or the Appendix.
+
+\begin{cor}
+For every $g \in G$, there exist infinitely many unramified places $w \in M_K^0$ such that $F_w = g$.
+\end{cor}
+
+For infinite extensions, we have:
+
+\begin{cor}
+Let $L$ be a Galois extension of $K$, which is unramified outside a finite set $S$.
+\begin{enumerate}[a)]
+	\item The Frobenius elements of the unramified places of $L$ are dense in $\Gal(L/K)$.
+	\item Let $K$ be a subset of $\Gal(L/K)$, stable by conjugation. Assume that the boundary of $X$ has measure zero with respect to the Haar measure $\mu$ of $X$, and normalize $\mu$ such that its total mass is $1$. Then the set of places $v \not\in S$ such that $F_v \subset X$ has a density equal to $\mu(X)$.
+\end{enumerate}
+\end{cor}
+
+Assertion (b) follows from the theorem, by writing $L$ as an increasing union of finite Galois extensions and passing to the limit (one may also use Prop. 1 of the Appendix). Assertion (a) follows from (b) applied to a suitable neghborhood of a given class of $\Gal(L/K)$.
+
+\subsubsection*{Exercise}
+
+Let $G$ be an $\ell$-adic Lie group and let $X$ be an analytic subset of $G$ (i.e. a set defined by the vanishing of a family of analytic functions on $G$). Shor that the boundary of $X$ has measure zero with respect to the Haar measure of $G$.
 
 \subsection{Rational \texorpdfstring{$\ell$}{l}-adic representations}
 \todo{Belen.}

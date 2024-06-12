@@ -23,7 +23,7 @@ Here's an indepth list of the chapters and sections, and their current status:
     - [ ] A. Equipartition and L-functions
         - [x] A.1 Equipartition
         - [x] A.2 The connection with L-functions
-        - [ ] A.3 Proof of theorem 1
+        - [x] A.3 Proof of theorem 1
 - [ ] Chapter II. The Groups Sm
     - [ ] 1 Preliminaries
         - [ ] 1.1 The torus T
