@@ -108,6 +108,16 @@
 \counterwithout{subsubsection}{subsection}
 % \renewcommand\thesubsubsection{\arabic{subsubsection}}
 
+% ======== Headers and footers ======
+\RequirePackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead[L,C,R]{}
+\fancyhead[LE, RO]{\thepage}
+\fancyhead[RE]{ABELIAN $\ell$-ADIC REPRESENTATIONS}
+\fancyhead[LO]{\MakeUppercase{\leftmark}}
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\renewcommand{\headrule}{}
+
 % ======== Utilities ================
 \RequirePackage{todonotes}
 \RequirePackage[shortlabels]{enumitem}
