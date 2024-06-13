@@ -17,7 +17,7 @@ Here's an indepth list of the chapters and sections, and their current status:
     - [ ] 2 l-adic representations of number fields
         - [x] 2.1 Preliminaries
         - [x] 2.2 Cebotarev's density theorem
-        - [ ] 2.3 Rational l-adic representations
+        - [x] 2.3 Rational l-adic representations
         - [x] 2.4 Representations with values in a linear algebraic group
         - [ ] 2.5 L-functions attached to rational representations
     - [x] A. Equipartition and L-functions
