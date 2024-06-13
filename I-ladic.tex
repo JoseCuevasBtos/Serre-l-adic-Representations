@@ -108,15 +108,15 @@ continuous homomorphism $\rho \colon G \to \Aut(V)$.
 
 \subsection{Examples}\label{sec:I_12}
 \subsubsection{Roots of unity}
-Let $\ell \ne \char(K)$. The group $\G = \Gal(\sepcl K / K)$ acts on the group
+Let $\ell \ne \char(K)$. The group $G = \Gal(\sepcl K / K)$ acts on the group
 $\mu_m$ of $\ell^m$-th roots of unity, and hence also on $T_\ell(\mu) =
 \invlim_{m\in\N} \mu_m$. The $\Q_\ell$-vector space $V_\ell(\mu) = T_\ell(\mu)
 \otimes_{\Z_\ell} \Q_\ell$ is of dimension 1, and the homomorphism $\chi_\ell
-\colon \G \to \Aut(V_\ell) = \Q_\ell^\times$ defined by the action of $\G$ on
-$V_\ell$ is a 1-dimensional $\ell$-adic representation of $\G$. The character
+\colon G \to \Aut(V_\ell) = \Q_\ell^\times$ defined by the action of $G$ on
+$V_\ell$ is a 1-dimensional $\ell$-adic representation of $G$. The character
 $\chi_\ell$ takes its values in the group of units $U$ of $\Z_\ell$; by
 definition
-$$ g(z) = z^{\chi_\ell(g)} \quad \text{if } g \in \G, \; z^{\ell^m} = 1. $$
+$$ g(z) = z^{\chi_\ell(g)} \quad \text{if } g \in G, \; z^{\ell^m} = 1. $$
 
 \subsubsection{Elliptic curves}
 Let $\ell \ne \char(K)$. Let $E$ be an elliptic
@@ -129,10 +129,10 @@ K)$, and let
 	T_\ell(E) = \invlim_m E_m, \qquad V_\ell(E) = T_\ell(E)
 	\otimes_{\Z_\ell} \Q_\ell.
 \]
-The Tate module $T_\ell(E)$ is a free $\Z_\ell$-module on which $\G =
+The Tate module $T_\ell(E)$ is a free $\Z_\ell$-module on which $G =
 \Gal(\sepcl K / K)$ acts (cf.\ \cite{12}, chap.\ VII). The corresponding
-homomorphism $\pi_\ell \colon \G \to \Aut(V_\ell(E))$ is an $\ell$-adic
-representation of $\G$. The group $G_\ell = \Img(\pi_\ell)$ is a closed
+homomorphism $\pi_\ell \colon G \to \Aut(V_\ell(E))$ is an $\ell$-adic
+representation of $G$. The group $G_\ell = \Img(\pi_\ell)$ is a closed
 subgroup of $\Aut(T_\ell(E))$, a 4-dimensional Lie group isomorphic to $\GL(2,
 \Z_\ell)$. (In chapter IV, we will determine the Lie algebra of $G_\ell$, under
 the assumption that $K$ is a number field.)
@@ -150,7 +150,7 @@ Hence $\det(\pi_\ell)$ is the character $\chi_\ell$ defined in example 1.
 Let $A$ be an abelian variety over $K$ of dimension $d$. If $\ell \ne
 \char(K)$, we define $T_\ell(A)$, $V_\ell(A)$ in the same way as in example 2.
 The group $T_\ell(A)$ is a free $\Z_\ell$-module of rank $2d$ (cf.\ \cite{12},
-\textit{loc.\ cit.}) on which $\G = \Gal(\sepcl K/K)$ acts.
+\textit{loc.\ cit.}) on which $G = \Gal(\sepcl K/K)$ acts.
 
 \subsubsection{Cohomology representations}
 Let $X$ be an algebraic variety defined over the field $K$, and let $\sepcl X =
@@ -305,12 +305,16 @@ Show that the boundary of $X$ has measure zero
 with respect to the Haar measure of $G$.
 
 \subsection{Rational \texorpdfstring{$\ell$}{l}-adic representations}
-Let $\rho$ be an $\ell$-adic representation of the number field $K$. If $v \in M_K^0$, and if $v$ is unramified with respect to $\rho$, we let $P_{v,\rho}(T)$ denote the polynomial $\det(1 - F_{v,\rho} T)$.
+\label{sec:I_23}
+Let $\rho$ be an $\ell$-adic representation of the number field $K$. If $v \in
+M_K^0$, and if $v$ is unramified with respect to $\rho$, we let $P_{v,\rho}(T)$
+denote the polynomial $\det(1 - F_{v,\rho} T)$.
 
 \begin{definition}
-The $\ell$-adic representation $\rho$ is said to be rational (resp. integral) if there exists a finite subset $S$ of $M_K^0$ such that
+The $\ell$-adic representation $\rho$ is said to be rational (resp.\ integral)
+if there exists a finite subset $S$ of $M_K^0$ such that
 \begin{enumerate}[(a)]
-	\item Any element of $M_K^0 - S$
+	\item Any element of $M_K^0 \setminus S$.
 \todo[color=pink!40]{{\color{pink}$\heartsuit$} Ver si la notación de eliminar conjunto está bien}
 	\item 
 \end{enumerate}

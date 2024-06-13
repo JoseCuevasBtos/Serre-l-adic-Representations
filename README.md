@@ -30,9 +30,9 @@ Here's an indepth list of the chapters and sections, and their current status:
         - [x] 1.2 Cutting down T
         - [ ] 1.3 Enlarging groups
     - [ ] 2 Construction of Tm and Sm
-        - [ ] 2.1 Ideles and idele-classes
+        - [x] 2.1 Ideles and idele-classes
         - [ ] 2.2 The groups Tm and Sm
-        - [ ] 2.3 The canonical l-adic representation with values in Sm
+        - [x] 2.3 The canonical l-adic representation with values in Sm
         - [ ] 2.4 Linear representations of Sm
         - [ ] 2.5 l-adic representations associated to a linear representation of Sm
         - [ ] 2.6 Alternative construction

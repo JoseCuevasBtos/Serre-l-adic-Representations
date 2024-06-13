@@ -1,4 +1,4 @@
-\chapter{The groups \texorpdfstring{$S_m$}{Sm}}
+\chapter{The groups \texorpdfstring{$S_{\mathfrak{m}}$}{Sm}}
 
 Throughout this chapter,
 \dpage
@@ -53,3 +53,247 @@ $\prod_{\sigma \in \Gamma} [\sigma]^{n_\sigma} = 1$, for all $x \in E$.
 \subsection{Enlarging groups}
 \label{sec:II_13}
 \todo{Belen}
+
+\section{Construction of \texorpdfstring{$T_{\mathfrak{m}}$}{Tm} and
+\texorpdfstring{$S_{\mathfrak{m}}$}{Sm}}
+
+\subsection{Idèles and idèles-classes}
+We defined in Chapter~\ref{ch:i}, \ref{sec:I_21} the set $M_K^0$ of finite
+places of the number field $K$. Let now $M_K^\infty$ be the set of equivalence
+classes of archimedian absolute values of $K$, and let $M_K$ be the union of
+$M_K$ and $M_K^\infty$. If $v \in M_K$ then $K_v$ denotes the \emph{completion}
+of $K$ with respect to $v$. For $v \in M_K^\infty$ we have $K_v = \R$ or $K_v =
+\C$, and $K$ is ultrametric if $v \in M_K^0$. For $v \in M_K^0$, the group of
+units of $K_v$ is denoted by $U_v$. The \strong{idèle group} $I$ of $K$
+is the subgroup of
+\[
+	\prod_{v \in M_K} K_v^\times,
+\]
+consisting of the families $(a_v)$ with $a_v \in U_v$, for almost all $v \in
+M_K^0$; it is given a topology by decreeing that the subgroup (with the product
+topology)
+\[
+	\prod_{v \in M_K^\infty} K_v^\times \times \prod_{v \in M_K^0} U_v
+\]
+be open. We embed $K^\times$ into $I$ by sending $a \in K^\times$ onto the
+idèle $(a_v)$, where $a_v = a$ for all $v$. The topology induced on $K$ is the
+discrete topology. The quotient group $C_K = I/K^\times$ is called the
+\strong{idèle class group} of $K$.
+(For all this, see \citeauthor{6}~\cite{6}, \citeauthor{13}~\cite{13} or
+\citeauthor{44}~\cite{44}.)
+
+Let $S$ be a finite subset of $M_K^0$.
+\dpage
+Then by a \strong{modulus of support $S$} we mean a family $\mathfrak{m} =
+(m_v)_{v\in S}$ where the $m_v$ are integers $\ge 1$.  If $v \in M_K$ and
+$\mathfrak{m}$ is a modulus of support $S$, we let $U_{v, \mathfrak{m}}$ denote
+the connected component of $K_v^\times$ if $v \in M_K^\infty$, the subgroup of
+$U_v$ consisting of those $u \in U_v$ for which $v(1-u) \ge m_v$ if $v \in S$,
+and $U_v$ if $v \in M_K^0 \setminus S$. The group $U_{\mathfrak{m}} = \prod_{v}
+U_{v, \mathfrak{m}}$ is an \emph{open subgroup} of $I$.  If $E$ is the group of
+units of $K$, let $E_{\mathfrak{m}} = E \cap U_{\mathfrak{m}}$. The subgroup
+$E_{\mathfrak{m}}$ is of finite index in $E$.
+(Conversely, by a theorem of Chevalley (\cite{8}, see also \cite{24},
+n\textsuperscript{o} 3.5) every subgroup of finite index in $E$ contains an
+$E_{\mathfrak{m}}$ for a suitable modulus $\mathfrak{m}$.)
+
+Let $I_{\mathfrak{m}}$ be the quotient $I/U_{\mathfrak{m}}$ and
+$C_{\mathfrak{m}}$ the quotient $I/K^\times U_{\mathfrak{m}} = C/$(Image of
+$U_{\mathfrak{m}}$ in $C_{\mathfrak{m}}$). One then has the exact sequence:
+\[\begin{tikzcd}[sep=large]
+	1 \rar & K^\times/E_{\mathfrak{m}} \rar & I_{\mathfrak{m}} \rar &
+	C_{\mathfrak{m}} \rar & 1
+\end{tikzcd}\]
+\emph{The group $C_{\mathfrak{m}}$ is finite}; in fact, the image of
+$U_{\mathfrak{m}}$ in $C$ is open, hence contains the connected component $D$
+of $C$, and the group $C/D$ is known to be compact (see \cite{13}, \cite{44}).
+Moreover, any open subgroup of $I$ contains one of the $U_{\mathfrak{m}}$'s,
+hence \emph{$C/D$ is the projective limit} of the $C_{\mathfrak{m}}$'s. Class
+field theory (cf.\ for instance \citeauthor{6}~\cite{6}), gives \emph{an
+isomorphism of $C/D = \invlim C_{\mathfrak{m}}$ onto the Galois group $\abcl
+G$} of the maximal abelian extension of $K$.
+
+\begin{obs}
+A more classical definition of $C_{\mathfrak{m}}$ is as follows. Let $\Id_S$ be
+the group of fractional ideals of $K$ prime to $S$, and $P$ the subgroup of
+principal ideals $(\gamma)$, where $\gamma$ is totally positive and
+\dpage
+$\gamma \equiv 1 \mod{\mathfrak{m}}$ (i.e.\ $\gamma$ belongs to $U_{v,
+\mathfrak{m}}$ for all $v \in S$ and $v \in M_K^\infty$). Let
+$\Cl_{\mathfrak{m}} = \Id_S/P_{S, \mathfrak{m}}$. We have the exact sequence:
+\[\begin{tikzcd}[sep=large]
+	1 \rar & P_{S, \mathfrak{m}} \rar & \Id_S \rar & \Cl_{\mathfrak{m}}
+	\rar & 1.
+\end{tikzcd}\]
+For each \vec $a = \prod_{v\notin S} v^{a_v} \in \Id_S$, choose an idèle
+$\alpha = (\alpha_v)$, with $\alpha_v \in U_{v, \mathfrak{m}}$ if $v \in S$ or
+$v \in M_K^\infty$, and $v(\alpha_v) = a_v$ if $v \in M_K^\infty \setminus S$.
+The image of $\alpha$ in $I_{\mathfrak{m}} = I/U_{\mathfrak{m}}$ depends only
+on $\vec a$. We then get a homomorphism $g \colon \Id_S \to I_{\mathfrak{m}}$.
+One checks readily that $g$ extends to a commutative diagram
+% https://q.uiver.app/#q=WzAsMTAsWzAsMCwiXFxidWxsZXQiXSxbMSwwLCJcXGJ1bGxldCJdLFsxLDEsIlxcYnVsbGV0Il0sWzAsMSwiXFxidWxsZXQiXSxbMiwxLCJcXGJ1bGxldCJdLFsyLDAsIlxcYnVsbGV0Il0sWzMsMCwiXFxidWxsZXQiXSxbMywxLCJcXGJ1bGxldCJdLFs0LDEsIlxcYnVsbGV0Il0sWzQsMCwiXFxidWxsZXQiXSxbMCwxXSxbMSwyXSxbMywyXSxbMiw0XSxbMSw1XSxbNSw2XSxbNSw0LCJnIl0sWzYsNywiZiJdLFs0LDddLFs3LDhdLFs2LDldXQ==
+\[\begin{tikzcd}[row sep=large]
+	1 & P_{S, \mathfrak{m}} & \Id_S & \Cl_{\mathfrak{m}} & 1 \\
+	1 & K^\times/E_{\mathfrak{m}} & I_{\mathfrak{m}} & C_{\mathfrak{m}} & 1
+	\arrow[from=1-1, to=1-2]
+	\arrow[from=1-2, to=1-3]
+	\arrow[from=1-2, to=2-2]
+	\arrow[from=1-3, to=1-4]
+	\arrow["g", from=1-3, to=2-3]
+	\arrow[from=1-4, to=1-5]
+	\arrow["f", from=1-4, to=2-4]
+	\arrow[from=2-1, to=2-2]
+	\arrow[from=2-2, to=2-3]
+	\arrow[from=2-3, to=2-4]
+	\arrow[from=2-4, to=2-5]
+\end{tikzcd}\]
+and that $f\colon \Cl_{\mathfrak{m}} \to C_{\mathfrak{m}}$ \emph{is an
+isomorphism:} hence $C$ can be identified with the ideal class group mod
+$\mathfrak{m}$ (and this shows again that it is finite).
+\end{obs}
+
+\subsection{The groups \texorpdfstring{$T_{\mathfrak{m}}$}{Tm} and
+\texorpdfstring{$S_{\mathfrak{m}}$}{Sm}}
+\label{sec:II_22}
+\todo{Belen.}
+
+\subsection{The canonical \texorpdfstring{$\ell$}{l}-adic representation with
+values in \texorpdfstring{$S_{\mathfrak{m}}$}{Sm}}
+Let $\mathfrak{m}$ be a modulus, and let $\ell$ be a prime number. Let $e\colon
+I \to I_{\mathfrak{m}} \to S_{\mathfrak{m}}(\Q)$ be the homomorphism defined in
+\ref{sec:II_22}. Let $\pi\colon T \to S_{\mathfrak{m}}$ be the algebraic
+morphism $T \to T_{\mathfrak{m}} \to S_{\mathfrak{m}}$; by taking points with
+values in $Q_\ell$, $\pi$ defines a homomorphism
+\[
+	\pi_\ell \colon T(\Q_\ell) \longrightarrow S_{\mathfrak{m}}(\Q_\ell)
+\]
+Since $K \otimes \Q_\ell = \prod_{v\mid\ell} K_v$, the group $T(\Q_\ell)$ can
+be identified with $K_\ell^\times = \prod_{v\mid\ell} K_v^\times$, and is
+therefore a direct factor of the idele group $I$.  Let $\pr_\ell$ denote the
+projection of $I$ onto this factor. The map
+\[
+	\alpha_\ell = \pi_\ell \circ \pr_\ell \colon I \longrightarrow T(\Q_\ell)
+	\longrightarrow S_{\mathfrak{m}}(\Q_\ell)
+\]
+is a continuous homomorphism.
+\begin{lem}
+	$\alpha_\ell$ and $\varepsilon$ coincide on $K^\times$.
+\end{lem}
+This is trivial from the commutativity of the diagram (**) of \ref{sec:II_22}.
+
+Now, let $\varepsilon_\ell \colon I \to S_{\mathfrak{m}}(\Q_\ell)$ be defined by
+\dpage
+\begin{align}
+	\varepsilon_\ell(\vec a) &= \varepsilon(\vec a) \alpha_\ell(\vec a^{-1})
+	\tag{$***$}\label{eqn:II_23_star} \\
+	\text{i.e.} \quad \varepsilon_\ell &= \varepsilon \cdot \alpha_\ell^{-1}.
+	\notag
+\end{align}
+(If $\vec a \in I$, write $a_\ell$ the $\ell$-component of $\vec a$. Then
+\[
+	\varepsilon_\ell(\vec a) = \varepsilon(\vec a) \pi_\ell(a_\ell^{-1}).)
+\]
+By the lemma, $\varepsilon_\ell$ is trivial on $K$ and, hence, defines a map
+$C \to S_{\mathfrak{m}}(\Q_\ell)$; since $S_{\mathfrak{m}}(\Q_\ell)$ is
+totally disconnected (it is an $\ell$-adic Lie group), the latter homomorphism is
+trivial on the connected component $D$ of $C$. We have already recalled that $C/D$
+may be identified with the Galois group $\abcl G$ of the maximal abelian
+extension of $K$. So we end up with a homomorphism $\varepsilon_\ell \colon
+\abcl G \to S_{\mathfrak{m}}(\Q_\ell)$, i.e.\ with an \emph{$\ell$-adic
+representation of $K$ with values in $S_{\mathfrak{m}}$} (cf.\ 
+Chap.~\ref{ch:i}, \ref{sec:I_23}).
+
+This representation is rational in the sense of Chapter~\ref{ch:i},
+\ref{sec:I_23}.  More precisely, let $v \notin \Supp(\mathfrak{m})$, and let
+$f_v \in I$ be an idèle which is a uniformizing parameter at $v$, and which is
+equal to 1 everywhere else; let $F_v = \varepsilon(f_v)$ be the image of $f_v$
+in $S_{\mathfrak{m}}(\Q_\ell)$. With these notations we have:
+
+\begin{prop}
+\begin{enumerate}[a)]
+\item The representation $\varepsilon_\ell, \colon \abcl G \to
+	S_{\mathfrak{m}}(\Q_\ell)$ is a rational representation with values in
+	$S_{\mathfrak{m}}$.
+\item $\varepsilon_\ell$ is unramified outside $\Supp(\mathfrak{m}) \cup
+	S_\ell$, where $S_\ell = \{ v : p_v = \ell \}$.
+\item If $v \notin \Supp(\mathfrak{m}) \cup S_\ell$,
+	\dpage
+	then the Frobenius element $F_{v, \varepsilon_\ell}$ (cf.\ 
+	Chap.~\ref{ch:i}, \ref{sec:I_23}) is equal to $F_v \in
+	S_{\mathfrak{m}}(\Q_\ell)$.
+\end{enumerate}
+\end{prop}
+\begin{proof}
+It is known that the class field isomorphism 
+\begin{tikzcd}[cramped, sep=small]
+	C/D \rar["\sim"] & \abcl G
+\end{tikzcd}
+maps $K_v^\times$ (resp.\ $U_v$) onto a dense subgroup of the decomposition
+group of $v$ in $\abcl G$ (resp.\ onto the inertia group of $v$ in $\abcl G$),
+and that a uniformizing element $f_v$ of $K_v^\times$ is mapped onto the
+Frobenius class of $v$.
+
+If $v \notin \Supp(\mathfrak{m})$ and $a \in U_v$, then $\varepsilon(a) = 1$;
+if moreover $p_v \ne \ell$, $\alpha_\ell(a) = 1$, hence $\varepsilon_\ell(a) =
+1$ and $\varepsilon_\ell$ is unramified at $v$; this proves b). For such a $v$,
+we have $\varepsilon_\ell(f_v) = \varepsilon(f_v) = F_v$; hence
+c), and a) follows from c).
+\end{proof}
+
+\begin{corp}
+The representations $\varepsilon$ form a system of strictly compatible
+$\ell$-adic representations with values in $S_{\mathfrak{m}}$.
+\end{corp}
+We also see that the exceptional set of this system is contained
+in $\Supp(\mathfrak{m})$; for an example where it is different from $\Supp(\mathfrak{m})$,
+see Exercise~\ref{exr:II_23_2}.
+
+\begin{obs}
+By construction, $\varepsilon_\ell\colon I \to S_{\mathfrak{m}}(\Q_\ell)$ is
+given by $x \mapsto \pi_\ell(x^{-1})$ on the open subgroup $U_{\ell,
+\mathfrak{m}} = \prod_{v\mid\ell} U_{v, \mathfrak{m}}$ of $K_\ell^\times$.
+Hence, $\Img(\varepsilon_\ell)$ contains $\pi_\ell(U_{\ell, \mathfrak{m}})
+\subset T_{\mathfrak{m}}(\Q_\ell) \subset S_{\mathfrak{m}}(\Q_\ell)$, and is an
+\emph{open subgroup} of $S_{\mathfrak{m}}(\Q_\ell)$. This open subgroup maps
+onto $C_{\mathfrak{m}}$, as remarked above. These properties imply, in
+particular, that $\Img(\varepsilon_\ell)$ is \emph{Zariski-dense} in
+S_{\mathfrak{m}}.
+\end{obs}
+
+\subsubsection*{Exercises}
+\dpage
+\begin{enumerate}[label=(\arabic*), ref=\arabic*]
+\item\label{exr:II_23_1}
+	Let $K = \Q$, $\Supp(\mathfrak{m}) = \emptyset$.
+\begin{enumerate}[a)]
+\item Show that $E_{\mathfrak{m}} = \{ 1 \}$, $C_{\mathfrak{m}} = \{ 1 \}$,
+	hence $T_{\mathfrak{m}} = S_{\mathfrak{m}} = \GG_m$ and
+	$S_{\mathfrak{m}}(\Q) = \Q^\times$, $S_{\mathfrak{m}}(\Q_\ell) =
+	\Q_\ell^\times$.
+\item Show that $I$ is the direct product of its subgroups $I_{\mathfrak{m}}$
+	and $\Q^\times$; hence any $\vec a \in I$ may be written as
+	\[
+		\vec a = u\cdot \gamma, \qquad u \in U_{\mathfrak{m}},
+		\; \gamma \in \Q^\times.
+	\]
+	Show that, if $\vec a = (a_p)$, one has
+	\[
+		\varepsilon(\vec a) = \gamma = \sgn(a_\infty) \prod_{p}
+		p^{v_p(a_p)}.
+	\]
+\item Show that
+	\begin{align*}
+		\rho_\ell(\vec a) &= \gamma \cdot a_\ell^{-1}, \\
+		\intertext{and}
+		F_p &= p.
+	\end{align*}
+\item Show that $\rho_\ell$ coincides with the character $\chi_\ell$ of
+	Chap.~\ref{ch:i}, \ref{sec:I_12}.
+\end{enumerate}
+\item\label{exr:II_23_2}
+	Let $K = \Q$, $\Supp(\mathfrak{m}) = \{ 2 \}$ and $m_2 = 1$. Show that
+	the groups $E_{\mathfrak{m}}$, $C_{\mathfrak{m}}$, $T_{\mathfrak{m}}$,
+	$S_{\mathfrak{m}}$ coincide with those of Exercise~\ref{exr:II_23_1},
+	hence that the exceptional set of the corresponding system is empty.
+\end{enumerate}
+
