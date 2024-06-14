@@ -1,6 +1,6 @@
 # General standards for programming
 
-1. Don't use non-standard commands (such as `\fp$` for `\mathfrak{p}`).
+1. Don't use non-standard commands (such as `\fp` for `\mathfrak{p}`).
 1. On the `template.sty` at the very beginning there are some customizable
    commands, like `\algcl` for the algebraic closure.
 1. Use `\dpage` for marking page breaks in the original document.
@@ -10,6 +10,7 @@
 1. Preserve the maximum of 80 characters per line inside the main matter (in
    `template.sty` it may be exceeded).
 1. For inline math use `$...$`, for display math use `\[...\]`.
+1. Avoid the use of `\displaystyle` unless strictly necessary. If an equation is inline and too big, just make it display.
 1. Use `\strong{...}` for definitions, and `\emph{...}` for highlights.
    **Never** use `\textbf` nor `\textit`.
 1. Follow definitions with `\index{}`.
