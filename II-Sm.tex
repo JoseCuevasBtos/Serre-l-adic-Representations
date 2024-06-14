@@ -13,16 +13,16 @@ abelian rational representations are of the form described here.
 \section{Preliminaries}
 
 \subsection{The torus $\TT$}
-Let $\TT = \WRes_{K/\Q}(\GG_{m, K})$ be the algebraic group over $\Q$, obtained
-from the multiplicative group $\GG_m$ by restriction of scalars from $K$ to
-$\Q$, cf.\ \citeauthor{43}~\cite{43}, \S 1.3. If $A$ is a commutative
-$\Q$-algebra, the points of $\TT$ with values in $A$ form by definition the
-multiplicative group $(K \otimes_\Q A)^\times$ of invertible elements of $K
-\otimes_\Q A$.
+Let $\TT = \WRes_{K/\Q}(\GG_{m, K})$\index{Tz@$\TT = \WRes_{K/\Q}(\GG_{m, K})$}
+be the algebraic group over $\Q$, obtained from the multiplicative group
+$\GG_m$\index{Gm@$\GG_m$} by restriction of scalars from $K$ to $\Q$, cf.\ 
+\citeauthor{43}~\cite{43}, \S 1.3. If $A$ is a commutative $\Q$-algebra, the
+points of $\TT$ with values in $A$ form by definition the multiplicative group
+$(K \otimes_\Q A)^\times$ of invertible elements of $K \otimes_\Q A$.
 In particular, $\TT(\Q) = K^\times$. If $d = [K : \Q]$, the group $\TT$ is a
-torus of dimension $d$; this means that the group $\TT_{/\algcl\Q} = \TT
-\otimes_\Q \algcl\Q$ obtained from $\TT$ by extending the scalars from $\Q$ to
-$\algcl\Q$, is isomorphic
+\strong{torus}\index{Torus} of dimension $d$; this means that the group
+$\TT_{/\algcl\Q} = \TT \otimes_\Q \algcl\Q$ obtained from $\TT$ by extending
+the scalars from $\Q$ to $\algcl\Q$, is isomorphic
 \dpage
 to...
 \todo{Belen}
@@ -59,13 +59,14 @@ $\prod_{\sigma \in \Gamma} [\sigma]^{n_\sigma} = 1$, for all $x \in E$.
 
 \subsection{Idèles and idèles-classes}
 We defined in Chapter~\ref{ch:i}, \ref{sec:I_21} the set $M_K^0$ of finite
-places of the number field $K$. Let now $M_K^\infty$ be the set of equivalence
-classes of archimedian absolute values of $K$, and let $M_K$ be the union of
-$M_K$ and $M_K^\infty$. If $v \in M_K$ then $K_v$ denotes the \emph{completion}
-of $K$ with respect to $v$. For $v \in M_K^\infty$ we have $K_v = \R$ or $K_v =
-\C$, and $K$ is ultrametric if $v \in M_K^0$. For $v \in M_K^0$, the group of
-units of $K_v$ is denoted by $U_v$. The \strong{idèle group} $I$ of $K$
-is the subgroup of
+places of the number field $K$. Let now $M_K^\infty$\index{MKinf@$M_K^\infty$}
+be the set of equivalence classes of archimedian absolute values of $K$, and
+let $M_K$\index{MK@$M_K$} be the union of $M_K$ and $M_K^\infty$. If $v \in
+M_K$ then $K_v$ denotes the \emph{completion} of $K$ with respect to $v$. For
+$v \in M_K^\infty$ we have $K_v = \R$ or $K_v = \C$, and $K$ is ultrametric if
+$v \in M_K^0$. For $v \in M_K^0$, the group of units of $K_v$ is denoted by
+$U_v$.\index{Uv@$U_v$} The \strong{idèle group}\index{Idèle} $I$\index{I@$I$}
+of $K$ is the subgroup of
 \[
 	\prod_{v \in M_K} K_v^\times,
 \]
@@ -77,8 +78,9 @@ topology)
 \]
 be open. We embed $K^\times$ into $I$ by sending $a \in K^\times$ onto the
 idèle $(a_v)$, where $a_v = a$ for all $v$. The topology induced on $K$ is the
-discrete topology. The quotient group $C_K = I/K^\times$ is called the
-\strong{idèle class group} of $K$.
+discrete topology. The quotient group $C_K = I/K^\times$\index{class
+group@$C_K$} is called the \strong{idèle class group}\index{Idèle class} of
+$K$.
 (For all this, see \citeauthor{6}~\cite{6}, \citeauthor{13}~\cite{13} or
 \citeauthor{44}~\cite{44}.)
 
@@ -86,32 +88,35 @@ Let $S$ be a finite subset of $M_K^0$.
 \dpage
 Then by a \strong{modulus of support $S$} we mean a family $\mathfrak{m} =
 (m_v)_{v\in S}$ where the $m_v$ are integers $\ge 1$.  If $v \in M_K$ and
-$\mathfrak{m}$ is a modulus of support $S$, we let $U_{v, \mathfrak{m}}$ denote
-the connected component of $K_v^\times$ if $v \in M_K^\infty$, the subgroup of
-$U_v$ consisting of those $u \in U_v$ for which $v(1-u) \ge m_v$ if $v \in S$,
-and $U_v$ if $v \in M_K^0 \setminus S$. The group $U_{\mathfrak{m}} = \prod_{v}
-U_{v, \mathfrak{m}}$ is an \emph{open subgroup} of $I$.  If $E$ is the group of
-units of $K$, let $E_{\mathfrak{m}} = E \cap U_{\mathfrak{m}}$. The subgroup
-$E_{\mathfrak{m}}$ is of finite index in $E$.
+$\mathfrak{m}$ is a modulus of support $S$, we let $U_{v, \mathfrak{m}}$%
+\index{Uvm@$U_{v, \mathfrak{m}}$} denote the connected component of
+$K_v^\times$ if $v \in M_K^\infty$, the subgroup of $U_v$ consisting of those
+$u \in U_v$ for which $v(1-u) \ge m_v$ if $v \in S$, and $U_v$ if $v \in M_K^0
+\setminus S$. The group $U_{\mathfrak{m}} = \prod_{v} U_{v, \mathfrak{m}}$ is
+an \emph{open subgroup} of $I$.  If $E$ is the group of units of $K$, let
+$E_{\mathfrak{m}} = E \cap U_{\mathfrak{m}}$.\index{Em@$E_{\mathfrak{m}}$} The
+subgroup $E_{\mathfrak{m}}$ is of finite index in $E$.
 (Conversely, by a theorem of Chevalley (\cite{8}, see also \cite{24},
 n\textsuperscript{o} 3.5) every subgroup of finite index in $E$ contains an
 $E_{\mathfrak{m}}$ for a suitable modulus $\mathfrak{m}$.)
 
-Let $I_{\mathfrak{m}}$ be the quotient $I/U_{\mathfrak{m}}$ and
-$C_{\mathfrak{m}}$ the quotient $I/K^\times U_{\mathfrak{m}} = C/$(Image of
-$U_{\mathfrak{m}}$ in $C_{\mathfrak{m}}$). One then has the exact sequence:
+Let $I_{\mathfrak{m}}$\index{Im@$I_{\mathfrak{m}}$} be the quotient
+$I/U_{\mathfrak{m}}$ and $C_{\mathfrak{m}}$\index{Cm@$C_{\mathfrak{m}}$} the
+quotient $I/K^\times U_{\mathfrak{m}} = C/$(Image of $U_{\mathfrak{m}}$ in
+$C_{\mathfrak{m}}$). One then has the exact sequence:
 \[\begin{tikzcd}[sep=large]
 	1 \rar & K^\times/E_{\mathfrak{m}} \rar & I_{\mathfrak{m}} \rar &
 	C_{\mathfrak{m}} \rar & 1
 \end{tikzcd}\]
 \emph{The group $C_{\mathfrak{m}}$ is finite}; in fact, the image of
-$U_{\mathfrak{m}}$ in $C$ is open, hence contains the connected component $D$
-of $C$, and the group $C/D$ is known to be compact (see \cite{13}, \cite{44}).
-Moreover, any open subgroup of $I$ contains one of the $U_{\mathfrak{m}}$'s,
-hence \emph{$C/D$ is the projective limit} of the $C_{\mathfrak{m}}$'s. Class
-field theory (cf.\ for instance \citeauthor{6}~\cite{6}), gives \emph{an
-isomorphism of $C/D = \invlim C_{\mathfrak{m}}$ onto the Galois group $\abcl
-G$} of the maximal abelian extension of $K$.
+$U_{\mathfrak{m}}$ in $C$ is open, hence contains the connected component
+$D$\index{D@$D$} of $C$, and the group $C/D$ is known to be compact (see
+\cite{13}, \cite{44}).  Moreover, any open subgroup of $I$ contains one of the
+$U_{\mathfrak{m}}$'s, hence \emph{$C/D$ is the projective limit} of the
+$C_{\mathfrak{m}}$'s. Class field theory (cf.\ for instance
+\citeauthor{6}~\cite{6}), gives \emph{an isomorphism of $C/D = \invlim
+C_{\mathfrak{m}}$ onto the Galois group $\abcl G$} of the maximal abelian
+extension of $K$.
 
 \begin{obs}
 A more classical definition of $C_{\mathfrak{m}}$ is as follows. Let $\Id_S$ be
@@ -159,11 +164,12 @@ $\mathfrak{m}$ (and this shows again that it is finite).
 
 \subsection{The canonical \texorpdfstring{$\ell$}{l}-adic representation with
 values in \texorpdfstring{$S_{\mathfrak{m}}$}{Sm}}
-Let $\mathfrak{m}$ be a modulus, and let $\ell$ be a prime number. Let $e\colon
-I \to I_{\mathfrak{m}} \to S_{\mathfrak{m}}(\Q)$ be the homomorphism defined in
-\ref{sec:II_22}. Let $\pi\colon T \to S_{\mathfrak{m}}$ be the algebraic
-morphism $T \to T_{\mathfrak{m}} \to S_{\mathfrak{m}}$; by taking points with
-values in $Q_\ell$, $\pi$ defines a homomorphism
+\label{sec:II_23}
+Let $\mathfrak{m}$ be a modulus, and let $\ell$ be a prime number. Let
+$\varepsilon\colon I \to I_{\mathfrak{m}} \to S_{\mathfrak{m}}(\Q)$ be the
+homomorphism defined in \ref{sec:II_22}. Let $\pi\colon T \to S_{\mathfrak{m}}$
+be the algebraic morphism $T \to T_{\mathfrak{m}} \to S_{\mathfrak{m}}$; by
+taking points with values in $\Q_\ell$, $\pi$ defines a homomorphism
 \[
 	\pi_\ell \colon T(\Q_\ell) \longrightarrow S_{\mathfrak{m}}(\Q_\ell)
 \]
@@ -181,7 +187,8 @@ is a continuous homomorphism.
 \end{lem}
 This is trivial from the commutativity of the diagram (**) of \ref{sec:II_22}.
 
-Now, let $\varepsilon_\ell \colon I \to S_{\mathfrak{m}}(\Q_\ell)$ be defined by
+Now, let \index{el@$\varepsilon_\ell$}$\varepsilon_\ell \colon I \to
+S_{\mathfrak{m}}(\Q_\ell)$ be defined by
 \dpage
 \begin{align}
 	\varepsilon_\ell(\vec a) &= \varepsilon(\vec a) \alpha_\ell(\vec a^{-1})
@@ -297,3 +304,167 @@ S_{\mathfrak{m}}.
 	hence that the exceptional set of the corresponding system is empty.
 \end{enumerate}
 
+\subsection{Linear representations of \texorpdfstring{$S_{\mathfrak{m}}$}{Sm}}
+We recall first some well known facts on representations.
+
+\begin{enumerate}[a)]
+\item Let $k$ be a field of characteristic 0; let $H$ be an affine
+	\dpage
+	commutative algebraic group over $k$. Let $X(H) = \Hom_{\algcl
+	k}(H_{/\algcl k}, \GG_{m, \algcl k})$ be the group of characters of $H$
+	(of degree 1). Here we write the characters of $X(H)$ multiplicatively.
+	The group $G = \Gal(\algcl k/k)$ acts on $X(H)$.
+
+	Let $\Lambda$ be the affine algebra of $H$, and let $\algcl\Lambda =
+	\Lambda \otimes_k \algcl k$ be the one of $H_{/\algcl k}$. Every
+	element $\chi \in X(H)$ can be identified with an invertible element of
+	$\algcl\Lambda$. Hence, by linearity, a homomorphism
+	\[
+		\alpha \colon \algcl k[X(H)] \longrightarrow \algcl \Lambda
+	\]
+	where $\algcl k[X(H)]$ is the group algebra of $X(H)$ over $\algcl k$.
+	This is a $G$-homomorphism if the action of $G$ is defined by
+	\[
+		s\left( \sum_{\chi} a_\chi \chi \right) = \sum s(a_\chi) s(\chi)
+	\]
+	for $a_\chi \in \algcl k$ and $\chi \in X(H)$. It is well-known (linear
+	independence of characters) that $\alpha$ is injective.  It is
+	bijective if and only if $H$ is a group of multiplicative type (cf.\ 
+	\ref{sec:II_13}, remark 2). Hence we may identify $\algcl k[X(H)]$ with
+	a subalgebra of $\Lambda$.
+
+\item Let $V$ be a finite-dimensional $k$-vector space and let
+	\[
+		\phi \colon H \longrightarrow \GL_V
+	\]
+	be a \emph{linear representation} of $H$ into $V$. Assume $\phi$ is
+	\emph{semi-simple} (this is always the case if $H$ is of multiplicative
+	type). We associate to $\phi$ its \strong{trace}\index{Trace}
+	\[
+		\theta_\phi = \sum_{\chi} n_\chi(\phi) \, \chi
+	\]
+	in $\Z[X(H)]$, where $n_\chi(\phi)$ is the multiplicity of $\chi$ in
+	the decomposition of $\chi$ over $\algcl k$.
+
+	We have $\theta_\phi(h) = \Tr(\phi(h))$ for any point $h$ of $H$
+	\dpage
+	(with value in any commutative $k$-algebra). Let $\Rep_k(H)$ be the set
+	of isomorphism classes of linear semi-simple representations of $H$. If
+	$k_1$ is an extension of $k$, then scalar extension from $k$ to $k_1$
+	defines a map $\Rep_k(H) \to \Rep_{k_1}(H_{/k_1})$ which is easily seen
+	to be \emph{injective}. We say that an element of\break
+	\emph{$\Rep_{k_1}(H_{/k_1})$ can be defined over $k$}, if it is in the
+	image of this map.
+\end{enumerate}
+\begin{prop}
+
+The map $\phi \mapsto \theta_\phi$ defines a bijection between
+$\Rep_k(H)$ and the set of elements $\theta = \sum n_\chi \, \chi$ of
+$\Z[X(H)]$ which satisfy:
+\begin{enumerate}[(a)]
+	\item $\theta$ is invariant by $G$ (i.e.\ $n_\chi =
+		n_{s(\chi)}$ for all $s \in G$, $\chi \in X(H)$).
+	\item $n_\chi \ge 0$ for every $\chi \in X(H)$.
+\end{enumerate}
+\end{prop}
+\begin{proof}
+	The injectivity of the map $\phi \mapsto \theta_\phi$ is
+	well-known (and does not depend on the commutativity of $H$). To prove
+	surjectivity, consider first the case where $\theta$ has the form
+	$\theta = \sum_{i} \chi^{(i)}$ where $\chi^{(i)}$ is a full set of
+	different conjugates of a character $\chi \in X(H)$. If $G(\chi)$ is
+	the subgroup of $G$ fixing $\chi$, then
+	\begin{equation}
+		\theta = \sum_{s \in G/G(\chi)} s(\chi).
+		\tag{$*$}
+		\label{eqn:II_24star}
+	\end{equation}
+	The fixed field $k_\chi$ of $G(\chi)$ in $k$ is the smallest subfield
+	of $k$ such that $\chi \in \Lambda \otimes k_\chi$. Consider $\chi$ as
+	a representation of degree 1 of $H_{/k_\chi}$. One gets, by restriction
+	of scalars to $k$, a representation
+	\dpage
+	$\phi$ of $H$ of degree $[k_\chi : k]$. One sees easily that the
+	trace $\theta_\phi$ of $\phi$ is equal to $\theta$. The
+	surjectivity of $\phi \mapsto \theta_\phi$ now follows from the
+	fact that any $\theta$ satisfying (a) and (b) is a sum of elements of
+	the form \eqref{eqn:II_24star} above.
+\end{proof}
+
+\begin{corp}
+In order that $\phi_1 \in \Rep_{k_1}(H_{/k_1})$ can be defined over $k$, it
+is necessary and sufficient that $\theta_{\phi_1} \in \Lambda \otimes_k k_1$
+belongs to $k_1$.
+\end{corp}
+
+\begin{enumerate}[resume*]
+	\item We return now to the groups $S_{\mathfrak{m}}$:
+\end{enumerate}
+\begin{prop}
+Let $k_1$ be an extension of $k$ and let $\phi \in
+\Rep_{k_1}(S_{\mathfrak{m} /k_1})$. The following properties are equivalent:
+\begin{enumerate}[(i)]
+\item $\phi$ can be defined over $k$,
+\item for every $v \notin \Supp(\mathfrak{m})$, the coefficients of the
+	characteristic polynomial $\phi(F_v)$ belong to $k$,
+\item there exists a set $M$ of places of $k$ of density 1 (cf.\ 
+	Chapter~\ref{ch:i}, \ref{sec:I_22}) such that $\Tr(\phi(F_v)) \in k$
+	for all $v \in M$.
+\end{enumerate}
+\end{prop}
+\begin{proof}
+The implications (i) $\implies$ (ii) $\implies$ (iii) are trivial.
+To prove (iii) $\implies$ (i) we need the following lemma.
+\end{proof}
+
+\begin{lem}
+	The set of Frobeniuses $F_v$, $v \in M$, is dense in $S$ for
+	the Zariski topology.
+\end{lem}
+\begin{proof}
+Let $X$ be the set of all $F_v$'s, $v \in M$, and let $\ell$ be a prime number.
+Let $\overline{X} \subseteq S_{\mathfrak{m}}$ (resp.\ $\overline{X}_\ell
+\subseteq S_{\mathfrak{m}}(\Q_\ell)$) the closure of $X$ in the Zariski
+topology (resp.\ $\ell$-adic topology). It is clear that
+\dpage
+$\overline{X} \subseteq \overline{X}(\Q_\ell)$. On the other hand, \v
+Cebotarev's theorem (cf.\ Chapter~\ref{ch:i}, \ref{sec:I_22}) implies that
+$\overline{X} = \Img(\varepsilon_\ell)$ (cf.\ \ref{sec:II_23}). The set
+$\Img(\varepsilon_\ell)$, however, is Zariski dense in $S_{\mathfrak{m}}$ (cf.\ 
+Remark in \ref{sec:II_23}). Hence $\overline{X} = S_{\mathfrak{m}}$, which
+proves the lemma.
+\end{proof}
+
+Let us now prove that (iii) $\implies$ (i). Let $\theta_\phi$ be the trace
+of $\theta$ in $\Lambda \otimes_k k_1$, where $\Lambda$ is the affine algebra
+of $H = S_{\mathfrak{m} /k}$. Let $\{ \ell_\alpha \}$ be a basis of the
+$k$-vector space $k_1$, with $\ell_{\alpha_0} = 1$ for some index $\alpha_0$.
+We have $\theta_\phi = \sum_{\alpha} \lambda_\alpha \otimes \ell_\alpha$
+($\lambda_\alpha \in \Lambda$); hence $\Tr( \phi(h) ) = \theta_\phi(h) =
+\sum_{\alpha} \lambda_\alpha(h) \ell_\alpha$ for all $h \in H(k_1)$. Take $h =
+F_v$, with $v \in M$, Since $F_v$ belongs to $H(k)$ we have
+$\lambda_\alpha(F_v) \in k$ for all $\alpha$; since $\Tr(\phi(F_v)) \in k$,
+we get $\lambda_\alpha(F_v) = 0$ for all $\alpha \ne \alpha_0$. By the lemma,
+the $F_v$'s, $v \in M$, are Zariski-dense in $H$; hence $\lambda_\alpha = 0$
+for $\alpha \ne \alpha_0$ and $\theta_\phi = \lambda_{\alpha_0}$ belongs to
+$\Lambda$ and (i) follows from the corollary to Proposition 1.
+\hfill
+\qedsymbol
+
+\subsubsection*{Exercise}
+Show that the characters of $S_{\mathfrak{m}}$ correspond in a one-one way to
+the homomorphisms $\chi \colon I \to \algcl{\Q}^\times$ having the following
+two properties:
+\begin{enumerate}[(a)]
+\item $\chi(x) = 1$ if $x \in U_{\mathfrak{m}}$.
+\item For each embedding $\sigma$ of $K$ into $\algcl Q$, there exists an
+	integral number $n(\sigma)$ such that
+	\[
+		\chi(x) = \prod_{\sigma \in \Gamma} \sigma(x)^{n(\sigma)}
+	\]
+	for all $x \in K^\times$.
+\end{enumerate}
+
+\subsection{\texorpdfstring{$\ell$}{l}-adic representations associated to a
+linear representation of \texorpdfstring{$S_{\mathfrak{m}}$}{Sm}}
+\todo{Belen.}

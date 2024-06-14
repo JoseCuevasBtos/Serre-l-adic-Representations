@@ -57,6 +57,7 @@
 \DeclareMathOperator{\Cl}{Cl}
 \DeclareMathOperator{\pr}{pr}
 \DeclareMathOperator{\sgn}{sgn}
+\DeclareMathOperator{\Rep}{Rep}
 
 \DeclareMathOperator{\Spec}{Spec}
 \DeclareMathOperator{\Proj}{Proj}
@@ -89,7 +90,7 @@
 \RequirePackage[utf8]{inputenc}
 \RequirePackage[english]{babel}
 \RequirePackage{framed}
-\RequirePackage{fdsymbol}
+% \RequirePackage{fdsymbol} % Don't
 
 % ======== Chapter sections =========
 \RequirePackage[indentafter]{titlesec}
@@ -99,22 +100,24 @@
 	{CHAPTER \thechapter}
 	{1em}
 	{\MakeUppercase}
+
 \renewcommand\thesection{\arabic{section}}
 \titleformat{\section}
 	{\centering\normalfont\Large\bfseries}
 	{\textmd{\S}\thesection.}
 	{1em}
 	{}
+
+\setcounter{secnumdepth}{3} % Add numbered subsubsections
+\renewcommand\thesubsubsection{\arabic{subsubsection}}
 \titleformat{\subsubsection}[runin]
 	{\bfseries}
-	{\thesubsubsection. }
+	{\thesubsubsection.}
 	{1ex}
 	{}[.]
 
-\usepackage{chngcntr}
 \usepackage{appendix}
-\counterwithout{subsubsection}{subsection}
-% \renewcommand\thesubsubsection{\arabic{subsubsection}}
+\renewcommand{\setthesection}{\Alph{section}}
 
 % ======== Headers and footers ======
 \RequirePackage{fancyhdr}
