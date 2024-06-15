@@ -77,9 +77,9 @@ continuous homomorphism $\rho \colon G \to \Aut(V)$.
 		following two properties:
 	\begin{enumerate}
 		\item $T'$ is stable by $G$.
-		\item Either $T'$ is a sublattice of index $\ell$ of $T$ and $G$
+		\item Either $T'$ is a sublattice of index $\ell$ of $T$ and
 			\dpage
-			acts trivially on $T/T'$ or $T$ is a sublattice of
+			$G$ acts trivially on $T/T'$ or $T$ is a sublattice of
 			index $\ell$ of $T'$ and $G$ acts trivially on $T/T'$.
 			\label{errata:t't}
 
@@ -323,6 +323,7 @@ if there exists a finite subset $S$ of $M_K^0$ such that
 \end{definition}
 
 \subsection{Representations with values in a linear algebraic group}
+\label{sec:I_24}
 Let $H$ be a linear algebraic group defined over a field $K$. If
 $k'$ is a commutative $k$-algebra, let $H(k')$ denote the group of points
 of $H$ with values in $k'$. Let $A$ denote the coordinate ring (or
@@ -354,9 +355,9 @@ class $F_{v, \rho}$. We say, as before, that $\rho$ is \strong{rational} if
 Two rational representations $\rho$, $\rho'$ (for primes $\ell$, $\ell'$) are said to
 be \strong{compatible} if there exists a finite subset $S$ of $M_K^0$ such that $\rho$
 and $\rho'$ are unramified outside $S$ and such that for any central 
-element $f \in A$ and any $v \in M_K^0 \setminus S$ we have $f(F_{v, \rho}) = f(F_{v, \rho})$. One
-defines in the same way the notions of \strong{compatible} and \strong{strictly
-compatible systems} of rational representations.
+element $f \in A$ and any $v \in M_K^0 \setminus S$ we have $f(F_{v, \rho}) =
+f(F_{v, \rho})$. One defines in the same way the notions of \strong{compatible}
+and \strong{strictly compatible systems} of rational representations.
 
 \begin{obs}
 \begin{enumerate}
@@ -390,8 +391,8 @@ compatible systems} of rational representations.
 \section{Equipartition and \texorpdfstring{$L$}{L}-functions}
 \subsection{Equipartition}
 Let $X$ be a compact topological space and $C(X)$ the Banach
-space of continuous, complex-valued, functions on $X$, with its usual
-norm $\|f\| = \sup_{x \in X} |f(x)|$. For each $x \in X$ let $\delta_x$ be the Dirac
+space of continuous, complex-valued, functions on $X$, with its usual norm
+$\|f\| = \sup_{x \in X} |f(x)|$. For each $x \in X$ let $\delta_x$ be the Dirac
 measure associated to $x$; if $f \in C(X)$, we have $\delta_x(f) = f(x)$.
 
 Let $(x_n)_{n\ge 1}$ be a sequence of points of $X$. For $n \ge 1$, let
@@ -494,10 +495,10 @@ For the proof, it suffices to remark that the irreducible characters of $\R/\Z$
 are the mappings $x \mapsto e^{2\pi mi x}$ ($m \in \Z$).
 
 \subsection{The connection with \texorpdfstring{$L$}{L}-functions}
-Let $G$ and $X$ be as in Example~\ref{ex:IA1_2} above: $G$ a compact group and $X$ the space
-of its conjugacy classes. Let $x_v$, $v \in M$, be a family of elements of $X$,
-indexed by a denumerable set $M$, and let $v \mapsto \numnorm v$ be a function
-on $M$ with values in the set of integers $\ge 2$.
+Let $G$ and $X$ be as in Example~\ref{ex:IA1_2} above: $G$ a compact group and
+$X$ the space of its conjugacy classes. Let $x_v$, $v \in M$, be a family of
+elements of $X$, indexed by a denumerable set $M$, and let $v \mapsto \numnorm
+v$ be a function on $M$ with values in the set of integers $\ge 2$.
 \dpage
 We make the following \emph{hypotheses:}
 \begin{enumerate}[(1), series=Lfunc_hyp]
@@ -568,14 +569,15 @@ $$ \mu(\chi) = c_\chi. $$
 	and let $\numnorm v$ be the norm of $v$, cf.\ \S\ref{sec:I_21}.
 
 	Properties (1), (2), (3) are satisfied with $c_\chi = 0$ for all
-	irreducible $\chi \ne 1$. This is trivial for (3). For (1), one remarks that
-	$L(s,l)$ is the zeta function of $K$ (up to a finite number of terms),
-	hence has a simple pole at $s = 1$ and is holomorphic on the rest of
+	irreducible $\chi \ne 1$. This is trivial for (3). For (1), one remarks
+	that $L(s,l)$ is the zeta function of $K$ (up to a finite number of
+	terms), hence has a simple pole at $s = 1$ and is holomorphic on the
 	\dpage
-	the line $\Re(s) = 1$, cf.\ for instance \citeauthor{13}~\cite{13},
-	chap.\ VII; for a proof of (2), cf.\ \citeauthor{1}~\cite[121]{1}.
-	Hence theorem 2 gives the equidistribution of the Frobenius elements,
-	i.e.\ the \v Cebotarev density theorem, cf.\ 2.2.
+	rest of the line $\Re(s) = 1$, cf.\ for instance
+	\citeauthor{13}~\cite{13}, chap.\ VII; for a proof of (2), cf.\
+	\citeauthor{1}~\cite[121]{1}.  Hence theorem 2 gives the
+	equidistribution of the Frobenius elements, i.e.\ the \v Cebotarev
+	density theorem, cf.~\ref{sec:I_22}.
 
 \item Let $C$ be the idèle class group of a number field $K$, and let $\rho$ be
 	a continuous homomorphism of $C$ into a compact abelian Lie group $G$.

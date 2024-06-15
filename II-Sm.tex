@@ -467,4 +467,309 @@ two properties:
 
 \subsection{\texorpdfstring{$\ell$}{l}-adic representations associated to a
 linear representation of \texorpdfstring{$S_{\mathfrak{m}}$}{Sm}}
+\label{sec:II_25}
 \todo{Belen.}
+
+\subsection{Alternative construction}
+Let $\phi_0 \colon S_{\mathfrak{m}} \to \GL_{V_0}$ be as in \ref{sec:II_25}. If
+we compose $\phi_0$ with the map $\varepsilon \colon I \to
+S_{\mathfrak{m}}(\Q)$ defined in \ref{sec:II_22}, we obtain a homomorphism
+\[
+	\phi_0 \circ \varepsilon \colon I \longrightarrow \GL_{V_0}(\Q) =
+	\Aut(V_0).
+\]
+Conversely:
+\dpage
+
+\begin{prop}
+Let $f \colon I \to \Aut(V_0)$ be a homomorphism. There exists a $\phi_0
+\colon S_{\mathfrak{m}} \to GL_{V_0}$ such that $\phi_0 \circ \varepsilon =
+f$ if and only if the following conditions are satisfied:
+\begin{enumerate}
+	\item The kernel of $f$ contains $U_{\mathfrak{m}}$.
+	\item There exists an algebraic homomorphism $\psi\colon T \to
+		\GL_{V_0}$ such that $\psi(x) = f(x)$ for every $x \in K^\times
+		= T(\Q)$.
+\end{enumerate}
+Moreover, such a $\phi_0$ is unique.
+\end{prop}
+\begin{proof}
+The necessity of the conditions (a) and (b) is trivial. 
+Conversely, if $f$ has properties (a), (b), it defines a homomorphism
+$I/U_{\mathfrak{m}} \to \Aut(V_0)$. On the other hand, since $f$ and $\psi$ agree on $K^\times$
+the morphism $\psi$ is equal to 1 on $E_{\mathfrak{m}} = K^\times \cap U_{\mathfrak{m}}$, hence on its
+Zariski-closure $\overline{E}_{\mathfrak{m}}$. This means that $\psi$ factors through
+\[\begin{tikzcd}[sep=large]
+	T \rar & T_{\mathfrak{m}} \rar & \GL_{V_0}.
+\end{tikzcd}\]
+By the universal property of $S_{\mathfrak{m}}$ (cf.\ \ref{sec:II_13} and
+\ref{sec:II_22}), the maps $I/U_{\mathfrak{m}} \to \GL_{V_0}(\Q)$ and
+$T_{\mathfrak{m}} \to \GL_{V_0}$ define an algebraic morphism $\phi_0 \colon
+S_{\mathfrak{m}} \to GL_{V_0}$, and one checks easily that $\phi_0$ has the
+required properties, and is unique.
+\end{proof}
+
+\begin{obs}
+Since $U$ is open, property (a) implies that $f$ is \emph{continuous} with
+\dpage
+respect to the discrete topology of $\Aut(V_0)$. Conversely, any continuous
+homomorphism $f\colon I \to \Aut(V_0)$ is trivial on some $U_{\mathfrak{m}}$;
+moreover, there is a smallest such $\mathfrak{m}$; it is called the
+\strong{conductor}\index{Conductor} of $f$.
+\end{obs}
+
+\subsubsection*{Exercise}
+Let $\mathfrak{m}$ be a modulus and let $V_0$ be a finite dimensional
+$\Q$-vector space. For each $v \notin \Supp(\mathfrak{m})$ let $F_v$ be an
+element of $\Aut(V_0)$. Assume:
+\begin{enumerate}
+	\item The $F_v$'s commute pairwise.
+	\item There exists an algebraic morphism $\psi\colon T \to \GL_{V_0}$
+		such that $\psi(\alpha) = \prod F_v^{v(\alpha)}$ for $\alpha
+		\in K^\times$, $\alpha \equiv 1 \pmod{\mathfrak{m}}$, and
+		$\alpha > 0$ at each real place.
+\end{enumerate}
+Show that there exists an algebraic morphism $\phi_0 \colon S_{\mathfrak{m}}
+\to \GL_{V_0}$ for which the Frobenius elements are equal to the $F_v$'s.
+
+\subsection{The real case}
+\todo{Belen.}
+
+\subsection{An example: complex multiplication of abelian varieties}
+(We give here only a brief sketch of the theory, with a few indications on the
+proofs. For more details, see \citeauthor{34}~\cite{34},
+\citeauthor{35}~\cite{35}, \citeauthor{41}~\cite{41}, \cite{42} and
+\citeauthor{32}~\cite{32}.)
+
+Let $A$ be an abelian variety of dimension $d$ defined over $K$.
+Let $\End_K(A)$ be its ring of endomorphisms and put
+$\End_K(A)_0 = \End_K(A) \otimes \Q$.
+Let $E$ be a number field of degree $2d$, and
+\dpage
+\[
+	i \colon E \to \End_K(A)_0
+\]
+be an injection of $E$ into $\End_K(A)_0$. The variety $A$ is then said to
+have \textquote{complex multiplication} by $E$; in the terminology of
+Shimura-Taniyama, it is a variety of \textquote{type (CM)}.
+
+Let $\ell$ be a prime integer and define $T_\ell(A)$ and $V_\ell = T_\ell(A)
+\otimes \Q_\ell$ as in Chapter~\ref{ch:i}, \ref{sec:I_12}. These are free
+modules over $\Z_\ell$ and $\Q_\ell$, of rank $2d$. The $\Q$-algebra
+$\End_K(A)_0$ acts on $V_\ell$; hence the same is true for $E$, and, by
+linearity, for $E_\ell = E \otimes_\Q \Q_\ell$. One proves easily:
+
+\begin{lem}
+	$V_\ell$ is a free $E_\ell$-module of rank 1.
+\end{lem}
+
+Let $\rho\colon \Gal(\algcl K/K) \to \Aut(V_\ell)$ be the $\ell$-adic
+representation defined by $A$. If $s \in \Gal(\algcl K/K)$, it is clear that
+$\rho(s)$ commutes with $E$, hence with $E_\ell$. But the lemma above implies
+that the commuting algebra of $E_\ell$ in $\End_K(V_\ell)$ is $E_\ell$ itself.
+Hence, $\rho$ may be identified with a homomorphism
+\[
+	\rho_\ell\colon \Gal(\algcl K/K) \longrightarrow E^\times_\ell
+\]
+Let now $T_E$ be the $2d$-dimensional torus attached to $E$ (as $\TT$ is
+attached to $K$), so that $T_E(\Q_\ell) = E_\ell^\times$, and $\rho$ takes
+values in $T_E(\Q_\ell)$.
+
+\begin{thm}\label{thm:II_28_1}
+\begin{enumerate}[(a)]
+\item\label{thm:II_28_1a}
+	The system $(\rho_\ell)$ is a strictly compatible system of rational
+	$\ell$-adic representations of $K$ with values in $T_E$ (in the sense
+	\dpage
+	of Chap.~\ref{ch:i}, \ref{sec:I_24}).
+\item\label{thm:II_28_1b}
+	There is a modulus $\mathfrak{m}$ and a morphism
+	\[
+		\varphi \colon S_{\mathfrak{m}} \longrightarrow T_E
+	\]
+	such that $\rho$ is the image by $\varphi$ of the canonical system
+	$(\varepsilon_\ell)$ attached to $S_{\mathfrak{m}}$, cf.\ 
+	\ref{sec:II_23}.
+\end{enumerate}
+\end{thm}
+
+Moreover, the restriction of $\varphi$ to $T_{\mathfrak{m}}$ can be given
+explicitly:
+
+Let $t$ be the tangent space at the origin of $A$. It is a $K$-vector space on
+which $E$ acts, i.e.\ an \emph{$(E, K)$-bimodule}. If we view it as an
+$E$-vector space, the action of $K$ is given by a homomorphism $j\colon K \to
+\End_E(t)$. In particular, if $x \in K^\times$, $\det_E j(x)$ is an element of
+$E^\times$; the map $\det_E j\colon K^\times \to E^\times$ is clearly the
+restriction of an algebraic morphism $\delta\colon \TT \to T_E$.
+
+\begin{thm}\label{thm:II_28_2}
+The map $\delta\colon \TT \to T_E$ coincides with the composition
+map 
+\begin{tikzcd}[cramped, sep=small]
+	\TT \rar & T_{\mathfrak{m}} \rar & S_{\mathfrak{m}} \rar["\varphi"] &
+	T_E
+\end{tikzcd}
+\end{thm}
+
+\begin{ex}
+If $A$ is an \emph{elliptic curve}, $E$ is an imaginary quadratic field, and
+the action of $E$ on the one-dimensional $K$-vector space $t$ defines an
+embedding $E \to K$. The map $\det_E j\colon K^\times \to E^\times$ is just the
+\emph{norm} relative to this embedding.
+\end{ex}
+
+\subsubsection*{Indications on the proofs of Theorems 1 and 2}
+Part \ref{thm:II_28_1a} of Theorem~\ref{thm:II_28_1} is proved as follows: Let
+$S$ denote the finite set of $v \in M_K^0$ where $A$ has \textquote{bad
+reduction}. If $v \notin S$, and
+\dpage
+$\ell \ne p_v$, one shows easily that $p_\ell$ is unramified at $v$ (the
+converse is also true, see \cite{32}); moreover the corresponding Frobenius
+element $F_{v, \rho_\ell}$ may be identified with the Frobenius endomorphism
+$F_v$ of the reduced variety $\widetilde{A}_v$. But $F_v$ commutes with $E$ in
+$\End(\widetilde{A}_v)_0$ and the commuting algebra of $E$ in
+$\End(\widetilde{A}_v)_0$ is $E$ itself (cf.\ \cite[39]{34}). Hence $F_v$
+belongs to $E^\times = T_E(\Q)$ and this implies \ref{thm:II_28_1a}.
+
+Theorem~\ref{thm:II_28_2} and part \ref{thm:II_28_1b} of
+Theorem~\ref{thm:II_28_1} are less easy; they are proved, in a somewhat
+different form in \citeauthor{34}~\cite{34} (see also \cite{32}). Note that one
+could express them (as in \ref{sec:II_26}) by saying that \emph{there exists a
+homomorphism} $f\colon I \to E^\times$ (where $I$ denotes, as usual, the group
+of idèles of $K$) \emph{having the following properties:}
+\begin{enumerate}
+\item $f$ is trivial on $U_{\mathfrak{m}}$, for some modulus $\mathfrak{m}$
+	with support $S$.
+\item If $v \notin S$, the image by $f$ of a uniformizing parameter at
+	$v$ is the Frobenius element $F_v \in E^\times$.
+\item If $x \in K^\times$ is a principal idèle, one has $f(x) = \det_E j(x)$.
+\end{enumerate}
+This is essentially what is proved in \cite[148]{34}, formula (3),
+except that the result is expressed in terms of ideals instead of
+ideles, and $\det_E j(x)$ is written in a different form, namely
+``$ \prod_{\alpha} \Nm_{K/K^\times}(x)^{\psi_\alpha} $''.
+
+\begin{obs}
+Another possible way of proving Theorems~\ref{thm:II_28_1} and
+\ref{thm:II_28_2} is the following:
+
+Let $\ell$ be a prime integer distinct from any of the $p_v$, $v \in S$.  One
+then sees that the Galois-module $V_\ell$ is of Hodge-Tate type in the sense of
+Chapter III, 1.2 (indeed, the corresponding local modules
+\dpage
+are associated with \emph{$\ell$-divisible groups}, and one may apply Tate's
+theorem \cite{39}). Hence $\rho_\ell$ is \textquote{locally algebraic} (Chapter
+III, \emph{loc.\ cit.}), and using the theorem of Chapter III, 2.3 one sees it
+defines a morphism $\varphi \colon S_{\mathfrak{m}} \to T_E$. One has
+$\varphi\circ\varepsilon_\ell = \rho_\ell$ by construction; the same is true
+for any prime number $\ell'$, since $\varphi\circ\varepsilon_{\ell'}$ and
+$\rho_{\ell'}$ have the same Frobenius elements for almost all $v$. This proves
+part \ref{thm:II_28_1b} of Theorem~\ref{thm:II_28_1}. As for
+Theorem~\ref{thm:II_28_2}, one uses the explicit form of the Hodge-Tate
+decomposition of $V_\ell$, as given by \citeauthor{39}~\cite{39}, combined with
+the results of the Appendix to Chapter III.
+\end{obs}
+
+\section{Structure of \texorpdfstring{$T_{\mathfrak{m}}$}{Tm} and applications}
+
+\subsection{Structure of \texorpdfstring{$X(T_{\mathfrak{m}})$}{X(Tm)}}
+\label{sec:II_31}
+\todo{Belen.}
+
+\subsection{The morphism \texorpdfstring{$j^* \colon \GG_m \to
+T_{\mathfrak{m}}$}{j*: Gm -> Tm}}
+\todo{Belen.}
+
+\subsection{Structure of \texorpdfstring{$T_{\mathfrak{m}}$}{Tm}}
+We need first some notations:
+
+Let $H_c$ be the closed subgroup of $G = \Gal(\algcl\Q/\Q)$ generated by
+$C_\infty$ (cf.\ \ref{sec:II_31}). There is a unique continuous homomorphism
+\dpage
+$\varepsilon \colon H_c \to \{ \pm 1 \}$ such that $\varepsilon(c) = -1$ for
+all $c \in C_\infty$. Indeed the unicity of $\varepsilon$ is clear, and one
+proves its existence by taking the restriction to $H_c$ of the homomorphism $G
+\to \{ \pm 1 \}$ associated with an imaginary quadratic extension of $\Q$. We
+let $H = \Ker(\varepsilon)$. The groups $H$ and $H_c$ are closed invariant
+subgroups of $G$, and $(H: H_c) = 2$.
+
+Let now $K$ be, as before, a finite extension of $\Q$; we identify
+it with a subfield of $\Q$; let $G_K = \Gal(\algcl\Q/K)$ be the corresponding
+subgroup of $G$. The field $K$ is \emph{totally real} if and only if all the
+elements $c$ of $C_\infty$ act trivially on $K$, i.e.\ if and only if $G_K$
+contains $G_c$. Hence, there exists a \emph{maximal totally real subfield}
+$K_0$ of $K$, whose Galois group is $G_{K_0} = G_K \cdot H_c$. We let $K_1$, be
+the field corresponding to $G_K \cdot H$. We have
+\[
+	K_0 \subset K_1 \subset K \qquad \text{and} \qquad
+	[K_1 : K_0] = 1 \text{ or } 2.
+\]
+As shown by Weil (cf.\ \cite[4]{47}) the fields $K_0$ and $K_1$ are closely
+connected to the groups $T_{\mathfrak{m}}$ relative to $K$. Indeed, if $\chi =
+\sum_{\sigma} b_\sigma[\sigma]$ is an element of the group denoted by $Y^-$ in
+\ref{sec:II_31}, we have $b_{c\sigma} = -b_\sigma$ for all $c \in C_\infty$. If
+$h = c_1 \cdots c_n$, this gives
+\[
+	b_{h\sigma} = (-1)^n b_\sigma = \varepsilon(h) b_\sigma
+\]
+and by continuity the same holds for all $h \in H_c$. One deduces from this:
+
+\begin{prop}
+	The norm map defines an isomorphism of the space $Y_{K_1}^0$ relative
+	to $K$ onto the space $Y_K^-$ relative to $K$.
+\end{prop}
+
+More precisely, if $\chi_1 = \sum b_{\sigma_1}[\sigma_1]$ belongs to
+\dpage
+$Y_{K_1}^-$, where $\sigma_1 \in \Gamma_{K_1}$, the image of $\chi_1$, by the
+norm map is
+\[
+	\Nm_{K_1/K_0}^*(\chi_1) = \sum_{\sigma} b_{\sigma/K_1}[\sigma], \qquad
+	\sigma \in \Gamma_K,
+\]
+where $\sigma/K_1$ is the restriction of $\sigma$ to $K$. It is clear that this
+map is injective. Conversely, if $\chi = \sum_{\sigma} b_\sigma[\sigma]$
+belongs to $Y_K^-$, we saw above that $b_{h\sigma} = \varepsilon(h)b_\sigma$
+for all $h \in H_c$, hence $b_{h \sigma} = b_\sigma$ for $h \in H$ and of
+course also for $h \in H\cdot G_K$. This shows that $b_\sigma$ depends only on
+the restriction of $\sigma$ to $K_1$, and hence that $\chi$ belongs to the
+image of the norm map.
+
+\begin{corp}
+	The tori $T_{\mathfrak{m}}$ attached to $K$ and $K_1$ are isogenous to
+	each other.
+\end{corp}
+There remains to describe the tori $T_{\mathfrak{m}}$ attached to $K_1$.  There
+are two cases:
+\begin{enumerate}[(1)]
+\item $K_1 = K_0$.
+	\emph{In this case, we have $Y^- = 0$ and $T_{\mathfrak{m}}$ is
+	one-dimensional, and isomorphic to $\GG_m$.}
+
+	Indeed, if $\chi = \sum_{\sigma} b_\sigma[\sigma]$ belongs to $Y^-$,
+	and $c \in C_\infty$, we have $b_{c \sigma} = -b_\sigma$ (cf.\
+	\ref{sec:II_31}) but also $b_{c \sigma} = b_\sigma$ since $c \in G_K
+	\cdot H_c = G_K \cdot H$. This shows that $b_\sigma = 0$ for all
+	$\sigma$, hence $Y^- = 0$.
+
+\item $[K_1 : K_0] = 2$.
+	The field $K_1$ is then a \emph{totally imaginary quadratic extension}
+	of $K_0$ (and it is the only one contained in $K$, as one checks
+	readily). In this case $Y^-$ is of dimension $d = [K_0 : \Q]$ and
+	$T_{\mathfrak{m}}$ is $(d+1)$-dimensional.
+
+	More precisely, the space $Y$ attached to $K_1$ is $2d$-dimensional
+	\dpage
+	and the involution $\sigma$ of $K_1$ corresponding to $K_0$ decomposes
+	$Y$ in two eigenspaces of dimension $d$ each; the space $Y^-$ is the
+	one corresponding to the eigenvalue $-1$ of $\sigma$. This is proved by
+	the same argument as above, once one remarks that all $c \in C_\infty$
+	induce $\sigma$ on $K_1$.
+\end{enumerate}
+
+\begin{obs}
+In this last case (which is the most interesting one), the torus
+$T_{\mathfrak{m}}$ is isogenous to the product of $\GG_m$ by the
+$d$-dimensional torus kernel of the norm map from $K_1$ to $K_0$.
+\end{obs}

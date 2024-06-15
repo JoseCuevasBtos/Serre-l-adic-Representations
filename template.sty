@@ -58,6 +58,7 @@
 \DeclareMathOperator{\pr}{pr}
 \DeclareMathOperator{\sgn}{sgn}
 \DeclareMathOperator{\Rep}{Rep}
+\DeclareMathOperator{\Nm}{N}
 
 \DeclareMathOperator{\Spec}{Spec}
 \DeclareMathOperator{\Proj}{Proj}
@@ -204,7 +205,7 @@
 % ======== Page counter =============
 \newcounter{origpage}[chapter]
 \renewcommand{\theorigpage}{\thechapter-\arabic{origpage}}
-\newcommand{\dpage}{\stepcounter{origpage}\marginpar{\small\theorigpage}}
+\newcommand{\dpage}{\stepcounter{origpage}\marginpar[\small\raggedleft\theorigpage]{\small\theorigpage}}
 
 \RequirePackage{imakeidx}
 \makeindex[intoc]
