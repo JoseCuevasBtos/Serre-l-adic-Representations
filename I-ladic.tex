@@ -245,8 +245,7 @@ on $v$; it is denoted by $F_{v, \rho}$. If $L/K$ is the extension of $K$
 corresponding to $H = \Ker(\rho)$, then $\rho$ is unramified at $v$ if and only
 if $v$ is unramified in $L/K$.
 
-\subsection{\v Cebotarev's density theorem}
-\label{sec:I_22}
+\subsection{\v Cebotarev's density theorem}\label{2.2}
 Let $P$ be a subset of $M_K^0$. For each integer $n$, let $a_n(P)$
 be the number of $v \in P$ such that $\numnorm v \le n$. If $a$ is a real number,
 one says that $P$ \strong{has density} $a$ if
@@ -265,7 +264,7 @@ that $\numnorm v$ is prime) has density $1$. The set of ordinary prime numbers
 whose first digit (in the decimal system, say) is $1$ has no density.
 \end{ex}
 
-\begin{thm}
+\begin{thm}\label{thm-chebotarev}
 Let $L$ be a finite Galois extension of the number field $K$, with Galois group
 $G$. Let $X$ be a subset of $G$, stable by
 \dpage
@@ -311,16 +310,108 @@ Let $\rho$ be an $\ell$-adic representation of the number field $K$. If $v \in
 M_K^0$, and if $v$ is unramified with respect to $\rho$, we let $P_{v,\rho}(T)$
 denote the polynomial $\det(1 - F_{v,\rho} T)$.
 
-\begin{definition}
-The $\ell$-adic representation $\rho$ is said to be rational (resp.\ integral)
-if there exists a finite subset $S$ of $M_K^0$ such that
+\begin{mydef}
+The $\ell$-adic representation $\rho$ is said to be \strong{rational}\index{Rational (representation)} (resp.\ integral \index{Integral (representation)}) if there exists a finite subset $S$ of $M_K^0$ such that
 \begin{enumerate}[(a)]
 	\item Any element of $M_K^0 \setminus S$.
-\todo[color=pink!40]{{\color{pink}$\heartsuit$} Ver si la notación de eliminar conjunto está bien}
-	\item 
+	\item If $v \not\in S$, the coefficients of $P_{v,\rho}(T)$ belong to $\Q$ (resp. to $\Z$).
+\end{enumerate}
+\end{mydef}
+
+\todo[color=pink!40]{Remark (no sé cómo ponerlo, como sssec?)}
+
+Let $K'/K$ be a finite extension. An $ell$-adic representation $\rho$ of $K$ defines (by restriction) an $\ell$-adic representation $\rho_{/K'}$ de $K'$. If $\rho$ is rational (resp. integral), then the same is true for $\rho_{/K'}$; this follows from the fact that the Frobenius elements relative to $K'$ are powers of those relative to $K$.
+
+\subsection{Example}
+The $\ell$-adic representations of $K$ given in examples \ref{ex:1-sec:I_12}, \ref{ex:2-sec:I_12}, \ref{ex:3-sec:I_12} of section \ref{sec:I_12} are rational (even integral) representation. In example \ref{ex:1-sec:I_12}, one can take for $S$ the set $S_{\ell}$ of elements $v$ of $M_K^0$ with $\rho_v = \ell$; In examples \ref{ex:2-sec:I_12}, \ref{ex:3-sec:I_12}, one can take for $S$ the union of $S_\ell$ and the set $S_A$ where $A$ has "bad reduction"; the fact that the corresponding Frobenius has an integral characteristic polynomial (which is independent of $\ell$) is a consequence of Weil's results on endomorphisms of abelian varieties (cf. \cite{[40]} and \cite{[12]}, chap. VII). The rationality of the cohomology representation is a well-known open question.
+\todo[color=pink!40]{Ver si sigue siendo una pregunta abierta.}
+
+\begin{mydef}
+Let $\ell'$ be a prime, $\rho'$ an $\ell'$-adic representation of $K$, and assume that $\rho$, $\rho'$ are rational. Then $\rho$, $\rho'$ are said to be \strong{compatible} if there exists a finite subset $S$ of $M_K^0$ such that $\rho$ and $\rho'$ are unramified outside of $S$ and $P_{v,\rho}(T) = P_{v,\rho'}(T)$ for $v \in M_K^0 \setminus S$.
+\end{mydef}
+
+(In other words, the characteristic polynomials of the Frobenius elements arte the same for $\rho$ and $\rho'$, at least for almost all $v's$.)
+
+If $\rho\colon \Gal(\algcl{K}/K) \to \Aut(V)$ is rational $\ell$-adic representation of $K$, then $V$ has a composition series
+\[
+	V = V_0 \supset V_1 \supset \hdots \supset V_q = 0
+\]
+of $\rho$-invariants subspaces with $V_i / V_{i+1} ~ (0 \leq i \leq q - 1)$ simple (i.e. irreducible). The $\ell$-adic representation $\rho'$ of $K$ defined by $V' = \sum_{i=0}^{q-1} V_i / V_{i + 1}$ is semi-simple, rational, and compatible with $\rho$; it is the "semi-simplification" of $V$. 
+
+\begin{thm}
+Let $\rho$ be a rational $\ell$-adic representation of $K$, let $\ell'$ be a prime. Then there exists at most one (up to isomorphism) $\ell'$-adic rational representation $\rho'$ of $K$ which is semi-simple and compatible with $\rho$.
+\end{thm}
+
+(Hence there exists a unique (up to isomorphism) rational semi-simple $\ell$-adic representation compatible with $\rho$.)
+
+\begin{proof}
+Let $\rho_1'$, $\rho_2'$ be semi-simple $\ell$-adic representations of $K$ 
+\dpage
+which are rational and compatible with $\rho$.
+
+We first prove that $\Tr(\rho_1'(g)) = \Tr(\rho_2'(g))$ for all $g \in G$. Let $H = G/(\Ker(\rho_1') \cap \Ker(\rho_2'))$; the representations $\rho_1'$, $\rho_2'$ may be regarded as representations of $H$, and it suffices to show that $\Tr(\rho_1'(h)) = \Tr(\rho_2'(h))$ for all $h \in H$. Let $K' \subset \algcl{K}$ be the fixed field of $H$. Then by the compatibility of $\rho_1'$, $\rho_2'$ there is a finite subset $S$ of $M_K^0$ such that for all $v \in M_K^0 \setminus S$, $w \in M_K'^0$, $w \mid v$, we have $\Tr(\rho_1'(F_w)) = \Tr(\rho_2'(F_w))$. But, by cor. \ref{thm-chebotarev} to \v{C}ebotarev's theorem (cf. \ref{2.2}) the $F_w$ are dense in $H$. Hence $\Tr(\rho_1'(h)) = \Tr(\rho_2'(h))$ for all $h \in H$ since $\Tr \circ \rho_1'$, $\Tr \circ \rho_2'$ are continuous.
+
+The theorem now follows from the following result applied to the group ring $\Lambda = \Q_{\ell}[H]$.
+\end{proof}
+
+\begin{lem}
+Let $k$ be a field of characteristic zero, let $\Lambda$ be a $k$-algebra, and let $\rho_1$, $\rho_2$ be two finite-dimensional linear representations of $\Lambda$. If $\rho_1$, $\rho_2$ are semi-simple and have the same trace ($\Tr \circ \rho_1 = \Tr \circ \rho_2)$, then they are isomorphic.
+\end{lem}
+
+For the proof see Bourbaki, Alg., ch. 8, \S12, n°1, prop. 3.
+\todo[color=pink!40]{Cómo citar esto}
+
+\begin{mydef}
+For each prime $\ell$ let $\rho_\ell$ be a rational $\ell$-adic representation of $K$. The system $(\rho_\ell)$ is said \strong{to be compatible}\index{compatible (system $(\rho_\ell)$)} if $\rho_\ell$, $\rho_\ell'$ are compatible for any two primes $\ell$, $\ell'$. The system $(\rho_\ell)$ is said \strong{to be strictly compatible}\index{strictly compatible (system $(\rho_\ell))$} if there exists a finite subset $S$ of $M_K^0$ such that:
+\begin{enumerate}[(a)]
+	\item Let $S_\ell = \{ v | \rho_v = \ell \}$. Then, for every $v \not\in S \cup S_\ell$, $\rho_\ell$ is unramified at $v$ and $P_{v,\rho_\ell}(T)$ has rational coefficients.
+\item $P_{v,\rho_\ell}(T) = P_{v,\rho_{\ell'}}(T)$ if $v \not\in S \cup S_\ell \cup S_{\ell'}$.
+\end{enumerate}
+\end{mydef}
+\dpage
+When a system $(\rho_\ell)$ is strictly compatible, there is a smallest finite set $S$ having properties (a) and (b) above. We call it the \strong{exceptional set}\index{exceptional set (of a system)} of the system.
+\todo[color=pink!40]{¿El strong e índice está bien aquí?}
+
+\subsection{Examples}
+The systems of $\ell$-adic representations given in examples \ref{ex:1-sec:I_12}, \ref{ex:2-sec:I_12}, \ref{ex:3-sec:I_12} of section \ref{sec:I_12} are strictly compatible. The exceptional set of the first one is empty. The exceptional set of example \ref{ex:2-sec:I_12} (resp. \ref{ex:3-sec:I_12}) is the set of places where the elliptic curve (resp. the abelian variety) has "bad reduction", cf. \cite{[32]}.
+
+\subsection{Questions}
+\begin{enumerate}
+	\item Let $\rho$ be a rational $\ell$-adic representation. Is true that $P_{v,\rho}$ has coefficients for all $v$ such that $\rho$ is unramified at $v$?
+
+A somewhat similar question is:
+
+	Is any compatible system strictly compatible?
+	\item Can any rational $\ell$-adic representation be obtained (by tensor products, direct sums, etc.) from ones coming from $\ell$-adic cohomology?
+\todo[color=pink!40]{¿es ones o one's?}
+	\item Given a rational $\ell$-adic representation $\rho$ of $K$, and a prime $\ell'$, does there exist a rational $\ell'$-adic representation $\rho'$ of $K$ compatible with $\rho$? $\rightarrow$ [no : easy counter-examples].
+\todo[color=pink!40]{flecha loca apareció}
+	\item Let $\rho$, $\rho'$ be rational $\ell$, $\ell'$-adic representations of $K$ which are compatible and semi-simple.
+	\begin{enumerate}
+		\item If $\rho$ is abelian (i.e., if $\Im(\rho)$ is abelian), is it true that $\rho'$ is abelian? (We shall see in chapter III that this is true at least if $\rho$ is ``locally algebraic''.)
+		\item Is it true that $\Im(\rho)$ and $\Im(\rho')$ are Lie groups of the
+\dpage		
+		same dimension? More optimistically, is it true that there exists a Lie algebra $g$ over $\Q$ such that Lie$(\Im(\rho)) = g \otimes_\Q \Q_{\ell}$ Lie$(\Im(\rho')) = g \otimes_\Q \Q_{\ell'}$
+\todo[color=pink!40]{No entiendo bien la puntuación y el Lie}
+	\end{enumerate}
+\item Let $X$ be a non-singular projective variety defined over $K$, and let $i$ be an integer. Is the $i$-th cohomology representation $H_\ell^i(X_S)$ semi-simple? Does its Lie algebra contain the homotheties if $i\geq1$? (When $i=1$, an affirmative answer to either one of these questions would imply a positive solution for the ``conguence subgroup problem'' on abelian varieties, cf. \cite{[24]}, \S3.) $\rightarrow$ [yes for $i=1$: see \cite{[48]} and also \cite{[75]}.]
 \end{enumerate}
 
-\end{definition}
+\todo[color=pink!40]{Remark (no sé cómo ponerlo, como sssec?)}
+The concept of an $\ell$-adic representation can be generalized by replacing the prime $\ell$ by a place $\lambda$ of a number field  $E$. A $\lambda$-adic representation is then a continuous homomorphism $\Gal(K_S/K) \to \Aut(V)$, where $V$ is a finite-dimensional vector space over the local field $E_\lambda$. The concepts of rational $\lambda$-adic representation, compatible representations, etc., can be defined in a way similar to the $\ell$-adic case.
+
+\subsubsection*{Exercise}
+\begin{enumerate}
+	\item Let $\rho$ and $\rho'$ be two rational, semi-simple, compatible representations. Show that, if $\Im(\rho)$ is finite, the same is true for $\Im(\rho')$ and that $\Ker(\rho) = \Ker(\rho')$. (Apply exer. 3 of 1.1 to $\rho'$ and to $U = \Ker(\rho)$.) Generalize this to $\lambda$-adic representations (with respect to a number field $E$).
+	\item Let $\rho$ (resp. $\rho'$) be a rational $\ell$-adic (resp. $\ell'$-adic) representation of $K$, of degree $n$. Assume $\rho$ and $\rho'$ are compatible. If $s \in G = \Gal(\algcl{K}/K)$, let $\sigma_i(s)$ (resp. $\sigma_i'(s)$) be the
+\dpage 
+	$i$-th coefficient of the characteristic polynomial of $\rho(s)$ (resp. $\rho'(s)$). Let $P(X_0,\hdots,X_n)$ be a polynomial with rational coefficients, and let $X_P$ (resp. $X'_P$) be the set of $s \in G$ such that $P(\sigma_0(s),\hdots,\sigma_n(s)) = 0$ (resp. $P(\sigma_0'(s),\hdots,\sigma_n'(s)) = 0$).
+	\begin{enumerate}
+		\item Show that the boundaries of $X_P$ and $X_P'$ have measure zero for the Haar measure $\mu$ of $G$ (use Exer. of 2.2).
+		\item Assume that $\mu$ is normalized, i.e. $\mu(G) = 1$. Let $T_P$ be the set of $v \in M_K^0$ at which $\rho$ is unramified, and for which the coefficients $\sigma_0,\hdots,\sigma_n$ of characteristic polynomial of $F_{v,\rho}$ satisfy the equation $P(\sigma_0,\hdots,\sigma_n) = 0$. Show that $T_P$ has density equal to $\mu(X_P)$.
+		\item Show that $\mu(X_P) = \mu(X_P')$.
+	\end{enumerate}
+\end{enumerate}
 
 \subsection{Representations with values in a linear algebraic group}
 \label{sec:I_24}
