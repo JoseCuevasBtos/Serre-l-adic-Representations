@@ -33,18 +33,18 @@ Here's an indepth list of the chapters and sections, and their current status:
         - [x] 2.1 Ideles and idele-classes
         - [ ] 2.2 The groups Tm and Sm
         - [x] 2.3 The canonical l-adic representation with values in Sm
-        - [ ] 2.4 Linear representations of Sm
+        - [x] 2.4 Linear representations of Sm
         - [ ] 2.5 l-adic representations associated to a linear representation of Sm
         - [x] 2.6 Alternative construction
         - [ ] 2.7 The real case
         - [x] 2.8 An example: complex multiplication of abelian varieties
     - [ ] 3 Structure of Tm and applications
-        - [ ] 3.1 Structure of X(Tm)
+        - [x] 3.1 Structure of X(Tm)
         - [ ] 3.2 The morphism j
         - [x] 3.3 Structure of Tm
         - [ ] 3.4 How to compute Frobeniuses
     - [ ] A. Killing arithmetic groups in tori
-        - [ ] A.1 Arithmetic groups in tori
+        - [x] A.1 Arithmetic groups in tori
         - [ ] A.2 Killing arithmetic subgroups
 - [ ] Chapter III. Locally Algebraic Abelian Representations
     - [ ] 1 The local case mi
