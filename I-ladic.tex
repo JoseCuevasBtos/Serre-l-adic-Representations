@@ -245,7 +245,8 @@ on $v$; it is denoted by $F_{v, \rho}$. If $L/K$ is the extension of $K$
 corresponding to $H = \Ker(\rho)$, then $\rho$ is unramified at $v$ if and only
 if $v$ is unramified in $L/K$.
 
-\subsection{\v Cebotarev's density theorem}\label{2.2}
+\subsection{\v Cebotarev's density theorem}%
+\label{sec:I_22}
 Let $P$ be a subset of $M_K^0$. For each integer $n$, let $a_n(P)$
 be the number of $v \in P$ such that $\numnorm v \le n$. If $a$ is a real number,
 one says that $P$ \strong{has density} $a$ if
@@ -349,7 +350,7 @@ Let $\rho_1'$, $\rho_2'$ be semi-simple $\ell$-adic representations of $K$
 \dpage
 which are rational and compatible with $\rho$.
 
-We first prove that $\Tr(\rho_1'(g)) = \Tr(\rho_2'(g))$ for all $g \in G$. Let $H = G/(\Ker(\rho_1') \cap \Ker(\rho_2'))$; the representations $\rho_1'$, $\rho_2'$ may be regarded as representations of $H$, and it suffices to show that $\Tr(\rho_1'(h)) = \Tr(\rho_2'(h))$ for all $h \in H$. Let $K' \subset \algcl{K}$ be the fixed field of $H$. Then by the compatibility of $\rho_1'$, $\rho_2'$ there is a finite subset $S$ of $M_K^0$ such that for all $v \in M_K^0 \setminus S$, $w \in M_K'^0$, $w \mid v$, we have $\Tr(\rho_1'(F_w)) = \Tr(\rho_2'(F_w))$. But, by cor. \ref{thm-chebotarev} to \v{C}ebotarev's theorem (cf. \ref{2.2}) the $F_w$ are dense in $H$. Hence $\Tr(\rho_1'(h)) = \Tr(\rho_2'(h))$ for all $h \in H$ since $\Tr \circ \rho_1'$, $\Tr \circ \rho_2'$ are continuous.
+We first prove that $\Tr(\rho_1'(g)) = \Tr(\rho_2'(g))$ for all $g \in G$. Let $H = G/(\Ker(\rho_1') \cap \Ker(\rho_2'))$; the representations $\rho_1'$, $\rho_2'$ may be regarded as representations of $H$, and it suffices to show that $\Tr(\rho_1'(h)) = \Tr(\rho_2'(h))$ for all $h \in H$. Let $K' \subset \algcl{K}$ be the fixed field of $H$. Then by the compatibility of $\rho_1'$, $\rho_2'$ there is a finite subset $S$ of $M_K^0$ such that for all $v \in M_K^0 \setminus S$, $w \in M_K'^0$, $w \mid v$, we have $\Tr(\rho_1'(F_w)) = \Tr(\rho_2'(F_w))$. But, by cor. \ref{thm-chebotarev} to \v{C}ebotarev's theorem (cf. \ref{sec:I_22}) the $F_w$ are dense in $H$. Hence $\Tr(\rho_1'(h)) = \Tr(\rho_2'(h))$ for all $h \in H$ since $\Tr \circ \rho_1'$, $\Tr \circ \rho_2'$ are continuous.
 
 The theorem now follows from the following result applied to the group ring $\Lambda = \Q_{\ell}[H]$.
 \end{proof}

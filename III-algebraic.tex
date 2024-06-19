@@ -1,0 +1,236 @@
+\chapter{Locally algebraic abelian representations}
+\label{ch:iii}
+
+In this Chapter, we define what it means for an abelian $\ell$-adic
+representation to be \emph{locally algebraic} and we prove (cf.\ \ref{sec:III_23}) that such
+a representation, when rational, comes from a linear representation
+of one of the groups $S_{\mathfrak{m}}$ of Chapter \ref{ch:ii}.
+
+When the ground field is a composite of quadratic extensions of
+$\Q$, any rational semi-simple $\ell$-adic representation is \emph{ipso facto}
+locally algebraic; this is proved in \S\ref{sec:III_3}, as a consequence of a result
+on transcendental numbers due to Siegel and Lang.
+
+In the local case, an abelian semi-simple representation is
+locally algebraic if and only if it has a ``Hodge-Tate decomposition''.
+This fact, due to Tate (College de France, 1966), is proved in the
+Appendix, together with some complements.
+
+\section{The local case}
+
+\subsection{Definitions}
+\label{sec:III_11}
+Let $p$ be a prime number and $K$ a finite extension of $\Q_p$; let $\TT =
+\WRes_{K/\Q_p}(\GG_{m, K})$ be the corresponding algebraic torus over
+\dpage
+$\Q_p$ (cf.\ \citeauthor{43}~\cite{43}, Chap.~I).
+\todo{Belen.}
+
+\subsection{Alternative definition of ``locally algebraic'' via Hodge-Tate
+modules}
+\label{sec:III_12}
+Let us recall first the notion of a \strong{Hodge-Tate module} (cf.\ \cite{27},
+\S 2); here $K$ is only assumed to be complete with respect to a discrete
+valuation, with perfect residue field $k$ and $\char(K) = 0$, $\char(k) = p$.
+Denote by $C$ the \emph{completion $\widehat{\algcl K}$ of the algebraic
+closure} of $K$.
+
+The group $G = \Gal(\algcl K/K)$ acts continuously on $K$. This action extends
+continuously to $C$. Let $W$ be a $C$-vector space of finite dimension upon
+which $G$ acts continuously and semi-linearly according to the formula
+\[
+	s(cw) = s(c) \cdot s(w) \qquad
+	(s \in G, \, c \in C \text{ and } w \in W).
+\]
+Let $\chi\colon G \to U_p$ be the homomorphism of $G$ into the group $U_p =
+\Z_p^\times$ of $p$-adic units, defined by its action on the $p^\nu$-th roots
+of unity (cf.\ chap.~\ref{ch:i}, \ref{sec:I_12}):
+\dpage
+\[
+	s(z) = z^{\chi(s)} \qquad \text{if } s \in G \text{ and } z^{p^\nu} = 1.
+\]
+Define for every $i \in \Z$ the subspace
+\[
+	W^i = \{ w \in W : sw = \chi(s)^i w \text{ for all } s\in G \}
+\]
+of $W$. This is a $K$-vector subspace of $W$. Let $W(i) = C \otimes_K W^i$.
+This is a $C$-vector space upon which $G$ acts in a natural way (i.e.\ by the
+formula $s(c \otimes y) = s(c) \otimes s(y)$). The inclusion $W^i \to W$
+extends uniquely to a $C$-linear map $\alpha_i\colon W(i) \to W$, which
+commutes with the action of $G$.
+
+\begin{prop}[Tate]
+	Let $\coprod_{i\in \Z} W(i)$ be the direct sum of the $W(i)$. Let
+	$\alpha\colon \coprod_i W(i) \to W$ be the sum of the $\alpha_i$'s
+	defined above. Then $\alpha$ is injective.
+\end{prop}
+For the proof see \cite{27}, \S 2, prop.~4.
+\begin{corp}
+	The $K$-spaces $W^i$ ($i \in \Z$) are of finite dimension.
+	They are linearly independent over $C$.
+\end{corp}
+
+\begin{mydef}\label{def:III_12_1}
+	The module $W$ is of \strong{Hodge-Tate type}\index{Hodge-Tate module}%
+	\index{Hodge-Tate type (module)}
+	if the homomorphism $\alpha\colon \coprod_{i\in\Z} W(i) \to W$ is an
+	isomorphism.
+\end{mydef}
+
+Let now $V$ be as in \ref{sec:III_11}, a vector space over $\Q_p$, of finite
+dimension. Let $\rho\colon G \to \Aut(V)$ be a $p$-adic representation. Let $W
+= C \otimes_{\Q_p} V$ and let $G$ act on $W$ by the formula
+\dpage
+\[
+	s(c\otimes v) = s(c) \otimes s(v) \qquad
+	s\in \Gamma, \; c\in C, \; v\in V.
+\]
+\begin{mydef}
+	The representation $\rho$ is of \strong{Hodge-Tate type}%
+	\index{Hodge-Tate representation}\index{Hodge-Tate type
+	(representation)} if the $C$-space $W = C \otimes_{\Q_p} V$ is of
+	Hodge-Tate type (cf.\ def.~\ref{def:III_12_1}).
+\end{mydef}
+
+\begin{ex}
+	Let $F$ be a $p$-divisible group of finite height (cf.\ \cite{26},
+	\cite{39}); let $T$ be its Tate module (\emph{loc. cit.}) and $V = \Q_p
+	\otimes T$. The group $G$ acts on $V$, and Tate has proved (\cite{39},
+	Cor.~2 to Th.~3) that this Galois module is of Hodge-Tate type; more
+	precisely, one has $W = W(0) \oplus W(1)$, where $W = C \otimes V$ as
+	above.
+\end{ex}
+\begin{thm}[Tate]
+Assume $K$ is a finite extension of $\Q_p$ (i.e.\ its residue field is finite).
+Let $\rho\colon G \to \Aut(V)$ be an abelian $p$-adic representation of $K$.
+The following properties are equivalent:
+\begin{enumerate}[(a)]
+\item $\rho$ is locally algebraic (cf.\ \ref{sec:III_11}).
+\item $\rho$ is of Hodge-Tate type and its restriction to the inertia group is
+	semi-simple.
+\end{enumerate}
+\end{thm}
+For the proof, see the Appendix.
+
+\section{The global case}
+\subsection{Definitions}
+\label{sec:III_21}
+\todo{Belen.}
+
+\subsection{Modulus of a locally algebraic abelian representation}
+\label{sec:III_22}
+Let $\rho\colon \abcl{\Gal(\algcl K/K)} \to \Aut(V_\ell)$ be as above; by
+composition with the class field homomorphism $i\colon I \to \abcl{\Gal(\algcl
+K/K)}$, $\rho$ defines a homomorphism $\rho \circ i\colon I \to \Aut(V_\ell)$.
+
+We assume that $p\rho$ is locally algebraic and we denote by $f$ the associated
+\dpage
+algebraic morphism $T_{/\Q_\ell} \to \GL_{V_\ell}$.
+\begin{mydef}
+Let $\mathfrak{m}$ be a modulus (chap.~\ref{ch:ii}, \ref{sec:II_11}).
+One says that $\rho$ is defined mod $\mathfrak{m}$ (or that
+$\mathfrak{m}$ is a modulus of definition for $\rho$) if
+\begin{enumerate}[(i)]
+	\item $\rho \circ i$ is trivial on $U_{v, \mathfrak{m}}$ when $p_v \ne
+		\ell$.
+	\item $\rho \circ i_\ell(x) = f(x^{-1})$ for \smash{$\displaystyle x
+		\in \prod_{v\mid\ell} U_{v, \mathfrak{m}}$}.
+\end{enumerate}
+\end{mydef}
+(Note that $\prod_{v\mid\ell} U_{v, \mathfrak{m}}$ is an open subgroup of
+$K_\ell^\times = T_{/\Q_\ell}(\Q_\ell)$.)
+
+In order to prove the existence of a modulus of definition, we
+need the following auxiliary result:
+\begin{prop}\label{prop:III_22_1}
+Let $H$ be a Lie group over $Q_\ell$ (resp.\ $\R$) and let
+$\alpha$ be a continuous homomorphism of the idèle group $I$ into $H$.
+\begin{enumerate}[(a)]
+\item\label{prop:III_22a}
+	If $p_v \ne \ell$ (resp.\ $p_v \ne \infty$), the restriction of
+	$\alpha$ to $K$ is equal to 1 on an open subgroup of $K_v^\times$.
+\item\label{prop:III_22b}
+	The restriction of $\alpha$ to the unit group $U_v$ of $K_v^\times$ is
+	equal to 1 for almost all $v$'s.
+\end{enumerate}
+\end{prop}
+\begin{proof}
+	Part \ref{prop:III_22a} follows from the fact that $K_v^\times$ is a
+	$p_v$-adic Lie group and that a homomorphism of a $p$-adic Lie group
+	into an $\ell$-adic one is locally equal to 1 if $p \ne \ell$.
+
+	To prove \ref{prop:III_22b}, let $N$ be a neighborhood of 1 in $H$
+	which contains no finite subgroup except $\{ 1 \}$; the existence of
+	such an $N$ is classical for real Lie groups, and quite easy to prove
+	for $\ell$-adic ones. By definition of the idèle topology,
+	$\alpha(U_v)$ is contained in $N$ for almost all $v$'s. But
+	\ref{prop:III_22a} shows that, if $p_v \ne \ell$, the group
+	\dpage
+	$\alpha(U_v)$ is finite; hence $\alpha(U_v) = \{ 1 \}$ for almost all
+	$v$'s.
+\end{proof}
+
+\begin{corp}\label{cor:III_22}
+	Any abelian $\ell$-adic representation of $K$ is unramified outside a
+	finite set of places.
+\end{corp}
+This follows from \ref{prop:III_22b} applied to the homomorphism $\alpha$ of $I$
+induced by the given representation, since the $\alpha(U_v)$ are known to be
+the inertia subgroups.
+% 2d by the given r
+
+\begin{obs}
+This does not extend to non-abelian representations (even solvable ones), cf.\ Exercise.
+\end{obs}
+\begin{prop}
+	Every locally algebraic abelian $\ell$-adic representation has a
+	modulus of definition.
+\end{prop}
+Let $\rho\colon \abcl{\Gal(\algcl K/K)} \to \Aut(V_\ell)$ be the given
+representation and $f$ the associated morphism of $T_{/\Q_\ell}$ into
+$\GL_{V_\ell}$. Let $X$ be the set of places $v \in M_K^0$, with $p_v \ne
+\ell$, for which $\rho$ is ramified; the corollary~\ref{cor:III_22} to
+Prop.~\ref{prop:III_22_1} shows that $X$ is finite. By
+Prop.~\ref{prop:III_22_1}, \ref{prop:III_22a}, we can choose a modulus
+$\mathfrak{m}$ such that $\rho \circ i\colon I \to \Aut(V_\ell)$ is trivial on
+all the $U_{v, \mathfrak{m}}$, $v \in X$. Enlarging $\mathfrak{m}$ if
+necessary, we can assume that $\rho \circ i_\ell(x) = f(x^{-1})$ for $x \in
+\prod_{p_v = \ell} U_{v, \mathfrak{m}}$. Hence, $\mathfrak{m}$ is a modulus of
+definition for $\rho$.
+
+\begin{obs}
+It is easy to show that there is a smallest modulus of definition for $\rho$;
+it is called the \strong{conductor}\index{Conductor} of $\rho$.
+\end{obs}
+
+\subsubsection*{Exercise}
+Let $z_1, \dots, z_n, \dots \in K^\times$. For each $n$, let $E_n$ be the
+\dpage
+subfield of $\algcl K$ generated by all the $\ell^n$-th roots of the element
+$z_1 z_2^\ell \cdots z_n^{\ell^{n-1}}$.
+\begin{enumerate}[a)]
+\item Show that $E_n$ is a Galois extension of $K$, containing the $\ell^n$-th
+	roots of unity and that its Galois group is isomorphic to a subgroup of
+	the affine group $
+	\begin{psmallmatrix}
+		* & * \\
+		0 & 1
+	\end{psmallmatrix} 
+	$ in $\GL(2, \Z/\ell^n\Z)$.
+\item Let $E$ be the union of the $E_n$'s. Show that $E$ is a Galois extension
+	of $K$, whose Galois group is a closed subgroup of the affine group
+	relative to $\Z_\ell$.
+\item Give an example where $E$ (and hence the corresponding 2-dimensional
+	$\ell$-adic representation) is ramified at all places of $K$.
+\end{enumerate}
+
+\subsection{Back to \texorpdfstring{$S_{\mathfrak{m}}$}{Sm}}
+\label{sec:III_23}
+\todo{Belen.}
+
+\subsection{A mild generalization}
+\label{sec:III_24}
+\todo{Belen.}
+
+\subsection{The function field case}
+\label{sec:III_25}

@@ -43,16 +43,16 @@ Here's an indepth list of the chapters and sections, and their current status:
         - [ ] 3.2 The morphism j
         - [x] 3.3 Structure of Tm
         - [ ] 3.4 How to compute Frobeniuses
-    - [ ] A. Killing arithmetic groups in tori
+    - [x] A. Killing arithmetic groups in tori
         - [x] A.1 Arithmetic groups in tori
-        - [ ] A.2 Killing arithmetic subgroups
+        - [x] A.2 Killing arithmetic subgroups
 - [ ] Chapter III. Locally Algebraic Abelian Representations
-    - [ ] 1 The local case mi
+    - [ ] 1 The local case
         - [ ] 1.1 Definitions
-        - [ ] 1.2 Alternative definition of "locally algebraic" via Hodge-Tate modules
+        - [x] 1.2 Alternative definition of "locally algebraic" via Hodge-Tate modules
     - [ ] 2 The global case
         - [ ] 2.1 Definitions
-        - [ ] 2.2 Modulus of a locally algebraic abelian representation
+        - [x] 2.2 Modulus of a locally algebraic abelian representation
         - [ ] 2.3 Back to Sm
         - [ ] 2.4 A mild generalization
         - [ ] 2.5 The function field case
