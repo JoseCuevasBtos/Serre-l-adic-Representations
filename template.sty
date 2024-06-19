@@ -93,6 +93,9 @@
 \RequirePackage{framed}
 % \RequirePackage{fdsymbol} % Don't
 
+% ======== Hyphen words correctly ===
+\hyphenation{con-ti-nuous}
+
 % ======== Chapter sections =========
 \RequirePackage[indentafter]{titlesec}
 \renewcommand{\thechapter}{\Roman{chapter}}
@@ -187,6 +190,7 @@
 
 \theoremstyle{definition}
 \newtheorem{mydef}{Definition}[section]
+\renewcommand{\themydef}{\arabic{mydef}}
 \newtheorem*{obs}{Remark}
 \newtheorem*{ex}{Examples}
 

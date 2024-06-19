@@ -1,5 +1,6 @@
 \chapter{Locally algebraic abelian representations}
 \label{ch:iii}
+\chaptermark{Locally algebraic representations}
 
 In this Chapter, we define what it means for an abelian $\ell$-adic
 representation to be \emph{locally algebraic} and we prove (cf.\ \ref{sec:III_23}) that such
@@ -234,3 +235,267 @@ $z_1 z_2^\ell \cdots z_n^{\ell^{n-1}}$.
 
 \subsection{The function field case}
 \label{sec:III_25}
+The above constructions have a (rather elementary) analogue
+for \emph{function fields of one variable over a finite field:}
+
+Let $K$ be such a field, and let $p$ be its characteristic. If $\mathfrak{m}$
+is a modulus for $K$ (i.e.\ a positive divisor) we define the subgroup
+$U_{\mathfrak{m}}$ of the idèle group $I$ as in chap.~\ref{ch:ii},
+\ref{sec:II_21}, and we put
+\[
+	\Gamma_{\mathfrak{m}} = I/U_{\mathfrak{m}} K^\times.
+\]
+\dpage
+The degree map $\deg\colon I \to \Z$ is trivial on $U_{\mathfrak{m}}$, hence defines an
+exact sequence
+\[\begin{tikzcd}
+	1 \rar & J_{\mathfrak{m}} \rar & \Gamma_{\mathfrak{m}} \rar & \Z \rar & 1.
+\end{tikzcd}\]
+One sees easily that the group $J_{\mathfrak{m}}$ is finite; moreover, it may
+be interpreted as the group of rational points of the ``generalized Jacobian
+variety defined by $\mathfrak{m}$''. If $\widehat{\Gamma}_{\mathfrak{m}}$
+denotes the completion of r with respect to the topology of subgroups of finite
+index, it is known (class field theory) that $\abcl{\Gal(\algcl K/K)} \cong
+\invlim_{\mathfrak{m}} \widehat{\Gamma}_{\mathfrak{m}}$.
+
+Let now $\rho\colon \abcl{\Gal(\algcl K/K)} \to \Aut(V_\ell)$ be an abelian
+$\ell$-adic representation of $K$, with $\ell \ne p$. One proves as in
+\ref{sec:III_22} that there exists a modulus $\mathfrak{m}$ such that $\rho$ is
+trivial on $U_{\mathfrak{m}}$, i.e.\ such that $\rho$ may be identified with a
+\emph{homomorphism of $\widehat{\Gamma}_{\mathfrak{m}}$ into $\Aut(V_\ell)$.}
+Moreover
+
+\begin{prop}
+	A homomorphism $\phi\colon \Gamma_{\mathfrak{m}} \to \Aut(V_\ell)$
+	can be extended to a continuous homomorphism of
+	$\widehat{\Gamma}_{\mathfrak{m}}$ if and only if there exists a lattice
+	of $V_\ell$ which is stable by $\rho(\Gamma_{\mathfrak{m}})$.
+\end{prop}
+
+The necessity follows from Remark~\ref{rmk:I_11_1} of chap.~\ref{ch:i},
+\ref{sec:I_11}. The sufficiency is clear.
+
+Note that, as in the number field case, we have Frobenius
+elements and we can define the notion of \emph{rationality} of an $\ell$-adic
+representation.
+
+\begin{thm}
+	An abelian $\ell$-adic representation
+	\[
+		\phi \colon \widehat{\Gamma}_{\mathfrak{m}} \to \Aut(V_\ell)
+	\]
+	\dpage
+	of $K$ is rational if and only if $\Tr\phi(\gamma)$ belongs to $\Q$
+	for every $y \in \Gamma_{\mathfrak{m}}$.
+\end{thm}
+
+If $v \notin \Supp(\mathfrak{m})$, and if $f_v$ is a uniformizing parameter at
+$v$, the image $F_v$ of $f_v$ in $\Gamma_{\mathfrak{m}}$ is the Frobenius
+element of the Galois group $\widehat{\Gamma}_{\mathfrak{m}}$. Hence, if
+$\Tr\phi$ takes rational values on $\Gamma_{\mathfrak{m}}$, the
+characteristic polynomial of $\phi(F_v)$ has rational coefficients for all
+$v \notin \Supp(\mathfrak{m})$ and $\phi$ is rational.
+
+To prove the converse, note first that \v Cebotarev's theorem
+(Chap.~\ref{ch:i}, \ref{sec:I_22}) is valid for $K$, if one uses a somewhat
+weaker definition of equipartition. Hence, the Frobenius elements $F_v$ are
+\emph{dense} in $\widehat{\Gamma}_{\mathfrak{m}}$. In particular, they generate
+$\Gamma_{\mathfrak{m}}$, and, from this, one sees that $\Tr\rho(\gamma)$
+belongs to some number field $E$. We can then construct an $E$-linear
+representation $\phi\colon \Gamma_{\mathfrak{m}} \to \GL(n, E)$ with the same
+trace as $\rho$, and the theorem follows from:
+
+\begin{lem}
+	Let $\Gamma$ be a finitely generated abelian group, and $\phi\colon
+	\Gamma \to \GL(n, E)$ a linear representation of $\Gamma$ over a number
+	field $E$. Let $\Sigma$ be a subset of $\Gamma$, which is dense in
+	$\Gamma$ for the topology of subgroups of finite index. Assume that
+	$\Tr\phi(\gamma) \in \Q$ for all $\gamma \in \Sigma$. Then
+	$\Tr\phi(\gamma) \in \Q$ for all $\gamma \in \Gamma$.
+\end{lem}
+\begin{proof}
+	Since $\phi(\Gamma)$ is finitely generated, there is a finite $S$ of
+	places of $E$ such that all the elements of $\phi(\Gamma)$ are
+	$S$-integral matrices. If $\ell'$ is a prime number not divisible by
+	any element of $S$, the image of $\phi(\Gamma)$ in $\GL(n, E \otimes
+	\Q_{\ell'})$ is contained in a compact subgroup of $\GL(n, E \otimes
+	\Q_{\ell'})$; hence $\phi$ extends by continuity to
+	\dpage
+	\[
+		\widehat{\phi} \colon \widehat{\Gamma} \to \GL(n, E \otimes
+		\Q_{\ell'})
+	\]
+	where $\widehat{\Gamma}$ is the completion of $\Gamma$ for the topology
+	of subgroups of finite index. Since $\Sigma$ is dense in
+	$\widehat{\Gamma}$, it follows that $\Tr\widehat{\phi}(\hat\gamma)$
+	belongs to the adherence $\Q_{\ell'}$ of $\Q$ in $E \otimes \Q_{\ell'}$
+	for every $\hat\gamma \in \widehat{\Gamma}$.  Hence, if $\gamma \in
+	\Gamma$, we have
+	\begin{equation}
+		\Tr \phi(\Gamma) \in E \cap \Q_{\ell'} = \Q.
+		\tqedhere
+	\end{equation}
+\end{proof}
+
+\subsubsection*{Exercises}
+\begin{enumerate}[1)]
+\item Let $\phi\colon \widehat{\Gamma}_{\mathfrak{m}} \to \Aut(V_\ell)$ be a
+	semi-simple $\ell$-adic representation of $\Gamma_{\mathfrak{m}}$. Show
+	the equivalence of:
+	\begin{enumerate}[(a)]
+	\item $\phi$ extends continuously to $\widehat{\Gamma}_{\mathfrak{m}}$.
+	\item For every $\gamma \in \Gamma_{\mathfrak{m}}$, the eigenvalues of
+		$\phi(\gamma)$ are units (in a suitable extension of
+		$\Q_\ell$).
+	\item There exists $\gamma \in \Gamma_{\mathfrak{m}}$, with
+		$\deg(\gamma) \ne 0$, such that the eigenvalues of
+		$\phi(\gamma)$ are units.
+	\item For every $\gamma \in \Gamma_{\mathfrak{m}}$, one has
+		$\Tr\phi(\gamma) \in \Z_\ell$.
+	\end{enumerate}
+
+\item Let $\phi\colon \widehat{\Gamma}_{\mathfrak{m}} \to \Aut(V_\ell)$ be a
+	rational $\ell$-adic representation of $K$.  Show that, for almost all
+	prime number $\ell'$, there is a rational $\ell'$-adic representation
+	of $K$ compatible with $\phi$. Show that this holds for all $\ell' \ne
+	p$ if and only if the following property is valid: for all $\gamma \in
+	\Gamma_{\mathfrak{m}}$, the coefficients of the characteristic
+	polynomial of $\phi(\gamma)$ are $p$-integers.
+\end{enumerate}
+
+\section{The case of a composite of quadratic fields}
+\dpage
+\subsection{Statement of the result}
+\label{sec:III_31}
+\todo{Belen.}
+
+\subsection{A criterion for local algebraicity}
+\label{sec:III_32}
+\begin{prop}
+	Let $\rho\colon \abcl{\Gal(\algcl K/K)} \to \Aut(V_\ell)$ be a rational
+	semi-simple $\ell$-adic abelian representation of $K$. Assume that
+	there exists an integer $N \ge 1$ such that $\rho^N$ is locally
+	algebraic. Then $\rho$ is locally algebraic.
+\end{prop}
+\begin{proof}
+	\dpage
+	Since $\rho$ is semi-simple, it can be brought in diagonal form over a
+	finite extension of $\Q_\ell$, hence gives rise to a family $\{ \psi_1,
+	\dots, \psi_n \}$ of $n$ continuous characters $\psi_i\colon C_K \to
+	\algcl{\Q}_\ell^\times$, where $C_K$ is the idèle-class group of $K$,
+	and $n = \dim V_\ell$.
+	Let $\chi_1 = \psi_1^N, \dots, \chi_n = \psi_n^N$ be the corresponding
+	characters occurring in $\rho^N$. Since $\rho^N$ is locally algebraic,
+	to each $\chi_i^N$ corresponds an algebraic character $\chi_i^{\rm alg}
+	\in X(\TT)$ of the torus $\TT$ (here we identify $X(\TT)$ with
+	$\Hom(\TT_{/\algcl\Q_\ell}, \GG_{m, \algcl\Q_\ell})$, since
+	$\algcl\Q_\ell$ is algebraically closed). Each $\chi_i^{\rm alg}$ is of
+	the form $\prod_{\sigma \in \Gamma} [\sigma]^{n_\sigma(i)}$, where
+	$\Gamma$ is the set of embeddings of $K$ into $\algcl\Q_\ell$, cf.\ 
+	Chap.~\ref{ch:ii}, \ref{sec:II_11}. One has
+	\[
+		\chi_i(x) = \chi_i^{\rm alg}(x^{-1}) = \prod_{\sigma \in
+		\Gamma} \sigma(x)^{-n_\sigma(i)}
+	\]
+	for all $x \in K_\ell^\times$ close enough to 1.
+\end{proof}
+
+\begin{lem}
+	All the integers $n_\sigma(i)$, $1 \le i \le n$, $\sigma \in \Gamma$,
+	are divisible by $N$.
+\end{lem}
+\begin{proof}
+	Let $U$ be an open subgroup of $\algcl{\Q}_\ell^\times$ containing no
+	$N$\textsuperscript{th}-root of unity except 1, and let $\mathfrak{m}$
+	be a modulus of $K$ such that $\psi_i(x) \in U$ for all $x \in
+	U_{\mathfrak{m}}$ and $i = 1, \dots, n$; the existence of such an
+	$\mathfrak{m}$ follows from the continuity of $\psi_1, \dots, \psi_n$.
+	We take $\mathfrak{m}$ large enough so that:
+	\begin{enumerate}[a)]
+	\item It is a modulus of definition for $\rho^N$.
+	\item $\rho$ is unramified at all $v \in \Supp(\mathfrak{m})$, and the
+		corresponding Frobenius elements $F_{v, \rho}$ have a
+		characteristic polynomial with
+		\dpage
+		rational coefficients.
+	\end{enumerate}
+	Let $K_{\mathfrak{m}}$ be the abelian extension of $K$ corresponding to
+	the open subgroup $K^\times U_{\mathfrak{m}}$ of the idèle group $I$,
+	and let $L$ be a finite Galois extension of $\Q$ containing
+	$K_{\mathfrak{m}}$. Choose a prime number $p$ which is distinct from 1,
+	is not divisible by any place of $\Supp(\mathfrak{m})$, and splits
+	completely in $L$. Let $v$ be a place of $K$ dividing $p$, and let
+	$f_v$ be an idèle which is a uniformizing element at $v$ and is equal
+	to 1 elsewhere. The fact that $v$ splits completely in
+	$K_{\mathfrak{m}}$ (since it does in $L$) implies that $f_v$ is the
+	norm of an idèle of $K_{\mathfrak{m}}$, hence (by class-field theory)
+	belongs to $K^\times U_{\mathfrak{m}}$; this means that the prime ideal
+	$\mathfrak{p}_v$ is a principal ideal $(\alpha)$, with $\alpha \equiv 1
+	\mod{\mathfrak{m}}$ and $\alpha$ positive at all real places of $K$.
+
+	Let $x = \psi_i(f_v)$ and $y = \chi_i(f_v)$, so that $y = x^N$; these
+	are the Frobenius elements of $\psi_i$ and $\chi_i$ relative to $v$. By
+	definition of $\chi_i^{\rm alg}$. we have
+	\[
+		y = \chi_i^{\rm alg}(\alpha) = \prod_{\sigma \in \Gamma}
+		\sigma(\alpha)^{n_\sigma(i)}
+	\]
+	where $\alpha$ is as above.
+
+	Hence $y$ belongs to the subfield $\widetilde{L}$ of $\Q$ corresponding
+	to $L$ (this field is well defined since $L$ is a Galois extension of
+	$\Q$).  Moreover, if $w_\sigma$ is any place of $L$ such that $w_\sigma
+	\circ \sigma$ induces $v$ on $K$, we have (as in chap.~\ref{ch:ii},
+	\ref{sec:II_34}):
+	\[
+		w_\sigma(y) = n_\sigma(i).
+	\]
+	Assume now that $n_\sigma(i)$ is not divisible by $N$. Then $x$, which
+	is an $N$\textsuperscript{th}-root of $y$, does not belong to
+	$\widetilde{L}$. Hence there is a
+	\dpage
+	non-trivial $N$\textsuperscript{th}-root of unity $z$ such that $x$ and
+	$zx$ are conjugate over $\widetilde{L}$, and \emph{a fortiori} over
+	$\Q$. Since the characteristic polynomial of $F_{v, \rho}$ has rational
+	coefficients, any coniugate over $\Q$ of an eigenvalue of $F_{v, \rho}$
+	is again an eigenvalue of $F_{v, \rho}$. Hence, there exists an index
+	$j$ such that
+	\[
+		\psi_j(f_v) = z\, x = z\, \psi_i(f_v).
+	\]
+	But $f_v \in K^\times U_{\mathfrak{m}}$ and all $\psi_j$ are trivial on
+	$K^\times$ and map $U_{\mathfrak{m}}$ into the open subgroup $U$ we
+	started with. Hence $z = \psi_j(f_v) \, \psi_i(f_v)^{-1}$ belongs to
+	$U$, and this contradicts the way $U_{\mathfrak{m}}$ has been chosen.
+\end{proof}
+
+\begin{proof}[ of the proposition]
+	Since the $n_\sigma(i)$ are divisible by $N$, there exist $\varphi_i
+	\in X(\TT)$ with $\varphi_i^N = \chi_i^{\rm alg}$. If $x \in
+	K_\ell^\times$, we have:
+	\[
+		\varphi_i(x^{-1})^N = \chi_i^{\rm alg}(x^{-1}) = \chi_i(x) =
+		\psi_i(x)^N
+	\]
+	if $x$ is close enough to 1. Hence $\varphi_i(x) \psi_i(x)$ is an
+	$N$\textsuperscript{th}-root of unity when $x$ is close enough to 1,
+	and, by continuity, it is equal to 1 in a neighbourhood of 1. Hence,
+	the restriction of $\rho$ to $K_\ell^\times$ is locally equal to
+	$\varphi^{-1}$, where $\varphi$ is the (algebraic) representation of
+	$\TT$ defined by the family $(\varphi_1, \dots, \varphi_n)$. The
+	representation $\varphi$, \emph{a priori} defined over $\algcl\Q_\ell$,
+	can be defined over $\Q_\ell$ (and even over $\Q$); this follows, for
+	instance, from the fact that the family $(\varphi_1, \dots, \varphi_n)$
+	is \emph{stable} under the action of $\Gal(\algcl\Q/\Q)$, since the
+	family $(\chi_1^{\rm alg}, \dots, \chi_n^{\rm alg})$ is.
+
+	Hence $\rho$ is locally algebraic.
+\end{proof}
+
+\subsection{An auxiliary result on tori}
+\label{sec:III_33}
+\todo{José.}
+
+\subsection{Proof of the theorem}
+\label{sec:III_34}
+\todo{Belen.}

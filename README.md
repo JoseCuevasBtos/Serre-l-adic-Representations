@@ -55,10 +55,10 @@ Here's an indepth list of the chapters and sections, and their current status:
         - [x] 2.2 Modulus of a locally algebraic abelian representation
         - [ ] 2.3 Back to Sm
         - [ ] 2.4 A mild generalization
-        - [ ] 2.5 The function field case
+        - [x] 2.5 The function field case
     - [ ] 3 The case of a composite of quadratic fields
         - [ ] 3.1 Statement of the result
-        - [ ] 3.2 A criterion for local algebraicity
+        - [x] 3.2 A criterion for local algebraicity
         - [ ] 3.3 An auxiliary result on tori
         - [ ] 3.4 Proof of the theorem
     - [ ] A. Hodge-Tate decompositions and locally algebraic representations
@@ -84,7 +84,7 @@ Here's an indepth list of the chapters and sections, and their current status:
         - [ ] 3.2 The case of a non integral j
         - [ ] 3.3 Numerical example
         - [ ] 3.4 Proof of the main lemma of 3.1
-    - [ ] Appendix Local results
+    - [ ] A. Local results
         - [ ] A.1 The case v(j) < 0
             - [ ] A.1.1 The elliptic curves of Tate
             - [ ] A.1.2 An exact sequence
