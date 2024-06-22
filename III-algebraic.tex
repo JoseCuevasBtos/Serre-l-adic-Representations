@@ -364,7 +364,9 @@ trace as $\rho$, and the theorem follows from:
 \end{enumerate}
 
 \section{The case of a composite of quadratic fields}
+\label{sec:III_3}
 \dpage
+
 \subsection{Statement of the result}
 \label{sec:III_31}
 \todo{Belen.}
@@ -494,8 +496,197 @@ trace as $\rho$, and the theorem follows from:
 
 \subsection{An auxiliary result on tori}
 \label{sec:III_33}
-\todo{José.}
+In \cite{15}, Lang proved that two exponential functions $\exp(b_1 z)$,
+$exp(b_2z)$, $b_1, b_2 \in \C$, which take algebraic values for at least 3
+$\Q$-linearly independent values of $z$, are multiplicatively dependent: the
+ratio $b_1/b_2$ is a rational number. This had also been noticed by Siegel.
+
+Lang proved the following $\ell$-adic analogue:
+\begin{prop}\label{prop:III_33_1}
+Let $E$ be a field containing $\Q_\ell$ and complete for a real valuation
+extending the valuation of $\Q_\ell$. Let $b_1, b_2 \in E$ and let $\Gamma$ be
+an additive subgroup of $E$. Assume:
+\begin{enumerate}
+	\item $\Gamma$ is of rank at least 3 over $\Z$.
+	\item The exponential series $\exp(z) = \sum_{n=1}^{\infty} z^n/n!$
+		converges absolutely on $b_1 \Gamma$ and $b_2 \Gamma$.
+	\item For all $z \in \Gamma$ the elements $\exp(b_1z)$ and $\exp(b_2z)$ are
+	algebraic over $\Q$.
+\end{enumerate}
+Then $b_1$ and $b_2$ are linearly dependent over $\Q$ (i.e.\ $b_1/b_2$ belongs
+to $\Q$ if $b_2 \ne 0$).
+\end{prop}
+For the proof, see \cite{15}, Appendix, or \cite{30}, \S 1.
+
+We will apply this result to tori, taking for $E$ the completion
+of $\algcl{\Q}_\ell$. We need a few definitions first:
+\begin{enumerate}[a/]
+\item Let $T$ be an $n$-dimensional torus over $\Q$, with character
+	group $X(T)$. As before, we identify $X(T)$ with the group of morphisms
+	of $T_{/E}$ into $\GG_{m, E}$. We say that \emph{$T$ is a sum of
+	one-dimensional tori} if there exist one-dimensional subtori $T_i$ of
+	$T$, $1 \le i \le n$, such that the sum map $T_1 \times \cdots \times
+	T_n \to T$ is surjective (and hence has a finite kernel). An equivalent
+	condition is:
+	\begin{displayquote}
+		\slshape
+		$X(T) \otimes \Q$ is a direct sum of one-dimensional
+		\dpage
+		subspaces stable by $\Gal(\algcl\Q/\Q)$.
+	\end{displayquote}
+
+\item Let $f$ be a continuous homomorphism of $T(\Q_\ell)$ into $E$. We say
+	that $f$ is \strong{locally algebraic}\index{Locally algebraic
+	(homomorphism)} if there is a neighbourhood $U$ of 1 in the $\ell$-adic
+	Lie group $T(\Q_\ell)$, and an element $\varphi \in X(T)$ such that
+	$f(x) = \varphi(x)$ for all $x \in U$. We say that $f$ is
+	\strong{almost locally algebraic}\index{Almost locally algebraic
+	(homomorphism)} if there is an integer $N \ge 1$ such that $f^N$ is
+	locally algebraic.
+
+\item Let $S$ be a finite set of prime numbers, and, for each $p \in S$, let
+	$W_p$ be an open subgroup of $T(\Q_p)$; denote by $W$ the family
+	$(W_p)_{p\in S}$.
+\end{enumerate}
+Let $T(\Q)_W$ be the set of elements $x \in T(\Q)$ whose images in
+$T(\Q_p)$ belong to $W$ for all $p \in S$; this is a subgroup of $T(\Q)$.
+With these notations, we have:
+
+\begin{prop}\label{prop:III_33_2}
+	Let $f\colon T(\Q_\ell) \to E^\times$ be a continuous homomorphism. Assume:
+	\begin{enumerate}[(a)]
+	\item There exists a family $W = (W_p)_{p\in S}$ such that $f(x)$ is
+		algebraic over $\Q$ for all $x \in T(\Q)_W$.
+	\item\label{item:III_33_2b}
+		$T$ is a sum of one-dimensional tori.
+	\end{enumerate}
+	Then $f$ is almost locally algebraic.
+\end{prop}
+\begin{proof}
+\begin{enumerate}[i)]
+\item\label{item:III_33_2i}
+	We suppose first that $T$ is \emph{one-dimensional}, and we denote by
+	$\chi$ a generator of $X(T)$. If $\chi$ is invariant by
+	$\Gal(\algcl\Q/\Q)$, $T$ is isomorphic to $\GG_m$ and $T(\Q) \cong
+	\Q^\times$. If not, $\Gal(\algcl\Q/\Q)$ acts on $X(T)$ \emph{via} a group of
+	order 2, corresponding to some quadratic
+	\dpage
+	extension $F$ of $\Q$; the character $\chi$ defines an isomorphism of
+	$T(\Q)$ onto the group $F_1^\times$ of elements of $F$ of norm 1. In both
+	cases, one sees that $T(\Q)$ is an abelian group of \emph{infinite
+	rank} (for a more precise result, see Exercise below). On the other
+	hand, each quotient $T(\Q_p)/W_p$ is a finitely generated abelian group
+	of rank $\le 1$.  Hence $T(\Q)/T(\Q)_W$ is finitely generated, and this
+	implies that $T(\Q)_W$ is also of \emph{infinite rank}.
+
+	Since $T(\Q_\ell)$ is an $\ell$-adic Lie group of dimension 1, it is
+	locally isomorphic to the \emph{additive group} $\Q_\ell$. This means
+	that there exists a homomorphism
+	\[
+		e \colon \Z_\ell \longrightarrow T(\Q_\ell)
+	\]
+	which is an isomorphism of $\Z$ onto an open subgroup of $T(\Q_\ell)$.
+	By composition we get two continuous homomorphisms
+	\[
+		f \circ e\colon \Z_\ell \longrightarrow E^\times, \qquad
+		\chi \circ e\colon \Z_\ell \longrightarrow E^\times.
+	\]
+	But any continuous homomorphism of $\Z$ into $E^*$ is locally an
+	exponential. This implies that, after replacing $\Z_\ell$ by $\ell^m
+	\Z_\ell$ if necessary, there exist $b_1, b_2 \in E$ such that
+	\[
+		f \circ e(z) = \exp(b_1 z), \qquad
+		\chi\circ e(z) = \exp(b_2 z),
+	\]
+	with absolute convergence of the exponential series.
+
+	Let now $\Gamma$ be the set of elements $z \in \Z_\ell$ such that $e(z)
+	\in T(\Q)_W$. Since $T(\Q_\ell)/e(\Z_\ell)$ is finitely generated, and
+	$T(\Q)_W$ is of infinite rank, $\Gamma$ is of infinite rank. If $z \in
+	\Gamma$, $e(z)$
+	\dpage
+	belongs to $T(\Q)_W$, hence $f \circ e(z)$ is algebraic over $\Q$; the
+	same is true for $\chi\circ e(z)$ since $\chi$ maps $T(\Q)$ either into
+	$\Q^\times$ or into the group $F$ defined above.
+	Proposition~\ref{prop:III_33_1} then shows that $b_1/b_2$ is rational.
+	This means that some integral power $f^N$ of $f$, with $N \ge 1$, is
+	locally equal to an integral power of $\chi$, hence $f$ is \emph{almost
+	locally algebraic}.
+
+\item \emph{General case.} Write $T = T_1 \cdots T_n$ where $T_1, \dots, T_n$
+	are one-dimensional subtori of $T$. Since $X(T) \otimes \Q$ is the
+	direct sum of the $X(T_i) \otimes \Q$, it is enough to show that, for
+	all $i$, the restriction $f_i$ of $f$ to $T_i(\Q_\ell)$ is almost
+	locally algebraic. But we may choose open subgroups $W_{i, p}$ of
+	$T_i(\Q_p)$ such that $W_{1,p} \cdots W_{n,p} \subset W_p$. If we put
+	$W_i = (W_{i,p})_{p\in S}$, we then see that $f_i$ takes algebraic
+	values on $T_i(\Q)_{W_i}$, hence is almost locally algebraic by
+	\ref{item:III_33_2i} above. \qedhere
+\end{enumerate}
+\end{proof}
+
+\begin{obs}
+	If one could suppress condition \ref{item:III_33_2b} from
+	Prop.~\ref{prop:III_33_2}, all the results of this \S{} would extend to
+	arbitrary number fields. This would be possible if one had a
+	sufficiently strong $n$-dimensional version of
+	Prop.~\ref{prop:III_33_1} above; the one given in \cite{30}, \S 2 does
+	not seem strong enough (it requires density properties which are
+	unknown in the case considered here). $\to$ [This has been done by
+	Waldschmidt: see \cite{63}, \cite{83}.]
+\end{obs}
+
+\subsubsection*{Exercise}
+Let $T$ be a non-trivial torus over $\Q$. Show that $T(\Q)$ is the direct sum
+of a finite group and a free abelian group of infinite rank.
 
 \subsection{Proof of the theorem}
 \label{sec:III_34}
 \todo{Belen.}
+
+\begin{subappendices}
+
+\section{Hodge-Tate decompositions and locally algebraic representations}
+\label{sec:III_App}
+Let $K$ be a field of characteristic zero, complete with respect
+to a discrete valuation and with perfect residue field $k$ of 
+characteristic $p > 0$. In this Appendix we deal with Hodge-Tate 
+decomposition of $p$-adic abelian representations of $K$.
+
+Sections \ref{sec:III_A1} and \ref{sec:III_A2} give invariance properties of
+\dpage
+these decompositions under ground field extensions. Special characters of
+$\Gal(\algcl K/K)$ are defined in \ref{sec:III_A4}; they are closely connected
+both with Hodge-Tate modules (\ref{sec:III_A4} and \ref{sec:III_A5}) and local
+algebraicity (\ref{sec:III_A6}). The proof of Tate's theorem (cf.\
+\ref{sec:III_12}) is given in the last section.
+
+\subsection{Invariance of Hodge-Tate decompositions}
+\label{sec:III_A1}
+\todo{Jose.}
+
+\subsection{Admissible characters}
+\label{sec:III_A2}
+\todo{Belen.}
+
+\subsection{A criterion for local triviality}
+\label{sec:III_A3}
+\todo{Belen.}
+
+\subsection{The character xi}
+\label{sec:III_A4}
+\todo{Belen.}
+
+\subsection{Characters associated with Hodge-Tate decompositions}
+\label{sec:III_A5}
+\todo{Belen.}
+
+\subsection{Locally compact case}
+\label{sec:III_A6}
+\todo{Jose.}
+
+\subsection{Tate's theorem}
+\label{sec:III_A7}
+\todo{Jose.}
+
+\end{subappendices}

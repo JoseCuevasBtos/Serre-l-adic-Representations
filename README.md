@@ -59,7 +59,7 @@ Here's an indepth list of the chapters and sections, and their current status:
     - [ ] 3 The case of a composite of quadratic fields
         - [ ] 3.1 Statement of the result
         - [x] 3.2 A criterion for local algebraicity
-        - [ ] 3.3 An auxiliary result on tori
+        - [x] 3.3 An auxiliary result on tori
         - [ ] 3.4 Proof of the theorem
     - [ ] A. Hodge-Tate decompositions and locally algebraic representations
         - [ ] A.1 Invariance of Hodge-Tate decompositions
