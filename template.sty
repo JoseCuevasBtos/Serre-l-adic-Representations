@@ -134,7 +134,6 @@
 \renewcommand{\headrule}{}
 
 % ======== Utilities ================
-\RequirePackage{todonotes}
 \RequirePackage[shortlabels]{enumitem}
 \RequirePackage{comment}
 \RequirePackage{hyperref}
@@ -143,9 +142,13 @@
 \RequirePackage{longtable}
 \RequirePackage{multicol}
 
-\setuptodonotes{inline}
-
 \setlist[enumerate,1]{label=\arabic*), ref=\arabic*} % Enumerate standards
+
+% ======== TODOs ====================
+\RequirePackage{todonotes}
+\setuptodonotes{inline}
+\todostyle{pinktask}{prepend, caption={Belen \textcolor{WildStrawberry}{$\heartsuit$}}, noinline, noline, color=pink!40}
+\todostyle{section}{inline, color=SeaGreen}
 
 % ======== Graphics =================
 \RequirePackage{color}
