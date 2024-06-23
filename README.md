@@ -62,12 +62,12 @@ Here's an indepth list of the chapters and sections, and their current status:
         - [x] 3.3 An auxiliary result on tori
         - [ ] 3.4 Proof of the theorem
     - [ ] A. Hodge-Tate decompositions and locally algebraic representations
-        - [ ] A.1 Invariance of Hodge-Tate decompositions
-        - [ ] A.2 Admissible characters
+        - [x] A.1 Invariance of Hodge-Tate decompositions
+        - [x] A.2 Admissible characters
         - [ ] A.3 A criterion for local triviality
         - [ ] A.4 The character xi
         - [ ] A.5 Characters associated with Hodge-Tate decompositions
-        - [ ] A.6 Locally compact case
+        - [x] A.6 Locally compact case
         - [ ] A.7 Tate's theorem
 - [ ] Chapter IV. l-adic Representations Attached to Elliptic Curves
     - [x] 1 Preliminaries
