@@ -10,23 +10,23 @@ notation (see "Editors' notes").
 
 Here's an indepth list of the chapters and sections, and their current status:
 
-- [ ] Chapter I. l-adic Representations
+- [x] Chapter I. l-adic Representations
     - [x] 1 The notion of an l-adic representation
         - [x] 1.1 Definition
         - [x] 1.2 Examples
-    - [ ] 2 l-adic representations of number fields
+    - [x] 2 l-adic representations of number fields
         - [x] 2.1 Preliminaries
         - [x] 2.2 Cebotarev's density theorem
         - [x] 2.3 Rational l-adic representations
         - [x] 2.4 Representations with values in a linear algebraic group
-        - [ ] 2.5 L-functions attached to rational representations
+        - [x] 2.5 L-functions attached to rational representations
     - [x] A. Equipartition and L-functions
         - [x] A.1 Equipartition
         - [x] A.2 The connection with L-functions
         - [x] A.3 Proof of theorem 1
 - [ ] Chapter II. The Groups Sm
-    - [ ] 1 Preliminaries
-        - [ ] 1.1 The torus T
+    - [x] 1 Preliminaries
+        - [x] 1.1 The torus T
         - [x] 1.2 Cutting down T
         - [ ] 1.3 Enlarging groups
     - [ ] 2 Construction of Tm and Sm

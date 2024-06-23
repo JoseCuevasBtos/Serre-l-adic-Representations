@@ -26,8 +26,17 @@ In particular, $\TT(\Q) = K^\times$. If $d = [K : \Q]$, the group $\TT$ is a
 $\TT_{/\algcl\Q} = \TT \otimes_\Q \algcl\Q$ obtained from $\TT$ by extending
 the scalars from $\Q$ to $\algcl\Q$, is isomorphic
 \dpage
-to...
-\todo[section]{Belen}
+to $G_{m/\algcl{\Q}} \times \hdots \times G_{m/\algcl{\Q}}$ ($d$ times). More 
+precisely, let $\Gamma$ be the set of embeddings of $K$ into $\algcl{\Q}$; each 
+$\sigma \in \Gamma$ extends to a homomorphism $K \otimes_{\Q} \algcl{\Q} \to 
+\algcl{\Q}$, hence defines a morphism $[\sigma] : T_{/\algcl{\Q}} \to G_{m/
+\algcl{Q}}$. The collection of all $[\sigma]$'s gives the isomorphism $T_{/
+\algcl{\Q}} \to G_{m/\algcl{\Q}} \times \hdots \times G_{m/\algcl{\Q}}$. 
+Moreover, the $[\sigma]$'s form a basis of the \emph{character group} $X(T) = 
+\Hom_{\algcl{\Q}} (T_{/\algcl{\Q}} , G_{m/\algcl{\Q}})$ of $T$. Note that the 
+Galois group $\Gal(\algcl{\Q} / \Q)$ acts in a natural way on $X(T)$, viz. by 
+permuting the $[\sigma]'s$. (For the dictionary between tori and Galois 
+modules, see for instance T. Ono \cite{21}.)
 
 \subsection{Cutting down $\TT$}
 \label{sec:II_12}
@@ -38,7 +47,8 @@ Let $\TT_E$ be the quotient group $\TT/E$; then $\TT_E$ is also a torus over
 $\Q$. Its character group $X_E = X(\TT_E)$ is the subgroup of $X = X(T)$
 consisting of those characters which take the value 1 on $E$.
 If $\lambda = \prod_{\sigma \in \Gamma} [\sigma]^{n_\sigma}$ denotes a
-character of $\TT$, then $X_E$ is the subgroup of those $\lambda \in X$ for which
+character of $\TT$, then $X_E$ is the subgroup of those $\lambda \in X$ for 
+which
 $\prod_{\sigma \in \Gamma} [\sigma]^{n_\sigma} = 1$, for all $x \in E$.
 
 \subsubsection*{Exercise}
@@ -55,7 +65,113 @@ $\prod_{\sigma \in \Gamma} [\sigma]^{n_\sigma} = 1$, for all $x \in E$.
 
 \subsection{Enlarging groups}
 \label{sec:II_13}
-\todo[section]{Belen}
+Let $k$ be a field and $A$ a commutative algebraic group over $k$. Let
+\begin{equation}\label{eq:II_13}
+	\begin{tikzcd}
+		0 \arrow[r] & Y_1 \arrow[r] & Y_2 \arrow[r] & Y_3 \arrow[r] & 0
+	\end{tikzcd}
+\end{equation}
+an exact sequence of (abstract) commutative groups, with $Y_3$ \emph{finite}.
+Let
+\[
+\varepsilon : Y_1 \rightarrow A(k)
+\]
+be a homomorphism of $Y_1$ into the group of $k$-rational points of $A$. We 
+intend to construct an algebraic group $B$, together with a morphism of 
+algebraic groups $A \to B$ and a homomorphism of $Y_2$ into $B(k)$ such that,
+\begin{enumerate}[(a)]
+	\item \emph{the diagram}
+	\[
+		\begin{tikzcd}
+			Y_1 \arrow[r] \arrow[d] & A(k) \arrow[d] \\
+			Y_2 \arrow[r] & B(k)
+		\end{tikzcd}
+	\]
+	\emph{is commutative},
+	\item $B$ \emph{is ``universal'' with respect to} (a).
+\end{enumerate}
+The universality of $B$ means that, for any algebraic group $B'$ over $k$ and 
+morphism $A \to B'$, $Y_2 \to B'(k)$ such that $(a)$ is true (with $B$ replaced 
+by $B'$), there exists a unique algebraic morphism $f:B \to B'$ such that the 
+given maps $A \to B'$ and $Y_2 \to B(k)$ can
+\dpage
+be obtained by composing those of $B$ with $f$. (In other words, $B$ is a \emph
+{push-out} over $Y_1$ of $A$ and the ``constant'' group scheme defined by 
+$Y_2$.)
+
+The uniqueness of $B$ is assured by its universality. Let us prove its 
+existence. For each $y \in Y_3$ let $\overline{y}$ be a representative of $y$
+in 
+$Y_2$. If $y$, $y' \in Y_3$, we have
+\[
+\overline{y} + \overline{y'} = \overline{y + y'} + c(y, y')
+\]
+with $c(y, y') \in Y_1$; the cochain $c$ is a $2$-cocycle defining the 
+extension~\ref{eq:II_13}. Let $B$ be the disjoint union of copies $A_y$ of $A$, 
+indexed by $y \in Y_3$. Define a group law on $B$ via the mappings
+\[
+\pi_{y, y'} : A_y \times A_{y'} \rightarrow A_{y + y'} \qquad (y,~y' \in Y_3),
+\]
+given by addition in $A$ followed by translation by $\varepsilon(c(y,y'))$. One 
+then checks easily that $B$ has the required universal  property, the maps $A 
+\to B$ and $Y_2 \to B(k)$ being defined as follows:
+
+$A \to B$ is the natural map $A \to A_0$ followed by translation by $- c(0,0)$,
+
+$Y_2 \to B(k)$ maps an element $\overline{y} + z$, $y \in Y_3$, $z \in Y_1$ 
+onto the image of z in $A_y$.
+
+Note that for any extension \emph{field} $k'$ of $k$ we have an \emph{exact 
+sequence}
+\[
+	\begin{tikzcd}
+		0 \arrow[r] & A(k') \arrow[r] & B(k') \arrow[r] & Y_3 \arrow[r] & 0,
+	\end{tikzcd}
+\]
+and a \emph{commutative diagram}
+\dpage
+\[
+	\begin{tikzcd}
+		0 \arrow[r] & Y_1 \arrow[r] \arrow[d] & Y_2 \arrow[r] \arrow[d] & Y_3 
+		\arrow[r] \arrow[d] & 0 \\
+		0 \arrow[r] & A(k') \arrow[r] & B(k') \arrow[r] & Y_3 \arrow[r] & 0
+	\end{tikzcd}
+\]
+The algebraic group $B$ is thus an \emph{extension} of the ``constant'' algebraic group $Y_3$ by $A$.
+\begin{obs}
+\begin{enumerate}
+	\item Let $k'$ be an extension of $k$ and $A' = A \times_k k'$. We may 
+	apply the above construction to the $k'$-algebraic group $A'$, with respect 
+	to the exact sequence~\ref{eq:II_13} and to the map $Y_1 \to A(k) \to A'(k')
+	$. The group $B'$ thus obtained is canonically isomorphic to $B \times_k 
+	k'$; this follows, for instance, from the explicit construction of $B$ and 
+	$B'$.
+	
+	\item We will only use the above construction when $\char(k) = 0$ and $A$ 
+	is a torus. The enlarged group $B$ is then a ``group of multiplicative 
+	type''; this means that, after a suitable finite extension of the ground 
+	field, $B$ becomes isomorphic to the product of a torus and a finite 
+	abelian group. Such a group is uniquely determined by its character group $X
+	(B) = \Hom_{\algcl{k}} (B_{/\algcl{k}} , G_{m/\algcl{k}})$, which is a 
+	Galois-module of finite type over $\Z$. Here $X(B)$ can be described as the 
+	set of pairs $(\phi, \chi)$, where $\phi : Y_2 \to \algcl{k}^*$ is a 
+	homomorphism and $\chi \in Z(A)$ is such that $\phi(y_1) = \chi(y_1)$ for 
+	all $y_1 \in Y_1$. Note that this gives an alternate definition of $B$. 
+\end{enumerate}
+\end{obs}
+
+\subsubsection*{Exercise}
+\begin{enumerate}[a)]
+	\item Let $k'$ be a commutative $k$-algebra, with $k' \neq 0$, and $\Spec
+	(k')$ connected (i.e. $k'$ contains exactly two idempotents: $0$ and $1$). 
+	Show the existence of an exact sequence:
+	\[
+	\begin{tikzcd}
+		0 \arrow[r] & A(k') \arrow[r] & B(k') \arrow[r] & Y_3 \arrow[r] & 0
+	\end{tikzcd}
+	\]
+	\item What happens when $\Spec(k')$ is not connected?
+\end{enumerate}
 
 \section{Construction of \texorpdfstring{$T_{\mathfrak{m}}$}{Tm} and
 \texorpdfstring{$S_{\mathfrak{m}}$}{Sm}}

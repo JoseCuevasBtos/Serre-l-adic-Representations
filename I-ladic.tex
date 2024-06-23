@@ -315,14 +315,14 @@ The $\ell$-adic representation $\rho$ is said to be
 \strong{integral}\index{Integral (representation)}) if there exists a finite
 subset $S$ of $M_K^0$ such that
 \begin{enumerate}[(a)]
-	\item Any element of $M_K^0 \setminus S$.
-		\todo[pinktask]{Aquí falta algo...}
+	\item Any element of $M_K^0 \setminus S$ is unramified with respect to 
+	$\rho$.
 	\item If $v \not\in S$, the coefficients of $P_{v,\rho}(T)$ belong to
 		$\Q$ (resp.\ to $\Z$).
 \end{enumerate}
 \end{mydef}
 
-\begin{obs}
+\begin{obs}\label{rmk:I_23_1}
 	Let $K'/K$ be a finite extension. An $\ell$-adic representation $\rho$
 	of $K$ defines (by restriction) an $\ell$-adic representation
 	$\rho_{/K'}$ de $K'$. If $\rho$ is rational (resp.\ integral), then the
@@ -334,8 +334,7 @@ subset $S$ of $M_K^0$ such that
 \begin{ex}
 The $\ell$-adic representations of $K$ given in examples \ref{ex:1-sec:I_12},
 \ref{ex:2-sec:I_12}, \ref{ex:3-sec:I_12} of section \ref{sec:I_12} are rational
-(even integral) representation.
-\todo[pinktask]{¡Destacar!}
+(even \emph{integral}) representation.
 In example \ref{ex:1-sec:I_12}, one can take for $S$ the set $S_{\ell}$ of
 elements $v$ of $M_K^0$ with $\rho_v = \ell$; In examples \ref{ex:2-sec:I_12},
 \ref{ex:3-sec:I_12}, one can take for $S$ the union of $S_\ell$ and the set
@@ -393,8 +392,9 @@ For each prime $\ell$ let $\rho_\ell$ be a rational $\ell$-adic representation o
 \dpage
 When a system $(\rho_\ell)$ is strictly compatible, there is a smallest finite set $S$ having properties (a) and (b) above. We call it the \strong{exceptional set}\index{Exceptional set (of a system)} of the system.
 
-\subsubsection*{Examples}
+\begin{ex}
 The systems of $\ell$-adic representations given in examples \ref{ex:1-sec:I_12}, \ref{ex:2-sec:I_12}, \ref{ex:3-sec:I_12} of section \ref{sec:I_12} are strictly compatible. The exceptional set of the first one is empty. The exceptional set of example \ref{ex:2-sec:I_12} (resp. \ref{ex:3-sec:I_12}) is the set of places where the elliptic curve (resp. the abelian variety) has ``bad reduction'', cf. \cite{32}.
+\end{ex}
 
 \subsubsection*{Questions}
 \begin{enumerate}
@@ -412,16 +412,17 @@ A somewhat similar question is:
 \dpage		
 		same dimension? More optimistically, is it true that there exists a Lie algebra $g$ over $\Q$ such that $\Lie(\Img(\rho)) = \mathfrak{g} \otimes_\Q \Q_{\ell}$ and $\Lie(\Img(\rho')) = \mathfrak{g} \otimes_\Q \Q_{\ell'}$?
 	\end{enumerate}
-	\item Let $X$ be a non-singular projective variety defined over $K$, and let $i$ be an integer. Is the $i$-th cohomology representation $H_\ell^i(X_S)$ semi-simple? Does its Lie algebra contain the homotheties if $i\geq1$? (When $i=1$, an affirmative answer to either one of these questions would imply a positive solution for the ``conguence subgroup problem'' on abelian varieties, cf. \cite{24}, \S3.) $\rightarrow$ [yes: for $i=1$: see \cite{48} and also \cite{75}.]
+	\item Let $X$ be a non-singular projective variety defined over $K$, and
+	let $i$ be an integer. Is the $i$-th cohomology representation $H_\ell^i(\sepcl{X})$ semi-simple? Does its Lie algebra contain the homotheties if $i\geq1$? (When $i=1$, an affirmative answer to either one of these questions would imply a positive solution for the ``conguence subgroup problem'' on abelian varieties, cf. \cite{24}, \S3.) $\rightarrow$ [yes: for $i=1$: see \cite{48} and also \cite{75}.]
 \end{enumerate}
 
 \begin{obs}
-The concept of an $\ell$-adic representation can be generalized by replacing the prime $\ell$ by a place $\lambda$ of a number field  $E$. A $\lambda$-adic representation is then a continuous homomorphism $\Gal(K_S/K) \to \Aut(V)$, where $V$ is a finite-dimensional vector space over the local field $E_\lambda$. The concepts of rational $\lambda$-adic representation, compatible representations, etc., can be defined in a way similar to the $\ell$-adic case.
+The concept of an $\ell$-adic representation can be generalized by replacing the prime $\ell$ by a place $\lambda$ of a number field  $E$. A $\lambda$-adic representation is then a continuous homomorphism $\Gal(\sepcl{K}/K) \to \Aut(V)$, where $V$ is a finite-dimensional vector space over the local field $E_\lambda$. The concepts of rational $\lambda$-adic representation, compatible representations, etc., can be defined in a way similar to the $\ell$-adic case.
 \end{obs}
 
 \subsubsection*{Exercise}
 \begin{enumerate}
-	\item Let $\rho$ and $\rho'$ be two rational, semi-simple, compatible representations. Show that, if $\Im(\rho)$ is finite, the same is true for $\Im(\rho')$ and that $\Ker(\rho) = \Ker(\rho')$. (Apply exer. 3 of \ref{sec:I_11} to $\rho'$ and to $U = \Ker(\rho)$.) Generalize this to $\lambda$-adic representations (with respect to a number field $E$).
+	\item Let $\rho$ and $\rho'$ be two rational, semi-simple, compatible representations. Show that, if $\Img(\rho)$ is finite, the same is true for $\Img(\rho')$ and that $\Ker(\rho) = \Ker(\rho')$. (Apply exer. 3 of \ref{sec:I_11} to $\rho'$ and to $U = \Ker(\rho)$.) Generalize this to $\lambda$-adic representations (with respect to a number field $E$).
 	\item Let $\rho$ (resp. $\rho'$) be a rational $\ell$-adic (resp. $\ell'$-adic) representation of $K$, of degree $n$. Assume $\rho$ and $\rho'$ are compatible. If $s \in G = \Gal(\algcl{K}/K)$, let $\sigma_i(s)$ (resp. $\sigma_i'(s)$) be the
 \dpage 
 	$i$-th coefficient of the characteristic polynomial of $\rho(s)$ (resp. $\rho'(s)$). Let $P(X_0,\hdots,X_n)$ be a polynomial with rational coefficients, and let $X_P$ (resp. $X'_P$) be the set of $s \in G$ such that $P(\sigma_0(s),\hdots,\sigma_n(s)) = 0$ (resp. $P(\sigma_0'(s),\hdots,\sigma_n'(s)) = 0$).
@@ -497,8 +498,79 @@ and \strong{strictly compatible systems} of rational representations.
 \end{enumerate}
 \end{obs}
 
+\subsection{\texorpdfstring{$L$}{L}-functions attached to rational 
+representations}
+
+Let $K$ be a number field and let $\rho=(\rho_\ell)$ be a strictly compatible 
+system of rational $\ell$-adic representations, with exceptional set $S$. If $v 
+\not\in S$, denote by $P_{v,\rho}(T)$ the rational polynomial does not depend 
+on the choice of $\ell$. Let $s$ be a complex number. 
+
+One has:
+\begin{align*}
+	P_{v,\rho}(\numnorm v)^{-s} 
+	&= \det(1 - F_{v,\rho} / (\numnorm v)^{s})\\
+	&= \prod_i (1 - \lambda_{i,v} / (\numnorm v)^{s}),
+\end{align*}
+
+where the $\lambda_{i,v}$'s are the eigenvalues of $F_{v,\rho}$ (note that the 
+$\lambda_{i,v}$'s are algebraic numbers and hence may be identified with 
+complex numbers). Put:
+\[
+L_\rho(s) = \prod_{v \not\in S} \frac{1}{P_{v,\rho}((\numnorm v)^{-s})}.
+\]
+
+This is a \emph{formal} Dirichlet series $\sum_{n=1}^{\infty} a_n / n^s$, with 
+coefficients in $\Q$.
+
+In all known cases, there exists a constant $k$ such that $\left|{\lambda_{i,v} 
+\leq (\numnorm v)^k}\right|$, and this implies that $L_\rho$ is convergent in 
+some half plane $\Re(s) > C$; one conjectures it extends to a meromorphic 
+function in the whole plane.
+\dpage
+When $\rho$ comes from $\ell$-adic cohomology, 
+there are some further conjectures on the zeros and poles of $L_\rho$, cf. Tate 
+\cite{36}; these, as indicated by Tate, may be applied to get equidistribution 
+properties of Frobenius elements, cf. Appendix~\ref{sec:I_A}.
+
+\begin{obs}
+\begin{enumerate}
+	\item\label{rmk:I_24_1} One can also associate $L$-functions to $E$-\emph{rational} systems of $\lambda$-adic representations (\ref{rmk:I_23_1}, Remark), where $E$ is a number field, once an embedding of $E$ into $\C$ has been chosen.
+\todo[pinktask]{No cacho si el C es los complejos o qué weá}
+	\item We have given a definition of the local factors of $L_\rho$ only at 
+	the places $v \not\in S$. One can give a more sophisticated definition in 
+	which local factors are defined for all places, even (with suitable 
+	hypotheses) for primes at infinity (gamma factors); this is necessary when 
+	one wants to study functional equations. We don't go into this here. 
+	$\rightarrow$ [see \cite{51}, \cite{74}.]
+	
+	\item Let $\phi(s) = \sum a_n / n^s $ be a Dirichlet series. Using the 
+	theorem in~\ref{sec:I_23}, one sees that there is (up to isomorphism) at 
+	most one semi-simple system $\rho = (\rho_\ell)$ over $\Q$ such that 
+	$L_\rho = \phi$. Whether there does exist one (for a given $\phi$) is often a quite interesting question. For instance, is it so for Ramanujan's $\phi(s) = \sum_{n = 1}^{\infty} \tau(n)/n^s$, where $\tau(n)$ is defined by the identity
+	\[
+	x \prod_{n=1}^{\infty}(1 - x^n)^24 = \sum_{n=1}^{\infty}\tau(n)x^n ?
+	\]
+	There is considerable numerical evidence for this, based on the congruence 
+	properties of $\tau$ (Swinnerton-Dyer, unpublished); of course,
+	\todo[pinktask]{¿Seguirá así?}
+	such a $\rho$ would be of dimension $2$, and its exceptional set $S$ would be empty. $\rightarrow$ [proved by Deligne: see \cite{49}, \cite{50}, \cite{65},\dots]
+\end{enumerate}
+\end{obs}
+
+More generally, there seems to be a close connection between
+\dpage
+modular forms, such as $\sum \tau(n) x^n$, and rational (or algebraic) $\ell$-adic representations; see for instance Shimura \cite{33} and Weil \cite{45}. $\rightarrow$ [see also \cite{49}, \cite{51}, \cite{65}, \cite{66}, \cite{68}, \cite{84}.]
+
+\begin{ex}
+\begin{enumerate}[1.]
+	\item If $G$ acts through a \emph{finite} group, $L_\rho$ is an Artin (non abelian) $L$-series, at least up to a finite number of factors (cf. \cite{1}). All Artin $L$-series are gotten in this way, provided of course one uses $E$-rational representations (cf. Remark \ref{rmk:I_24_1}) and not merely rational ones.
+	\item If $\rho$ is the system associated with an elliptic curve $E$ (cf. \ref{sec:I_12}), the corresponding $L$-function gives the non-trivial part of zeta function of $E$. The symmetric powers of $\rho$ give the zeta functions of the products $E \times \hdots \times E$, cf. Tate \cite{36}.
+\end{enumerate}
+\end{ex}
+
 \begin{subappendices}
-\section{Equipartition and \texorpdfstring{$L$}{L}-functions}
+\section{Equipartition and \texorpdfstring{$L$}{L}-functions}\label{sec:I_A}
 \subsection{Equipartition}
 Let $X$ be a compact topological space and $C(X)$ the Banach
 space of continuous, complex-valued, functions on $X$, with its usual norm
@@ -603,12 +675,6 @@ $$ \sum_{n\le N} e^{2\pi mi x_n} = o(N) \qquad (N \to \infty). $$
 \end{corp}
 For the proof, it suffices to remark that the irreducible characters of $\R/\Z$
 are the mappings $x \mapsto e^{2\pi mi x}$ ($m \in \Z$).
-
-\subsection{\texorpdfstring{$L$}{L}-functions attached to rational representations}
-
-
-
-
 
 \subsection{The connection with \texorpdfstring{$L$}{L}-functions}
 Let $G$ and $X$ be as in Example~\ref{ex:IA1_2} above: $G$ a compact group and
