@@ -68,7 +68,7 @@ Here's an indepth list of the chapters and sections, and their current status:
         - [ ] A.4 The character xi
         - [ ] A.5 Characters associated with Hodge-Tate decompositions
         - [x] A.6 Locally compact case
-        - [ ] A.7 Tate's theorem
+        - [x] A.7 Tate's theorem
 - [ ] Chapter IV. l-adic Representations Attached to Elliptic Curves
     - [x] 1 Preliminaries
         - [x] 1.1 Elliptic curves
@@ -77,11 +77,11 @@ Here's an indepth list of the chapters and sections, and their current status:
         - [x] 1.4 Safarevic's theorem
     - [ ] 2 The Galois modules attached to E
         - [x] 2.1 The irreducibility theorem
-        - [ ] 2.2 Determination of the Lie algebra of Gl
+        - [x] 2.2 Determination of the Lie algebra of Gl
         - [ ] 2.3 The isogeny theorem
     - [ ] 3 Variation of Gl and Gl with l
         - [ ] 3.1 Preliminaries
-        - [ ] 3.2 The case of a non integral j
+        - [x] 3.2 The case of a non integral j
         - [ ] 3.3 Numerical example
         - [ ] 3.4 Proof of the main lemma of 3.1
     - [ ] A. Local results
