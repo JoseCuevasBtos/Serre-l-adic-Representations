@@ -106,7 +106,7 @@ continuous homomorphism $\rho \colon G \to \Aut(V)$.
 \end{enumerate}
 
 \subsection{Examples}\label{sec:I_12}
-\subsubsection{Roots of unity}
+\subsubsection{Roots of unity}\label{sec:I_121}
 Let $\ell \ne \char(K)$. The group $G = \Gal(\sepcl K / K)$ acts on the group
 $\mu_m$ of $\ell^m$-th roots of unity, and hence also on $T_\ell(\mu) =
 \invlim_{m\in\N} \mu_m$. The $\Q_\ell$-vector space $V_\ell(\mu) = T_\ell(\mu)
@@ -117,13 +117,14 @@ $\chi_\ell$ takes its values in the group of units $U$ of $\Z_\ell$; by
 definition
 $$ g(z) = z^{\chi_\ell(g)} \quad \text{if } g \in G, \; z^{\ell^m} = 1. $$
 
-\subsubsection{Elliptic curves}
+\subsubsection{Elliptic curves}\label{sec:I_122}
 Let $\ell \ne \char(K)$. Let $E$ be an elliptic
 curve defined over $K$ with a given rational point $o$. One knows that
 \dpage
 there is a unique structure of group variety on $E$ with $o$ as neutral
 element. Let $E_m$ be the kernel of multiplication by $\ell^m$ in $E(\sepcl
 K)$, and let
+\todo[pinktask]{¿Deberíamos modernizar la notación a $E[\ell^m]$?}
 \[
 	T_\ell(E) = \invlim_m E_m, \qquad V_\ell(E) = T_\ell(E)
 	\otimes_{\Z_\ell} \Q_\ell.
@@ -145,13 +146,13 @@ canonical isomorphisms
 \]
 Hence $\det(\pi_\ell)$ is the character $\chi_\ell$ defined in example 1.
 
-\subsubsection{Abelian varieties}
+\subsubsection{Abelian varieties}\label{sec:I_123}
 Let $A$ be an abelian variety over $K$ of dimension $d$. If $\ell \ne
 \char(K)$, we define $T_\ell(A)$, $V_\ell(A)$ in the same way as in example 2.
 The group $T_\ell(A)$ is a free $\Z_\ell$-module of rank $2d$ (cf.\ \cite{12},
 \textit{loc.\ cit.}) on which $G = \Gal(\sepcl K/K)$ acts.
 
-\subsubsection{Cohomology representations}
+\subsubsection{Cohomology representations}\label{sec:I_124}
 Let $X$ be an algebraic variety defined over the field $K$, and let $\sepcl X =
 X \times_K \sepcl K$ be the corresponding variety over $\sepcl K$. Let $\ell
 \ne \char(K)$, and let $i$ be an integer. Using the étale cohomology of
@@ -332,16 +333,16 @@ subset $S$ of $M_K^0$ such that
 \end{obs}
 
 \begin{ex}
-The $\ell$-adic representations of $K$ given in examples \ref{ex:1-sec:I_12},
-\ref{ex:2-sec:I_12}, \ref{ex:3-sec:I_12} of section \ref{sec:I_12} are rational
-(even \emph{integral}) representation.
-In example \ref{ex:1-sec:I_12}, one can take for $S$ the set $S_{\ell}$ of
-elements $v$ of $M_K^0$ with $\rho_v = \ell$; In examples \ref{ex:2-sec:I_12},
-\ref{ex:3-sec:I_12}, one can take for $S$ the union of $S_\ell$ and the set
+The $\ell$-adic representations of $K$ given in examples~\ref{sec:I_121},
+\ref{sec:I_122}, \ref{sec:I_123} of section \ref{sec:I_12} are rational (even
+\emph{integral}) representation.
+In example~\ref{sec:I_121}, one can take for $S$ the set $S_{\ell}$ of
+elements $v$ of $M_K^0$ with $\rho_v = \ell$; In examples~\ref{sec:I_122},
+\ref{sec:I_123}, one can take for $S$ the union of $S_\ell$ and the set
 $S_A$ where $A$ has ``bad reduction''; the fact that the corresponding
 Frobenius has an integral characteristic polynomial (which is independent of
 $\ell$) is a consequence of Weil's results on endomorphisms of abelian
-varieties (cf. \cite{40} and \cite{12}, chap. VII).
+varieties (cf.\ \cite{40} and \cite{12}, chap.~VII).
 \dpage
 The rationality of the cohomology representation is a well-known open question.
 \todo[color=pink!40]{Ver si sigue siendo una pregunta abierta.}
@@ -350,14 +351,19 @@ The rationality of the cohomology representation is a well-known open question.
 \begin{mydef}
 Let $\ell'$ be a prime, $\rho'$ an $\ell'$-adic representation of $K$, and assume that $\rho$, $\rho'$ are rational. Then $\rho$, $\rho'$ are said to be \strong{compatible} if there exists a finite subset $S$ of $M_K^0$ such that $\rho$ and $\rho'$ are unramified outside of $S$ and $P_{v,\rho}(T) = P_{v,\rho'}(T)$ for $v \in M_K^0 \setminus S$.
 \end{mydef}
+(In other words, the characteristic polynomials of the Frobenius elements arte
+the same for $\rho$ and $\rho'$, at least for almost all $v$'s.)
 
-(In other words, the characteristic polynomials of the Frobenius elements arte the same for $\rho$ and $\rho'$, at least for almost all $v's$.)
-
-If $\rho\colon \Gal(\algcl{K}/K) \to \Aut(V)$ is rational $\ell$-adic representation of $K$, then $V$ has a composition series
+If $\rho\colon \Gal(\algcl{K}/K) \to \Aut(V)$ is rational $\ell$-adic
+representation of $K$, then $V$ has a composition series
 \[
-	V = V_0 \supset V_1 \supset \hdots \supset V_q = 0
+	V = V_0 \supset V_1 \supset \cdots \supset V_q = 0
 \]
-of $\rho$-invariants subspaces with $V_i / V_{i+1} ~ (0 \leq i \leq q - 1)$ simple (i.e. irreducible). The $\ell$-adic representation $\rho'$ of $K$ defined by $V' = \sum_{i=0}^{q-1} V_i / V_{i + 1}$ is semi-simple, rational, and compatible with $\rho$; it is the ``semi-simplification'' of $V$. 
+of $\rho$-invariants subspaces with $V_i / V_{i+1}$ ($0 \leq i \leq q - 1$)
+\emph{simple} (i.e.\ \emph{irreducible}). The $\ell$-adic representation
+$\rho'$ of $K$ defined by $V' = \sum_{i=0}^{q-1} V_i / V_{i + 1}$ is
+semi-simple, rational, and compatible with $\rho$; it is the
+``semi-simplification''\break of $V$. 
 
 \begin{thm}
 Let $\rho$ be a rational $\ell$-adic representation of $K$, let $\ell'$ be a prime. Then there exists at most one (up to isomorphism) $\ell'$-adic rational representation $\rho'$ of $K$ which is semi-simple and compatible with $\rho$.
@@ -385,7 +391,7 @@ For the proof see Bourbaki, Alg., ch. 8, \S12, n°1, prop. 3.
 \begin{mydef}
 For each prime $\ell$ let $\rho_\ell$ be a rational $\ell$-adic representation of $K$. The system $(\rho_\ell)$ is said \strong{to be compatible}\index{Compatible (system $(\rho_\ell)$)} if $\rho_\ell$, $\rho_\ell'$ are compatible for any two primes $\ell$, $\ell'$. The system $(\rho_\ell)$ is said \strong{to be strictly compatible}\index{Strictly compatible (system $(\rho_\ell))$} if there exists a finite subset $S$ of $M_K^0$ such that:
 \begin{enumerate}[(a)]
-	\item Let $S_\ell = \{ v | \rho_v = \ell \}$. Then, for every $v \not\in S \cup S_\ell$, $\rho_\ell$ is unramified at $v$ and $P_{v,\rho_\ell}(T)$ has rational coefficients.
+	\item Let $S_\ell = \{ v \mid \rho_v = \ell \}$. Then, for every $v \not\in S \cup S_\ell$, $\rho_\ell$ is unramified at $v$ and $P_{v,\rho_\ell}(T)$ has rational coefficients.
 \item $P_{v,\rho_\ell}(T) = P_{v,\rho_{\ell'}}(T)$ if $v \not\in S \cup S_\ell \cup S_{\ell'}$.
 \end{enumerate}
 \end{mydef}
@@ -393,7 +399,12 @@ For each prime $\ell$ let $\rho_\ell$ be a rational $\ell$-adic representation o
 When a system $(\rho_\ell)$ is strictly compatible, there is a smallest finite set $S$ having properties (a) and (b) above. We call it the \strong{exceptional set}\index{Exceptional set (of a system)} of the system.
 
 \begin{ex}
-The systems of $\ell$-adic representations given in examples \ref{ex:1-sec:I_12}, \ref{ex:2-sec:I_12}, \ref{ex:3-sec:I_12} of section \ref{sec:I_12} are strictly compatible. The exceptional set of the first one is empty. The exceptional set of example \ref{ex:2-sec:I_12} (resp. \ref{ex:3-sec:I_12}) is the set of places where the elliptic curve (resp. the abelian variety) has ``bad reduction'', cf. \cite{32}.
+The systems of $\ell$-adic representations given in examples \ref{sec:I_121},
+\ref{sec:I_122}, \ref{sec:I_123} of section \ref{sec:I_12} are strictly
+compatible. The exceptional set of the first one is empty. The exceptional set
+of example~\ref{sec:I_122} (resp.\ \ref{sec:I_123}) is the set of
+places where the elliptic curve (resp.\ the abelian variety) has ``bad
+reduction'', cf.\ \cite{32}.
 \end{ex}
 
 \subsubsection*{Questions}
@@ -407,7 +418,7 @@ A somewhat similar question is:
 	\item Given a rational $\ell$-adic representation $\rho$ of $K$, and a prime $\ell'$, does there exist a rational $\ell'$-adic representation $\rho'$ of $K$ compatible with\break $\rho$? $\rightarrow$ [no: easy counter-examples].
 	\item Let $\rho$, $\rho'$ be rational $\ell$, $\ell'$-adic representations of $K$ which are compatible and semi-simple.
 	\begin{enumerate}[(i)]
-		\item If $\rho$ is abelian (i.e., if $\Img(\rho)$ is abelian), is it true that $\rho'$ is abelian? (We shall see in chapter III that this is true at least if $\rho$ is ``locally algebraic''.) $\rightarrow$ [yes: this follows from \cite{36}.]
+		\item If $\rho$ is abelian (i.e., if $\Img(\rho)$ is abelian), is it true that $\rho'$ is abelian? (We shall see in chapter~\ref{ch:iii} that this is true at least if $\rho$ is ``locally algebraic''.) $\rightarrow$ [yes: this follows from \cite{36}.]
 		\item Is it true that $\Img(\rho)$ and $\Img(\rho')$ are Lie groups of the
 \dpage		
 		same dimension? More optimistically, is it true that there exists a Lie algebra $\mathfrak{g}$ over $\Q$ such that $\Lie(\Img(\rho)) = \mathfrak{g} \otimes_\Q \Q_{\ell}$ and $\Lie(\Img(\rho')) = \mathfrak{g} \otimes_\Q \Q_{\ell'}$?
