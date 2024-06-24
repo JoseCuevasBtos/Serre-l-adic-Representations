@@ -695,7 +695,7 @@ we prove
 Indeed, Theorem~\ref{thm:III_A1_1} shows that $W^n$ and $W^n_{K'}$, generate
 the same $C$-vector subspace of $W$.
 
-\begin{cor}
+\begin{cor}\label{cor:III_A1_12}
 	The Galois module $W$ is of Hodge-Tate type over $K$ if and only if it
 	is so over $\widehat{K'}$.
 \end{cor}
@@ -1022,6 +1022,57 @@ Prop.~\ref{prop:III_A6_5} and Prop.~\ref{prop:III_A6_6}.
 
 \subsection{Tate's theorem}
 \label{sec:III_A7}
-\todo[section]{Jose.}
+We recall the statement (cf.\ \ref{sec:III_12}); here again, $K$ is locally
+compact.
+
+\begin{thm}
+	Let $V$ be a finite dimensional vector space over $\Q_p$ and let $\rho
+	\colon G \to \Aut(V)$ be an abelian $p$-adic representation of $K$.
+	The following are equivalent:
+	\begin{enumerate}[(1)]
+	\item\label{thm:III_A7_1} $\rho$ is locally algebraic
+	\item\label{thm:III_A7_2} $\rho$ is of Hodge-Tate type and its
+		restriction to the inertia group is semi-simple.
+	\end{enumerate}
+\end{thm}
+\begin{proof}
+	We have already remarked (cf.\ \ref{sec:III_11}) that
+	\ref{thm:III_A7_1} implies:
+	\begin{displayquote}
+		\emph{\textbf{(*)} The restriction of p to the inertia group is
+		semi-simple.}
+	\end{displayquote}
+	Hence we may assume that (*) holds.
+
+	Let $\pi$ be a uniformizing element of $K$, and let $\pr_\pi$ denote
+	the projection map of $\abcl G$ onto its inertia group $U_K$ associated
+	to $\pi$ (cf.\ \ref{sec:III_A4} and \citeauthor{6}~\cite[144-145]{6}).
+	Define a new representation $\rho'$ of $\abcl G$ by
+	\[
+		\rho' = \rho \circ \pr_\pi.
+	\]
+	Replacing $\rho$ by $\rho'$ does not affect the local algebraicity
+	(clear), nor the Hodge-Tate property (this follows from
+	\ref{sec:III_A1}, Cor.~\ref{cor:III_A1_12} to Th.~\ref{thm:III_A1_1}).
+	Since (*) implies that $\rho'$ is semi-simple, this means that, after
+	\dpage
+	replacing $\rho$ by $\rho'$, we may assume that $\rho$ is semi-simple
+	and even (by an easy reduction) that it is \emph{simple}. Let then $E
+	\subset \End(V)$ be the commuting algebra of $\rho$. Since $\rho$ is
+	abelian and simple, $E$ is a commutative field, of finite degree over
+	$\Q_p$, and $V$ is a one-dimensional vector space over $E$; the
+	representation $\rho$ is given by a continuous character $\rho \colon G
+	\to E^\times$
+
+	Let now $K'$ be a finite extension of $K$ which is large enough to
+	contain all the $\Q_p$-conjugates of $E$. Call ($1'$) and ($2'$) the
+	properties corresponding to \ref{thm:III_A7_1} and \ref{thm:III_A7_2},
+	when $K'$ is taken as groundfield instead of $K$. We know (cf.\
+	\ref{sec:III_11}) that \ref{thm:III_A7_1} ${}\iff (1')$. By
+	Cor.~\ref{cor:III_A1_12} to Th.~\ref{thm:III_A1_1} of \ref{sec:III_A1},
+	we have \ref{thm:III_A7_2} $\iff (2')$. Hence it is enough to prove
+	that $(1') \iff (2')$, and this has been done in \ref{sec:III_A6} (Cor.
+	to Prop.~\ref{prop:III_A6_5}).
+\end{proof}
 
 \end{subappendices}
