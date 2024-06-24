@@ -86,8 +86,8 @@ Here's an indepth list of the chapters and sections, and their current status:
         - [ ] 3.4 Proof of the main lemma of 3.1
     - [ ] A. Local results
         - [ ] A.1 The case v(j) < 0
-            - [ ] A.1.1 The elliptic curves of Tate
-            - [ ] A.1.2 An exact sequence
+            - [x] A.1.1 The elliptic curves of Tate
+            - [x] A.1.2 An exact sequence
             - [ ] A.1.3 Determination of gl and il
             - [ ] A.1.4 Application to isogenies
             - [ ] A.1.5 Existence of transvections in the inertia group
