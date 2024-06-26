@@ -88,11 +88,11 @@ Here's an indepth list of the chapters and sections, and their current status:
         - [ ] A.1 The case v(j) < 0
             - [x] A.1.1 The elliptic curves of Tate
             - [x] A.1.2 An exact sequence
-            - [ ] A.1.3 Determination of gl and il
+            - [x] A.1.3 Determination of gl and il
             - [ ] A.1.4 Application to isogenies
             - [ ] A.1.5 Existence of transvections in the inertia group
-        - [ ] A.2 The case v(j) > 0
-            - [ ] A.2.1 The case l = p
-            - [ ] A.2.2 The case l != p with good reduction of height 2
-            - [ ] A.2.3 Auxiliary results on abelian varieties
+        - [ ] A.2 The case v(j) >= 0
+            - [ ] A.2.1 The case l /= p
+            - [x] A.2.2 The case l = p with good reduction of height 2
+            - [x] A.2.3 Auxiliary results on abelian varieties
             - [ ] A.2.4 The case l = p with good reduction of height 1

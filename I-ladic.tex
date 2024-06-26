@@ -576,12 +576,12 @@ properties of Frobenius elements, cf. Appendix~\ref{sec:I_A}.
 
 More generally, there seems to be a close connection between
 \dpage
-modular forms, such as $\sum \tau(n) x^n$, and rational (or algebraic) $\ell$-adic representations; see for instance Shimura \cite{33} and Weil \cite{45}. $\rightarrow$ [see also \cite{49}, \cite{51}, \cite{65}, \cite{66}, \cite{68}, \cite{84}.]
+modular forms, such as $\sum \tau(n) x^n$, and rational (or algebraic) $\ell$-adic representations; see for instance \citeauthor{33}~\cite{33} and \citeauthor{45}~\cite{45}. $\rightarrow$ [see also \cite{49}, \cite{51}, \cite{65}, \cite{66}, \cite{68}, \cite{84}.]
 
 \begin{ex}
 \begin{enumerate}[1.]
-	\item If $G$ acts through a \emph{finite} group, $L_\rho$ is an Artin (non abelian) $L$-series, at least up to a finite number of factors (cf. \cite{1}). All Artin $L$-series are gotten in this way, provided of course one uses $E$-rational representations (cf. Remark \ref{rmk:I_24_1}) and not merely rational ones.
-	\item If $\rho$ is the system associated with an elliptic curve $E$ (cf. \ref{sec:I_12}), the corresponding $L$-function gives the non-trivial part of zeta function of $E$. The symmetric powers of $\rho$ give the zeta functions of the products $E \times \hdots \times E$, cf. Tate \cite{36}.
+	\item If $G$ acts through a \emph{finite} group, $L_\rho$ is an Artin (non abelian) $L$-series, at least up to a finite number of factors (cf.\ \cite{1}). All Artin $L$-series are gotten in this way, provided of course one uses $E$-rational representations (cf.\ Remark~\ref{rmk:I_24_1}) and not merely rational ones.
+	\item If $\rho$ is the system associated with an elliptic curve $E$ (cf.\ \ref{sec:I_12}), the corresponding $L$-function gives the non-trivial part of zeta function of $E$. The symmetric powers of $\rho$ give the zeta functions of the products $E \times \hdots \times E$, cf.\ \citeauthor{36}~\cite{36}.
 \end{enumerate}
 \end{ex}
 
@@ -661,6 +661,7 @@ proposition.
 	$\mu$. We then have:
 \end{enumerate}
 \end{ex}
+
 \begin{prop}\label{prop:IA_2}
 The sequence $(x_n)$ of elements of $X$ is $\mu$-equidistributed if and only if
 for any irreducible character $\chi$ of $G$ we have
@@ -723,7 +724,7 @@ if $L(s,\rho)$ has a pole (resp.\ a zero) of order $m$ at $s = 1$, one has
 $c_\chi = m$ (resp.\ $c_\chi = -m$).
 
 Under these assumptions, we have:
-\begin{thm}
+\begin{thm}\label{thm:I_A2_1}
 \begin{enumerate}[(a)]
 \item The number of $v \in M$ with $\numnorm v \le n$ is equivalent to $n/\log
 	n$ (as $n \to \infty$).
@@ -733,7 +734,7 @@ Under these assumptions, we have:
 \end{enumerate}
 \end{thm}
 The theorem results, by a standard argument, from the theorem of
-Wiener-Ikehara, cf.\ \ref{sec:IA_3} below.
+Wiener-Ikehara, cf.\ \ref{sec:I_A3} below.
 Suppose now that the function $v \mapsto \numnorm v$ has the following
 property:
 
@@ -746,8 +747,8 @@ One may then arrange the elements of $M$ as a sequence
 $(v_i)_{i\ge 1}$. so that $i \le j$ implies $\numnorm v_i \le \numnorm v_j$ (in
 general, this is possible in many ways). It then makes sense to speak about the
 equidistribution of the sequence of $x_v$'s; using (3), one shows easily that
-this does not depend on the chosen ordering of $M$. Applying theorem 1 and
-proposition 2, we obtain:
+this does not depend on the chosen ordering of $M$. Applying
+theorem~\ref{thm:I_A2_1} and proposition~\ref{prop:IA_2}, we obtain:
 \begin{thm}
 The elements $x_v$ ($v \in M$) are equidistributed in $X$
 with respect to a measure $\mu$ such that for any irreducible character
@@ -776,18 +777,18 @@ $$ \mu(\chi) = c_\chi. $$
 	\dpage
 	rest of the line $\Re(s) = 1$, cf.\ for instance
 	\citeauthor{13}~\cite{13}, chap.\ VII; for a proof of (2), cf.\
-	\citeauthor{1}~\cite[121]{1}.  Hence theorem 2 gives the
+	\citeauthor{1}~\cite[121]{1}.  Hence theorem~\ref{thm:I_A2_2} gives the
 	equidistribution of the Frobenius elements, i.e.\ the \v Cebotarev
 	density theorem, cf.~\ref{sec:I_22}.
 
 \item Let $C$ be the idèle class group of a number field $K$, and let $\rho$ be
 	a continuous homomorphism of $C$ into a compact abelian Lie group $G$.
-	An easy argument (cf.\ ch.\ III, 2.2) shows that $\rho$ is almost
-	everywhere unramified (i.e., if $U_v$ denotes the group of units at
-	$v$, then $\rho(U_v) = 1$ for almost all $v$). Choose $\pi_v \in K$
-	with $v(\pi_v) = 1$. If $\rho$ is unramified at $v$, then $\rho(\pi_v)$
-	depends only on $v$, and we set $x_v = \rho(\pi_v)$. We make the
-	following \emph{assumption:}
+	An easy argument (cf.\ ch.~\ref{ch:iii}, \ref{sec:III_22}) shows that
+	$\rho$ is almost everywhere unramified (i.e., if $U_v$ denotes the
+	group of units at $v$, then $\rho(U_v) = 1$ for almost all $v$). Choose
+	$\pi_v \in K$ with $v(\pi_v) = 1$. If $\rho$ is unramified at $v$, then
+	$\rho(\pi_v)$ depends only on $v$, and we set $x_v = \rho(\pi_v)$. We
+	make the following \emph{assumption:}
 	\begin{displayquote}
 		\slshape
 		\textbf{(*)}
@@ -800,17 +801,17 @@ $$ \mu(\chi) = c_\chi. $$
 	\citeauthor{44}~\cite{44}.)
 
 	Then, the elements $x_v$ are \emph{uniformly distributed} in $G$ with
-	respect to the normalized Haar measure. This follows from theorem~1 and
-	the fact that the $L$-functions relative to the irreducible characters
-	$\chi$ of $G$ are Hecke $L$-functions with Grössencharakters; these
-	$L$-functions are holomorphic and non-zero for $\Re(s) \ge 1$ if $\chi
-	\ne 1$, see \cite{13}, chap.\ VII.
+	respect to the normalized Haar measure. This follows from
+	theorem~\ref{thm:I_A2_1} and the fact that the $L$-functions relative
+	to the irreducible characters $\chi$ of $G$ are Hecke $L$-functions
+	with Grössencharakters; these $L$-functions are holomorphic and
+	non-zero for $\Re(s) \ge 1$ if $\chi \ne 1$, see \cite{13}, chap.\ VII.
 \end{enumerate}
 \end{ex}
 
 \begin{obs}
 This example (essentially due to Hecke) is given in Lang
-(\emph{loc.\ cit.}, ch.\ VIII, \S 5) except that Lang has replaced the condition
+(\emph{loc.\ cit.}, ch.~VIII, \S 5) except that Lang has replaced the condition
 (*) by the condition ``$\rho$ is surjective'', which is insufficient. This
 led him to affirm that, for example, the sequence $(\log p)_p$ (and also
 the sequence $(\log n)_n$) is uniformly distributed modulo 1; however,
@@ -823,12 +824,12 @@ measure on $\R/\Z$ (cf.\ \citeauthor{22}~\cite[179-180]{22}).
 \item (Conjectural example).
 	Let $E$ be an elliptic curve defined over a number field $K$ and let
 	$M$ be the set of finite places $v$ of $K$ such that $E$ has good
-	reduction at $v$, cf.\ 1.2 and chap.~\ref{ch:iv}.  Let $v \in M$, let
-	$\ell \ne p_v$ and let $F_v$ be the Frobenius conjugacy class of $v$ in
-	$\Aut(T_\ell(E))$. The eigenvalues of $F_v$ are algebraic numbers; when
-	embedded into $\C$ they give conjugate complex numbers $\pi_v$,
-	$\bar{\pi}_v$ with $|\pi_v| = (\numnorm v)^{1/2}$.
-	We may write then
+	reduction at $v$, cf.\ \ref{sec:I_12} and chap.~\ref{ch:iv}.  Let $v
+	\in M$, let $\ell \ne p_v$ and let $F_v$ be the Frobenius conjugacy
+	class of $v$ in $\Aut(T_\ell(E))$. The eigenvalues of $F_v$ are
+	algebraic numbers; when embedded into $\C$ they give conjugate complex
+	numbers $\pi_v$, $\bar{\pi}_v$ with $|\pi_v| = (\numnorm v)^{1/2}$.  We
+	may write then
 	\[
 		\pi_v = (\numnorm v)^{1/2} e^{i \phi_v}; \quad
 		\bar{\pi}_v = (\numnorm v)^{1/2} e^{-i \phi_v} \qquad
@@ -879,7 +880,8 @@ measure on $\R/\Z$ (cf.\ \citeauthor{22}~\cite[179-180]{22}).
 	representations.
 \end{enumerate}
 
-\subsection{Proof of theorem~1}
+\subsection{Proof of theorem~\ref{thm:I_A2_1}}
+\label{sec:I_A3}
 The logarithmic derivative of $L$ is
 \[
 	\frac{L'(s)}{L(s)} = -\sum_{\substack{v\ge 1 \\ m\ge 1}}
@@ -984,7 +986,7 @@ Hence,
 	\frac{ \sum_{\numnorm v \le n} \chi(x_v) }{ \sum_{\numnorm v \le n} 1 }
 	\longrightarrow c_\chi \qquad \text{as } n\to \infty,
 \]
-and we may apply proposition~2 to conclude the proof.
+and we may apply proposition~\ref{prop:I_A2_2} to conclude the proof.
 \hfill
 q.e.d.
 
