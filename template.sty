@@ -184,20 +184,19 @@
 
 % ======== Theorems =================
 \RequirePackage{amsthm}
-\newtheorem{thm}{Theorem}[section]
+\newtheorem{thm}{Theorem}[subsection]
 \renewcommand{\thethm}{\arabic{thm}}
-\newtheorem{prop}{Proposition}[section]
+\newtheorem{prop}{Proposition}[subsection]
 \renewcommand{\theprop}{\arabic{prop}}
-\newtheorem{lem}{Lemma}[section]
+\newtheorem{lem}{Lemma}[subsection]
 \renewcommand{\thelem}{\arabic{lem}}
-\newtheorem{con}[thm]{Conjecture}
 
 \newtheorem{cor}{Corollary}[thm] % A whole lot of corollaries
 \newtheorem{corp}{Corollary}[prop]
 \newtheorem{corl}{Corollary}[lem]
 
 \theoremstyle{definition}
-\newtheorem{mydef}{Definition}[section]
+\newtheorem{mydef}{Definition}[subsection]
 \renewcommand{\themydef}{\arabic{mydef}}
 \newtheorem*{obs}{Remark}
 \newtheorem*{ex}{Examples}

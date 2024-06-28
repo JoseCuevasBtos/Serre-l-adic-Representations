@@ -3,14 +3,15 @@
 \chaptermark{Locally algebraic representations}
 
 In this Chapter, we define what it means for an abelian $\ell$-adic
-representation to be \emph{locally algebraic} and we prove (cf.\ \ref{sec:III_23}) that such
-a representation, when rational, comes from a linear representation
-of one of the groups $S_{\mathfrak{m}}$ of Chapter \ref{ch:ii}.
+representation to be \emph{locally algebraic} and we prove (cf.\
+\ref{sec:III_23}) that such a representation, when rational, comes from a
+linear representation of one of the groups $S_{\mathfrak{m}}$ of Chapter
+\ref{ch:ii}.
 
-When the ground field is a composite of quadratic extensions of
-$\Q$, any rational semi-simple $\ell$-adic representation is \emph{ipso facto}
-locally algebraic; this is proved in \S\ref{sec:III_3}, as a consequence of a result
-on transcendental numbers due to Siegel and Lang.
+When the ground field is a composite of quadratic extensions of $\Q$, any
+rational semi-simple $\ell$-adic representation is \emph{ipso facto} locally
+algebraic; this is proved in \S\ref{sec:III_3}, as a consequence of a result on
+transcendental numbers due to Siegel and Lang.
 
 In the local case, an abelian semi-simple representation is
 locally algebraic if and only if it has a ``Hodge-Tate decomposition''.
@@ -25,7 +26,7 @@ Let $p$ be a prime number and $K$ a finite extension of $\Q_p$; let $\TT =
 \WRes_{K/\Q_p}(\GG_{m, K})$ be the corresponding algebraic torus over
 \dpage
 $\Q_p$ (cf.\ \citeauthor{43}~\cite{43}, Chap.~I).
-\todo[section]{Belen.}
+\todo[section]{Belén.}
 
 \subsection{Alternative definition of ``locally algebraic'' via Hodge-Tate
 modules}
@@ -52,7 +53,7 @@ of unity (cf.\ chap.~\ref{ch:i}, \ref{sec:I_12}):
 \]
 Define for every $i \in \Z$ the subspace
 \[
-	W^i = \{ w \in W : sw = \chi(s)^i w \text{ for all } s\in G \}
+	W^i = \{ w \in W \mid sw = \chi(s)^i w \text{ for all } s\in G \}
 \]
 of $W$. This is a $K$-vector subspace of $W$. Let $W(i) = C \otimes_K W^i$.
 This is a $C$-vector space upon which $G$ acts in a natural way (i.e.\ by the
@@ -116,7 +117,7 @@ For the proof, see the Appendix.
 \section{The global case}
 \subsection{Definitions}
 \label{sec:III_21}
-\todo[section]{Belen.}
+\todo[section]{Belén.}
 
 \subsection{Modulus of a locally algebraic abelian representation}
 \label{sec:III_22}
@@ -124,7 +125,7 @@ Let $\rho\colon \abcl{\Gal(\algcl K/K)} \to \Aut(V_\ell)$ be as above; by
 composition with the class field homomorphism $i\colon I \to \abcl{\Gal(\algcl
 K/K)}$, $\rho$ defines a homomorphism $\rho \circ i\colon I \to \Aut(V_\ell)$.
 
-We assume that $p\rho$ is locally algebraic and we denote by $f$ the associated
+We assume that $\rho$ is locally algebraic and we denote by $f$ the associated
 \dpage
 algebraic morphism $T_{/\Q_\ell} \to \GL_{V_\ell}$.
 \begin{mydef}
@@ -227,11 +228,150 @@ $z_1 z_2^\ell \cdots z_n^{\ell^{n-1}}$.
 
 \subsection{Back to \texorpdfstring{$S_{\mathfrak{m}}$}{Sm}}
 \label{sec:III_23}
-\todo[section]{Belen.}
+Let $\mathfrak{m}$ be a modulus of $K$ and let
+\[
+	\phi \colon S_{\mathfrak{m}/\Q_\ell} \longrightarrow \GL_{V_\ell}
+\]
+be a linear representation of $S_{\mathfrak{m}/\Q_\ell}$. Let
+\[
+	\phi_\ell \colon \abcl{\Gal(\algcl K/K)} \longrightarrow \Aut(V_\ell)
+\]
+be the corresponding $\ell$-adic representation (cf.\ chap.~\ref{ch:ii},
+\ref{sec:II_25}).
+
+\begin{thm}\label{thm:III_23_1}
+	The representation $\phi_\ell$ is locally algebraic and defined mod
+	$\mathfrak{m}$. The associated algebraic morphism
+	\dpage
+	\[
+		f \colon \TT_{/\Q_\ell} \longrightarrow \GL_{V_\ell}
+	\]
+	is $\phi \circ \pi$, where $\pi$ denotes the canonical morphism of
+	$\TT$ into $S_{\mathfrak{m}}$ (cf.\ chap.~\ref{ch:ii},
+	\ref{sec:II_22}).
+\end{thm}
+This is trivial from the construction of $\phi_\ell$ as $\phi \circ
+\varepsilon$ (chap.~\ref{ch:ii}, \ref{sec:II_25}) and the corresponding
+properties of $\varepsilon_\ell$ (chap.~\ref{ch:ii}, \ref{sec:II_23}).
+
+The converse of Theorem~\ref{thm:III_23_1} is true. We state it only for the
+case of rational representations:
+\begin{thm}
+	Let $\rho\colon \abcl{\Gal(\algcl K/K)} \to \Aut(V_\ell)$ be an abelian
+	$\ell$-adic representation of the number field $K$. Assume $\rho$ is
+	rational (chap.~\ref{ch:i}, \ref{sec:I_23}) and is locally algebraic
+	with $\mathfrak{m}$ as a modulus of definition (cf.\ \ref{sec:III_22}).
+	Then, there exist a $\Q$-vector subspace $V_0$ of $V_\ell$, with
+	$V_\ell = V_0 \otimes_\Q \Q_\ell$, and a morphism $\phi_0 \colon
+	S_{\mathfrak{m}} \to \GL_{V_\ell}$ of $\Q$-algebraic groups such that
+	$\rho$ is equal to the $\ell$-adic representation $\phi_\ell$
+	associated to $\phi_0$ (cf.\ chap.~\ref{ch:ii}, \ref{sec:II_25}).
+\end{thm}
+(The condition $V_\ell = V_0 \otimes_\Q \Q_\ell$ means that $V_0$ is a
+\textquote{$\Q$-structure} on $V_\ell$, cf.\ Bourbaki Alg., chap.~II,
+3\textsuperscript{rd} ed.)
+
+\begin{proof}
+	Let $r \colon \TT_{/\Q_\ell} \to \GL_{V_\ell}$ be the algebraic
+	morphism associated with $\rho$. We have
+	\[
+		\rho\circ i(x) = r(x^{-1}) \qquad \text{for } x\in
+		K_\ell^\times \cap U_{\mathfrak{m}} = \prod_{v\mid\ell} U_{v,
+		\mathfrak{m}}
+	\]
+	Define a map $\psi \colon I \to \Aut(V_\ell)$ by
+	\dpage
+	\[
+		\psi(x) = \rho\circ i(x) \cdot r(x_\ell)
+	\]
+	where $x_\ell$ is the $\ell$\textsuperscript{th} component of the idèle
+	$x$.
+	\todo[bluetask]{¿Estandarizar notación $\vec x$ para idèles?}
+	One checks immediately that \emph{$\psi$ is trivial on
+	$U_{\mathfrak{m}}$ and coincides with $r$ on $K^\times$.}
+	Hence $r$ is trivial on $E_{\mathfrak{m}} = K^\times \cap
+	U_{\mathfrak{m}}$ and factors through an algebraic morphism
+	$r_{\mathfrak{m}} \colon T_{\mathfrak{m}/\Q_\ell} \to \GL_{V_\ell}$. By
+	the universal property
+	of the $\Q_\ell$-algebraic group $S_{\mathfrak{m}/\Q_\ell}$ (cf.\ chap.~\ref{ch:ii}, \ref{sec:II_13} and \ref{sec:II_22}),
+	there exists an algebraic morphism
+	\[
+		\phi \colon S_{\mathfrak{m}/\Q_\ell} \longrightarrow
+		\GL_{V_\ell}
+	\]
+	with the following properties:
+	\begin{enumerate}[(a)]
+	\item\label{thm:III_23_2a} The morphism 
+		\begin{tikzcd}[cramped, sep=small]
+			T_{\mathfrak{m}/\Q_\ell} \rar &
+			S_{\mathfrak{m}/\Q_\ell} \rar["\phi"] & \GL_{V_\ell}
+		\end{tikzcd}
+		is $r_{\mathfrak{m}}$.
+	\item The map 
+		\begin{tikzcd}[cramped, sep=small]
+			I \rar["\varepsilon"] & S_{\mathfrak{m}}(\Q_\ell)
+			\rar["\phi"] & \Aut(V_\ell)
+		\end{tikzcd}
+		is $\psi$.
+	\end{enumerate}
+	It is trivial to check that the $\ell$-adic representation
+	$\phi_\ell$ attached to $\phi$ as above coincides with $\rho$.
+	Indeed, if $a \in I$, we have (with the notations of chap.~\ref{ch:ii})
+	\begin{align*}
+		\phi_\ell\circ i(a) &= \phi(\varepsilon_\ell(a))
+		= \phi(\varepsilon(a))
+		\phi\big( \pi_\ell(a_\ell^{-1}) \big)
+		= \psi(a) \phi\big( \pi_\ell(a_\ell^{-1}) \big) \\
+				       &= \rho\circ i(a) r(a_\ell)
+				       \phi\big( \pi_\ell(a_\ell^{-1}) \big)
+				       = \rho\circ i(a).
+	\end{align*}
+	since $\phi\circ\pi_\ell = r$ by \ref{thm:III_23_2a} above.
+	\dpage
+
+	Hence $\phi_\ell = \rho$; the fact that $\rho$ is \emph{rational}
+	then implies that \emph{$\phi$ can be defined over $\Q$}
+	(chap.~\ref{ch:ii}, \ref{sec:II_24}, Prop.), and this gives $V_0$ and
+	$\phi_0$.
+\end{proof}
+
+\begin{obs}
+	The subspace $V_0$ of $V_\ell$ constructed in the proof of the theorem
+	is \emph{not} unique; however, any other choice gives us a space of the
+	form $\sigma V_0$, where $\sigma$ is an automorphism of $V_\ell$
+	commuting with $\rho$. To a given $V_0$ corresponds of course a unique
+	$\phi$.
+\end{obs}
+
+\begin{cor}
+	For each prime number $\ell'$ there exists a unique (up to isomorphism)
+	$\ell'$-adic rational semi-simple representation $\rho$ of $K$,
+	compatible with $\rho$. It is abelian and locally algebraic.  These
+	representations form a strictly compatible system (cf.\
+	chap.~\ref{ch:i}, \ref{sec:I_23}) with exceptional set contained in
+	$\Supp(\mathfrak{m})$. For an infinite number of $\ell'$,
+	$\rho_{\ell'}$ can be brought in diagonal form.
+\end{cor}
+\begin{proof}
+	The unicity of the $\rho_{\ell'}$, follows from the theorem of
+	chap.~\ref{ch:i}, \ref{sec:I_23}. For the existence, take
+	$\rho_{\ell'}$ to be the $\phi_{\ell'}$ associated to $\phi$ as
+	in chapter~\ref{ch:ii}, \ref{sec:II_25}. The remaining assertion
+	follows from the proposition in chap.~\ref{ch:ii}, \ref{sec:II_25}.
+\end{proof}
+
+\begin{cor}
+	The eigenvalues of the Frobenius elements $F_{v, \rho}$ ($v \notin
+	\Supp(\mathfrak{m})$, $p_v \ne \ell$) generate a finite extension of
+	$\Q$.
+\end{cor}
+This follows from the corresponding property of $\phi_\ell$, cf.\
+chapter~\ref{ch:ii}, \ref{sec:II_25}, Remark~\ref{rmk:II_25_1}.
+\todo[pinktask]{Añadir referencia al Rmk.~1 en II.2.5.}
 
 \subsection{A mild generalization}
 \label{sec:III_24}
-\todo[section]{Belen.}
+\todo[section]{Belén.}
 
 \subsection{The function field case}
 \label{sec:III_25}
@@ -369,7 +509,7 @@ trace as $\rho$, and the theorem follows from:
 
 \subsection{Statement of the result}
 \label{sec:III_31}
-\todo[section]{Belen.}
+\todo[section]{Belén.}
 
 \subsection{A criterion for local algebraicity}
 \label{sec:III_32}
@@ -497,7 +637,7 @@ trace as $\rho$, and the theorem follows from:
 \subsection{An auxiliary result on tori}
 \label{sec:III_33}
 In \cite{15}, Lang proved that two exponential functions $\exp(b_1 z)$,
-$exp(b_2z)$, $b_1, b_2 \in \C$, which take algebraic values for at least 3
+$\exp(b_2z)$, $b_1, b_2 \in \C$, which take algebraic values for at least 3
 $\Q$-linearly independent values of $z$, are multiplicatively dependent: the
 ratio $b_1/b_2$ is a rational number. This had also been noticed by Siegel.
 
@@ -642,7 +782,7 @@ of a finite group and a free abelian group of infinite rank.
 
 \subsection{Proof of the theorem}
 \label{sec:III_34}
-\todo[section]{Belen.}
+\todo[section]{Belén.}
 
 \begin{subappendices}
 
@@ -839,15 +979,15 @@ This is a continuous homomorphism and even a local isomorphism.
 
 \subsection{A criterion for local triviality}
 \label{sec:III_A3}
-\todo[section]{Belen.}
+\todo[section]{Belén.}
 
 \subsection{The character \texorpdfstring{$\xi$}{ξ}}%
 \label{sec:III_A4}
-\todo[section]{Belen.}
+\todo[section]{Belén.}
 
 \subsection{Characters associated with Hodge-Tate decompositions}
 \label{sec:III_A5}
-\todo[section]{Belen.}
+\todo[section]{Belén.}
 
 \begin{thm}\label{thm:III_A5_2}
 Let $\rho$, $V$, $W$ be as above and, for each $\sigma \in \Gamma_E$, let
@@ -1039,8 +1179,8 @@ compact.
 	We have already remarked (cf.\ \ref{sec:III_11}) that
 	\ref{thm:III_A7_1} implies:
 	\begin{displayquote}
-		\emph{\textbf{(*)} The restriction of p to the inertia group is
-		semi-simple.}
+		\emph{\textbf{(*)} The restriction of $\rho$ to the inertia
+		group is semi-simple.}
 	\end{displayquote}
 	Hence we may assume that (*) holds.
 
@@ -1062,7 +1202,7 @@ compact.
 	abelian and simple, $E$ is a commutative field, of finite degree over
 	$\Q_p$, and $V$ is a one-dimensional vector space over $E$; the
 	representation $\rho$ is given by a continuous character $\rho \colon G
-	\to E^\times$
+	\to E^\times$.
 
 	Let now $K'$ be a finite extension of $K$ which is large enough to
 	contain all the $\Q_p$-conjugates of $E$. Call ($1'$) and ($2'$) the

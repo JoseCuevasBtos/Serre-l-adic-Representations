@@ -342,7 +342,7 @@ in $S_{\mathfrak{m}}(\Q_\ell)$. With these notations we have:
 	S_{\mathfrak{m}}(\Q_\ell)$ is a rational representation with values in
 	$S_{\mathfrak{m}}$.
 \item $\varepsilon_\ell$ is unramified outside $\Supp(\mathfrak{m}) \cup
-	S_\ell$, where $S_\ell = \{ v : p_v = \ell \}$.
+	S_\ell$, where $S_\ell = \{ v \mid p_v = \ell \}$.
 \item If $v \notin \Supp(\mathfrak{m}) \cup S_\ell$,
 	\dpage
 	then the Frobenius element $F_{v, \varepsilon_\ell}$ (cf.\ 
@@ -425,6 +425,7 @@ S_{\mathfrak{m}}.
 \end{enumerate}
 
 \subsection{Linear representations of \texorpdfstring{$S_{\mathfrak{m}}$}{Sm}}
+\label{sec:II_24}
 We recall first some well known facts on representations.
 
 \begin{enumerate}[a)]
@@ -809,8 +810,8 @@ write $X(\TT)$ additively and put $Y(\TT) = X(\TT) \otimes_\Z \Q$. We decompose
 $Y$ as a direct sum $Y = Y^0 \oplus Y^- \oplus Y^+$ of $G$-invariant subspaces, as
 follows (cf.\ Appendix, \ref{sec:II_A2})
 \begin{align*}
-	Y^0 &= Y^G = \{ y \in Y : gy = y \; \text{for all } g\in G \} \\
-	Y^- &= \{ y \in Y : cy = -y \; \text{for all } c\in C_\infty \}
+	Y^0 &= Y^G = \{ y \in Y \mid gy = y \; \text{for all } g\in G \} \\
+	Y^- &= \{ y \in Y \mid cy = -y \; \text{for all } c\in C_\infty \}
 \end{align*}
 and $Y$ is a $G$-invariant supplement to $Y^0 \oplus Y^-$ in $Y$; one proves
 \dpage
@@ -824,7 +825,7 @@ element $\sum_{\sigma \in \Gamma} [\sigma]$, and its $G$-invariant supplement
 is
 \[
 	Y^- \oplus Y^+ = \left\{ \sum_{\sigma \in \Gamma} b_\sigma \, [\sigma]
-	: b_\sigma \in \Q, \; \sum_{\sigma \in \Gamma} b_\sigma = 0 \right\}.
+	\mid b_\sigma \in \Q, \; \sum_{\sigma \in \Gamma} b_\sigma = 0 \right\}.
 \]
 Hence, any character $\chi \in X(\TT)$ can be written in the form
 \begin{gather}
@@ -836,7 +837,7 @@ Hence, any character $\chi \in X(\TT)$ can be written in the form
 (In particular, we see that $da \in \Z$ where $d = [K : \Q]$.) The subspace
 $Y^-$ can now be described as follows
 \[
-	Y^- = \left\{ \sum_{\sigma} b_\sigma \, [\sigma] : b_\sigma \in \Q, \;
+	Y^- = \left\{ \sum_{\sigma} b_\sigma \, [\sigma] \mid b_\sigma \in \Q, \;
 	\sum_{\sigma} b_\sigma = 0, \; b_{c\sigma} = -b_\sigma \text{ for all }
 	c \in C_\infty \text{ and } \sigma \in \Gamma \right\}.
 \]
@@ -1038,8 +1039,8 @@ sum of those $Y$ where for all the infinite Frobeniuses $c \in C_\infty$
 other $Y_\lambda$.  We have
 \dpage
 \begin{align*}
-	Y^0 &= Y^G = \{ y \in Y : gy = y \; \text{for all } g\in G \} \\
-	Y^- &= \{ y \in Y : cy = -y \; \text{for all } c\in C_\infty \}, \\
+	Y^0 &= Y^G = \{ y \in Y \mid gy = y \; \text{for all } g\in G \} \\
+	Y^- &= \{ y \in Y \mid cy = -y \; \text{for all } c\in C_\infty \}, \\
 	Y   &= Y^0 \oplus Y^- \oplus Y^+.
 \end{align*}
 Note that $Y = Y^0$ if and only if $\TT$ is anisotropic.  If $c \in C_\infty$,
