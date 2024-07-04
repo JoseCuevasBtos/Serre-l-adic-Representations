@@ -163,7 +163,7 @@ The algebraic group $B$ is thus an \emph{extension} of the ``constant'' algebrai
 \subsubsection*{Exercise}
 \begin{enumerate}[a)]
 	\item Let $k'$ be a commutative $k$-algebra, with $k' \neq 0$, and $\Spec
-	(k')$ connected (i.e. $k'$ contains exactly two idempotents: $0$ and $1$). 
+	(k')$ connected (i.e.\ $k'$ contains exactly two idempotents: $0$ and $1$). 
 	Show the existence of an exact sequence:
 	\[
 	\begin{tikzcd}
@@ -280,11 +280,76 @@ $\mathfrak{m}$ (and this shows again that it is finite).
 \subsection{The groups \texorpdfstring{$T_{\mathfrak{m}}$}{Tm} and
 \texorpdfstring{$S_{\mathfrak{m}}$}{Sm}}
 \label{sec:II_22}
-\todo[section]{Belen.}
+
+We are now in a position to apply the group construction of~\ref{sec:II_13}.
+We take for exact sequence~\ref{eq:II_13} the sequence 
+\[
+	\begin{tikzcd}
+		1 \arrow[r] & K^{\times} / E_\mathfrak{m} \arrow[r] & I_\mathfrak{m} 
+		\arrow[r] & C_\mathfrak{m} \arrow[r] & I
+	\end{tikzcd}
+\]
+and for $A$ the algebraic group $T_\mathfrak{m} = \TT / \algcl{E_\mathfrak{m}}
+$, where $E_\mathfrak{m}$ is as before, $\TT$ is the torus $\WRes_{K/\Q}(
+\GG_{m, K})$ defined in~\ref{sec:II_11}, and $\algcl{E_\mathfrak{m}}$ is the 
+\dpage
+Zariski closure of $E_\mathfrak{m}$ in $\TT$, cf.\ ~\ref{sec:II_12}.
+
+The construction of~\ref{sec:II_13} now yields a \emph{$\Q$-algebraic group} 
+$S_\mathfrak{m}$ with an algebraic morphism $T_\mathfrak{m} \to S_\mathfrak{m}$ 
+and a group homomorphism $\varepsilon\colonI_\mathfrak{m} \to S_\mathfrak{m} (\Q)$.
+The sequence 
+\[
+\begin{tikzcd}
+	1 \arrow[r] & T_\mathfrak{m} \arrow[r] & S_\mathfrak{m} \arrow[r] &
+	C_\mathfrak{m} \arrow[r] & 1
+\end{tikzcd}
+\]
+is exact ($C_\mathfrak{m}$ being identified with the corresponding constant 
+algebraic group) and the diagram 
+\begin{equation}\label{eq:II_22}
+	\begin{tikzcd}
+		1 \arrow[r] & K^\times / E_\mathfrak{m} \arrow[r] \arrow[d] & 
+		I_\mathfrak{m} \arrow[r] \arrow[d, "\varepsilon"] & C_\mathfrak{m} 
+		\arrow[r] \arrow[d, "\id"] & 1 \\
+		1 \arrow[r] & T_\mathfrak{m}(\Q) \arrow[r] & S_\mathfrak{m}
+		(\Q) \arrow[r] & C_\mathfrak{m} \arrow[r] & 1
+	\end{tikzcd}
+\end{equation}
+is commutative.
+
+\begin{obs}
+Let $\mathfrak{m}'$ be another modulus; assume $\mathfrak{m}' \geq \mathfrak{m}
+$, i.e.\ $\Supp(\mathfrak{m}') \supset \Supp(\mathfrak{m})$ and 
+$\mathfrak{m}'_v \geq \mathfrak{m}_v$ if $v \in \Supp(\mathfrak{m})$. From the  
+inclusion $U_{\mathfrak{m}'} \subset U_\mathfrak{m}$ one deduces maps $T_{
+\mathfrak{m}'} \to T_\mathfrak{m}$ and $I_{\mathfrak{m}'} \to I_\mathfrak{m}$,
+whence a morphism $S_{\mathfrak{m}'} \to S_\mathfrak{m}$. Hence the 
+$S_\mathfrak{m}$'s form a projective system; their limit is a proalgebraic 
+group over $\Q$, extension of the profinite group $C/D = \invlim
+C_{\mathfrak{m}}$ by a torus.
+\end{obs}
+
+\subsubsection*{Exercises}
+\begin{enumerate}[1)]
+	\item Let $\algcl{E_\mathfrak{m}}(\Q)$ be the Zariski-closure of 
+	$E_\mathfrak{m}$ in $K^\times = \T(\Q)$. Show that the kernel of 
+	$\varepsilon_\mathfrak{m} \colon I/U_\mathfrak{m} \to S_\mathfrak{m}(\Q)$ 
+	is the image of $\algcl{E_\mathfrak{m}}(\Q) \to I/U_\mathfrak{m}$.
+	\item Let $H_{\mathfrak{m}'/\mathfrak{m}}$ be the kernel of $S_{\mathfrak{m}'} \to S_\mathfrak{m}$, where $\mathfrak{m}'_v \geq \mathfrak{m}_v$.
+	\begin{enumerate}[a)]
+		\item Show that $H_{\mathfrak{m}'/\mathfrak{m}}$ is a finite subgroup of $S_{\mathfrak{m}'}(\Q)$ and that it is contained  in the image of $\varepsilon_{\mathfrak{m}'}$.
+		\item Construct an exact sequence (cf.\ Exer.~1)
+\[
+\begin{tikzcd}
+	1 \arrow[r] & \left({E_\mathfrak{m} \cap \algcl{E_{\mathfrak{m}'}}(\Q)}\right)/ E_{\mathfrak{m}'} \arrow[r] & U_\mathfrak{m} / U_{\mathfrak{m}'} \arrow[r] & H_{\mathfrak{m}'/\mathfrak{m}} \arrow[r] & 1.
+\end{tikzcd}
+\]
+	\end{enumerate}	
+\end{enumerate}
 
 \subsection{The canonical \texorpdfstring{$\ell$}{ℓ}-adic representation with
-values in \texorpdfstring{$S_{\mathfrak{m}}$}{Sm}}
-\label{sec:II_23}
+values in \texorpdfstring{$S_{\mathfrak{m}}$}{Sm}}\label{sec:II_23}
 Let $\mathfrak{m}$ be a modulus, and let $\ell$ be a prime number. Let
 $\varepsilon\colon I \to I_{\mathfrak{m}} \to S_{\mathfrak{m}}(\Q)$ be the
 homomorphism defined in \ref{sec:II_22}. Let $\pi\colon T \to S_{\mathfrak{m}}$
@@ -549,7 +614,7 @@ Let $\overline{X} \subseteq S_{\mathfrak{m}}$ (resp.\ $\overline{X}_\ell
 topology (resp.\ $\ell$-adic topology). It is clear that
 \dpage
 $\overline{X} \subseteq \overline{X}(\Q_\ell)$. On the other hand, \v
-Cebotarev's theorem (cf.\ Chapter~\ref{ch:i}, \ref{sec:I_22}) implies that
+\^Cebotarev's theorem (cf.\ Chapter~\ref{ch:i}, \ref{sec:I_22}) implies that
 $\overline{X} = \Img(\varepsilon_\ell)$ (cf.\ \ref{sec:II_23}). The set
 $\Img(\varepsilon_\ell)$, however, is Zariski dense in $S_{\mathfrak{m}}$ (cf.\ 
 Remark in \ref{sec:II_23}). Hence $\overline{X} = S_{\mathfrak{m}}$, which
@@ -589,7 +654,152 @@ two properties:
 \subsection{\texorpdfstring{$\ell$}{ℓ}-adic representations associated to a
 linear representation of \texorpdfstring{$S_{\mathfrak{m}}$}{Sm}}
 \label{sec:II_25}
-\todo[section]{Belen.}
+
+\subsubsection*{1) \texorpdfstring{$\ell$}{ℓ}-adic case}
+% \label{sssec:II_25_1}
+
+Let $V_\ell$ be a finite-dimensional $\Q_\ell$-vector space and
+\[
+	\phi \colon S_{\mathfrak{m} / \Q_\ell} \rightarrow \GL_{V_\ell}
+\]
+a linear representation of $S_{\mathfrak{m} / \Q_\ell}$ in $V_\ell$. This 
+defines a homomorphism
+\[
+	\phi \colon S_\mathfrak{m}(\Q_\ell) \rightarrow \GL_{V_\ell}(\Q_\ell) = 
+	\Aut(V_\ell)
+\]
+which is continuous for the $\ell$-adic topologies of those groups.
+
+By composition with the map $\varepsilon_\ell \colon \abcl{G} \to
+S_{\mathfrak{m}} (\Q_\ell)$ defined in~\ref{sec:II_23}, we get a map
+\todo[pinktask]{Lo dejo cómo $G$ o como galois de algo}
+\[
+	\phi_\ell = \phi \circ \varepsilon \colon \abcl{G} \to \Aut(V_\ell),
+\]
+i.e.\ an \emph{abelian $\ell$-adic representation of} $K$ in $V_\ell$.
+
+\begin{prop}
+\begin{enumerate}[a)]
+	\item The representation $\phi_\ell$ is semi-simple.
+	\item Let $v \in M_K^0$, with $v \not\in \Supp(\mathfrak{m})$ and $p_v \neq 
+	\ell$.
+\todo[pinktask]{no pertence?}
+
+Then $\phi_\ell$ is unramified at $v$; the corresponding Frobenius element 
+$F_{v, \phi_v} \in \Aut(V_\ell)$ is equal to $\phi(F_v)$, where $F_v$ denotes 
+the element of $S_\mathfrak{m}(\Q)$ defined in~\ref{sec:II_23}.
+\dpage
+	\item The representation $\phi_\ell$ is rational (Chap.~\ref{ch:i},\ref{sec:II_23})
+if and only if $\phi$ can be defined over $\Q$ (cf.\ \ref{sec:II_24}).
+\end{enumerate}
+\end{prop}
+
+Since $S_\mathfrak{m}$ is a group of multiplicative type, all its 
+representations can be brought to diagonal form on a suitable extension of the 
+ground field; hence a). Assertion b) follows from~\ref{sec:II_23}, and 
+assertion c) follows from prop.~2 of~\ref{sec:II_24}.
+
+\begin{obs}
+Let us identify $\phi_\ell$ with the corresponding homomorphism of the idèle 
+group $I$ into $\Aut(V_\ell)$. Then
+\begin{enumerate}
+	\item[d)] $\Ker(\phi_\ell)$ contains $U_{v , \mathfrak{m}}$ if $v \not\in 
+	\Supp(\mathfrak{m})$, $p_v \neq \ell$.
+	\item[e)]  Let $\phi_T \colon T_{/\Q_\ell} \to \GL_{V_\ell}$ be defined by 
+	composing $T_{/\Q_\ell} \to S_{\mathfrak{m}/\Q_\ell}$ with $\phi$. If $x$ 
+	belongs to the open subgroup $U_{\ell , \mathfrak{m}} = \prod_{v \mid \ell} 
+	U_{v , \mathfrak{m}}$ of $T(\Q_\ell)$, one has
+\[
+	\phi_\ell (x) = \phi_T(x^{-1}).
+\]
+These properties follow readily from those of $\varepsilon_\ell$.
+\todo{Es T de toro?}
+\end{enumerate}
+\end{obs}
+
+\subsubsection*{The rational case}
+
+Let now $V_0$ be a finite dimensional vector space over $\Q$ and 
+$\phi_0 \colon S_\mathfrak{m} \to \GL_{V_0}$ a linear representation of 
+$S_\mathfrak{m}$. For each prime number $\ell$ we may apply the preceding 
+construction to the representation $\phi_{0/\ell} \colon S_{\mathfrak{m}/
+\Q_{\ell}} \to \GL(V_\ell)$, where $V_\ell = V_0 \otimes \Q_\ell$; 
+\dpage
+we then get an $\ell$-adic representation $\phi_\ell \colon \abcl{G} \to \Aut
+(V_\ell)$.
+\todo{0 está bien??}
+
+\begin{thm}
+\begin{enumerate}[1)]
+	\item The $\phi_\ell$ form a strictly compatible system of rational abelian 
+	semi-simple representations. Its exceptional set is contained in $\Supp
+	(\mathfrak{m})$.
+	\item For each $v \not\in \Supp(\mathfrak{m})$ the Frobenius element of $v$ 
+	with respect to the system $(\phi_\ell)$ is the element $\phi_0(F_v)$ 
+	of $\Aut(V_0)$.
+	\item There exist infinitely many primes $\ell$ such that $\phi_\ell$ is 
+	diagonalizable over $\Q_\ell$.
+\end{enumerate}
+\end{thm}
+
+The first two assertions follow directly from the proposition above. To prove 
+the third one, note first that there exists a finite extension $E$ of $\Q$ over 
+which $\phi_0$ becomes diagonalizable. If $\ell$ is a prime number which 
+splits completely in $E$, one can embed $E$ into $\Q_\ell$ and this shows that 
+$\phi_\ell$ is diagonalizable. Assertion 3) now follows from the well-known 
+fact that there exist infinitely many such $\ell$ (this is, for instance, a 
+consequence of \^Cebotarev's theorem, cf.\ Chap.~\ref{ch:i},~\ref{sec:II_22}).
+
+\begin{obs}
+The Frobenius elements $\phi_0(F_v) \in \Aut(V_0)$ can also be defined 
+using the homomorphism
+\[
+\begin{tikzcd}
+	\phi_0 \circ \varepsilon \colon I \arrow[r] & S_\mathfrak{m}(\Q) \to 
+	\Aut(V_0).
+\end{tikzcd}
+\]
+
+Note that their eigenvalues generate \emph{a finite extension} of $\Q$; indeed 
+they are contained in any field over which $\phi_0$ can be brought in 
+diagonal form.
+\end{obs}
+\dpage
+
+\subsubsection*{Exercises}
+\begin{enumerate}[1)]
+	\item Let $\phi_0 \colon S_\mathfrak{m} \to \Gl_(V_0)$ be a linear
+representation of $S_\mathfrak{m}$, and let $\ell$ be a prime number.
+\begin{enumerate}[a)]
+	\item Show that the Zariski closure of $\Img(\phi_\ell)$ is the algebraic 
+group $\phi_0(S_\mathfrak{m})$. (Use the fact that 
+($\Img(\varepsilon_\ell)$) is Zariski dense in $S_\mathfrak{m}$, 
+cf.~\ref{sec:II_23})
+	\item Let $\underline{s}_\mathfrak{m}$ be the Lie algebra of 
+	$S_\mathfrak{m}$ and $\phi_0(\underline{s}_\mathfrak{m})$ be its image 
+	by $\phi_circ$, 
+	i.e.\ the Lie algebra of $\phi_0(S_\mathfrak{m})$. Show that the Lie 
+	algebra of the $\ell$-adic Lie group $\Img(\phi_\ell)$ is 
+	$\phi_0(\underline{s}_\mathfrak{m}) \otimes \Q_\ell$. (Use the fact 
+	that $\Img(\varepsilon_\ell)$ is open in $S_\mathfrak{m}(\Q_\ell)$, cf.\ 
+	~\ref{sec:II_23})
+\end{enumerate}
+	\item
+	\begin{enumerate}[a)]
+		\item Show that there exists a unique one-dimensional representation 
+		\[
+			\numnorm \colon S_{\mathfrak{m}} \rightarrow G_\mathfrak{m}
+		\]
+		such that $\numnorm(F_v) = \numnorm v \in \Q^{\times}$ for all 
+		$v \not\in \Supp(\mathfrak{m})$.
+		\item Show that the morphism $T \to S_\mathfrak{m} 
+		\overset{\numnorm}{\to} G_\mathfrak{m}$ is the one induced by the norm 
+		map from $K$ to $\Q$.
+		\item Show that the $\ell$-adic representation defined by $\numnorm$ is 
+		isomorphic to the representation $V_\ell(\mu)$ defined in 
+		Chap.~\ref{ch:i},~\ref{sec:I_12}.
+	\end{enumerate}
+\end{enumerate}
 
 \subsection{Alternative construction}
 Let $\phi_0 \colon S_{\mathfrak{m}} \to \GL_{V_0}$ be as in \ref{sec:II_25}. If
@@ -654,7 +864,71 @@ Show that there exists an algebraic morphism $\phi_0 \colon S_{\mathfrak{m}}
 \to \GL_{V_0}$ for which the Frobenius elements are equal to the $F_v$'s.
 
 \subsection{The real case}
-\todo[section]{Belen.}
+The preceding constructions are relative to a given prime number $\ell$.
+However, they have an archimedean analogue, as follows: 
+
+Let $\pi \colon T \to S_\mathfrak{m}$ be the canonical map defined 
+in~\ref{sec:II_23}, and let 
+\[
+	\pi_{\infty} \colon T(R) \to S_\mathfrak{m}(R)
+\]
+be the corresponding homomorphism of real Lie groups. Since 
+$T(R) = (K \otimes R)^{\times} = \prod_{v \in M_K^\intfy} K_v^{\times}$, 
+we can identify $T(R)$ with a direct factor of the idèle group $I$. Let
+$\pr_\infty$ be the projection on this factor; the map 
+\[
+	\begin{tikzcd}
+		\alpha_\infty = \pi_\intfy \circ \pr_\infty \colon I \arrow[r] & T(R) 
+		\arrow[r] & S_\mathfrak{m}(R)
+	\end{tikzcd}
+\]
+is continuous, and one checks as in~\ref{sec:II_23} that $\alpha_\infty$ 
+coincides with $\varepsilon$ on $K^{\times}$. One may then define a map
+\[
+	\varepsilon_{\infty} \colon I \rightarrow S_{\mathfrak{m}}(R)
+\]
+by 
+\[
+	\varepsilon_\infty(a) = \varepsilon(a)\alpha_\infty(a^{-1}).
+\]
+One has $\varepsilon_\infty(a) = 1$ if $a \in K^{\times}$, hence 
+$\varepsilon_\infty$ may be viewed as \emph{a homomorphism of the idèle 
+class group} $C = I/K^{\times}$ \emph{into the real Lie gruop} $S_\mathfrak{m}
+(R)$.
+
+The main difference with the ``finite'' case is that $\varepsilon_\infty$ 
+\emph{is not trivial on the connected component of} $C$, hence has no Galois 
+group interpretation.
+
+When one composes $\varepsilon_\infty \colon C \to S_\mathfrak{m}(R)$ with a 
+complex character $S_{\mathfrak{m}/C} \to G_{\mathfrak{m}/C}$, one gets a 
+homomorphism $C \to C^{\times}$, i.e.\ that the characters obtained in this way 
+coincide with the ``Gr\¨ossencharakter of type ($A_0$)'' of Weil (cf.\ 
+\cite{35}, \cite{41}), whose conductor divide $\mathfrak{m}$.
+
+\subsubsection*{Exercises}
+Let 
+\[
+	e \colon I \to S_\mathfrak{m}(R) \times \prod_{\ell} S_\mathfrak{m}(\Q_\ell)
+\]
+be the map defined by $\varepsilon_\infty$ and the $\varepsilon_\ell$'s.
+\begin{enumerate}[a)]
+	\item Show that the image of $e$ is contained in the subgroup
+$S_\mathfrak{m}(A)$ of $S_\mathfrak{m}(R) \times \prod_{\ell} 
+S_\mathfrak{m}(Q_\ell)$, where $A$ denote the ring of adèles of $\Q$, and that
+$e \colon I \to S_\mathfrak{m}(A)$ is continuous (for the natural topology of 
+the adelized group $S_\mathfrak{m}(A)$).
+	\item Let $\pi_A \colon T(A) \to S_\mathfrak{m}(A)$ be the map defined by 
+	$\pi \colon T \to S_\mathfrak{m}$. Show that, if one identifies $T(A)$ with
+	$I$ in the obvious way, one has 
+	\[
+		e(x) = \varepsilon(x) \pi_A(x^{-1})
+	\]
+where $\varepsilon \colon I \to S_\mathfrak{m}(\Q) \subset S_\mathfrak{m}$ is 
+the map defined in~\ref{sec:II_23}. [Note that this gives an alternate definition of the $\varepsilon_\ell$'s.]
+	\item Show that $\varepsilon(I)$ is not open in $S_\mathfrak{m}(A)$ if 
+	$C_\mathfrak{m} \neq \{1\}$.
+\end{enumerate}
 
 \subsection{An example: complex multiplication of abelian varieties}
 \label{sec:II_28}
