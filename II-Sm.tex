@@ -26,16 +26,16 @@ In particular, $\TT(\Q) = K^\times$. If $d = [K : \Q]$, the group $\TT$ is a
 $\TT_{/\algcl\Q} = \TT \otimes_\Q \algcl\Q$ obtained from $\TT$ by extending
 the scalars from $\Q$ to $\algcl\Q$, is isomorphic
 \dpage
-to $G_{m/\algcl{\Q}} \times \hdots \times G_{m/\algcl{\Q}}$ ($d$ times). More 
-precisely, let $\Gamma$ be the set of embeddings of $K$ into $\algcl{\Q}$; each 
-$\sigma \in \Gamma$ extends to a homomorphism $K \otimes_{\Q} \algcl{\Q} \to 
-\algcl{\Q}$, hence defines a morphism $[\sigma] : T_{/\algcl{\Q}} \to G_{m/
-\algcl{Q}}$. The collection of all $[\sigma]$'s gives the isomorphism $T_{/
-\algcl{\Q}} \to G_{m/\algcl{\Q}} \times \hdots \times G_{m/\algcl{\Q}}$. 
-Moreover, the $[\sigma]$'s form a basis of the \emph{character group} $X(T) = 
-\Hom_{\algcl{\Q}} (T_{/\algcl{\Q}} , G_{m/\algcl{\Q}})$ of $T$. Note that the 
-Galois group $\Gal(\algcl{\Q} / \Q)$ acts in a natural way on $X(T)$, viz. by 
-permuting the $[\sigma]'s$. (For the dictionary between tori and Galois 
+to $\GG_{m, \algcl{\Q}} \times \hdots \times \GG_{m, \algcl{\Q}}$ ($d$ times).
+More precisely, let $\Gamma$ be the set of embeddings of $K$ into $\algcl{\Q}$;
+each $\sigma \in \Gamma$ extends to a homomorphism $K \otimes_{\Q} \algcl{\Q}
+\to \algcl{\Q}$, hence defines a morphism $[\sigma]\colon \TT_{/\algcl{\Q}} \to
+\GG_{m, \algcl{Q}}$. The collection of all $[\sigma]$'s gives the isomorphism
+$T_{/ \algcl{\Q}} \to G_{m/\algcl{\Q}} \times \hdots \times G_{m/\algcl{\Q}}$.
+Moreover, the $[\sigma]$'s form a basis of the \emph{character group} $X(T) =
+\Hom_{\algcl{\Q}}(\TT_{/\algcl{\Q}}, \GG_{m, \algcl{\Q}})$ of $T$. Note that
+the Galois group $\Gal(\algcl{\Q} / \Q)$ acts in a natural way on $X(T)$, viz.
+by permuting the $[\sigma]'s$. (For the dictionary between tori and Galois
 modules, see for instance T. Ono \cite{21}.)
 
 \subsection{Cutting down $\TT$}
@@ -60,7 +60,7 @@ $\prod_{\sigma \in \Gamma} [\sigma]^{n_\sigma} = 1$, for all $x \in E$.
 	let again $E$ be its group of units (of rank 1). Show that $\dim T = 3$
 	and $\dim T_E = 1$.
 
-	(For more examples, see 3.3.)\dpage
+	(For more examples, see \ref{sec:II_33}.)\dpage
 \end{enumerate}
 
 \subsection{Enlarging groups}
@@ -152,11 +152,12 @@ The algebraic group $B$ is thus an \emph{extension} of the ``constant'' algebrai
 	type''; this means that, after a suitable finite extension of the ground 
 	field, $B$ becomes isomorphic to the product of a torus and a finite 
 	abelian group. Such a group is uniquely determined by its character group $X
-	(B) = \Hom_{\algcl{k}} (B_{/\algcl{k}} , G_{m/\algcl{k}})$, which is a 
+	(B) = \Hom_{\algcl{k}} (B_{/\algcl{k}}, \GG_{m, \algcl{k}})$, which is a 
 	Galois-module of finite type over $\Z$. Here $X(B)$ can be described as the 
-	set of pairs $(\phi, \chi)$, where $\phi : Y_2 \to \algcl{k}^*$ is a 
-	homomorphism and $\chi \in Z(A)$ is such that $\phi(y_1) = \chi(y_1)$ for 
-	all $y_1 \in Y_1$. Note that this gives an alternate definition of $B$. 
+	set of pairs $(\phi, \chi)$, where $\phi \colon Y_2 \to
+	{\algcl{k}}^\times$ is a homomorphism and $\chi \in Z(A)$ is such that
+	$\phi(y_1) = \chi(y_1)$ for all $y_1 \in Y_1$. Note that this gives an
+	alternate definition of $B$. 
 \end{enumerate}
 \end{obs}
 
@@ -165,11 +166,10 @@ The algebraic group $B$ is thus an \emph{extension} of the ``constant'' algebrai
 	\item Let $k'$ be a commutative $k$-algebra, with $k' \neq 0$, and $\Spec
 	(k')$ connected (i.e.\ $k'$ contains exactly two idempotents: $0$ and $1$). 
 	Show the existence of an exact sequence:
-	\[
-	\begin{tikzcd}
-		0 \arrow[r] & A(k') \arrow[r] & B(k') \arrow[r] & Y_3 \arrow[r] & 0
-	\end{tikzcd}
-	\]
+	\dpage
+	\[\begin{tikzcd}
+		0 \rar & A(k') \rar & B(k') \rar & Y_3 \rar & 0.
+	\end{tikzcd}\]
 	\item What happens when $\Spec(k')$ is not connected?
 \end{enumerate}
 
@@ -332,19 +332,27 @@ C_{\mathfrak{m}}$ by a torus.
 
 \subsubsection*{Exercises}
 \begin{enumerate}[1)]
-	\item Let $\algcl{E_\mathfrak{m}}(\Q)$ be the Zariski-closure of 
-	$E_\mathfrak{m}$ in $K^\times = \T(\Q)$. Show that the kernel of 
-	$\varepsilon_\mathfrak{m} \colon I/U_\mathfrak{m} \to S_\mathfrak{m}(\Q)$ 
-	is the image of $\algcl{E_\mathfrak{m}}(\Q) \to I/U_\mathfrak{m}$.
-	\item Let $H_{\mathfrak{m}'/\mathfrak{m}}$ be the kernel of $S_{\mathfrak{m}'} \to S_\mathfrak{m}$, where $\mathfrak{m}'_v \geq \mathfrak{m}_v$.
+\item Let $\algcl{E_\mathfrak{m}}(\Q)$ be the Zariski-closure of
+	$E_\mathfrak{m}$ in $K^\times = \T(\Q)$. Show that the kernel of
+	$\varepsilon_\mathfrak{m} \colon I/U_\mathfrak{m} \to
+	S_\mathfrak{m}(\Q)$ is the image of $\algcl{E_\mathfrak{m}}(\Q) \to
+	I/U_\mathfrak{m}$.
+\item Let $H_{\mathfrak{m}'/\mathfrak{m}}$ be the kernel of
+	\dpage
+	$S_{\mathfrak{m}'} \to S_\mathfrak{m}$, where $\mathfrak{m}'_v \geq
+	\mathfrak{m}_v$.
 	\begin{enumerate}[a)]
-		\item Show that $H_{\mathfrak{m}'/\mathfrak{m}}$ is a finite subgroup of $S_{\mathfrak{m}'}(\Q)$ and that it is contained  in the image of $\varepsilon_{\mathfrak{m}'}$.
-		\item Construct an exact sequence (cf.\ Exer.~1)
-\[
-\begin{tikzcd}
-	1 \arrow[r] & \left({E_\mathfrak{m} \cap \algcl{E_{\mathfrak{m}'}}(\Q)}\right)/ E_{\mathfrak{m}'} \arrow[r] & U_\mathfrak{m} / U_{\mathfrak{m}'} \arrow[r] & H_{\mathfrak{m}'/\mathfrak{m}} \arrow[r] & 1.
-\end{tikzcd}
-\]
+	\item Show that $H_{\mathfrak{m}'/\mathfrak{m}}$ is a finite subgroup
+		of $S_{\mathfrak{m}'}(\Q)$ and that it is contained  in the
+		image of $\varepsilon_{\mathfrak{m}'}$.
+	\item Construct an exact sequence (cf.\ Exer.~1)
+		\[\begin{tikzcd}
+		1 \arrow[r] & \left({E_\mathfrak{m} \cap
+		\algcl{E_{\mathfrak{m}'}}(\Q)}\right)/ E_{\mathfrak{m}'}
+				\arrow[r] & U_\mathfrak{m} / U_{\mathfrak{m}'}
+				\arrow[r] & H_{\mathfrak{m}'/\mathfrak{m}}
+				\arrow[r] & 1.
+		\end{tikzcd}\]
 	\end{enumerate}	
 \end{enumerate}
 
@@ -353,6 +361,7 @@ values in \texorpdfstring{$S_{\mathfrak{m}}$}{Sm}}\label{sec:II_23}
 Let $\mathfrak{m}$ be a modulus, and let $\ell$ be a prime number. Let
 $\varepsilon\colon I \to I_{\mathfrak{m}} \to S_{\mathfrak{m}}(\Q)$ be the
 homomorphism defined in \ref{sec:II_22}. Let $\pi\colon T \to S_{\mathfrak{m}}$
+\todo[pinktask]{Cambiar $T$ por $\TT$ (pero no en $T_{\mathfrak{m}}$).}
 be the algebraic morphism $T \to T_{\mathfrak{m}} \to S_{\mathfrak{m}}$; by
 taking points with values in $\Q_\ell$, $\pi$ defines a homomorphism
 \[
@@ -614,7 +623,7 @@ Let $\overline{X} \subseteq S_{\mathfrak{m}}$ (resp.\ $\overline{X}_\ell
 topology (resp.\ $\ell$-adic topology). It is clear that
 \dpage
 $\overline{X} \subseteq \overline{X}(\Q_\ell)$. On the other hand, \v
-\^Cebotarev's theorem (cf.\ Chapter~\ref{ch:i}, \ref{sec:I_22}) implies that
+Cebotarev's theorem (cf.\ Chapter~\ref{ch:i}, \ref{sec:I_22}) implies that
 $\overline{X} = \Img(\varepsilon_\ell)$ (cf.\ \ref{sec:II_23}). The set
 $\Img(\varepsilon_\ell)$, however, is Zariski dense in $S_{\mathfrak{m}}$ (cf.\ 
 Remark in \ref{sec:II_23}). Hence $\overline{X} = S_{\mathfrak{m}}$, which
@@ -643,7 +652,7 @@ the homomorphisms $\chi \colon I \to \algcl{\Q}^\times$ having the following
 two properties:
 \begin{enumerate}[(a)]
 \item $\chi(x) = 1$ if $x \in U_{\mathfrak{m}}$.
-\item For each embedding $\sigma$ of $K$ into $\algcl Q$, there exists an
+\item For each embedding $\sigma$ of $K$ into $\algcl\Q$, there exists an
 	integral number $n(\sigma)$ such that
 	\[
 		\chi(x) = \prod_{\sigma \in \Gamma} \sigma(x)^{n(\sigma)}
@@ -654,8 +663,9 @@ two properties:
 \subsection{\texorpdfstring{$\ell$}{ℓ}-adic representations associated to a
 linear representation of \texorpdfstring{$S_{\mathfrak{m}}$}{Sm}}
 \label{sec:II_25}
+\dpage
 
-\subsubsection*{1) \texorpdfstring{$\ell$}{ℓ}-adic case}
+\subsubsection{\texorpdfstring{$\ell$}{ℓ}-adic case}
 % \label{sssec:II_25_1}
 
 Let $V_\ell$ be a finite-dimensional $\Q_\ell$-vector space and
@@ -689,8 +699,9 @@ Then $\phi_\ell$ is unramified at $v$; the corresponding Frobenius element
 $F_{v, \phi_v} \in \Aut(V_\ell)$ is equal to $\phi(F_v)$, where $F_v$ denotes 
 the element of $S_\mathfrak{m}(\Q)$ defined in~\ref{sec:II_23}.
 \dpage
-	\item The representation $\phi_\ell$ is rational (Chap.~\ref{ch:i},\ref{sec:II_23})
-if and only if $\phi$ can be defined over $\Q$ (cf.\ \ref{sec:II_24}).
+	\item The representation $\phi_\ell$ is rational (Chap.~\ref{ch:i},
+		\ref{sec:II_23}) if and only if $\phi$ can be defined over $\Q$
+		(cf.\ \ref{sec:II_24}).
 \end{enumerate}
 \end{prop}
 
@@ -717,7 +728,7 @@ These properties follow readily from those of $\varepsilon_\ell$.
 \end{enumerate}
 \end{obs}
 
-\subsubsection*{The rational case}
+\subsubsection{The rational case}
 
 Let now $V_0$ be a finite dimensional vector space over $\Q$ and 
 $\phi_0 \colon S_\mathfrak{m} \to \GL_{V_0}$ a linear representation of 
@@ -748,52 +759,53 @@ which $\phi_0$ becomes diagonalizable. If $\ell$ is a prime number which
 splits completely in $E$, one can embed $E$ into $\Q_\ell$ and this shows that 
 $\phi_\ell$ is diagonalizable. Assertion 3) now follows from the well-known 
 fact that there exist infinitely many such $\ell$ (this is, for instance, a 
-consequence of \^Cebotarev's theorem, cf.\ Chap.~\ref{ch:i},~\ref{sec:II_22}).
+consequence of \v Cebotarev's theorem, cf.\ Chap.~\ref{ch:i}, \ref{sec:II_22}).
 
 \begin{obs}
 The Frobenius elements $\phi_0(F_v) \in \Aut(V_0)$ can also be defined 
 using the homomorphism
-\[
-\begin{tikzcd}
-	\phi_0 \circ \varepsilon \colon I \arrow[r] & S_\mathfrak{m}(\Q) \to 
+\[\begin{tikzcd}
+	\phi_0 \circ \varepsilon \colon I \rar & S_\mathfrak{m}(\Q) \rar &
 	\Aut(V_0).
-\end{tikzcd}
-\]
+\end{tikzcd}\]
 
 Note that their eigenvalues generate \emph{a finite extension} of $\Q$; indeed 
 they are contained in any field over which $\phi_0$ can be brought in 
 diagonal form.
 \end{obs}
-\dpage
 
 \subsubsection*{Exercises}
+{}\dpage
 \begin{enumerate}[1)]
-	\item Let $\phi_0 \colon S_\mathfrak{m} \to \Gl_(V_0)$ be a linear
+	\item Let $\phi_0 \colon S_\mathfrak{m} \to \GL_{V_0}$ be a linear
 representation of $S_\mathfrak{m}$, and let $\ell$ be a prime number.
 \begin{enumerate}[a)]
-	\item Show that the Zariski closure of $\Img(\phi_\ell)$ is the algebraic 
-group $\phi_0(S_\mathfrak{m})$. (Use the fact that 
-($\Img(\varepsilon_\ell)$) is Zariski dense in $S_\mathfrak{m}$, 
-cf.~\ref{sec:II_23})
-	\item Let $\underline{s}_\mathfrak{m}$ be the Lie algebra of 
-	$S_\mathfrak{m}$ and $\phi_0(\underline{s}_\mathfrak{m})$ be its image 
-	by $\phi_circ$, 
-	i.e.\ the Lie algebra of $\phi_0(S_\mathfrak{m})$. Show that the Lie 
-	algebra of the $\ell$-adic Lie group $\Img(\phi_\ell)$ is 
-	$\phi_0(\underline{s}_\mathfrak{m}) \otimes \Q_\ell$. (Use the fact 
-	that $\Img(\varepsilon_\ell)$ is open in $S_\mathfrak{m}(\Q_\ell)$, cf.\ 
-	~\ref{sec:II_23})
+\item Show that the Zariski closure of $\Img(\phi_\ell)$ is the algebraic group
+	$\phi_0(S_\mathfrak{m})$. (Use the fact that ($\Img(\varepsilon_\ell)$)
+	is Zariski dense in $S_\mathfrak{m}$, cf.~\ref{sec:II_23}.)
+\item Let $\mathfrak{s}_\mathfrak{m}$ be the Lie algebra of $S_\mathfrak{m}$
+	and $\phi_0(\mathfrak{s}_\mathfrak{m})$ be its image by $\phi_0$, i.e.\
+	the Lie algebra of $\phi_0(S_\mathfrak{m})$. Show that the Lie algebra
+	of the $\ell$-adic Lie group $\Img(\phi_\ell)$ is
+	$\phi_0(\mathfrak{s}_\mathfrak{m}) \otimes \Q_\ell$. (Use the fact that
+	$\Img(\varepsilon_\ell)$ is open in $S_\mathfrak{m}(\Q_\ell)$, cf.\
+	\ref{sec:II_23}.)
 \end{enumerate}
 	\item
 	\begin{enumerate}[a)]
 		\item Show that there exists a unique one-dimensional representation 
+		\todo[pinktask]{Cambiar $G_\mathfrak{m}$ por $\GG_m$.}
 		\[
 			\numnorm \colon S_{\mathfrak{m}} \rightarrow G_\mathfrak{m}
 		\]
 		such that $\numnorm(F_v) = \numnorm v \in \Q^{\times}$ for all 
 		$v \not\in \Supp(\mathfrak{m})$.
-		\item Show that the morphism $T \to S_\mathfrak{m} 
-		\overset{\numnorm}{\to} G_\mathfrak{m}$ is the one induced by the norm 
+		\item Show that the morphism 
+		\begin{tikzcd}[cramped, sep=small]
+		T \rar & S_\mathfrak{m} \rar["\numnorm"] & G_\mathfrak{m}
+		\end{tikzcd}
+		% $T \to S_\mathfrak{m} \overset{\numnorm}{\to} G_\mathfrak{m}$
+		is the one induced by the norm 
 		map from $K$ to $\Q$.
 		\item Show that the $\ell$-adic representation defined by $\numnorm$ is 
 		isomorphic to the representation $V_\ell(\mu)$ defined in 
@@ -836,7 +848,7 @@ Zariski-closure $\overline{E}_{\mathfrak{m}}$. This means that $\psi$ factors th
 By the universal property of $S_{\mathfrak{m}}$ (cf.\ \ref{sec:II_13} and
 \ref{sec:II_22}), the maps $I/U_{\mathfrak{m}} \to \GL_{V_0}(\Q)$ and
 $T_{\mathfrak{m}} \to \GL_{V_0}$ define an algebraic morphism $\phi_0 \colon
-S_{\mathfrak{m}} \to GL_{V_0}$, and one checks easily that $\phi_0$ has the
+S_{\mathfrak{m}} \to \GL_{V_0}$, and one checks easily that $\phi_0$ has the
 required properties, and is unique.
 \end{proof}
 
@@ -873,15 +885,14 @@ in~\ref{sec:II_23}, and let
 	\pi_{\infty} \colon T(R) \to S_\mathfrak{m}(R)
 \]
 be the corresponding homomorphism of real Lie groups. Since 
-$T(R) = (K \otimes R)^{\times} = \prod_{v \in M_K^\intfy} K_v^{\times}$, 
+$T(R) = (K \otimes R)^{\times} = \prod_{v \in M_K^\infty} K_v^{\times}$, 
 we can identify $T(R)$ with a direct factor of the idèle group $I$. Let
 $\pr_\infty$ be the projection on this factor; the map 
-\[
-	\begin{tikzcd}
-		\alpha_\infty = \pi_\intfy \circ \pr_\infty \colon I \arrow[r] & T(R) 
-		\arrow[r] & S_\mathfrak{m}(R)
-	\end{tikzcd}
-\]
+\dpage
+\[\begin{tikzcd}
+	\alpha_\infty = \pi_\infty \circ \pr_\infty \colon I \arrow[r] & T(R) 
+	\arrow[r] & S_\mathfrak{m}(R)
+\end{tikzcd}\]
 is continuous, and one checks as in~\ref{sec:II_23} that $\alpha_\infty$ 
 coincides with $\varepsilon$ on $K^{\times}$. One may then define a map
 \[
@@ -906,8 +917,9 @@ homomorphism $C \to C^{\times}$, i.e.\ that the characters obtained in this way
 coincide with the ``Gr\¨ossencharakter of type ($A_0$)'' of Weil (cf.\ 
 \cite{35}, \cite{41}), whose conductor divide $\mathfrak{m}$.
 
-\subsubsection*{Exercises}
+\subsubsection*{Exercise}
 Let 
+\dpage
 \[
 	e \colon I \to S_\mathfrak{m}(R) \times \prod_{\ell} S_\mathfrak{m}(\Q_\ell)
 \]
@@ -940,6 +952,7 @@ proofs. For more details, see \citeauthor{34}~\cite{34},
 Let $A$ be an abelian variety of dimension $d$ defined over $K$.
 Let $\End_K(A)$ be its ring of endomorphisms and put
 $\End_K(A)_0 = \End_K(A) \otimes \Q$.
+
 Let $E$ be a number field of degree $2d$, and
 \dpage
 \[
@@ -1087,7 +1100,7 @@ follows (cf.\ Appendix, \ref{sec:II_A2})
 	Y^0 &= Y^G = \{ y \in Y \mid gy = y \; \text{for all } g\in G \} \\
 	Y^- &= \{ y \in Y \mid cy = -y \; \text{for all } c\in C_\infty \}
 \end{align*}
-and $Y$ is a $G$-invariant supplement to $Y^0 \oplus Y^-$ in $Y$; one proves
+and $Y^+$ is a $G$-invariant supplement to $Y^0 \oplus Y^-$ in $Y$; one proves
 \dpage
 easily that $Y^+$ is unique, cf.\ Appendix, \emph{loc. cit.}
 

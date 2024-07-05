@@ -31,7 +31,7 @@ and elliptic curves" (Addison-Wesley, 1989) into modern LaTeX.
         - [x] 2.4 Linear representations of Sm
         - [x] 2.5 l-adic representations associated to a linear representation of Sm
         - [x] 2.6 Alternative construction
-        - [x25] 2.7 The real case
+        - [x] 2.7 The real case
         - [x] 2.8 An example: complex multiplication of abelian varieties
     - [ ] 3 Structure of Tm and applications
         - [x] 3.1 Structure of X(Tm)
