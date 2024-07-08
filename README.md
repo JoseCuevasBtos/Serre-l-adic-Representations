@@ -35,7 +35,7 @@ and elliptic curves" (Addison-Wesley, 1989) into modern LaTeX.
         - [x] 2.8 An example: complex multiplication of abelian varieties
     - [ ] 3 Structure of Tm and applications
         - [x] 3.1 Structure of X(Tm)
-        - [ ] 3.2 The morphism j
+        - [x] 3.2 The morphism j
         - [x] 3.3 Structure of Tm
         - [ ] 3.4 How to compute Frobeniuses
     - [x] A. Killing arithmetic groups in tori

@@ -307,7 +307,7 @@ The sequence
 \]
 is exact ($C_\mathfrak{m}$ being identified with the corresponding constant 
 algebraic group) and the diagram 
-\begin{equation}\label{eq:II_22}
+\begin{equation}\tag{$**$}\label{eq:II_22}
 	\begin{tikzcd}
 		1 \arrow[r] & K^\times / E_\mathfrak{m} \arrow[r] \arrow[d] & 
 		I_\mathfrak{m} \arrow[r] \arrow[d, "\varepsilon"] & C_\mathfrak{m} 
@@ -360,19 +360,19 @@ C_{\mathfrak{m}}$ by a torus.
 values in \texorpdfstring{$S_{\mathfrak{m}}$}{Sm}}\label{sec:II_23}
 Let $\mathfrak{m}$ be a modulus, and let $\ell$ be a prime number. Let
 $\varepsilon\colon I \to I_{\mathfrak{m}} \to S_{\mathfrak{m}}(\Q)$ be the
-homomorphism defined in \ref{sec:II_22}. Let $\pi\colon T \to S_{\mathfrak{m}}$
+homomorphism defined in \ref{sec:II_22}. Let $\pi\colon \TT \to S_{\mathfrak{m}}$
 \todo[pinktask]{Cambiar $T$ por $\TT$ (pero no en $T_{\mathfrak{m}}$).}
-be the algebraic morphism $T \to T_{\mathfrak{m}} \to S_{\mathfrak{m}}$; by
+be the algebraic morphism $\TT \to T_{\mathfrak{m}} \to S_{\mathfrak{m}}$; by
 taking points with values in $\Q_\ell$, $\pi$ defines a homomorphism
 \[
-	\pi_\ell \colon T(\Q_\ell) \longrightarrow S_{\mathfrak{m}}(\Q_\ell)
+	\pi_\ell \colon \TT(\Q_\ell) \longrightarrow S_{\mathfrak{m}}(\Q_\ell)
 \]
-Since $K \otimes \Q_\ell = \prod_{v\mid\ell} K_v$, the group $T(\Q_\ell)$ can
+Since $K \otimes \Q_\ell = \prod_{v\mid\ell} K_v$, the group $\TT(\Q_\ell)$ can
 be identified with $K_\ell^\times = \prod_{v\mid\ell} K_v^\times$, and is
 therefore a direct factor of the idele group $I$.  Let $\pr_\ell$ denote the
 projection of $I$ onto this factor. The map
 \[
-	\alpha_\ell = \pi_\ell \circ \pr_\ell \colon I \longrightarrow T(\Q_\ell)
+	\alpha_\ell = \pi_\ell \circ \pr_\ell \colon I \longrightarrow \TT(\Q_\ell)
 	\longrightarrow S_{\mathfrak{m}}(\Q_\ell)
 \]
 is a continuous homomorphism.
@@ -796,13 +796,13 @@ representation of $S_\mathfrak{m}$, and let $\ell$ be a prime number.
 		\item Show that there exists a unique one-dimensional representation 
 		\todo[pinktask]{Cambiar $G_\mathfrak{m}$ por $\GG_m$.}
 		\[
-			\numnorm \colon S_{\mathfrak{m}} \rightarrow G_\mathfrak{m}
+			\numnorm \colon S_{\mathfrak{m}} \rightarrow \GG_\mathfrak{m}
 		\]
 		such that $\numnorm(F_v) = \numnorm v \in \Q^{\times}$ for all 
 		$v \not\in \Supp(\mathfrak{m})$.
 		\item Show that the morphism 
 		\begin{tikzcd}[cramped, sep=small]
-		T \rar & S_\mathfrak{m} \rar["\numnorm"] & G_\mathfrak{m}
+		T \rar & S_\mathfrak{m} \rar["\numnorm"] & \GG_\mathfrak{m}
 		\end{tikzcd}
 		% $T \to S_\mathfrak{m} \overset{\numnorm}{\to} G_\mathfrak{m}$
 		is the one induced by the norm 
@@ -1154,7 +1154,57 @@ In fact, given $c \in C_\infty$ and $\sigma \in \Gamma$, we have
 
 \subsection{The morphism \texorpdfstring{$j^* \colon \GG_m \to
 T_{\mathfrak{m}}$}{j*: Gm -> Tm}}
-\todo[section]{Belen.}
+We have seen that any character $\chi \in X(T_\mathfrak{m})$ can be written in 
+the form
+\[
+	\chi = a \sum_{\sigma \in \Gamma} [\sigma] + \sum_{\sigma \in \Gamma} 
+	b_{\sigma}[\sigma]
+\]
+with $a, b_\sigma \in \Q$, $\sum b_{\sigma} = 0$, $2a \in \Z$. Hence $\chi 
+\mapsto 2a$ defines a homomorphism $j \colon X(T_\mathfrak{m}) \to X(\GG_m) = 
+\Z$ and we obtain by duality a morphism of algebraic groups $j^{*} \colon \GG_m 
+\to T_\mathfrak{m}$. If $\phi_0 \colon S_\mathfrak{m} \to \GL_{V_0}$ is a 
+representation of $S_\mathfrak{m}$, we obtain by composition with $j^{*}$ a 
+morphism of algebraic groups $\GG_m \to \GL_{V_0}$. This representation of 
+$\GG_m$ defines (and is defined by) a grading $V_0 = \sum_{i \in \Z} V_0^{(i)}$ 
+of $V_0$; recall that $\GG_m$ acts on $V_0^{(i)}$ by means of the character $i 
+\in \Z = X(\GG_m)$.
+
+We say that $V_0$ is homogeneous of degree $n$ if $V_0 = V_0^{(n)}$.
+\dpage
+\begin{obs}
+For representations coming from the $\ell$-adic homology $H_{*}(\algcl{X})$ of 
+a projective smooth variety $X$, the grading defined above should coincide with 
+the natural one: $H_{*}(\algcl{X}) = \sum_i H_i(\algcl{X})$.
+\end{obs}
+\subsubsection*{Exercise}
+\begin{enumerate}[1)]
+	\item Let $\numnorm \colon S_\mathfrak{m} \to \GG_m$ be the morphism 
+	defined in Exercise 2 of~\ref{sec:II_25}. Show that $\numnorm \cirv j 
+	\colon \GG_m \to S_\mathfrak{m} \to \GG_m$ is $\lambda \mapsto \lambda^2$.
+\todo{Referenciar ejercicio?}
+	Show that any morphism $S_\mathfrak{m} \to \GG_m$ is equal to 
+	$\varepsilon\numnorm^{n}$, where $\varepsilon$ is a character of 
+	$C_\mathfrak{m}$ with values in $\{\pm 1\}$ and $n \in \Z$.
+	\item Let $\phi \colon S_\mathfrak{m} \to \GL_{V_0}$ be a linear 
+	representation of $S_\mathfrak{m}$.
+	
+	Assume $\phi$ is homogeneous of degree $d$, and put $h = \dim_{V_0}$.
+	\begin{enumerate}[a)]
+		\item Show that $dh$ is even (apply Exerc.~1 to $\det(\phi) \colon 
+		S_\mathfrak{m} \to \GG_m$).
+		\item Prove that there exists on $V_0$ a positive definite quadratic 
+		form $\Q$ such that 
+		\[
+			\Q(\rho(x)y) = \numnorm(x)^d\Q(y)
+		\]
+		for any $y \in V_0$ and any $x \in S_\mathfrak{m}(\Q)$. [Let $H$ be the 
+		kernel of $\numnorm \colon S_\mathfrak{m} \to \GG_m$. Using the fact 
+		that $H(R)$ is compact, prove the existence of a positive definite 
+		quadratic form $\Q$ on $V_0$ invariant by $H$; then note that 
+		$S_\mathfrak{m}$ is generated by $HH$ and $j^{*}(\GG_m)$.] 
+	\end{enumerate}
+\end{enumerate}
 
 \subsection{Structure of \texorpdfstring{$T_{\mathfrak{m}}$}{Tm}}
 We need first some notations:
