@@ -70,10 +70,10 @@ and elliptic curves" (Addison-Wesley, 1989) into modern LaTeX.
         - [x] 1.2 Good reduction
         - [x] 1.3 Properties of Vl related to good reduction
         - [x] 1.4 Safarevic's theorem
-    - [ ] 2 The Galois modules attached to E
+    - [x] 2 The Galois modules attached to E
         - [x] 2.1 The irreducibility theorem
         - [x] 2.2 Determination of the Lie algebra of Gl
-        - [ ] 2.3 The isogeny theorem
+        - [x] 2.3 The isogeny theorem
     - [ ] 3 Variation of Gl and Gl with l
         - [ ] 3.1 Preliminaries
         - [x] 3.2 The case of a non integral j

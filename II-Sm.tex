@@ -361,7 +361,6 @@ values in \texorpdfstring{$S_{\mathfrak{m}}$}{Sm}}\label{sec:II_23}
 Let $\mathfrak{m}$ be a modulus, and let $\ell$ be a prime number. Let
 $\varepsilon\colon I \to I_{\mathfrak{m}} \to S_{\mathfrak{m}}(\Q)$ be the
 homomorphism defined in \ref{sec:II_22}. Let $\pi\colon \TT \to S_{\mathfrak{m}}$
-\todo[pinktask]{Cambiar $T$ por $\TT$ (pero no en $T_{\mathfrak{m}}$).}
 be the algebraic morphism $\TT \to T_{\mathfrak{m}} \to S_{\mathfrak{m}}$; by
 taking points with values in $\Q_\ell$, $\pi$ defines a homomorphism
 \[
@@ -738,7 +737,6 @@ construction to the representation $\phi_{0/\ell} \colon S_{\mathfrak{m}/
 \dpage
 we then get an $\ell$-adic representation $\phi_\ell \colon \abcl{G} \to \Aut
 (V_\ell)$.
-\todo{0 está bien??}
 
 \begin{thm}
 \begin{enumerate}[1)]
@@ -791,18 +789,17 @@ representation of $S_\mathfrak{m}$, and let $\ell$ be a prime number.
 	$\Img(\varepsilon_\ell)$ is open in $S_\mathfrak{m}(\Q_\ell)$, cf.\
 	\ref{sec:II_23}.)
 \end{enumerate}
-	\item
+	\item\label{exr:II_25_2}
 	\begin{enumerate}[a)]
 		\item Show that there exists a unique one-dimensional representation 
-		\todo[pinktask]{Cambiar $G_\mathfrak{m}$ por $\GG_m$.}
 		\[
-			\numnorm \colon S_{\mathfrak{m}} \rightarrow \GG_\mathfrak{m}
+			\numnorm \colon S_{\mathfrak{m}} \rightarrow \GG_m
 		\]
 		such that $\numnorm(F_v) = \numnorm v \in \Q^{\times}$ for all 
 		$v \not\in \Supp(\mathfrak{m})$.
 		\item Show that the morphism 
 		\begin{tikzcd}[cramped, sep=small]
-		T \rar & S_\mathfrak{m} \rar["\numnorm"] & \GG_\mathfrak{m}
+		T \rar & S_\mathfrak{m} \rar["\numnorm"] & \GG_m
 		\end{tikzcd}
 		% $T \to S_\mathfrak{m} \overset{\numnorm}{\to} G_\mathfrak{m}$
 		is the one induced by the norm 
@@ -814,6 +811,7 @@ representation of $S_\mathfrak{m}$, and let $\ell$ be a prime number.
 \end{enumerate}
 
 \subsection{Alternative construction}
+\label{sec:II_26}
 Let $\phi_0 \colon S_{\mathfrak{m}} \to \GL_{V_0}$ be as in \ref{sec:II_25}. If
 we compose $\phi_0$ with the map $\varepsilon \colon I \to
 S_{\mathfrak{m}}(\Q)$ defined in \ref{sec:II_22}, we obtain a homomorphism
@@ -826,13 +824,13 @@ Conversely:
 
 \begin{prop}
 Let $f \colon I \to \Aut(V_0)$ be a homomorphism. There exists a $\phi_0
-\colon S_{\mathfrak{m}} \to GL_{V_0}$ such that $\phi_0 \circ \varepsilon =
+\colon S_{\mathfrak{m}} \to \GL_{V_0}$ such that $\phi_0 \circ \varepsilon =
 f$ if and only if the following conditions are satisfied:
 \begin{enumerate}
 	\item The kernel of $f$ contains $U_{\mathfrak{m}}$.
-	\item There exists an algebraic homomorphism $\psi\colon T \to
+	\item There exists an algebraic homomorphism $\psi\colon \TT \to
 		\GL_{V_0}$ such that $\psi(x) = f(x)$ for every $x \in K^\times
-		= T(\Q)$.
+		= \TT(\Q)$.
 \end{enumerate}
 Moreover, such a $\phi_0$ is unique.
 \end{prop}
@@ -867,7 +865,7 @@ $\Q$-vector space. For each $v \notin \Supp(\mathfrak{m})$ let $F_v$ be an
 element of $\Aut(V_0)$. Assume:
 \begin{enumerate}
 	\item The $F_v$'s commute pairwise.
-	\item There exists an algebraic morphism $\psi\colon T \to \GL_{V_0}$
+	\item There exists an algebraic morphism $\psi\colon \TT \to \GL_{V_0}$
 		such that $\psi(\alpha) = \prod F_v^{v(\alpha)}$ for $\alpha
 		\in K^\times$, $\alpha \equiv 1 \pmod{\mathfrak{m}}$, and
 		$\alpha > 0$ at each real place.
@@ -879,15 +877,15 @@ Show that there exists an algebraic morphism $\phi_0 \colon S_{\mathfrak{m}}
 The preceding constructions are relative to a given prime number $\ell$.
 However, they have an archimedean analogue, as follows: 
 
-Let $\pi \colon T \to S_\mathfrak{m}$ be the canonical map defined 
+Let $\pi \colon \TT \to S_\mathfrak{m}$ be the canonical map defined 
 in~\ref{sec:II_23}, and let 
 \[
-	\pi_{\infty} \colon T(R) \to S_\mathfrak{m}(R)
+	\pi_{\infty} \colon \TT(R) \to S_\mathfrak{m}(R)
 \]
-be the corresponding homomorphism of real Lie groups. Since 
-$T(R) = (K \otimes R)^{\times} = \prod_{v \in M_K^\infty} K_v^{\times}$, 
-we can identify $T(R)$ with a direct factor of the idèle group $I$. Let
-$\pr_\infty$ be the projection on this factor; the map 
+be the corresponding homomorphism of real Lie groups. Since $\TT(R) = (K
+\otimes R)^{\times} = \prod_{v \in M_K^\infty} K_v^{\times}$, we can identify
+$\TT(R)$ with a direct factor of the idèle group $I$. Let $\pr_\infty$ be the
+projection on this factor; the map 
 \dpage
 \[\begin{tikzcd}
 	\alpha_\infty = \pi_\infty \circ \pr_\infty \colon I \arrow[r] & T(R) 
@@ -912,9 +910,9 @@ The main difference with the ``finite'' case is that $\varepsilon_\infty$
 group interpretation.
 
 When one composes $\varepsilon_\infty \colon C \to S_\mathfrak{m}(R)$ with a 
-complex character $S_{\mathfrak{m}/C} \to G_{\mathfrak{m}/C}$, one gets a 
+complex character $S_{\mathfrak{m}/C} \to \GG_{m, C}$, one gets a 
 homomorphism $C \to C^{\times}$, i.e.\ that the characters obtained in this way 
-coincide with the ``Gr\¨ossencharakter of type ($A_0$)'' of Weil (cf.\ 
+coincide with the ``Gr\"o\ss encharakter of type ($A_0$)'' of Weil (cf.\ 
 \cite{35}, \cite{41}), whose conductor divide $\mathfrak{m}$.
 
 \subsubsection*{Exercise}
@@ -925,20 +923,21 @@ Let
 \]
 be the map defined by $\varepsilon_\infty$ and the $\varepsilon_\ell$'s.
 \begin{enumerate}[a)]
-	\item Show that the image of $e$ is contained in the subgroup
-$S_\mathfrak{m}(A)$ of $S_\mathfrak{m}(R) \times \prod_{\ell} 
-S_\mathfrak{m}(Q_\ell)$, where $A$ denote the ring of adèles of $\Q$, and that
-$e \colon I \to S_\mathfrak{m}(A)$ is continuous (for the natural topology of 
-the adelized group $S_\mathfrak{m}(A)$).
-	\item Let $\pi_A \colon T(A) \to S_\mathfrak{m}(A)$ be the map defined by 
-	$\pi \colon T \to S_\mathfrak{m}$. Show that, if one identifies $T(A)$ with
-	$I$ in the obvious way, one has 
+\item Show that the image of $e$ is contained in the subgroup
+	$S_\mathfrak{m}(A)$ of $S_\mathfrak{m}(R) \times \prod_{\ell}
+	S_\mathfrak{m}(\Q_\ell)$, where $A$ denote the ring of adèles of $\Q$,
+	and that $e \colon I \to S_\mathfrak{m}(A)$ is continuous (for the
+	natural topology of the adelized group $S_\mathfrak{m}(A)$).
+\item Let $\pi_A \colon T(A) \to S_\mathfrak{m}(A)$ be the map defined
+	by $\pi \colon \TT \to S_\mathfrak{m}$. Show that, if one
+	identifies $\TT(A)$ with $I$ in the obvious way, one has 
 	\[
 		e(x) = \varepsilon(x) \pi_A(x^{-1})
 	\]
-where $\varepsilon \colon I \to S_\mathfrak{m}(\Q) \subset S_\mathfrak{m}$ is 
-the map defined in~\ref{sec:II_23}. [Note that this gives an alternate definition of the $\varepsilon_\ell$'s.]
-	\item Show that $\varepsilon(I)$ is not open in $S_\mathfrak{m}(A)$ if 
+	where $\varepsilon \colon I \to S_\mathfrak{m}(\Q) \subset
+	S_\mathfrak{m}$ is the map defined in~\ref{sec:II_23}. [Note that this
+	gives an alternate definition of the $\varepsilon_\ell$'s.]
+\item Show that $\varepsilon(I)$ is not open in $S_\mathfrak{m}(A)$ if
 	$C_\mathfrak{m} \neq \{1\}$.
 \end{enumerate}
 
@@ -1178,31 +1177,29 @@ a projective smooth variety $X$, the grading defined above should coincide with
 the natural one: $H_{*}(\algcl{X}) = \sum_i H_i(\algcl{X})$.
 \end{obs}
 \subsubsection*{Exercise}
-\begin{enumerate}[1)]
-	\item Let $\numnorm \colon S_\mathfrak{m} \to \GG_m$ be the morphism 
-	defined in Exercise 2 of~\ref{sec:II_25}. Show that $\numnorm \circ j 
-	\colon \GG_m \to S_\mathfrak{m} \to \GG_m$ is $\lambda \mapsto \lambda^2$.
-\todo{Referenciar ejercicio?}
-	Show that any morphism $S_\mathfrak{m} \to \GG_m$ is equal to 
-	$\varepsilon\numnorm^{n}$, where $\varepsilon$ is a character of 
-	$C_\mathfrak{m}$ with values in $\{\pm 1\}$ and $n \in \Z$.
-	\item Let $\phi \colon S_\mathfrak{m} \to \GL_{V_0}$ be a linear 
+\begin{enumerate}
+\item\label{exr:II_32_1} Let $\numnorm \colon S_\mathfrak{m} \to \GG_m$ be the morphism
+	defined in Exercise~\ref{exr:II_25_2} of~\ref{sec:II_25}. Show
+	that $\numnorm \circ j \colon \GG_m \to S_\mathfrak{m} \to
+	\GG_m$ is $\lambda \mapsto \lambda^2$.  Show that any morphism
+	$S_\mathfrak{m} \to \GG_m$ is equal to
+	$\varepsilon\numnorm^{n}$, where $\varepsilon$ is a character
+	of $C_\mathfrak{m}$ with values in $\{\pm 1\}$ and $n \in \Z$.
+\item Let $\phi \colon S_\mathfrak{m} \to \GL_{V_0}$ be a linear
 	representation of $S_\mathfrak{m}$.
 	
 	Assume $\phi$ is homogeneous of degree $d$, and put $h = \dim_{V_0}$.
 	\begin{enumerate}[a)]
-		\item Show that $dh$ is even (apply Exerc.~1 to $\det(\phi) \colon 
-		S_\mathfrak{m} \to \GG_m$).
-		\item Prove that there exists on $V_0$ a positive definite quadratic 
-		form $\Q$ such that 
-		\[
-			\Q(\rho(x)y) = \numnorm(x)^d\Q(y)
-		\]
-		for any $y \in V_0$ and any $x \in S_\mathfrak{m}(\Q)$. [Let $H$ be the 
-		kernel of $\numnorm \colon S_\mathfrak{m} \to \GG_m$. Using the fact 
-		that $H(R)$ is compact, prove the existence of a positive definite 
-		quadratic form $\Q$ on $V_0$ invariant by $H$; then note that 
-		$S_\mathfrak{m}$ is generated by $H$ and $j^{*}(\GG_m)$.] 
+	\item Show that $dh$ is even (apply Exerc.~\ref{exr:II_32_1} to
+		$\det(\phi) \colon S_\mathfrak{m} \to \GG_m$).
+	\item Prove that there exists on $V_0$ a positive definite quadratic
+		form $\Q$ such that \[ \Q(\rho(x)y) = \numnorm(x)^d\Q(y) \] for
+		any $y \in V_0$ and any $x \in S_\mathfrak{m}(\Q)$. [Let $H$ be
+		the kernel of $\numnorm \colon S_\mathfrak{m} \to \GG_m$. Using
+		the fact that $H(R)$ is compact, prove the existence of a
+		positive definite quadratic form $\Q$ on $V_0$ invariant by
+		$H$; then note that $S_\mathfrak{m}$ is generated by $H$ and
+		$j^{*}(\GG_m)$.] 
 	\end{enumerate}
 \end{enumerate}
 

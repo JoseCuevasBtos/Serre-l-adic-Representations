@@ -517,10 +517,136 @@ corresponding automorphism of $T_\ell$.)
 
 \subsection{The isogeny theorem}
 \label{sec:IV_23}
-\todo[section]{Belen.}
+
+\begin{thm}
+	Let $E$ and $E'$ be elliptic curves over $K$, let $\ell$ be a prime
+	number and let $V_\ell(E)$ and $V_\ell(E')$ be the corresponding
+	$\ell$-adic representations of $K$. Suppose that the Galois modules
+	$V_\ell(E)$ and $V_\ell(E')$ are isomorphic and that the modular
+	invariant $j$ of $E$ (cf.~\ref{sec:IV_11}) is not an integer $K$. Then
+	$E$ and $E'$ are $K$-isogenous.
+\end{thm}
+
+We need the following result:
+\dpage
+\begin{prop}
+	Let $E$ and $E'$ be elliptic curves over $K$. The following conditions
+	are equivalent:
+	\begin{enumerate}[(a)]
+		\item\label{prop:IV_23_a}
+			The Galois modules $V_\ell(E)$ and $V_\ell(E')$ are
+			isomorphic for all $\ell$.
+		\item\label{prop:IV_23_b}
+			The Galois modules $V_\ell(E)$ and $V_\ell(E')$ are
+			isomorphic for one $\ell$.
+		\item\label{prop:IV_23_c}
+			If $\Frob_v$ and $\Frob^\prime_v$ are the Frobeniuses of
+			the reduced curves $\widetilde E_v$ and
+			$\widetilde{E}^\prime_v$, we have $\Tr(\Frob_v) =
+			\Tr(\Frob^\prime_v)$ for all $v$ where there is good
+			reduction.
+		\item\label{prop:IV_23_d}
+			For a set of places of $K$ of density one we have
+			$\Tr(\Frob_v) = \Tr(\Frob^\prime_v)$.
+	\end{enumerate}
+\end{prop}
+\begin{proof}
+	Clearly \ref{prop:IV_23_a} implies \ref{prop:IV_23_b}, and
+	\ref{prop:IV_23_c} implies \ref{prop:IV_23_d}. The implication
+	\ref{prop:IV_23_b} $\implies$ \ref{prop:IV_23_c} follows from the fact
+	that $\Tr(\Frob_v)$ is known when $V_\ell$ is known. To prove
+	\ref{prop:IV_23_d} $\implies$ \ref{prop:IV_23_a} one remarks first that
+	the representations of $\Gal(\algcl K/K)$ in $V_\ell(E)$ and
+	$V_\ell(E')$ have the same trace, by \v Cebotarev's density theorem
+	(chap.~\ref{ch:i}, \ref{sec:I_22}). Moreover, $V_\ell(E)$ (and also
+	$V_\ell(E')$) is semi-simple. This is clear if $E$ has no complex
+	multiplication over $K$ since $V_\ell(E)$ is then irreducible (2.1); if
+	$E$ has complex multiplication, it follows from the Remark in
+	\ref{sec:IV_22}.  Since $V_\ell(E)$ and $V_\ell(E')$ are semi-simple
+	and have the same trace, they are isomorphic.
+\end{proof}
+\begin{obs}
+	\begin{enumerate}
+		\item If $E$ and $E'$ have good reduction at $v$, let $t_v$
+			(resp.\ $t^\prime_v$) be the number of $k_v$-points of
+			$\widetilde E_v$ (resp.\ $\widetilde E^\prime_v$). We
+			have the formulas (cf.\ \ref{sec:IV_13}):
+			\dpage
+			\begin{align*}
+				t_v        & = 1 - \Tr(\Frob_v) + \numnorm v, \\
+				t^\prime_v & = 1 - \Tr(\Frob^\prime_v) + \numnorm v.
+			\end{align*}
+			Hence condition \ref{prop:IV_23_c} (resp.\ condition
+			\ref{prop:IV_23_d}) is equivalent to saying that $t_v =
+			t^\prime_v$ for all $v$ where there is good reduction
+			(resp.\ for a set of $v$'s of density one).
+		\item\label{rmk:IV_23_2}
+			If $E$ and $E'$ are $K$-isogenous, it is clear that
+			conditions \ref{prop:IV_23_a}, \ref{prop:IV_23_b},
+			\ref{prop:IV_23_c}, \ref{prop:IV_23_d} are satisfied.
+	\end{enumerate}
+\end{obs}
+
+\begin{proof}[ of the theorem]
+In view of Remark~\ref{rmk:IV_23_2} above, it suffices to show that the
+equivalent conditions \ref{prop:IV_23_a}, \ref{prop:IV_23_b},
+\ref{prop:IV_23_c} and \ref{prop:IV_23_d} imply that the elliptic curves $E$
+and $E'$ are isogenous when the modular invariant $j$ of $E$ is not an integer
+of $K$. Let $v$ be a place of $K$ such that $v(j) < 0$, and let $p$ be the
+characteristic of the residue field $k_v$.
+
+If $j' = j(E')$, we first show that $v(j')$ is also $< 0$. Suppose
+that $v(j') \ge 0$. Then, after possibly replacing $K$ by a finite
+extension, we may assume that $E'$ has good reduction at $v$.
+
+Then, if $\ell \ne p_v$, the Galois-module $V_\ell(E')$ is unramified at $v$
+(cf.\ \ref{sec:IV_13}); but $V_\ell(E)$ is ramified at $v$: this follows either
+from the criterion of Néron-Ogg-\v Safarevi\v c (\ref{sec:IV_13}) or from the
+determination of the inertia group given in the
+Appendix~\ref{sec:IV_A1}.\ref{sec:IV_A13}. This contradicts the fact that
+$V_\ell(E)$ and $V_\ell(E')$ are isomorphic.
+
+Let now $q$ and $q'$ be the elements of $K_v$ which correspond to $j$ and $j'$
+in Tate's theory (cf.\ Appendix~\ref{sec:IV_A1}.\ref{sec:IV_A11}), and let
+$E_q$ and $E_{q'}$, be the corresponding elliptic curves (\emph{loc. cit.}).
+Since $E$ and $E_q$ have the same modular invariant $j$, there is a finite
+extension $K'$ of $K_v$ where they become isomorphic, and we can do the same
+for $E'$ and $E_{q'}$. Hence, the Tate modules $T_p(E_q)$ and $T_q(E_{q'})$
+become isomorphic over $K'$. But, in this case the isogeny
+\dpage
+theorem is true (cf.\ Appendix~\ref{sec:IV_A1}.\ref{sec:IV_A14}), i.e.\ the
+curves $E_q$ and $E_{q'}$, hence also $E$ and $E'$, are $K'$-isogenous.
+However, if two elliptic curves are isogenous over some extension of the ground
+field, they are isogenous over a \emph{finite} extension of the ground field.
+We may thus choose a finite extension $L$ of $K$ and an $L$-isogeny $f\colon E
+\otimes_K L \to E' \otimes_K L$. We will show that $f$ is automatically defined
+over $K$. For this, it suffices to show that $f = {}^sf$ for all
+$s\in\Gal(\algcl K/K)$, or, equivalently, that $V(f)\colon V_p(E) \to V_p(E')$
+commutes with the action of Galois. However, if $G_L = \Gal(\algcl K/L)$ is
+the open subgroup of $G = \Gal(\algcl K/K)$ which corresponds to $L$, then
+$V(f)$ commutes with the action of $G_L$. It is then enough to show that
+$\Hom_{G_L}(V, V') = \Hom_G(V, V')$. But $V$ and $V'$ are isomorphic as
+$G$-modules. Hence we have to show that $\End_{G_L}(V) = \End_G(V)$. But
+this is clearly true; in fact, $G$ and $G_L$ are open in $\Aut(V)$ by the
+theorem in section~\ref{sec:IV_22}\label{errata:wrongsec}, and hence their
+commuting algebra is reduced to the homotheties in each case, i.e.\
+$\End_{G_L}(V) = \End_G(V) = \Q_p$.
+This completes the proof of the theorem.
+\end{proof}
+
+\begin{obs}
+It is very likely that the theorem is true without the hypothesis that $j$ is
+not integral. This could be proved (by Tate's method \cite{38}) if the
+following generalization of \v Safarevi\v c's theorem were true: given a finite
+subset $S$ of $M_K^0$, the abelian varieties over $K$, of dimension 2, with
+polarization of degree one, and good reduction outside $S$, are in finite
+number (up to isomorphism). $\to$ [this has been proved by Fairings, see
+\cite{54}, \cite{56}, \cite{82}.]
+\end{obs}
 
 \section{Variation of \texorpdfstring{$G_\ell$}{Gℓ} and
 \texorpdfstring{$\widetilde{G}_\ell$}{Ḡℓ} with \texorpdfstring{$\ell$}{ℓ}}
+\label{sec:IV_3}
 
 \subsection{Preliminaries}
 \label{sec:IV_31}
@@ -614,6 +740,7 @@ generate $\SL(2, \F_\ell)$.
 \begin{subappendices}
 
 \section{Local results}
+\label{sec:IV_A}
 \dpage
 In what follows, $K$ denotes a field which is complete with respect to a
 discrete valuation $v$; we denote by $\mathcal{O}_K$ (resp.\ by $k$) the ring
