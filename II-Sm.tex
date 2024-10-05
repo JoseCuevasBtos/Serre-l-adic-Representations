@@ -4,9 +4,9 @@
 Throughout this chapter,
 \dpage
 $K$ denotes an algebraic number field.
-We associate to $K$ a projective family $(S_m)$ of commutative 
-algebraic groups over $\Q$, and we show that each $S_m$ gives rise to a
-strictly compatible system of rational $\ell$-adic representations of $K$.
+We associate to $K$ a projective family $(S_{\mathfrak{m}})$ of commutative
+algebraic groups over $\Q$, and we show that each $S_{\mathfrak{m}}$ gives rise
+to a strictly compatible system of rational $\ell$-adic representations of $K$.
 
 In the next chapter, we shall see that all ``locally algebraic''
 abelian rational representations are of the form described here.
@@ -1298,9 +1298,138 @@ $T_{\mathfrak{m}}$ is isogenous to the product of $\GG_m$ by the
 $d$-dimensional torus kernel of the norm map from $K_1$ to $K_0$.
 \end{obs}
 
-\subsection{How to compute Frobeniuses}
+\subsection{How to compute Frobeniuses} %3.4
 \label{sec:II_34}
-\todo[section]{Belen.}
+Let $\phi$ be a linear representation of $S_\mathfrak{m}$ of degree
+$n$. By extending the groundfield, the restriction of $ \phi $ to
+$ T_\mathfrak{m} $ can be put in diagonal form; let $ \chi_1,\cdots, \chi_n $ 
+be the $ n $ characteres of $T_\mathfrak{m}$ so obtained and write (in additive 
+notation)
+
+\[
+	\chi_i = \sum_{\sigma \in \Gamma} n_\sigma (i)[\sigma], \qquad
+	(n_\sigma(i) \in \Z).
+\]
+
+We say that $ \chi_i $ is \strong{positive} if all the $n_\sigma(i)$'s are 
+$\geq 0$. Let $v \in \Supp(\mathfrak{m})$, and let $F_v \in S_\mathfrak{m}(\Q)
+$ be the corresponding Frobenius element, cf.\ \ref{sec:II_23}. Since
+$C_\mathfrak{m} = S_\mathfrak{m} / T_\mathfrak{m}$ is finite, there exists an
+integer $N \geq 1$ such that $ F_v \in T_\mathfrak{m}(\Q)$. If $\mathfrak{p}_v$
+is the prime ideal of $v$, this means that there exist $ \alpha \in K^\times$,
+with $\mathfrak{p}_v^N = ( \alpha )$, $ \alpha \equiv 1 \mod \mathfrak{m}$, and
+$ \alpha > 0 $ at all real places of $K$.
+ 
+\dpage
+
+\begin{prop}\label{prop:II_34_1}
+	The eigenvalues of $ \phi(F_v^N)$ are the numbers 
+\[
+	\chi_i( \alpha ) = \prod_\sigma \sigma( \alpha )^{n_\sigma(i)}, \qquad
+(i = 1,\dots,n).
+\]
+This is trivial by construction, because $F_v^N$ is the image of $\alpha$ under
+$ \TT(\Q) \rightarrow T_\mathfrak{m}(\Q)$.
+\end{prop}
+
+\begin{corp}\label{corp:II_34_1} 
+The eigenvalues of $\phi(F_v)$ are $\{ p_v \}$-units (i.e.\ they are units at 
+all places of $\algcl{\Q}$ not dividing $p_v$).
+\end{corp}
+
+\begin{corp}\label{corp:II_34_2}
+Let $z_1,\dots,z_n$ be the eigenvalues of $\phi(F_v)$, indexed so that $z_i^N 
+= \chi_i(\alpha)$. Let $w$ be a place of $\algcl{\Q}$ dividing $p_v$, 
+normalized so that $w(p_v) = v(p_v) = e_v$. Then $w(z_i) = 
+\sum_{\substack{\sigma\in \Gamma \\ w \circ \sigma}} n_\sigma(i)$.
+\end{corp}
+
+We have $w(z_i^N) = w(\prod_{\sigma \in \Gamma} \left(\sigma
+(\alpha)^{n_\sigma(i)}\right) = \sum_{\sigma \in \Gamma}n_\sigma(i)
+w \circ \sigma(\alpha)$, and
+\begin{align*}
+	w \circ \sigma(\alpha) &= 0 &&\text{if} \quad w \circ \sigma \neq v,\\
+	w \circ \sigma(\alpha) &= N &&\text{if} \quad w \circ \sigma = v,
+\end{align*}
+since $(\alpha) = \mathfrak{p}_v^N$.
+
+Hence the result.
+
+\begin{corp}\label{corp:II_34_3}
+Let $\ell$ be a prime number and let $\phi_\ell \colon \Gal(\algcl{K}
+/K) \rightarrow \Aut(V_\ell)$ be the $\ell$-adic representation of $K$ 
+associated to $\phi$. Then $\phi_\ell$ is integral (cf.\ Ch.~\ref{ch:i},~\ref{sec:I_22}) if
+and only if all the characteres $\chi_i$ occuring in $\phi$ are positive.
+\end{corp}
+
+\begin{proof}[ of Corollary 3]
+Assume firts the $\chi_i$'s are positive. Let $v \not\in \Supp(m)$ and let
+$z_1,\dots,z_n$ be the corresponding eigenvalues of
+\dpage
+$F_v$ as in Corollary \ref{corp:II_34_2}. Corrollaries \ref{corp:II_34_1} and 
+\ref{corp:II_34_2} show that the $w(z_i)$ are positive for all valuations $w$
+of $\algcl\Q$; hence the $z_i$ are integral over $\Z$. Hence the $\phi_\ell$'s
+are integral.
+
+Conversely, assume $\phi_\ell$ is integral for some $\ell$. There exists a 
+finite subset $S'$ of $M_K^0$, containing $\Supp(\mathfrak{m})$, such that if
+$v \not\in S'$, the eigenvalues of $\phi(F_v)$ are integral. Choose a prime
+number $p$ which splits completely in $K$ and is such that $p_v = p$ implies
+$v \not\in S'$. Let $w$ be a valuation of $\algcl\Q$ dividing $p$. The
+valuations $w \circ \sigma$, $\sigma \in \Gamma$, are pairwise inequivalent.
+Let $\sigma \in \Gamma$; and let $v$ be the normalized valuation of $K$ 
+equivalent to $w \circ \sigma$ so that $\lambda v = w \circ \sigma$ for some
+$\lambda > 0$. Let $z_1,\dots,z_n$ be the eigenvalues of $\phi(F_v)$. By
+Corollary~\ref{corp:II_34_2}, $w(z_i) = \lambda n_\sigma (i)$. Since the $z_i$ 
+are integral, this shows that the $n_\sigma(i)$'s are all positive.
+\end{proof}
+
+\begin{prop}\label{prop:II_34_2}
+Let $v \not\in \Supp(\mathfrak{m})$ and let $\chi$ be a character of
+$S_{\mathfrak{m}}$. Let $\chi_\TT \in X(T_{\mathfrak{m}})$ be the restriction
+of $\chi$ to $T_{\mathfrak{m}}$ and let $i = j(\chi_\TT)$ be the integer
+defined in~\ref{sec:II_32}.  Then, for any archimedian absolute value $\omega$
+of $\algcl{\Q}$ extending the usual absolute value of $\algcl{Q}$, we have
+\[
+	\omega(\chi (F_v)) = (\numnorm_v)^{i/2}.
+\]
+\end{prop}
+
+\begin{proof}
+Si $\chi = a \sum_{\sigma \in \Gamma} [\sigma] + \sum_{\sigma \in \Gamma}
+b_\sigma[\sigma]$ as in~\ref{sec:II_31}, we have
+\[
+\omega(\chi(F_v))^N = \omega(\chi(F_v^N))
+= \prod_{\sigma} \omega \circ \sigma(\alpha)^a \cdot \prod_{\sigma} 
+\omega \circ \sigma(\alpha)^{b_\sigma},
+\]
+
+\dpage
+and $ \prod_{\sigma} \omega \circ \sigma(\alpha)^a = \omega(\Nm(\alpha))^a
+= \numnorm v^{i N/2}$, where $i = 2a$. It remains to show that 
+$\chi = \prod_{\sigma} \omega \circ \sigma(\alpha)^{b_\sigma}$ is equal to $1$. 
+Let $c = c_\omega$ be the ``Frobenius'' attached to $\omega$ (cf.~\ref{sec:3.1}). 
+Since $b_\sigma + b_{c \sigma} = 0$, we have $x \cdot y = 1$ with 
+$y = \prod_{\sigma} \omega \circ \sigma(\alpha)^{b_{c\sigma}}$. But 
+$y = \prod_{\tau} \omega \circ c \circ \tau(\alpha)^{b_\tau}$, and, since 
+$\omega \circ c = \omega$, we have $y = x$, hence $x^2 = 1$, and $x = 1$, 
+since $x > 0$.
+\end{proof}
+
+\subsubsection*{Exercises}
+\begin{enumerate}
+	\item Check the product formula for the eigenvalue of the $\phi(F_v)$. 
+(Use Cor.~\ref{corp:II_34_1} and \ref{corp:II_34_2} to Prop.~\ref{prop:II_34_1}
+and Prop.~\ref{prop:II_34_2}).
+	\item Show that Prop.~\ref{prop:II_34_2} and Cor.\ref{corp:II_34_1} and
+\ref{corp:II_34_2} to Prop.~\ref{prop:II_34_1} determine the eigenvalues of the
+$\phi(F_v)$'s up to multiplication by roots of unity. 
+	\item (Generalization of Cor.~\ref{corp:II_34_1} to
+Prop.~\ref{prop:II_34_1}). Let $(\rho_\ell)$ be a strictly compatible system of
+rational $\ell$-adic representations, with exceptional set $S$ (cf.\
+Chap.~\ref{ch:i},~\ref{sec:I_23}). Show that, for any $v \in M_K^0 \setminus
+S$, the eigenvalues of $F_{v,\rho_\ell}$, $\ell \neq p_v$, are $p_v$-units.
+\end{enumerate}
 
 \begin{subappendices}
 \section{Killing arithmetic groups in tori}

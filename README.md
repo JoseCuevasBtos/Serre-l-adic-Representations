@@ -19,12 +19,12 @@ and elliptic curves" (Addison-Wesley, 1989) into modern LaTeX.
         - [x] A.1 Equipartition
         - [x] A.2 The connection with L-functions
         - [x] A.3 Proof of theorem 1
-- [ ] Chapter II. The Groups Sm
+- [x] Chapter II. The Groups Sm
     - [x] 1 Preliminaries
         - [x] 1.1 The torus T
         - [x] 1.2 Cutting down T
         - [x] 1.3 Enlarging groups
-    - [ ] 2 Construction of Tm and Sm
+    - [x] 2 Construction of Tm and Sm
         - [x] 2.1 Ideles and idele-classes
         - [x] 2.2 The groups Tm and Sm
         - [x] 2.3 The canonical l-adic representation with values in Sm
@@ -33,11 +33,11 @@ and elliptic curves" (Addison-Wesley, 1989) into modern LaTeX.
         - [x] 2.6 Alternative construction
         - [x] 2.7 The real case
         - [x] 2.8 An example: complex multiplication of abelian varieties
-    - [ ] 3 Structure of Tm and applications
+    - [x] 3 Structure of Tm and applications
         - [x] 3.1 Structure of X(Tm)
         - [x] 3.2 The morphism j
         - [x] 3.3 Structure of Tm
-        - [ ] 3.4 How to compute Frobeniuses
+        - [x] 3.4 How to compute Frobeniuses
     - [x] A. Killing arithmetic groups in tori
         - [x] A.1 Arithmetic groups in tori
         - [x] A.2 Killing arithmetic subgroups
