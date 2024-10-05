@@ -118,7 +118,71 @@ For the proof, see the Appendix.
 \section{The global case}
 \subsection{Definitions}
 \label{sec:III_21}
-\todo[section]{Belén.}
+We now go back to the notations of Chap.~\ref{ch:ii}, i.e.\ $K$ denotes a number
+field. Let $\ell$ be a prime number and let 
+\[
+\rho \colon \Gal(\algcl{K}/K)^{\ab} \longrightarrow \Aut(V_\ell)
+\]
+
+be an abelian $\ell$-adic representation of $K$. Let $v \in M_K^0$ be a place of
+$K$ of residue characteristic $\ell$ and let $D_v \subset
+\Gal(\algcl{K}/K)^{\ab}$ be the corresponding decomposition group. This group
+is a quotient of the local Galois group $\Gal(\algcl{K_v}/K_v)^{\ab}$ (there two
+group are, in fact, isomorphic, but we do not need this here). Hence, we get by
+composition an $\ell$-adic representation of $K_v$ 
+\[
+\rho_v \colon \Gal(\algcl{K_v}/K_v)^{\ab} \longrightarrow D_v
+\overset{\rho}{\longrightarrow} \Aut(V_\ell).
+\]
+
+\begin{mydef}
+The representation $\rho$ is said to be \strong{locally algebraic} if all the
+local representations $\rho_v$, with $p_v = \ell$, are locally algebraic (in the
+sense defined in \ref{sec:III_11}, with $p = \ell$). 
+\end{mydef}
+
+It is convenient to reformulate this definition, using the torus $T = R_{K/\Q}
+(G_{m/K})$ of Chap.~\ref{ch:ii},~\ref{sec:II_11}. Let $T/{\Q_\ell} = T
+\otimes_{\Q} \Q_\ell$ be the $\Q_\ell$-torus obtained from $\TT$ by extending the
+ground field from $\Q$ to $\Q_\ell$. We have
+\[
+T/{\Q_\ell} (\Q_\ell) = (K \otimes \Q_\ell)^{\times} = K_{\ell}^\times,
+\]
+
+where $K_\ell = K \otimes \Q_\ell$. 
+
+Let $I$ be the idèle group of $K$, cf.\ Chap.~\ref{ch:ii},~\ref{sec:II_21}. The
+injection $K_\ell^\times \to I$, followed by the class field homomorphism $i
+\colon I \to \Gal(\algcl{K}/K)^{\ab}$, define a homomorphism
+\[
+i_\ell \colon K_\ell^\times \longrightarrow \Gal(\algcl{K}/K)^{\ab}.
+\]
+
+\begin{prop}
+The proposition $\rho$ is locally algebraic if and only if there exists an
+algebraic morphism 
+\[
+f \colon T/{\Q_\ell} \longrightarrow \GL_{V_\ell}
+\]
+
+such that $\rho \circ i_\ell(x) = f(x^{-1})$ for all $x \in K_\ell^\times$ close
+enough to $1$. 
+\end{prop}
+
+(Note that, as in the local case, the above condition determines $f$ uniquely;
+one says it is the algebraic morphism \emph{associated with} $\rho$.)
+
+Since $K \otimes_\Q \Q_\ell = \prod_{v \mid \ell} K_v$, we have 
+\[
+T/{\Q_\ell} = \prod_{v \mid \ell} T_v,
+\]
+
+where $T_v$ is the $\Q_\ell$-torus defined by $K_v$, cf.~\ref{III:sec_11}. The 
+proposition follow from this decomposition. 
+
+\subsubsection*{Exercise}
+Give a criterion for local algebraicity analogous to the one of
+Prop.~\ref{prop:III_11_2} of \ref{sec:III_11}.
 
 \subsection{Modulus of a locally algebraic abelian representation}
 \label{sec:III_22}
