@@ -46,7 +46,7 @@ and elliptic curves" (Addison-Wesley, 1989) into modern LaTeX.
         - [ ] 1.1 Definitions
         - [x] 1.2 Alternative definition of "locally algebraic" via Hodge-Tate modules
     - [ ] 2 The global case
-        - [ ] 2.1 Definitions
+        - [x] 2.1 Definitions
         - [x] 2.2 Modulus of a locally algebraic abelian representation
         - [x] 2.3 Back to Sm
         - [ ] 2.4 A mild generalization
@@ -78,7 +78,7 @@ and elliptic curves" (Addison-Wesley, 1989) into modern LaTeX.
         - [ ] 3.1 Preliminaries
         - [x] 3.2 The case of a non integral j
         - [ ] 3.3 Numerical example
-        - [ ] 3.4 Proof of the main lemma of 3.1
+        - [x] 3.4 Proof of the main lemma of 3.1
     - [ ] A. Local results
         - [ ] A.1 The case v(j) < 0
             - [x] A.1.1 The elliptic curves of Tate

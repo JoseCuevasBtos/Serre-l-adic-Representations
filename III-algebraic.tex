@@ -127,13 +127,13 @@ field. Let $\ell$ be a prime number and let
 be an abelian $\ell$-adic representation of $K$. Let $v \in M_K^0$ be a place of
 $K$ of residue characteristic $\ell$ and let $D_v \subset
 \Gal(\algcl{K}/K)^{\ab}$ be the corresponding decomposition group. This group
-is a quotient of the local Galois group $\Gal(\algcl{K_v}/K_v)^{\ab}$ (there two
-group are, in fact, isomorphic, but we do not need this here). Hence, we get by
-composition an $\ell$-adic representation of $K_v$ 
-\[
-\rho_v \colon \Gal(\algcl{K_v}/K_v)^{\ab} \longrightarrow D_v
-\overset{\rho}{\longrightarrow} \Aut(V_\ell).
-\]
+is a quotient of the local Galois group $\abcl{\Gal(\algcl{K_v}/K_v)}$ (there
+two group are, in fact, isomorphic, but we do not need this here). Hence, we
+get by composition an $\ell$-adic representation of $K_v$ 
+\[\begin{tikzcd}[sep=large]
+	\rho_v \colon \abcl{\Gal(\algcl{K_v}/K_v)} \rar & D_v \rar["\rho"] &
+	\Aut(V_\ell).
+\end{tikzcd}\]
 
 \begin{mydef}
 The representation $\rho$ is said to be \strong{locally algebraic} if all the
@@ -141,32 +141,30 @@ local representations $\rho_v$, with $p_v = \ell$, are locally algebraic (in the
 sense defined in \ref{sec:III_11}, with $p = \ell$). 
 \end{mydef}
 
-It is convenient to reformulate this definition, using the torus $T = R_{K/\Q}
-(G_{m/K})$ of Chap.~\ref{ch:ii},~\ref{sec:II_11}. Let $T/{\Q_\ell} = T
-\otimes_{\Q} \Q_\ell$ be the $\Q_\ell$-torus obtained from $\TT$ by extending the
-ground field from $\Q$ to $\Q_\ell$. We have
+It is convenient to reformulate this definition, using the torus $T =
+\WRes_{K/\Q} (\GG_{m, K})$ of Chap.~\ref{ch:ii},~\ref{sec:II_11}. Let
+$\TT_{/\Q_\ell} = \TT \otimes_{\Q} \Q_\ell$ be the $\Q_\ell$-torus obtained
+from $\TT$ by extending the ground field from $\Q$ to $\Q_\ell$. We have
 \[
-T/{\Q_\ell} (\Q_\ell) = (K \otimes \Q_\ell)^{\times} = K_{\ell}^\times,
+\TT_{/\Q_\ell}(\Q_\ell) = (K \otimes \Q_\ell)^{\times} = K_{\ell}^\times,
 \]
-
 where $K_\ell = K \otimes \Q_\ell$. 
 
 Let $I$ be the idèle group of $K$, cf.\ Chap.~\ref{ch:ii},~\ref{sec:II_21}. The
 injection $K_\ell^\times \to I$, followed by the class field homomorphism $i
-\colon I \to \Gal(\algcl{K}/K)^{\ab}$, define a homomorphism
+\colon I \to \abcl{\Gal(\algcl{K}/K)}$, define a homomorphism
 \[
-i_\ell \colon K_\ell^\times \longrightarrow \Gal(\algcl{K}/K)^{\ab}.
+i_\ell \colon K_\ell^\times \longrightarrow \abcl{\Gal(\algcl{K}/K)}.
 \]
 
 \begin{prop}
 The proposition $\rho$ is locally algebraic if and only if there exists an
 algebraic morphism 
 \[
-f \colon T/{\Q_\ell} \longrightarrow \GL_{V_\ell}
+f \colon \TT_{/\Q_\ell} \longrightarrow \GL_{V_\ell}
 \]
-
-such that $\rho \circ i_\ell(x) = f(x^{-1})$ for all $x \in K_\ell^\times$ close
-enough to $1$. 
+such that $\rho \circ i_\ell(x) = f(x^{-1})$ for all $x \in K_\ell^\times$
+close enough to $1$. 
 \end{prop}
 
 (Note that, as in the local case, the above condition determines $f$ uniquely;
@@ -174,9 +172,8 @@ one says it is the algebraic morphism \emph{associated with} $\rho$.)
 
 Since $K \otimes_\Q \Q_\ell = \prod_{v \mid \ell} K_v$, we have 
 \[
-T/{\Q_\ell} = \prod_{v \mid \ell} T_v,
+\TT_{/\Q_\ell} = \prod_{v \mid \ell} T_v,
 \]
-
 where $T_v$ is the $\Q_\ell$-torus defined by $K_v$, cf.~\ref{III:sec_11}. The 
 proposition follow from this decomposition. 
 
@@ -192,7 +189,7 @@ K/K)}$, $\rho$ defines a homomorphism $\rho \circ i\colon I \to \Aut(V_\ell)$.
 
 We assume that $\rho$ is locally algebraic and we denote by $f$ the associated
 \dpage
-algebraic morphism $T_{/\Q_\ell} \to \GL_{V_\ell}$.
+algebraic morphism $\TT_{/\Q_\ell} \to \GL_{V_\ell}$.
 \begin{mydef}
 Let $\mathfrak{m}$ be a modulus (chap.~\ref{ch:ii}, \ref{sec:II_11}).
 One says that $\rho$ is defined mod $\mathfrak{m}$ (or that
@@ -205,7 +202,7 @@ $\mathfrak{m}$ is a modulus of definition for $\rho$) if
 \end{enumerate}
 \end{mydef}
 (Note that $\prod_{v\mid\ell} U_{v, \mathfrak{m}}$ is an open subgroup of
-$K_\ell^\times = T_{/\Q_\ell}(\Q_\ell)$.)
+$K_\ell^\times = \TT_{/\Q_\ell}(\Q_\ell)$.)
 
 In order to prove the existence of a modulus of definition, we
 need the following auxiliary result:
