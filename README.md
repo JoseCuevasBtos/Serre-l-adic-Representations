@@ -42,8 +42,8 @@ and elliptic curves" (Addison-Wesley, 1989) into modern LaTeX.
         - [x] A.1 Arithmetic groups in tori
         - [x] A.2 Killing arithmetic subgroups
 - [ ] Chapter III. Locally Algebraic Abelian Representations
-    - [ ] 1 The local case
-        - [ ] 1.1 Definitions
+    - [x] 1 The local case
+        - [x] 1.1 Definitions
         - [x] 1.2 Alternative definition of "locally algebraic" via Hodge-Tate modules
     - [ ] 2 The global case
         - [x] 2.1 Definitions
