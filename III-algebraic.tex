@@ -32,10 +32,10 @@ Let $V$ be a finite dimensional $\Q_p$-vector space and denote, as usual, by
 $\GL_V$ the corresponding linear group; it is an algebraic group over $\Q_{p'}$
 and $\GL_V(\Q_p) = \Aut (V)$.
 
-Let $\rho \colon \Gal(\overline{K}/K)^{\ab} \to \Aut(V)$ be an abelian $p$-adic
-representation of $K$ in $V$, where $\Gal(\overline{K}/K)^{\ab}$ denotes the
+Let $\rho \colon \abcl{\Gal(\overline{K}/K)} \to \Aut(V)$ be an abelian $p$-adic
+representation of $K$ in $V$, where \abcl{$\Gal(\overline{K}/K)}$ denotes the
 Galois group of the maximal abelian extension of $K$. If $i \colon K^\times \to
-\Gal(\overline{K}/K)^{\ab}$ is the canonical homomorphism of local class field
+\abcl{\Gal(\overline{K}/K)} $ is the canonical homomorphism of local class field
 theory (cf.\ for instance Cassels - Fr\¨ohlich \cite{6}, chap. VI, \S2), we then
 get a continuous homomorphism $\rho \circ i$ of $K^\times = \TT(\Q_p)$ into
 $\Aut(V)$.
@@ -51,10 +51,10 @@ unique; this follows from the fact that any non-empty open set of $K^\times =
 \TT(\Q_p)$ is Zariski dense in $\TT$. We say that $r$ is the algebraic morphism
 \emph{associated with} $\rho$.
 
-\subsubsection{Examples}\label{sec:III_11}
+\subsubsection*{Examples}\label{sec:III_11}
 \begin{enumerate}
 	\item Take $K = \Q_p$, and $\dim V = 1$, so that $\rho$ is given by a
-continuous homomorphism $\Gal(\overline{\Q}/\Q)^{\ab} \to U_p$, where $U_p$ is the
+continuous homomorphism $\abcl{\Gal(\overline{\Q}/\Q)} \to U_p$, where $U_p$ is the
 group of $p$-adic units. It is easy to see there exists an element $v \in \Z_p$
 such that $\rho \circ i (x) = x^v$ if $x$ is close enough to $1$. The
 representation $\rho$ is locally algebraic if and only if $v$ belongs to $\Z$.
@@ -62,28 +62,31 @@ This happens for instance when $V = V_p(\mu)$, cf.\ Chap. \ref{ch:i},
 \ref{sec:I_12}, in which case $v = -1$ and $r$ is the canonical one-dimensional
 representation of $\TT = \GG_{m, \Q_p}$. 
 
+\dpage
+
 	\item The abelian representation associated to a Lubin-Tate formal group
 (cf. \ref{17} and \ref{6}, Chap. VI, \S3) is locally algebraic (and also of the
 form $u \mapsto u^{-1}$ on the inertia group).  
 \end{enumerate}
 
 \begin{prop}
-	Let $\rho \colon \Gal(\overline{K}/K)^{\ab} \to \Aut(V)$ be a locally
+	Let $\rho \colon \abcl{\Gal(\overline{K}/K)} \to \Aut(V)$ be a locally
 algebraic abelian representation of $K$. The restriction of $\rho$ to the
-inertia subgroup of $\Gal(\overline{K}/K)^{\ab}$ is semi-simple.
+inertia subgroup of $\abcl{\Gal(\overline{K}/K)}$ is semi-simple.
 \end{prop}
 
 \begin{proof}
-Let us identify the inertia subgroup of $\Gal(\overline{K}/K)^{\ab}$ with the
+Let us identify the inertia subgroup of $ \abcl{\Gal(\overline{K}/K)} $ with the
 group $U_K$ of units of $K$. By assumption, there is an open subgroup $U'$ of 
 $U_K$ and an algebraic morphism $r$ of $\TT$ into $\GL_V$ such that $\rho(x) = r
 (x^{-1})$ if $x \in U'$. Let $W$ be a sub-vector space of $V$ stable by
 $\rho(U_K)$; it is then stable by $\rho(U')$, hence by $r(T)$. But every linear
 representation of a torus is semi-simple. Hence, there exists a projector $\pi
 \colon V \to W$ which commutes with the action of $\TT$. If we put $\pi' =
-\frac{1}{(U_K:U')}\todo[pinktask]{qué notación es (:)} \sum_{s \in U_K \setminus U'}
-\rho(S) \pi \rho(s^{-1})$, we obtain a projector $\pi' \colon V \to W$ which
-commutes with all $\rho(s)$, $s \in U_K$, q.e.d.\
+\frac{1}{(U_K:U')}\sum_{s \in U_K \setminus U'}
+\rho(S) \pi \rho(s^{-1})$\todo[pinktask]{qué notación es (:)}
+, we obtain a projector $\pi' \colon V \to W$ which
+commutes with all $\rho(s)$, $s \in U_K$. 
 \end{proof}
 \todo[pinktask]{aquí termina la dem??}
 
@@ -92,12 +95,13 @@ is semi-simple. If we make a suitable large finite extension $E$ of $\Q_p$, the
 restriction of $\rho$ to $U_K$ may be brought into diagonal form, i.e.\ is given
 by continuous characters $\chi_i \colon U_K \to E^{\times}$, $i = 1, \hdots,n$.
 We assume $E$ large enough to contain all conjugates of $K$ into $E$. Recall
-(cf.\ Chap. \ref{ch:II}, \ref{sec:II_11}) that the $[\sigma]$, $\sigma\in
-\Gamma_K$, make a basis of the character group $X(\TT)$ of $T$.
+(cf.\ Chap. \ref{ch:ii}, \ref{sec:II_11}) that the $[\sigma]$, $\sigma\in
+\Gamma_K$, make a basis of the character group $X(\TT)$ of $\TT$.
 
 \begin{prop}
 The representation $\rho$ is locally algebraic if and only if there exists
 integer $n_\sigma(i)$ such that
+\dpage
 \[
 	\chi_i (u) = \prod_{\sigma \in \Gamma_K} \sigma(u)^{- n_\sigma(i)}
 \]
@@ -114,10 +118,10 @@ over $\Q_p$ (cf.\ Chap. \ref{ch:ii}, \ref{sec:II_24}). But the trace $\theta_r =
 \sum r_i$ of $r$ (loc.\ cit.\) is such that $\theta_r(u) \in \Q_p$ for all $u
 \in U'$. Since $U'$ is Zariski-dense in $\TT$, this implies that $\theta_r$ is
 ''defined over $\Q_p$´´, hence that $r$ can be defined over $\Q_p$ (loc.\
-cit.\).
+cit.\ ).
 \end{proof}
  
-\subsubsection{Extension of the ground field}
+\subsubsection*{Extension of the ground field}
 
 Let $K'$ be a finite extension of $K$, and let $\rho'$ be the restriction of the
 given representation $\rho$ to $\Gal(\overline{K}/K')$. Then $\rho'$ is locally
@@ -132,12 +136,12 @@ torus associated with $K'$ and $N_{K'/K} \colon \TT' \to T$ is the algebraic
 morphism defined by the norm from $K'$ to $K$.
 
 All this follows easily from the commutativity of the diagram
-
+\dpage
 % https://q.uiver.app/#q=WzAsNCxbMCwwLCJLXlxcdGltZXMiXSxbMSwwLCJcXEdhbChcXG92ZXJsaW5le0t9L0spXlxcYWIiXSxbMCwxLCJLJyJdLFsxLDEsIlxcR2FsKFxcb3ZlcmxpbmV7S30vSycpXlxcYWIiXSxbMCwxXSxbMiwwLCJOIiwyXSxbMiwzXSxbMywxXV0=
 \[\begin{tikzcd}
-	{K^\times} & {\Gal(\overline{K}/K)^\ab} \\
-	{K'} & {\Gal(\overline{K}/K')^\ab}
-	\arrow[from=1-1, to=1-2]
+	{K^\times} & {\abcl{\Gal(\overline{K}/K)}} \\
+	{K'} & { \abcl{\Gal(\overline{K}/K') }
+}	\arrow[from=1-1, to=1-2]
 	\arrow["N"', from=2-1, to=1-1]
 	\arrow[from=2-1, to=2-2]
 	\arrow[from=2-2, to=1-2]
@@ -145,6 +149,10 @@ All this follows easily from the commutativity of the diagram
 
 and from the fact that the kernel of $N_{K'/K} \colon \TT' \to \TT$ is connected
 for the Zariski topology.
+
+\subsubsection*{Exercise}
+Give an example of a locally algebraic abelian $p$-adic representation of
+dimension $2$ which is not semi-simple.
 
 \subsection{Alternative definition of ``locally algebraic'' via Hodge-Tate
 modules}
@@ -238,12 +246,12 @@ For the proof, see the Appendix.
 We now go back to the notations of Chap.~\ref{ch:ii}, i.e.\ $K$ denotes a number
 field. Let $\ell$ be a prime number and let 
 \[
-\rho \colon \Gal(\algcl{K}/K)^{\ab} \longrightarrow \Aut(V_\ell)
+\rho \colon \abcl{\Gal(\algcl{K}/K)} \longrightarrow \Aut(V_\ell)
 \]
 
 be an abelian $\ell$-adic representation of $K$. Let $v \in M_K^0$ be a place of
 $K$ of residue characteristic $\ell$ and let $D_v \subset
-\Gal(\algcl{K}/K)^{\ab}$ be the corresponding decomposition group. This group
+\abcl{\Gal(\algcl{K}/K)}$ be the corresponding decomposition group. This group
 is a quotient of the local Galois group $\abcl{\Gal(\algcl{K_v}/K_v)}$ (there
 two group are, in fact, isomorphic, but we do not need this here). Hence, we
 get by composition an $\ell$-adic representation of $K_v$ 
@@ -546,10 +554,30 @@ case of rational representations:
 \end{cor}
 This follows from the corresponding property of $\phi_\ell$, cf.\
 chapter~\ref{ch:ii}, \ref{sec:II_25}, Remark~\ref{rmk:II_25_1}.
-
+\dpage
 \subsection{A mild generalization}
 \label{sec:III_24}
-\todo[section]{Belén.}
+
+Most results of this and the previous Chapter may be extended to the case where
+we take for ground field of the linear representation a number field $E$
+(instead of $\Q$). More precisely, let $\lambda$ be a finite place of $E$ and
+let $E_\lambda$ be the $\lambda$-adic completion of $E$. The notion of an
+$E$-rational $\lambda$-adic representation of $K$ has been defined in chap.
+\ref{ch:i}, \ref{sec:I_23}, Remark. \todo[pinktask]{referenciar el remark?} Let 
+\[
+	\rho \colon \Gal(\overline{K}/K) \to \Aut(V_\lambda)
+\]
+be such a representation, and assume $r$ is abelian. Let $\ell$ be the residue
+characteristic of $\lambda$, so that $E_\lambda$ contains $\Q_\ell$. As in
+\ref{sec:III_21}, we say that $\rho$ is \strong{locally algebraic} if there
+exists an algebraic morphism
+\[
+	f \colon \TT_{/E_\lambda} \to GL_{V_\lambda}
+\]
+such that $\rho \circ i_\lambda(x) = f(x^{-1})$ for $x \in K^\times_\ell$ close
+enough to $1$ (note that $K^\times_\ell = \TT(\Q_p)$ is subgroup of
+$\TT(E_\ell)$. As in \ref{sec:III_23}, one proves that such a $\rho$ \emph{comes
+from an $E$-linear representation of some $S_\mathfrak{m}$} (and conversely).  
 
 \subsection{The function field case}
 \label{sec:III_25}
