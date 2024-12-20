@@ -33,11 +33,11 @@ each $\sigma \in \Gamma$ extends to a homomorphism $K \otimes_{\Q} \algcl{\Q}
 \to \algcl{\Q}$, hence defines a morphism $[\sigma]\colon \TT_{/\algcl{\Q}} \to
 \GG_{m, \algcl{Q}}$. The collection of all $[\sigma]$'s gives the isomorphism
 $T_{/ \algcl{\Q}} \to G_{m/\algcl{\Q}} \times \hdots \times G_{m/\algcl{\Q}}$.
-Moreover, the $[\sigma]$'s form a basis of the \emph{character group} $X(T) =
-\Hom_{\algcl{\Q}}(\TT_{/\algcl{\Q}}, \GG_{m, \algcl{\Q}})$ of $T$. Note that
-the Galois group $\Gal(\algcl{\Q} / \Q)$ acts in a natural way on $X(T)$, viz.
-by permuting the $[\sigma]'s$. (For the dictionary between tori and Galois
-modules, see for instance T. Ono \cite{21}.)
+Moreover, the $[\sigma]$'s form a basis of the \strong{character
+group}\index{Character group} $X(T) = \Hom_{\algcl{\Q}}(\TT_{/\algcl{\Q}},
+\GG_{m, \algcl{\Q}})$ of $T$. Note that the Galois group $\Gal(\algcl{\Q} / \Q)$
+acts in a natural way on $X(T)$, viz.\ by permuting the $[\sigma]'s$. (For the
+dictionary between tori and Galois modules, see for instance T. Ono \cite{21}.)
 
 \subsection{Cutting down $\TT$}
 \label{sec:II_12}
@@ -108,7 +108,7 @@ $Y_2$. If $y$, $y' \in Y_3$, we have
 \overline{y} + \overline{y'} = \overline{y + y'} + c(y, y')
 \]
 with $c(y, y') \in Y_1$; the cochain $c$ is a $2$-cocycle defining the 
-extension~\ref{eq:II_13}. Let $B$ be the disjoint union of copies $A_y$ of $A$, 
+extension~\eqref{eq:II_13}. Let $B$ be the disjoint union of copies $A_y$ of $A$, 
 indexed by $y \in Y_3$. Define a group law on $B$ via the mappings
 \[
 \pi_{y, y'} : A_y \times A_{y'} \rightarrow A_{y + y'} \qquad (y,~y' \in Y_3),
@@ -143,10 +143,10 @@ The algebraic group $B$ is thus an \emph{extension} of the ``constant'' algebrai
 \begin{enumerate}
 	\item Let $k'$ be an extension of $k$ and $A' = A \times_k k'$. We may 
 	apply the above construction to the $k'$-algebraic group $A'$, with respect 
-	to the exact sequence~\ref{eq:II_13} and to the map $Y_1 \to A(k) \to A'(k')
-	$. The group $B'$ thus obtained is canonically isomorphic to $B \times_k 
-	k'$; this follows, for instance, from the explicit construction of $B$ and 
-	$B'$.
+	to the exact sequence~\eqref{eq:II_13} and to the map $Y_1 \to A(k) \to
+	A'(k') $. The group $B'$ thus obtained is canonically isomorphic to $B
+	\times_k k'$; this follows, for instance, from the explicit construction
+	of $B$ and $B'$.
 	
 	\item We will only use the above construction when $\char(k) = 0$ and $A$ 
 	is a torus. The enlarged group $B$ is then a ``group of multiplicative 
@@ -284,15 +284,16 @@ $\mathfrak{m}$ (and this shows again that it is finite).
 \label{sec:II_22}
 
 We are now in a position to apply the group construction of~\ref{sec:II_13}.
-We take for exact sequence~\ref{eq:II_13} the sequence 
+We take for exact sequence~\eqref{eq:II_13} the sequence 
 \[
 	\begin{tikzcd}
 		1 \arrow[r] & K^{\times} / E_\mathfrak{m} \arrow[r] & I_\mathfrak{m} 
 		\arrow[r] & C_\mathfrak{m} \arrow[r] & I
 	\end{tikzcd}
 \]
-and for $A$ the algebraic group $T_\mathfrak{m} = \TT / \algcl{E_\mathfrak{m}}
-$, where $E_\mathfrak{m}$ is as before, $\TT$ is the torus $\WRes_{K/\Q}(
+and for $A$ the algebraic group $T_\mathfrak{m} = \TT / \algcl{E_\mathfrak{m}}$,%
+\index{Tm@$T_{\mathfrak{m}}$}
+where $E_\mathfrak{m}$ is as before, $\TT$ is the torus $\WRes_{K/\Q}(
 \GG_{m, K})$ defined in~\ref{sec:II_11}, and $\algcl{E_\mathfrak{m}}$ is the 
 \dpage
 Zariski closure of $E_\mathfrak{m}$ in $\TT$, cf.\ ~\ref{sec:II_12}.
