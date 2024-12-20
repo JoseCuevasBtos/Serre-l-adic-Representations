@@ -45,11 +45,11 @@ and elliptic curves" (Addison-Wesley, 1989) into modern LaTeX.
     - [x] 1 The local case
         - [x] 1.1 Definitions
         - [x] 1.2 Alternative definition of "locally algebraic" via Hodge-Tate modules
-    - [ ] 2 The global case
+    - [x] 2 The global case
         - [x] 2.1 Definitions
         - [x] 2.2 Modulus of a locally algebraic abelian representation
         - [x] 2.3 Back to Sm
-        - [ ] 2.4 A mild generalization
+        - [x] 2.4 A mild generalization
         - [x] 2.5 The function field case
     - [ ] 3 The case of a composite of quadratic fields
         - [ ] 3.1 Statement of the result
