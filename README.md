@@ -55,7 +55,7 @@ and elliptic curves" (Addison-Wesley, 1989) into modern LaTeX.
         - [x] 3.1 Statement of the result
         - [x] 3.2 A criterion for local algebraicity
         - [x] 3.3 An auxiliary result on tori
-        - [ ] 3.4 Proof of the theorem
+        - [x] 3.4 Proof of the theorem
     - [ ] A. Hodge-Tate decompositions and locally algebraic representations
         - [x] A.1 Invariance of Hodge-Tate decompositions
         - [x] A.2 Admissible characters
