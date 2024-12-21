@@ -52,7 +52,7 @@ and elliptic curves" (Addison-Wesley, 1989) into modern LaTeX.
         - [x] 2.4 A mild generalization
         - [x] 2.5 The function field case
     - [ ] 3 The case of a composite of quadratic fields
-        - [ ] 3.1 Statement of the result
+        - [x] 3.1 Statement of the result
         - [x] 3.2 A criterion for local algebraicity
         - [x] 3.3 An auxiliary result on tori
         - [ ] 3.4 Proof of the theorem

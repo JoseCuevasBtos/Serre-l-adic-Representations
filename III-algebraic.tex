@@ -1013,9 +1013,102 @@ With these notations, we have:
 Let $T$ be a non-trivial torus over $\Q$. Show that $T(\Q)$ is the direct sum
 of a finite group and a free abelian group of infinite rank.
 
+\dpage 
+
 \subsection{Proof of the theorem}
 \label{sec:III_34}
-\todo[section]{Belén.}
+
+We go back to the notations and hypotheses of \ref{sec:III_31}. Let
+\[
+	\rho \colon \abcl{\Gal(\overline{K}/K)} \rightarrow \Aut(V_\ell)
+\]
+be a rational, semi-simple, abelian $\ell$-adic representation of $K$. If $E$ is
+the completion of $ \overline{\Q_\ell} $, as in \ref{sec:III_33}, we may bring 
+$\rho$ in diagonal form over $E$. This gives rise to a family $(\psi_1,
+\hdots,\psi_n)$ of continuous characters of $\abcl{\Gal(\overline{K}/K)}$ (hence
+also of the idèle group $I$) into $E^\times$; here, $n = \dim V_\ell$.
+
+Let $f_i \colon  K_\ell^\times \to E^\times$ be the restriction of $\psi_i$ to
+the $\ell^{\text{th}}$- component $K^{\times}_\ell$ of $I$. Note that
+$K^\times_\ell = \TT(\Q_\ell)$, where $\TT$ is, as usual, the torus defined by
+$K$ (chap. \ref{ch:ii}, \ref{sec:II_11}).
+
+\begin{lem}
+The torus $\TT$ and the homomorphism $f_i$ satisfy the assumptions (a) and (b)
+of Prop.~2, \ref{sec:III_33}. 
+\end{lem}
+
+\subsubsection*{Verification of (a)}
+
+Let $S$ be a finite set of primes, with $\ell \not\in S$, such that if $v \in
+M_K$, $p_v \neq \ell$, $p_v \not\in S$, the representation $\rho$ is unramified
+at $v$, and the characteristic polynomial of $F_{v,\rho}$ has rational
+coefficients. If $p
+\in S$, Prop.~1 of \ref{sec:III_22} shows that there exists an open subgroup
+$W_p$ of $K_p^\times = \TT(\Q_p)$ such that $\psi_i(W_p) = 1$. Let $W =
+(W_p)_{p \in S}$ and let $x \in \TT(\Q)_W$. Since $x \in K$, we have $\psi_i(x)
+= 1$, when $x$ is identified with an idèle of $K$. On the other hand, let us
+split the idèle $x$ in its components.
+\[
+	x = x_\infty \cdot x_\ell \cdot x_S \cdot x'
+\]
+\dpage
+according to the descomposition of $I$ in
+\[ I = K_\infty^\times \times K_\ell^\times \times K_S^\times \times I'.\]
+
+(Here $K^\times = (K \otimes R)^\times$, $K_S^\times = \prod_{p \in S}
+K^\times_p$ and $I'$ is the restricted product of the $K_v^\times$, for $v \in
+M_K$, and $p_v \neq \ell$, $p_v \not\in S$.) The relation $\psi_i(x)=1$,
+together with $\psi_i(x_\ell) = f_i(x)$, gives
+\[
+	f_i(x)^{-1} = \psi_i(x_\infty) \psi_i(x_S) \psi_i(x').
+\]
+
+By construction, we have $\psi_i(x_S) = 1$ and it is clear that
+$\psi_i(x_\infty) = \pm 1$.
+
+Hence:
+\[
+	f_i(x) = \pm \psi_i(x')^{-1}.
+\]
+
+But, for each $v \in M_K$, with $p_v \not\in S$, $p_v \neq \ell$, we know that
+the eigenvalues of $F_{v,\rho}$ are algebraic; hence, if $f_v$ is an idèle which
+is a uniformizing element at $v$, and is equal to $1$ elsewhere, $\psi_i(f_v)$
+\emph{is algebraic}. If $a(v)$ is the valuation of $x'$ at $v$, we have:
+\[
+	\psi_i(x') = \prod \psi_i(f_v)^{a(v)};
+\]
+hence $\psi_i(x')$ and $f_i(x)$ are algebraic and we have checked (a).
+
+\subsubsection*{Verification of (b)}
+
+Since $K$ is a composite of quadratic fields, it is Galois extension of $\Q$,
+and its Galois group $G$ is a product of groups of order $2$. The character
+group $X(\TT)$ of $\TT$ is isomorphic to the 
+\dpage 
+regular representation of $G$, and it is clear that $X(\TT) \otimes \Q$ splits
+as a direct sum of one-dimensional $G$-stable subspaces (each correspond to a
+character of $G$). Hence $\TT$ is a sum of one-dimensional tori.
+
+\subsubsection*{End of the proof of the theorem}
+
+\begin{proof}
+Using prop.~2 of \ref{sec:III_33}, we see that each $f_i$ is \emph{almost
+locally algebraic}. Hence there is an integer $N \geq 1$ such that the
+$f_i^{N}$ are locally algebraic. This implies, cf.\ \ref{sec:III_11}, that
+$\rho^N$ is locally algebraic, hence (cf.\ \ref{sec:III_32}) that $\rho$ itself
+is locally algebraic. 
+\end{proof}
+
+\subsubsection*{Exercise}
+
+Assume that $K$ is a composite of quadratic fields. Let $\chi$ be a
+\strong{Grössencharakter} of $K$ and suppose that the values of $\chi$ (on the
+ideals prime to the conductor) are algebraic numbers. Show that $\chi$ is ``of
+type of $(A)$'' in the sense of Weil \ref{41}. (Use the same method than above,
+with $E$ replaced by C.) If the values of $\chi$ lie in a finite extension of
+$\Q$, show that $\chi$ is ``of type $(A_\circ)$''.
 
 \begin{subappendices}
 
