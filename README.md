@@ -59,8 +59,8 @@ and elliptic curves" (Addison-Wesley, 1989) into modern LaTeX.
     - [ ] A. Hodge-Tate decompositions and locally algebraic representations
         - [x] A.1 Invariance of Hodge-Tate decompositions
         - [x] A.2 Admissible characters
-        - [ ] A.3 A criterion for local triviality
-        - [ ] A.4 The character xi
+        - [x] A.3 A criterion for local triviality
+        - [x] A.4 The character xi
         - [ ] A.5 Characters associated with Hodge-Tate decompositions
         - [x] A.6 Locally compact case
         - [x] A.7 Tate's theorem
