@@ -867,6 +867,8 @@ the ones now available.
 	Hence $\rho$ is locally algebraic.
 \end{proof}
 
+\dpage
+
 \subsection{An auxiliary result on tori}
 \label{sec:III_33}
 In \cite{15}, Lang proved that two exponential functions $\exp(b_1 z)$,
@@ -1261,9 +1263,10 @@ continuous homomorphism.
 	of $H^1(G, C^\times)$. One has $\overline{\varphi} =
 	\overline{\varphi'}$ if and only if $\varphi \sim \varphi'$.
 
+\dpage
+
 \item\label{rmk:III_A2_3}
 	Define a new action of $G$ on $C^\times$ by means of
-	\dpage
 	\[
 		(s, c) \longmapsto \varphi(s)\, s(c),
 		\qquad s\in G,\; c \in C,
@@ -1303,6 +1306,116 @@ with the group of multiplicative representatives, so that $U_C = U_C^1 \times
 \end{align*}
 This is a continuous homomorphism and even a local isomorphism.
 
+\dpage
+
+Moreover:
+
+\begin{lem}
+\begin{enumerate}[(a)]
+	\item $\log$ is surjective.
+	\item The kernel of $\log \colon U_C \to C$ is $\algcl{k}^\times \times
+\mu_{p^\infty}$,
+\end{enumerate}
+where $\mu_{p^\infty}$ is the set of all $p^n$-th roots of unity, for $n =
+1,2, \hdots$
+\end{lem}
+
+\begin{proof}
+Assertion (a) follows from the fact that $C$ is algebraically closed, hence that
+$U_C$ is divisible.
+
+On the other hand, if $u \in U^l_C$ is such that $\log(u) = 0$, one has $\lim
+u^{p^N} = 1$, hence, if $N$ is large enough, $u^{p^N}$ belongs to a subgroup of
+$U^l_C$ where $\log$ is injective (for instance the subgroup of elements $x$
+with $x \equiv 1 \mod p^2$). Hence $u^{p^N} = 1$, and $u \in \mu_{p^\infty}$;
+this implies (b).
+\end{proof}
+
+We now apply the $\log$ map to the cohomology groups of $G$ with values in
+$U_C,~C,~C^\times, \hdots$ (cohomology being, as usual, defined by
+\emph{continuous} cochains). First, since the valuation group of $C$ in $\Q$, we
+have the exact sequence
+\[
+	1 \rightarrow U_C \rightarrow C^\times \rightarrow \Q \rightarrow 1.
+\]
+
+By Tate's theorem (\ref{39}, \S 3.3) one has $H^0(G, C^\times) = K^\times$,
+hence an exact sequence
+\[
+	K^\times \rightarrow \Q \rightarrow H^1(G, U_C) \rightarrow
+H^1(G,C^\times) \rightarrow 0,
+\]
+
+\dpage
+
+or equivalently: 
+\[
+	0 \rightarrow \Q / \Z \overset{\delta}{\rightarrow} H^l(G, U_C)
+\overset{i}{\rightarrow} H^l(G, C^\times) \rightarrow 0.
+\]
+
+Let $N = \Ker(\log)$. We have the exact sequence
+\[
+	H^l(G,N) \overset{j}{\rightarrow} H^l(G,U_C)
+\overset{\lambda}{\rightarrow} H^l(G,C),  
+\]
+
+where $\lambda$ is induced by the $\log$. Since $H^l(G,C)$ is a $C$-vector
+space, the composite $\lambda \circ \delta \colon \Q / \Z \to H^l(G,C)$ is $0$,
+hence there is a unique map
+\[
+	L \colon H^l(G,C^\times) \to H^l(G,C)  
+\]
+such that $L \circ i = \lambda$.
+
+\begin{prop}
+The map $L \colon H^l(G,C^\times) \to H^l(G,C)$ is injective. 
+\end{prop}
+
+\begin{proof}
+Using the exact sequence above, one sees it is enough to prove that $i \circ j
+\colon H^l(G,N) \to H^l(G,C^\times)$ is trivial. But $N$ is a discrete subgroup
+of $\algcl{K}^\times$, hence $i \circ j$ factors through $H^l(G,
+\algcl{K}^\times$, where now $\algcl{K}^\times$ is viewes as a discrete group;
+by Theorem 90 \todo[pinktask]{¿Cómo dice que dijo 90?} $H^l(G,
+\algcl{K}^\times)$ is trivial, hence also $i \circ j$.
+\end{proof}
+
+Let now $\phi \colon G \to K^\times$ be a continuous character. Since $\phi(G)$
+is compact, it is contained in $U_K$, hence in $U_C$, and $\log \phi \colon G
+\to C$ is an additive $1$-cocycle. Its cohomology class in $H^l(G,C)$ is
+$L\bar{\phi}$, where $\bar{\phi}$ is the cohomology class of $\phi$ in
+$H^l(G,C^\times)$.
+
+\dpage
+
+\begin{prop}
+The properties $\phi \sim 1$ and $L\bar{\phi} = 0$ are equivalent.
+\end{prop}
+
+\begin{proof}
+This follows from the ijectivity of $L$.
+\end{proof}
+
+\begin{cor}
+If there exists a non-zero integer $n$ such that $\phi^n \sim 1$, then $\phi
+\sim 1$.
+\end{cor}
+
+\begin{proof}
+Indeed, $L\bar{\phi} = \frac{1}{n} L\bar{\phi}^n = 0$
+\end{proof}
+
+\begin{obs}
+Springer has proved that $H^l(G,C)$ is of dimension $1$ over $C$
+\todo[pinktask]{$C$ son los complejos o qué} (cf.\ Tate \ref{39}, \S3.3). Hence,
+one can take for basis of $H^l(G,C)$ the element $L\bar{\chi}$, where $\chi$ is
+the fundamental character defined in chap.~I, 1.2. In particular, for any $\phi
+\colon G \to K^\times$, there is an element $c(\phi)$ of $C$ such that
+$L\bar{\phi} = c(\phi)L\bar{\chi}$; when $K$ is locally compact, this $c(\phi)$
+may be computed explicitly, see A\ref{sec:III_A6}, Exer. 2.
+\end{obs}
+
 \subsection{A criterion for local triviality}
 \label{sec:III_A3}
 
@@ -1334,7 +1447,7 @@ The following two properties are equivalent:
 \end{prop}
 
 \begin{proof}
-(1) $\implies$ (2) is trivial from the result of A\ref{sec:III_A1} (since we know that
+(1) $\implies$ (2) is trivial from the result of \ref{sec:III_A1} (since we know that
 admissibility can be seen on an open subgroup of the inertia group).
 
 (2= $\implies$ (1). We use the $\log$ map defined in A2. Note that $\psi$ takes
@@ -1355,24 +1468,106 @@ f = \sum_{\sigma \in \Gamma_E} k_\sigma \sigma
 \]
 
 and we have $f \circ \log \psi = \sum k_\sigma \log(\sigma \circ \psi)$.
+
 \dpage
 
-But by assumption (and Prop.~3 of A\ref{sec:III_A2}), the additive $1$-cocycle $\log(\sigma
+But by assumption (and Prop.~3 of \ref{sec:III_A2}), the additive $1$-cocycle $\log(\sigma
 \circ \psi) \colon  G \to K$ is cohomologous to $0$. Hence the same is true for
 $ f \circ \log \psi$. But we may assume (replacing $f$ by $p^Nf$,  with $N$
 large, if necessary) that there exists a continuous homomorphism $F \colon U_E
 \to U_K$ such that $f \circ \log = \log \circ F$. We then have $\log (F \circ
-\psi) = f \circ \log \psi$ and hence (cf.\ Prop.~3 of A\ref{sec:III_A2}), $F
+\psi) = f \circ \log \psi$ and hence (cf.\ Prop.~3 of \ref{sec:III_A2}), $F
 \circ \psi \sim 1$, i.e.\ $F \circ \psi$ is admissible. But $F \circ \psi$ has
 now the property that $F \circ \psi(I) \subset U_K$ is a $p$-adic Lie group of
 dimension $1$ (product of $\Z_p$ with a finite group). This contradicts a
 theorem of Tate (\ref{39}, \S3, Th. 2), hence the result.
 \end{proof}
 
-\todo[section]{Belén.}
-
 \subsection{The character \texorpdfstring{$\xi$}{ξ}}%
 \label{sec:III_A4}
+
+We keep the same hypotheses on $K$ and $E$ as in the previous section. By class
+field theory, the group $\abcl{\Gal(\overline{K}/K)}$ may be identified with the
+completion $\hat{E}^\times$ of $E^\times$ with respect to the topology of open
+subgroups of finite index. In particular, we have an exact sequence
+\[
+	1 \rightarrow U_E \rightarrow \abcl{\Gal(\overline{K}/K)} \rightarrow
+\hat{\Z} \rightarrow 1,
+\]
+
+where $\hat{\Z} \cong \prod \Z_\ell$ denotes the completition of $\Z$ with
+respect to the topology of subgroups of finite index (cf.\ for instance
+Artin-Tate \ref{2} or Cassels-Fröhlich \ref{6}, Chap.~VI,\S2).
+
+\dpage
+
+Let now $\pi$ be a uniformizing element of $E$. The image of $\pi$ in
+$\abcl{\Gal(\overline{K}/K)}$ generates a subgroup whose closure is isomorphic
+to $\hat{\Z}$, and this gives an isomorphism:
+\[
+	\abcl{\Gal(\overline{K}/K)} \cong U_E \times \hat{\Z}
+\]
+\todo[pinktask]{¿usó el mismo símbolo de isomorfismo ahora y la línea anterior?}
+
+Let $\pr_\pi \colon  \abcl{\Gal(\overline{K}/K)} \to U_E$ be the projection
+associated with this decomposition (the Galois extension of $E$ corresponding to
+$\Ker(\pr_\pi)$) is a norm, cf.\ \ref{6}, p. 144-145).
+
+On the other hand, the inclusion $E \to K$ defines a homomorphism
+$\Gal(\overline{K}/K) \to \Gal(\overline{E}/E)$, hence also a homomorphism
+\[
+	r_E \colon G \to \abcl{\Gal(\overline{K}/K)}.
+\]
+
+Define $\chi_{E, \pi}$ (abbr.\ $\chi_E$) to be the composite homomorphism
+\[
+	G \rightarrow \abcl{\Gal(\overline{K}/K)} \rightarrow U_E
+\overset{i}{\rightarrow} U_E,
+\]
+
+where $i(x) = x^{-1}$ for $x \in U_E$. Observe that the restriction of $\chi_E$
+to the intertia group of $G$ is $x \mapsto r_e(x^{-1})$, and hence \emph{is
+independent of the choice of} $ \pi$.
+
+\begin{prop}
+Let $F_\pi$ be the Lubin-Tate formal group (\ref{17}, see also \ref{6},
+chap.~VI, \S3) associated to $E$ and $ \pi$. Let $T$ be its Tate-module, which
+is free of rank $!$ over the ring $\mathcal{O}_E$ of integers of $E$. The action
+of $\mathcal{O}_E$ of integers of $E$. This action of $\Gal(\overline{K}/K)$ on
+$T$ is given by the character $\chi_E \colon G \to U_E$, defined above.
+\end{prop}
+\dpage
+
+This follows from the main theorem of \ref{17} (see also \ref{6}, Th.~3, p.
+149).
+
+\begin{cor}
+If $E = \Q_p$ and $\pi = p$, then the character $\chi_E$ coincides with the
+character $\chi$ defined in chap.~\ref{ch:i}, \ref{sec:I_12}. 
+\todo[pinktask]{¿Está bien la enumeración?}
+\end{cor}
+
+Indeed, the Lubin-Tate group is now the multiplicative group $G_\mathfrak{m}$
+and its Tate module is the module $T_p(\mu)$ defined in chap.~\ref{ch:i},
+\ref{sec:I_12}.
+
+\begin{obs}
+If $K$ is locally compact, we may identify $\abcl{G}$ to $\hat{K}^\times$ and
+the character $\chi_E$ is given by
+\[
+	\hat{K}^\times \overset{N}{\rightarrow} \hat{E}^\times
+\overset{\pr_\pi}{\rightarrow} U_E \overset{i}{\rightarrow} U_E,
+\]
+
+where $N = N_{K/E}$ is the norm map. [This follows from the functorial
+properties of the ``reciprocity law'' of local class field theory.]
+
+In particular, the restriction of $\chi_E$ to the inertia subgroup $U_K$ of
+$\abcl{G}$ is $x \mapsto N_{K/E}(x^{-1})$.
+\end{obs}
+
+
+
 \todo[section]{Belén.}
 
 \subsection{Characters associated with Hodge-Tate decompositions}
