@@ -33,11 +33,11 @@ Let $V$ be a finite dimensional $\Q_p$-vector space and denote, as usual, by
 $\GL_V$ the corresponding linear group; it is an algebraic group over $\Q_{p'}$
 and $\GL_V(\Q_p) = \Aut(V)$.
 
-Let $\rho \colon \abcl{\Gal(algcl{K}/K)} \to \Aut(V)$ be an abelian $p$-adic
+Let $\rho \colon \abcl{\Gal(\algcl{K}/K)} \to \Aut(V)$ be an abelian $p$-adic
 representation of $K$ in $V$, where $\abcl{\Gal(\algcl K/K)}$ denotes the Galois
 group of the maximal abelian extension of $K$.
 If $i \colon K^\times \to \abcl{\Gal(\algcl K/K)}$ is the canonical homomorphism
-of local class field theory (cf.\ for instance Cassels - Fr\"ohlich \cite{6},
+of local class field theory (cf.\ for instance \citeauthor{6}~\cite{6},
 chap.~VI, \S2), we then get a continuous homomorphism $\rho \circ i$ of
 $K^\times = \TT(\Q_p)$ into $\Aut(V)$.
 
@@ -72,7 +72,7 @@ with a locally algebraic representation)}.
 \end{ex}
 
 \begin{prop}
-	Let $\rho \colon \abcl{\Gal(algcl{K}/K)} \to \Aut(V)$ be a locally
+	Let $\rho \colon \abcl{\Gal(\algcl{K}/K)} \to \Aut(V)$ be a locally
 	algebraic abelian representation of $K$. The restriction of $\rho$ to
 	the inertia subgroup of $\abcl{\Gal(\algcl K/K)}$ is semi-simple.
 \end{prop}
@@ -100,7 +100,7 @@ We assume $E$ large enough to contain all conjugates of $K$ into $E$. Recall
 (cf.\ Chap. \ref{ch:ii}, \ref{sec:II_11}) that the $[\sigma]$, $\sigma\in
 \Gamma_K$, make a basis of the character group $X(\TT)$ of $\TT$.
 
-\begin{prop}
+\begin{prop}\label{prop:III_11_2}
 The representation $\rho$ is locally algebraic if and only if there exists
 integer $n_\sigma(i)$ such that
 \dpage
@@ -301,7 +301,7 @@ Since $K \otimes_\Q \Q_\ell = \prod_{v \mid \ell} K_v$, we have
 \[
 \TT_{/\Q_\ell} = \prod_{v \mid \ell} T_v,
 \]
-where $T_v$ is the $\Q_\ell$-torus defined by $K_v$, cf.~\ref{III:sec_11}. The 
+where $T_v$ is the $\Q_\ell$-torus defined by $K_v$, cf.~\ref{sec:III_11}. The 
 proposition follow from this decomposition. 
 
 \subsubsection*{Exercise}
@@ -556,7 +556,8 @@ case of rational representations:
 	$\Q$.
 \end{cor}
 This follows from the corresponding property of $\phi_\ell$, cf.\
-chapter~\ref{ch:ii}, \ref{sec:II_25}, Remark~\ref{rmk:II_25_1}.
+chapter~\ref{ch:ii}, \ref{sec:II_25}, Remark~\ref{sec:II_25_1}.
+
 \dpage
 \subsection{A mild generalization}
 \label{sec:III_24}
@@ -565,8 +566,10 @@ Most results of this and the previous Chapter may be extended to the case where
 we take for ground field of the linear representation a number field $E$
 (instead of $\Q$). More precisely, let $\lambda$ be a finite place of $E$ and
 let $E_\lambda$ be the $\lambda$-adic completion of $E$. The notion of an
-$E$-rational $\lambda$-adic representation of $K$ has been defined in chap.
-\ref{ch:i}, \ref{sec:I_23}, Remark. \todo[pinktask]{referenciar el remark?} Let 
+$E$-rational $\lambda$-adic representation of $K$ has been defined in
+chap.~\ref{ch:i}, \ref{sec:I_23}, Remark.
+\todo[pinktask]{referenciar el remark?}
+Let
 \[
 	\rho \colon \Gal(algcl{K}/K) \to \Aut(V_\lambda)
 \]
@@ -1022,12 +1025,12 @@ of a finite group and a free abelian group of infinite rank.
 
 We go back to the notations and hypotheses of \ref{sec:III_31}. Let
 \[
-	\rho \colon \abcl{\Gal(algcl{K}/K)} \rightarrow \Aut(V_\ell)
+	\rho \colon \abcl{\Gal(\algcl{K}/K)} \rightarrow \Aut(V_\ell)
 \]
 be a rational, semi-simple, abelian $\ell$-adic representation of $K$. If $E$ is
-the completion of $ \overline{\Q_\ell} $, as in \ref{sec:III_33}, we may bring 
+the completion of $\algcl{\Q}_\ell$, as in \ref{sec:III_33}, we may bring 
 $\rho$ in diagonal form over $E$. This gives rise to a family $(\psi_1,
-\hdots,\psi_n)$ of continuous characters of $\abcl{\Gal(algcl{K}/K)}$ (hence
+\hdots,\psi_n)$ of continuous characters of $\abcl{\Gal(\algcl{K}/K)}$ (hence
 also of the idèle group $I$) into $E^\times$; here, $n = \dim V_\ell$.
 
 Let $f_i \colon  K_\ell^\times \to E^\times$ be the restriction of $\psi_i$ to
@@ -1037,7 +1040,7 @@ $K$ (chap. \ref{ch:ii}, \ref{sec:II_11}).
 
 \begin{lem}
 The torus $\TT$ and the homomorphism $f_i$ satisfy the assumptions (a) and (b)
-of Prop.~2, \ref{sec:III_33}. 
+of Prop.~\ref{prop:III_33_2} of \ref{sec:III_33}. 
 \end{lem}
 
 \subsubsection*{Verification of (a)}
@@ -1045,8 +1048,8 @@ of Prop.~2, \ref{sec:III_33}.
 Let $S$ be a finite set of primes, with $\ell \not\in S$, such that if $v \in
 M_K$, $p_v \neq \ell$, $p_v \not\in S$, the representation $\rho$ is unramified
 at $v$, and the characteristic polynomial of $F_{v,\rho}$ has rational
-coefficients. If $p
-\in S$, Prop.~1 of \ref{sec:III_22} shows that there exists an open subgroup
+coefficients. If $p \in S$, Prop.~\ref{prop:III_22_1} of \ref{sec:III_22} shows
+that there exists an open subgroup
 $W_p$ of $K_p^\times = \TT(\Q_p)$ such that $\psi_i(W_p) = 1$. Let $W =
 (W_p)_{p \in S}$ and let $x \in \TT(\Q)_W$. Since $x \in K$, we have $\psi_i(x)
 = 1$, when $x$ is identified with an idèle of $K$. On the other hand, let us
@@ -1056,8 +1059,9 @@ split the idèle $x$ in its components.
 \]
 \dpage
 according to the descomposition of $I$ in
-\[ I = K_\infty^\times \times K_\ell^\times \times K_S^\times \times I'.\]
-
+\[
+	I = K_\infty^\times \times K_\ell^\times \times K_S^\times \times I'.
+\]
 (Here $K^\times = (K \otimes R)^\times$, $K_S^\times = \prod_{p \in S}
 K^\times_p$ and $I'$ is the restricted product of the $K_v^\times$, for $v \in
 M_K$, and $p_v \neq \ell$, $p_v \not\in S$.) The relation $\psi_i(x)=1$,
@@ -1065,7 +1069,6 @@ together with $\psi_i(x_\ell) = f_i(x)$, gives
 \[
 	f_i(x)^{-1} = \psi_i(x_\infty) \psi_i(x_S) \psi_i(x').
 \]
-
 By construction, we have $\psi_i(x_S) = 1$ and it is clear that
 $\psi_i(x_\infty) = \pm 1$.
 
@@ -1073,7 +1076,6 @@ Hence:
 \[
 	f_i(x) = \pm \psi_i(x')^{-1}.
 \]
-
 But, for each $v \in M_K$, with $p_v \not\in S$, $p_v \neq \ell$, we know that
 the eigenvalues of $F_{v,\rho}$ are algebraic; hence, if $f_v$ is an idèle which
 is a uniformizing element at $v$, and is equal to $1$ elsewhere, $\psi_i(f_v)$
@@ -1096,7 +1098,7 @@ character of $G$). Hence $\TT$ is a sum of one-dimensional tori.
 \subsubsection*{End of the proof of the theorem}
 
 \begin{proof}
-Using prop.~2 of \ref{sec:III_33}, we see that each $f_i$ is \emph{almost
+Using prop.~\ref{prop:III_33_2} of \ref{sec:III_33}, we see that each $f_i$ is \emph{almost
 locally algebraic}. Hence there is an integer $N \geq 1$ such that the
 $f_i^{N}$ are locally algebraic. This implies, cf.\ \ref{sec:III_11}, that
 $\rho^N$ is locally algebraic, hence (cf.\ \ref{sec:III_32}) that $\rho$ itself
@@ -1108,9 +1110,9 @@ is locally algebraic.
 Assume that $K$ is a composite of quadratic fields. Let $\chi$ be a
 \strong{Grössencharakter} of $K$ and suppose that the values of $\chi$ (on the
 ideals prime to the conductor) are algebraic numbers. Show that $\chi$ is ``of
-type of $(A)$'' in the sense of Weil \ref{41}. (Use the same method than above,
+type of $(A)$'' in the sense of Weil \cite{41}. (Use the same method than above,
 with $E$ replaced by C.) If the values of $\chi$ lie in a finite extension of
-$\Q$, show that $\chi$ is ``of type $(A_\circ)$''.
+$\Q$, show that $\chi$ is ``of type $(A_0)$''.
 
 \begin{subappendices}
 
@@ -1335,36 +1337,29 @@ We now apply the $\log$ map to the cohomology groups of $G$ with values in
 $U_C,~C,~C^\times, \hdots$ (cohomology being, as usual, defined by
 \emph{continuous} cochains). First, since the valuation group of $C$ in $\Q$, we
 have the exact sequence
-\[
-	1 \rightarrow U_C \rightarrow C^\times \rightarrow \Q \rightarrow 1.
-\]
-
-By Tate's theorem (\ref{39}, \S 3.3) one has $H^0(G, C^\times) = K^\times$,
+\[\begin{tikzcd}
+	1 \rar & U_C \rar & C^\times \rar & \Q \rar & 1.
+\end{tikzcd}\]
+By Tate's theorem (\cite{39}, \S 3.3) one has $H^0(G, C^\times) = K^\times$,
 hence an exact sequence
-\[
-	K^\times \rightarrow \Q \rightarrow H^1(G, U_C) \rightarrow
-H^1(G,C^\times) \rightarrow 0,
-\]
-
+\[\begin{tikzcd}
+	K^\times \rar & \Q \rar & H^1(G, U_C) \rar & H^1(G,C^\times) \rar & 0,
+\end{tikzcd}\]
 \dpage
-
 or equivalently: 
-\[
-	0 \rightarrow \Q / \Z \overset{\delta}{\rightarrow} H^l(G, U_C)
-\overset{i}{\rightarrow} H^l(G, C^\times) \rightarrow 0.
-\]
-
+\[\begin{tikzcd}
+	0 \rar & \Q / \Z \rar["\delta"] & H^l(G, U_C) \rar["i"] & H^l(G,
+	C^\times) \rar & 0.
+\end{tikzcd}\]
 Let $N = \Ker(\log)$. We have the exact sequence
-\[
-	H^l(G,N) \overset{j}{\rightarrow} H^l(G,U_C)
-\overset{\lambda}{\rightarrow} H^l(G,C),  
-\]
-
+\[\begin{tikzcd}
+	H^l(G,N) \rar["j"] & H^l(G,U_C) \rar["\lambda"] & H^l(G,C),
+\end{tikzcd}\]
 where $\lambda$ is induced by the $\log$. Since $H^l(G,C)$ is a $C$-vector
 space, the composite $\lambda \circ \delta \colon \Q / \Z \to H^l(G,C)$ is $0$,
 hence there is a unique map
 \[
-	L \colon H^l(G,C^\times) \to H^l(G,C)  
+	L \colon H^l(G,C^\times) \longrightarrow H^l(G,C)  
 \]
 such that $L \circ i = \lambda$.
 
@@ -1377,8 +1372,7 @@ Using the exact sequence above, one sees it is enough to prove that $i \circ j
 \colon H^l(G,N) \to H^l(G,C^\times)$ is trivial. But $N$ is a discrete subgroup
 of $\algcl{K}^\times$, hence $i \circ j$ factors through $H^l(G,
 \algcl{K}^\times$, where now $\algcl{K}^\times$ is viewes as a discrete group;
-by Theorem 90 \todo[pinktask]{¿Cómo dice que dijo 90?} $H^l(G,
-\algcl{K}^\times)$ is trivial, hence also $i \circ j$.
+by Theorem~90 $H^l(G, \algcl{K}^\times)$ is trivial, hence also $i \circ j$.
 \end{proof}
 
 Let now $\phi \colon G \to K^\times$ be a continuous character. Since $\phi(G)$
@@ -1389,47 +1383,46 @@ $H^l(G,C^\times)$.
 
 \dpage
 
-\begin{prop}
-The properties $\phi \sim 1$ and $L\bar{\phi} = 0$ are equivalent.
+\begin{prop}\label{prop:III_A2_3}
+	The properties $\phi \sim 1$ and $L\bar{\phi} = 0$ are equivalent.
 \end{prop}
-
 \begin{proof}
-This follows from the ijectivity of $L$.
+This follows from the injectivity of $L$.
 \end{proof}
 
 \begin{cor}
 If there exists a non-zero integer $n$ such that $\phi^n \sim 1$, then $\phi
 \sim 1$.
 \end{cor}
-
 \begin{proof}
-Indeed, $L\bar{\phi} = \frac{1}{n} L\bar{\phi}^n = 0$
+Indeed, $L\bar{\phi} = \frac{1}{n} L\bar{\phi}^n = 0$.
 \end{proof}
 
 \begin{obs}
 Springer has proved that $H^l(G,C)$ is of dimension $1$ over $C$
-\todo[pinktask]{$C$ son los complejos o qué} (cf.\ Tate \ref{39}, \S3.3). Hence,
+\todo[pinktask]{$C$ son los complejos o qué} (cf.\ Tate \cite{39}, \S3.3). Hence,
 one can take for basis of $H^l(G,C)$ the element $L\bar{\chi}$, where $\chi$ is
-the fundamental character defined in chap.~I, 1.2. In particular, for any $\phi
-\colon G \to K^\times$, there is an element $c(\phi)$ of $C$ such that
-$L\bar{\phi} = c(\phi)L\bar{\chi}$; when $K$ is locally compact, this $c(\phi)$
-may be computed explicitly, see A\ref{sec:III_A6}, Exer. 2.
+the fundamental character defined in chap.~\ref{ch:i}, \ref{sec:I_12}.
+In particular, for any $\phi \colon G \to K^\times$, there is an element
+$c(\phi)$ of $C$ such that $L\bar{\phi} = c(\phi)L\bar{\chi}$; when $K$ is
+locally compact, this $c(\phi)$ may be computed explicitly, see
+\ref{sec:III_A6}, Exer. 2.
 \end{obs}
 
 \subsection{A criterion for local triviality}
 \label{sec:III_A3}
 
 From now on, $E$ denotes a subfield of $K$ having the following properties: 
-\begin{center}
-(a) $E$ contains $\Q_p$ and $[E : \Q_p] < \infty$ (so that $E$ is \emph{locally
+\begin{enumerate}[(a)]
+\item $E$ contains $\Q_p$ and $[E : \Q_p] < \infty$ (so that $E$ is \emph{locally
 compact}).
-(b) $K$ contains all $\Q_p$-conjugates of $E$.
-\end{center}
+\item $K$ contains all $\Q_p$-conjugates of $E$.
+\end{enumerate}
 
 We denote by $\Gamma_E$ the set of all $\Q_p$-embeddings of $E$ in $K$. Consider
 a continuous character
 \[
-\psi \colon \Gal(\overline{K}/K) \rightarrow E^\times
+	\psi \colon \Gal(\overline{K}/K) \rightarrow E^\times
 \]
 
 with values in $E$. For each $\sigma \in \Gamma_E$ this gives a character
@@ -1440,10 +1433,10 @@ $\sigma \circ \psi \colon G \to E^\times \to K^\times$ of $G =
 
 \begin{prop}
 The following two properties are equivalent:
-\begin{center}
-(1) $\psi$ is equal to $1$ on an open subgroup of the inertia group of $G$.
-(2) $\sigma \circ \psi \sim 1$ for all $\sigma \in \Gamma_E$.
-\end{center}
+\begin{enumerate}[(1)]
+\item $\psi$ is equal to $1$ on an open subgroup of the inertia group of $G$.
+\item $\sigma \circ \psi \sim 1$ for all $\sigma \in \Gamma_E$.
+\end{enumerate}
 \end{prop}
 
 \begin{proof}
@@ -1471,16 +1464,18 @@ and we have $f \circ \log \psi = \sum k_\sigma \log(\sigma \circ \psi)$.
 
 \dpage
 
-But by assumption (and Prop.~3 of \ref{sec:III_A2}), the additive $1$-cocycle $\log(\sigma
-\circ \psi) \colon  G \to K$ is cohomologous to $0$. Hence the same is true for
-$ f \circ \log \psi$. But we may assume (replacing $f$ by $p^Nf$,  with $N$
-large, if necessary) that there exists a continuous homomorphism $F \colon U_E
-\to U_K$ such that $f \circ \log = \log \circ F$. We then have $\log (F \circ
-\psi) = f \circ \log \psi$ and hence (cf.\ Prop.~3 of \ref{sec:III_A2}), $F
-\circ \psi \sim 1$, i.e.\ $F \circ \psi$ is admissible. But $F \circ \psi$ has
-now the property that $F \circ \psi(I) \subset U_K$ is a $p$-adic Lie group of
-dimension $1$ (product of $\Z_p$ with a finite group). This contradicts a
-theorem of Tate (\ref{39}, \S3, Th. 2), hence the result.
+But by assumption (and Prop.~\ref{prop:III_A2_3} of \ref{sec:III_A2}), the
+additive $1$-cocycle $\log(\sigma \circ \psi) \colon  G \to K$ is cohomologous
+to $0$. Hence the same is true for $ f \circ \log \psi$.
+But we may assume (replacing $f$ by $p^Nf$,  with $N$ large, if necessary) that
+there exists a continuous homomorphism $F \colon U_E \to U_K$ such that $f
+\circ \log = \log \circ F$.
+We then have $\log (F \circ \psi) = f \circ \log \psi$ and hence (cf.\
+Prop.~\ref{prop:III_A2_3} of \ref{sec:III_A2}), $F \circ \psi \sim 1$, i.e.\ $F
+\circ \psi$ is admissible.
+But $F \circ \psi$ has now the property that $F \circ \psi(I) \subset U_K$ is a
+$p$-adic Lie group of dimension $1$ (product of $\Z_p$ with a finite group).
+This contradicts a theorem of Tate (\cite{39}, \S3, Th.~2), hence the result.
 \end{proof}
 
 \subsection{The character \texorpdfstring{$\xi$}{ξ}}%
@@ -1490,14 +1485,12 @@ We keep the same hypotheses on $K$ and $E$ as in the previous section. By class
 field theory, the group $\abcl{\Gal(\overline{K}/K)}$ may be identified with the
 completion $\hat{E}^\times$ of $E^\times$ with respect to the topology of open
 subgroups of finite index. In particular, we have an exact sequence
-\[
-	1 \rightarrow U_E \rightarrow \abcl{\Gal(\overline{K}/K)} \rightarrow
-\hat{\Z} \rightarrow 1,
-\]
-
+\[\begin{tikzcd}
+	1 \rar & U_E \rar & \abcl{\Gal(\overline{K}/K)} \rar & \hat{\Z} \rar & 1,
+\end{tikzcd}\]
 where $\hat{\Z} \cong \prod \Z_\ell$ denotes the completition of $\Z$ with
 respect to the topology of subgroups of finite index (cf.\ for instance
-Artin-Tate \ref{2} or Cassels-Fröhlich \ref{6}, Chap.~VI,\S2).
+\citeauthor{2}~\cite{2} or \citeauthor{6}~\cite{6}, Chap.~VI, \S2).
 
 \dpage
 
@@ -1507,68 +1500,59 @@ to $\hat{\Z}$, and this gives an isomorphism:
 \[
 	\abcl{\Gal(\overline{K}/K)} \cong U_E \times \hat{\Z}
 \]
-\todo[pinktask]{¿usó el mismo símbolo de isomorfismo ahora y la línea anterior?}
+% \todo[pinktask]{¿usó el mismo símbolo de isomorfismo ahora y la línea anterior?}
 
 Let $\pr_\pi \colon  \abcl{\Gal(\overline{K}/K)} \to U_E$ be the projection
 associated with this decomposition (the Galois extension of $E$ corresponding to
-$\Ker(\pr_\pi)$) is a norm, cf.\ \ref{6}, p. 144-145).
+$\Ker(\pr_\pi)$) is a norm, cf.\ \cite[144-145]{6}).
 
 On the other hand, the inclusion $E \to K$ defines a homomorphism
 $\Gal(\overline{K}/K) \to \Gal(\overline{E}/E)$, hence also a homomorphism
 \[
-	r_E \colon G \to \abcl{\Gal(\overline{K}/K)}.
+	r_E \colon G \longrightarrow \abcl{\Gal(\overline{K}/K)}.
 \]
-
 Define $\chi_{E, \pi}$ (abbr.\ $\chi_E$) to be the composite homomorphism
-\[
-	G \rightarrow \abcl{\Gal(\overline{K}/K)} \rightarrow U_E
-\overset{i}{\rightarrow} U_E,
-\]
-
-where $i(x) = x^{-1}$ for $x \in U_E$. Observe that the restriction of $\chi_E$
-to the intertia group of $G$ is $x \mapsto r_e(x^{-1})$, and hence \emph{is
-independent of the choice of} $ \pi$.
+\[\begin{tikzcd}
+	G \rar & \abcl{\Gal(\overline{K}/K)} \rar & U_E \rar["i"] & U_E,
+\end{tikzcd}\]
+where $i(x) = x^{-1}$ for $x \in U_E$.
+Observe that the restriction of $\chi_E$ to the intertia group of $G$ is $x
+\mapsto r_E(x^{-1})$, and hence \emph{is independent of the choice of} $\pi$.
 
 \begin{prop}
-Let $F_\pi$ be the Lubin-Tate formal group (\ref{17}, see also \ref{6},
-chap.~VI, \S3) associated to $E$ and $ \pi$. Let $T$ be its Tate-module, which
-is free of rank $!$ over the ring $\mathcal{O}_E$ of integers of $E$. The action
-of $\mathcal{O}_E$ of integers of $E$. This action of $\Gal(\overline{K}/K)$ on
-$T$ is given by the character $\chi_E \colon G \to U_E$, defined above.
+Let $F_\pi$ be the Lubin-Tate formal group (\cite{17}, see also \cite{6},
+chap.~VI, \S3) associated to $E$ and $\pi$.
+Let $T$ be its Tate-module, which is free of rank $1$ over the ring
+$\mathcal{O}_E$ of integers of $E$.
+The action of $\Gal(\overline{K}/K)$ on $T$ is given by the character $\chi_E
+\colon G \to U_E$, defined above.
 \end{prop}
+
+This follows from the main theorem of \cite{17} (see also \cite[149]{6}, Th.~3).
 \dpage
 
-This follows from the main theorem of \ref{17} (see also \ref{6}, Th.~3, p.
-149).
-
-\begin{cor}
+\begin{corp}
 If $E = \Q_p$ and $\pi = p$, then the character $\chi_E$ coincides with the
 character $\chi$ defined in chap.~\ref{ch:i}, \ref{sec:I_12}. 
-\todo[pinktask]{¿Está bien la enumeración?}
-\end{cor}
+\end{corp}
 
-Indeed, the Lubin-Tate group is now the multiplicative group $G_\mathfrak{m}$
+Indeed, the Lubin-Tate group is now the multiplicative group $\GG_m$
 and its Tate module is the module $T_p(\mu)$ defined in chap.~\ref{ch:i},
 \ref{sec:I_12}.
 
 \begin{obs}
 If $K$ is locally compact, we may identify $\abcl{G}$ to $\hat{K}^\times$ and
 the character $\chi_E$ is given by
-\[
-	\hat{K}^\times \overset{N}{\rightarrow} \hat{E}^\times
-\overset{\pr_\pi}{\rightarrow} U_E \overset{i}{\rightarrow} U_E,
-\]
-
-where $N = N_{K/E}$ is the norm map. [This follows from the functorial
+\[\begin{tikzcd}
+	\hat{K}^\times \rar["{\Nm}"] & \hat{E}^\times \rar["\pr_\pi"] & U_E
+	\rar["i"] & U_E,
+\end{tikzcd}\]
+where $\Nm = \Nm_{K/E}$ is the norm map. [This follows from the functorial
 properties of the ``reciprocity law'' of local class field theory.]
 
 In particular, the restriction of $\chi_E$ to the inertia subgroup $U_K$ of
-$\abcl{G}$ is $x \mapsto N_{K/E}(x^{-1})$.
+$\abcl{G}$ is $x \mapsto \Nm_{K/E}(x^{-1})$.
 \end{obs}
-
-
-
-\todo[section]{Belén.}
 
 \subsection{Characters associated with Hodge-Tate decompositions}
 \label{sec:III_A5}

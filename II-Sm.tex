@@ -505,7 +505,7 @@ $S_{\mathfrak{m}}$.
 \label{sec:II_24}
 We recall first some well known facts on representations.
 
-\begin{enumerate}[a)]
+\begin{enumerate}[a), wide]
 \item Let $k$ be a field of characteristic 0; let $H$ be an affine
 	\dpage
 	commutative algebraic group over $k$. Let $X(H) = \Hom_{\algcl
@@ -550,12 +550,11 @@ We recall first some well known facts on representations.
 	of isomorphism classes of linear semi-simple representations of $H$. If
 	$k_1$ is an extension of $k$, then scalar extension from $k$ to $k_1$
 	defines a map $\Rep_k(H) \to \Rep_{k_1}(H_{/k_1})$ which is easily seen
-	to be \emph{injective}. We say that an element of\break
+	to be \emph{injective}. We say that an element of
 	\emph{$\Rep_{k_1}(H_{/k_1})$ can be defined over $k$}, if it is in the
 	image of this map.
-\end{enumerate}
-\begin{prop}
 
+\begin{prop}
 The map $\phi \mapsto \theta_\phi$ defines a bijection between
 $\Rep_k(H)$ and the set of elements $\theta = \sum n_\chi \, \chi$ of
 $\Z[X(H)]$ which satisfy:
@@ -589,16 +588,15 @@ $\Z[X(H)]$ which satisfy:
 	the form \eqref{eqn:II_24star} above.
 \end{proof}
 
-\begin{corp}
+\begin{corp}\label{cor:II_24_1}
 In order that $\phi_1 \in \Rep_{k_1}(H_{/k_1})$ can be defined over $k$, it
 is necessary and sufficient that $\theta_{\phi_1} \in \Lambda \otimes_k k_1$
 belongs to $k_1$.
 \end{corp}
 
-\begin{enumerate}[resume*]
 	\item We return now to the groups $S_{\mathfrak{m}}$:
-\end{enumerate}
-\begin{prop}
+
+\begin{prop}\label{prop:II_24_2}
 Let $k_1$ be an extension of $k$ and let $\phi \in
 \Rep_{k_1}(S_{\mathfrak{m} /k_1})$. The following properties are equivalent:
 \begin{enumerate}[(i)]
@@ -645,9 +643,10 @@ $\lambda_\alpha(F_v) \in k$ for all $\alpha$; since $\Tr(\phi(F_v)) \in k$,
 we get $\lambda_\alpha(F_v) = 0$ for all $\alpha \ne \alpha_0$. By the lemma,
 the $F_v$'s, $v \in M$, are Zariski-dense in $H$; hence $\lambda_\alpha = 0$
 for $\alpha \ne \alpha_0$ and $\theta_\phi = \lambda_{\alpha_0}$ belongs to
-$\Lambda$ and (i) follows from the corollary to Proposition 1.
+$\Lambda$ and (i) follows from the corollary~\ref{cor:II_24_1}.
 \hfill
 \qedsymbol
+\end{enumerate}
 
 \subsubsection*{Exercise}
 Show that the characters of $S_{\mathfrak{m}}$ correspond in a one-one way to
@@ -669,7 +668,7 @@ linear representation of \texorpdfstring{$S_{\mathfrak{m}}$}{Sm}}
 \dpage
 
 \subsubsection{\texorpdfstring{$\ell$}{ℓ}-adic case}
-% \label{sssec:II_25_1}
+\label{sec:II_25_1}
 
 Let $V_\ell$ be a finite-dimensional $\Q_\ell$-vector space and
 \[
@@ -692,42 +691,45 @@ S_{\mathfrak{m}} (\Q_\ell)$ defined in~\ref{sec:II_23}, we get a map
 i.e.\ an \emph{abelian $\ell$-adic representation of} $K$ in $V_\ell$.
 
 \begin{prop}
-\begin{enumerate}[a)]
-	\item The representation $\phi_\ell$ is semi-simple.
-	\item Let $v \in M_K^0$, with $v \not\in \Supp(\mathfrak{m})$ and $p_v \neq 
+\begin{enumerate}[a), series=prII_25_1]
+\item\label{prop:II_25_a}
+	The representation $\phi_\ell$ is semi-simple.
+\item\label{prop:II_25_b}
+	Let $v \in M_K^0$, with $v \not\in \Supp(\mathfrak{m})$ and $p_v \neq 
 	\ell$.
-\todo[pinktask]{no pertence?}
-
-Then $\phi_\ell$ is unramified at $v$; the corresponding Frobenius element 
-$F_{v, \phi_v} \in \Aut(V_\ell)$ is equal to $\phi(F_v)$, where $F_v$ denotes 
-the element of $S_\mathfrak{m}(\Q)$ defined in~\ref{sec:II_23}.
-\dpage
-	\item The representation $\phi_\ell$ is rational (Chap.~\ref{ch:i},
-		\ref{sec:II_23}) if and only if $\phi$ can be defined over $\Q$
-		(cf.\ \ref{sec:II_24}).
+	% \todo[pinktask]{no pertence?}
+	Then $\phi_\ell$ is unramified at $v$; the corresponding Frobenius element 
+	$F_{v, \phi_v} \in \Aut(V_\ell)$ is equal to $\phi(F_v)$, where $F_v$ denotes 
+	the element of $S_\mathfrak{m}(\Q)$ defined in~\ref{sec:II_23}.
+	\dpage
+\item\label{prop:II_25_c}
+	The representation $\phi_\ell$ is rational (Chap.~\ref{ch:i},
+	\ref{sec:II_23}) if and only if $\phi$ can be defined over $\Q$
+	(cf.\ \ref{sec:II_24}).
 \end{enumerate}
 \end{prop}
 
 Since $S_\mathfrak{m}$ is a group of multiplicative type, all its 
 representations can be brought to diagonal form on a suitable extension of the 
-ground field; hence a). Assertion b) follows from~\ref{sec:II_23}, and 
-assertion c) follows from prop.~2 of~\ref{sec:II_24}.
+ground field; hence \ref{prop:II_25_a}. Assertion \ref{prop:II_25_b} follows
+from~\ref{sec:II_23}, and assertion \ref{prop:II_25_c} follows from
+prop.~\ref{prop:II_24_2} of~\ref{sec:II_24}.
 
 \begin{obs}
 Let us identify $\phi_\ell$ with the corresponding homomorphism of the idèle 
 group $I$ into $\Aut(V_\ell)$. Then
-\begin{enumerate}
-	\item[d)] $\Ker(\phi_\ell)$ contains $U_{v , \mathfrak{m}}$ if $v \not\in 
-	\Supp(\mathfrak{m})$, $p_v \neq \ell$.
-	\item[e)]  Let $\phi_T \colon T_{/\Q_\ell} \to \GL_{V_\ell}$ be defined by 
-	composing $T_{/\Q_\ell} \to S_{\mathfrak{m}/\Q_\ell}$ with $\phi$. If $x$ 
-	belongs to the open subgroup $U_{\ell , \mathfrak{m}} = \prod_{v \mid \ell} 
-	U_{v , \mathfrak{m}}$ of $T(\Q_\ell)$, one has
+\begin{enumerate}[resume*=prII_25_1]
+\item $\Ker(\phi_\ell)$ contains $U_{v , \mathfrak{m}}$ if $v \not\in 
+\Supp(\mathfrak{m})$, $p_v \neq \ell$.
+\item Let $\phi_T \colon \TT_{/\Q_\ell} \to \GL_{V_\ell}$ be defined by 
+composing $\TT_{/\Q_\ell} \to S_{\mathfrak{m}/\Q_\ell}$ with $\phi$. If $x$ 
+belongs to the open subgroup $U_{\ell , \mathfrak{m}} = \prod_{v \mid \ell} 
+U_{v , \mathfrak{m}}$ of $\TT(\Q_\ell)$, one has
 \[
 	\phi_\ell (x) = \phi_T(x^{-1}).
 \]
 These properties follow readily from those of $\varepsilon_\ell$.
-\todo[pinktask]{Es T de toro?}
+% \todo[pinktask]{Es T de toro?}
 \end{enumerate}
 \end{obs}
 
@@ -1157,6 +1159,7 @@ In fact, given $c \in C_\infty$ and $\sigma \in \Gamma$, we have
 
 \subsection{The morphism \texorpdfstring{$j^* \colon \GG_m \to
 T_{\mathfrak{m}}$}{j*: Gm -> Tm}}
+\label{sec:II_32}
 We have seen that any character $\chi \in X(T_\mathfrak{m})$ can be written in 
 the form
 \[
@@ -1391,8 +1394,8 @@ are integral, this shows that the $n_\sigma(i)$'s are all positive.
 Let $v \not\in \Supp(\mathfrak{m})$ and let $\chi$ be a character of
 $S_{\mathfrak{m}}$. Let $\chi_\TT \in X(T_{\mathfrak{m}})$ be the restriction
 of $\chi$ to $T_{\mathfrak{m}}$ and let $i = j(\chi_\TT)$ be the integer
-defined in~\ref{sec:II_32}.  Then, for any archimedian absolute value $\omega$
-of $\algcl{\Q}$ extending the usual absolute value of $\algcl{Q}$, we have
+defined in \ref{sec:II_32}.  Then, for any archimedian absolute value $\omega$
+of $\algcl{\Q}$ extending the usual absolute value of $\algcl{\Q}$, we have
 \[
 	\omega(\chi (F_v)) = (\numnorm_v)^{i/2}.
 \]
@@ -1400,18 +1403,22 @@ of $\algcl{\Q}$ extending the usual absolute value of $\algcl{Q}$, we have
 
 \begin{proof}
 Si $\chi = a \sum_{\sigma \in \Gamma} [\sigma] + \sum_{\sigma \in \Gamma}
-b_\sigma[\sigma]$ as in~\ref{sec:II_31}, we have
+b_\sigma[\sigma]$ as in \ref{sec:II_31}, we have
 \[
 \omega(\chi(F_v))^N = \omega(\chi(F_v^N))
 = \prod_{\sigma} \omega \circ \sigma(\alpha)^a \cdot \prod_{\sigma} 
 \omega \circ \sigma(\alpha)^{b_\sigma},
 \]
-
 \dpage
-and $ \prod_{\sigma} \omega \circ \sigma(\alpha)^a = \omega(\Nm(\alpha))^a
-= \numnorm v^{i N/2}$, where $i = 2a$. It remains to show that 
+and
+\[
+	\prod_{\sigma} \omega \circ \sigma(\alpha)^a = \omega(\Nm(\alpha))^a
+	= \numnorm v^{i N/2},
+\]
+where $i = 2a$. It remains to show that 
 $\chi = \prod_{\sigma} \omega \circ \sigma(\alpha)^{b_\sigma}$ is equal to $1$. 
-Let $c = c_\omega$ be the ``Frobenius'' attached to $\omega$ (cf.~\ref{sec:3.1}). 
+Let $c = c_\omega$ be the ``Frobenius'' attached to $\omega$ (cf.\
+\ref{sec:II_31}). 
 Since $b_\sigma + b_{c \sigma} = 0$, we have $x \cdot y = 1$ with 
 $y = \prod_{\sigma} \omega \circ \sigma(\alpha)^{b_{c\sigma}}$. But 
 $y = \prod_{\tau} \omega \circ c \circ \tau(\alpha)^{b_\tau}$, and, since 

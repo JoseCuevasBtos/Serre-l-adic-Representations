@@ -51,7 +51,7 @@ and elliptic curves" (Addison-Wesley, 1989) into modern LaTeX.
         - [x] 2.3 Back to Sm
         - [x] 2.4 A mild generalization
         - [x] 2.5 The function field case
-    - [ ] 3 The case of a composite of quadratic fields
+    - [x] 3 The case of a composite of quadratic fields
         - [x] 3.1 Statement of the result
         - [x] 3.2 A criterion for local algebraicity
         - [x] 3.3 An auxiliary result on tori
@@ -90,7 +90,7 @@ and elliptic curves" (Addison-Wesley, 1989) into modern LaTeX.
             - [ ] A.2.1 The case l /= p
             - [x] A.2.2 The case l = p with good reduction of height 2
             - [x] A.2.3 Auxiliary results on abelian varieties
-            - [ ] A.2.4 The case l = p with good reduction of height 1
+            - [x] A.2.4 The case l = p with good reduction of height 1
 
 ## Credits
 This was done by José Cuevas Barrientos and Rocío Sepúlveda Manzo
