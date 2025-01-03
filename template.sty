@@ -43,6 +43,7 @@
 \newcommand{\GG}{\mathbb{G}}
 \renewcommand{\SS}{\mathbb{S}} % Circle/spheres
 
+
 \DeclareMathOperator{\Card}{Card}
 \DeclareMathOperator{\Occ}{Occ}
 
@@ -55,6 +56,7 @@
 \DeclareMathOperator{\GL}{GL}
 \DeclareMathOperator{\SL}{SL}
 \DeclareMathOperator{\SU}{SU}
+\DeclareMathOperator{\PSL}{PSL}
 \DeclareMathOperator{\Supp}{Supp}
 
 \DeclareMathOperator{\Id}{Id}
@@ -63,6 +65,7 @@
 \DeclareMathOperator{\sgn}{sgn}
 \DeclareMathOperator{\Rep}{Rep}
 \DeclareMathOperator{\Nm}{N}
+
 
 \DeclareMathOperator{\Gl}{\mathfrak{gl}}
 \DeclareMathOperator{\Sl}{\mathfrak{sl}}
@@ -78,7 +81,7 @@
 % \DeclareMathOperator{\sgn}{sgn}
 \DeclareMathOperator{\Ker}{Ker}
 \DeclareMathOperator{\Img}{Im}
-\renewcommand{\char}{\operatorname{char}}
+\renewcommand{\char}{\ensuremath{\operatorname{char}}}
 
 \newcommand{\abcl}[1]{#1^{\mathrm{ab}}}
 
@@ -137,7 +140,7 @@
 \pagestyle{fancy}
 \fancyhead[L,C,R]{}
 \fancyhead[LE, RO]{\thepage}
-\fancyhead[RE]{ABELIAN $\ell$-ADIC REPRESENTATIONS}
+\fancyhead[RE]{ABELIAN {$\ell$}-ADIC REPRESENTATIONS}
 \fancyhead[LO]{\MakeUppercase{\leftmark}}
 \renewcommand{\chaptermark}[1]{\markboth{#1}{}}
 \renewcommand{\headrule}{}
@@ -164,8 +167,8 @@
 \RequirePackage{color}
 \RequirePackage{float}
 \RequirePackage{tikz-cd}
-\RequirePackage{bmpsize}
-\DeclareGraphicsExtensions{.bmp,.png,.pdf,.jpg}
+% \RequirePackage{bmpsize}
+% \DeclareGraphicsExtensions{.bmp,.png,.pdf,.jpg}
 \usetikzlibrary{babel}
 
 \RequirePackage{csquotes}
@@ -176,6 +179,7 @@
 	style=nature,
 	sorting=nyt,
 	defernumbers=true,
+	loccittracker=true,
 	citestyle=numeric
 ]{biblatex}
 
