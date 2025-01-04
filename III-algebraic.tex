@@ -1512,12 +1512,23 @@ $\Gal(\overline{K}/K) \to \Gal(\overline{E}/E)$, hence also a homomorphism
 	r_E \colon G \longrightarrow \abcl{\Gal(\overline{K}/K)}.
 \]
 Define $\chi_{E, \pi}$ (abbr.\ $\chi_E$) to be the composite homomorphism
+<<<<<<< HEAD
 \[\begin{tikzcd}
 	G \rar & \abcl{\Gal(\overline{K}/K)} \rar & U_E \rar["i"] & U_E,
 \end{tikzcd}\]
 where $i(x) = x^{-1}$ for $x \in U_E$.
 Observe that the restriction of $\chi_E$ to the intertia group of $G$ is $x
 \mapsto r_E(x^{-1})$, and hence \emph{is independent of the choice of} $\pi$.
+=======
+\[
+	G \rightarrow \abcl{\Gal(\overline{K}/K)} \rightarrow U_E
+\overset{i}{\rightarrow} U_E,
+\]
+
+where $i(x) = x^{-1}$ for $x \in U_E$. Observe that the restriction of $\chi_E$
+to the inertia group of $G$ is $x \mapsto r_e(x^{-1})$, and hence \emph{is
+independent of the choice of} $ \pi$.
+>>>>>>> 54a831d (sync)
 
 \begin{prop}
 Let $F_\pi$ be the Lubin-Tate formal group (\cite{17}, see also \cite{6},
@@ -1534,7 +1545,11 @@ This follows from the main theorem of \cite{17} (see also \cite[149]{6}, Th.~3).
 \begin{corp}
 If $E = \Q_p$ and $\pi = p$, then the character $\chi_E$ coincides with the
 character $\chi$ defined in chap.~\ref{ch:i}, \ref{sec:I_12}. 
+<<<<<<< HEAD
 \end{corp}
+=======
+\end{cor}
+>>>>>>> 54a831d (sync)
 
 Indeed, the Lubin-Tate group is now the multiplicative group $\GG_m$
 and its Tate module is the module $T_p(\mu)$ defined in chap.~\ref{ch:i},
@@ -1556,6 +1571,99 @@ $\abcl{G}$ is $x \mapsto \Nm_{K/E}(x^{-1})$.
 
 \subsection{Characters associated with Hodge-Tate decompositions}
 \label{sec:III_A5}
+
+Retainging the notation of the previous sections, let $\rho \colon G \to U_E$ be
+a continuous homomorphism. Let $V$ be a one-dimensional vector space over $E$;
+we make $G$ act on $V$ by
+\[
+	(s,y) \mapsto \rho(s)y, \qquad s \in G, y \in V.
+\]
+
+Hence $V$ is a $G$-module. Let $W = C \otimes_{\Q_p} V$, where $C =
+\hat{\algcl{K}}$ as before.
+\dpage
+This is a $d$-dimensional vector space over $C$,
+\todo[pinktaks]{¿Es $C$ o $\C$?} where $d = [E : \Q_p]$. Every element $x$ of
+$E$ defines a $C$-endomorphism $a_x$ of $W$ by
+\[
+	a_x(\sum c_i \otimes y_i) = \sum c_i \otimes xy_i, c_i \in C, y_i \in V.
+\]
+
+We get in this way a representation of $E$ in the $C$-vector space $W$; note
+that the action of $a_x$ commutes with the action of $G$. 
+
+Let $\sigma \in \Gamma_E$ and put
+\[
+	W_\sigma = \{ w | w \in  W, \quad a_x(w) = \sigma(x) w \quad \text{for
+all } x \in E\}.
+\]
+
+\begin{lem}
+\begin{enumerate}[(a)]
+	\item Each $w_\sigma$ is a one-dimensional $C$-vector space stable by
+$G$.
+	\item $W$ is the direct sum of the $W_\sigma$'s, $\sigma \in \Gamma_E$.
+	\item For each $\sigma \in \Gamma_E$, the Galois module $W_\sigma$ is
+isomorphic to $C(\sigma \icrc \rho)$.
+\end{enumerate}
+\end{lem}
+[For the definition of the ``twisted'' module $C(\sigma \circ \rho$ see
+\ref{sec:III_A2}, Remark 3.]
+
+\begin{proof}
+The assertions (a) and (b) are consequences of the well-known fact that $C
+\oplus_{\Q_p} E$ is a product of $d$ copies of $C$, the projections $C
+\oplus_{\Q_p} V$, since $K$ contains all the $\Q_p$-conjugates of $E$; hence for
+each $\sigma \in \Gamma_E$, there exists a $w \in W_\sigma$ contained in $V_K$.
+\end{proof}
+
+For such a $w$, say $w = \sum k_i \oplus y_i \quad (k_i \in K, y_i \in V)$ we
+have
+
+\begin{align*}
+	a(w) &= \sum_k_i \oplu s(y_i)\\
+	&= \sum k_i \oplus \rho(s)y_i\\
+	&= a_{\rho(s)}w
+	&= \sigma \circ \rho(s)w, \qquad \text{since $w$ belongs to $W_\sigma$,}
+\end{align*}
+
+and this implies that $W_\sigma$ is isomorphic to $C(\sigma \circ \rho)$.
+
+If $\rho_1$ and $\rho_2$ are two characters of $G$ into $K^\times$, then we shall
+write $\rho_1 \equiv \rho_2$ if $\rho_1$ and $\rho_2$ coincide on an open
+subgroup of the inertia group of $G$.
+
+\begin{thm}
+Let $\rho,~V,~W$ be as above and, for each $\sigma \in \Gamma_E$, let $n_\sigma$
+be an integer. The following are equivalent:
+\begin{enumerate}[(i)]
+	\item $\rho \equiv \prod_{\sigma \in \Gamma_E} \sigma^{-1} \circ
+\chi_{\sigma E}^{n_\sigma}$.
+	\item $\sigma \circ \rho \sim \chi^{n_\sigma}$ for all $\sigma \in
+\Gamma_E$
+	\item for every $\sigma \in \Gamma_E$ the Galois-module $W_\sigma$ is
+isomorphic to $C(\chi^{n_\sigma})$.
+\end{enumerate}
+\end{thm}
+
+[Recall that $\chi$ is the character defined in chap. \ref{ch:i},
+\ref{sec:I_12}, and that $x_{\sigma E}$ is the one attached to the subfield
+$\sigma E$ off $K$, as in \ref{sec:III_A4}. Note that, since $\chi_{\sigma E}$
+restricted to the inertia group depends only on $\sigma E$, (i) is meaningful.]
+
+\begin{cor}
+$V$ is of Hodge-Tate type if and only if there exist $n_\sigma \in \Z$ such that
+$p \equiv \prod_{\sigma \in \Gamma_E} \sigma^{-1} \circ \chi_{\sigma
+E}^{n_\sigma}$
+\end{cor}
+
+This follows from (iii) and the fact that $W = C \oplus V$ is the direct sum of
+the $W_\sigma$'s.
+
+\begin{proof}[Proof of Theorem 2]
+
+\end{proof}
+
 \todo[section]{Belén.}
 
 \begin{thm}\label{thm:III_A5_2}
