@@ -1431,7 +1431,7 @@ $\sigma \circ \psi \colon G \to E^\times \to K^\times$ of $G =
 
 \dpage
 
-\begin{prop}
+\begin{prop}\label{prop:III_A3_3}
 The following two properties are equivalent:
 \begin{enumerate}[(1)]
 \item $\psi$ is equal to $1$ on an open subgroup of the inertia group of $G$.
@@ -1512,14 +1512,12 @@ $\Gal(\overline{K}/K) \to \Gal(\overline{E}/E)$, hence also a homomorphism
 	r_E \colon G \longrightarrow \abcl{\Gal(\overline{K}/K)}.
 \]
 Define $\chi_{E, \pi}$ (abbr.\ $\chi_E$) to be the composite homomorphism
-<<<<<<< HEAD
 \[\begin{tikzcd}
 	G \rar & \abcl{\Gal(\overline{K}/K)} \rar & U_E \rar["i"] & U_E,
 \end{tikzcd}\]
 where $i(x) = x^{-1}$ for $x \in U_E$.
 Observe that the restriction of $\chi_E$ to the intertia group of $G$ is $x
 \mapsto r_E(x^{-1})$, and hence \emph{is independent of the choice of} $\pi$.
-=======
 \[
 	G \rightarrow \abcl{\Gal(\overline{K}/K)} \rightarrow U_E
 \overset{i}{\rightarrow} U_E,
@@ -1528,7 +1526,6 @@ Observe that the restriction of $\chi_E$ to the intertia group of $G$ is $x
 where $i(x) = x^{-1}$ for $x \in U_E$. Observe that the restriction of $\chi_E$
 to the inertia group of $G$ is $x \mapsto r_e(x^{-1})$, and hence \emph{is
 independent of the choice of} $ \pi$.
->>>>>>> 54a831d (sync)
 
 \begin{prop}
 Let $F_\pi$ be the Lubin-Tate formal group (\cite{17}, see also \cite{6},
@@ -1545,11 +1542,7 @@ This follows from the main theorem of \cite{17} (see also \cite[149]{6}, Th.~3).
 \begin{corp}
 If $E = \Q_p$ and $\pi = p$, then the character $\chi_E$ coincides with the
 character $\chi$ defined in chap.~\ref{ch:i}, \ref{sec:I_12}. 
-<<<<<<< HEAD
 \end{corp}
-=======
-\end{cor}
->>>>>>> 54a831d (sync)
 
 Indeed, the Lubin-Tate group is now the multiplicative group $\GG_m$
 and its Tate module is the module $T_p(\mu)$ defined in chap.~\ref{ch:i},
@@ -1598,16 +1591,16 @@ Let $\sigma \in \Gamma_E$ and put
 all } x \in E\}.
 \]
 
-\begin{lem}
+\begin{lem}\label{lem:III_A5_1}
 \begin{enumerate}[(a)]
 	\item Each $w_\sigma$ is a one-dimensional $C$-vector space stable by
 $G$.
 	\item $W$ is the direct sum of the $W_\sigma$'s, $\sigma \in \Gamma_E$.
 	\item For each $\sigma \in \Gamma_E$, the Galois module $W_\sigma$ is
-isomorphic to $C(\sigma \icrc \rho)$.
+isomorphic to $C(\sigma \circ \rho)$.
 \end{enumerate}
 \end{lem}
-[For the definition of the ``twisted'' module $C(\sigma \circ \rho$ see
+[For the definition of the ``twisted'' module $C(\sigma \circ \rho)$ see
 \ref{sec:III_A2}, Remark 3.]
 
 \begin{proof}
@@ -1615,7 +1608,8 @@ The assertions (a) and (b) are consequences of the well-known fact that $C
 \oplus_{\Q_p} E$ is a product of $d$ copies of $C$, the projections $C
 \oplus_{\Q_p} V$, since $K$ contains all the $\Q_p$-conjugates of $E$; hence for
 each $\sigma \in \Gamma_E$, there exists a $w \in W_\sigma$ contained in $V_K$.
-\end{proof}
+
+\dpage
 
 For such a $w$, say $w = \sum k_i \oplus y_i \quad (k_i \in K, y_i \in V)$ we
 have
@@ -1623,17 +1617,18 @@ have
 \begin{align*}
 	a(w) &= \sum_k_i \oplu s(y_i)\\
 	&= \sum k_i \oplus \rho(s)y_i\\
-	&= a_{\rho(s)}w
+	&= a_{\rho(s)}w\\
 	&= \sigma \circ \rho(s)w, \qquad \text{since $w$ belongs to $W_\sigma$,}
 \end{align*}
 
 and this implies that $W_\sigma$ is isomorphic to $C(\sigma \circ \rho)$.
+\end{proof}
 
 If $\rho_1$ and $\rho_2$ are two characters of $G$ into $K^\times$, then we shall
 write $\rho_1 \equiv \rho_2$ if $\rho_1$ and $\rho_2$ coincide on an open
 subgroup of the inertia group of $G$.
 
-\begin{thm}
+\begin{thm}\label{thm:III_A5_2}
 Let $\rho,~V,~W$ be as above and, for each $\sigma \in \Gamma_E$, let $n_\sigma$
 be an integer. The following are equivalent:
 \begin{enumerate}[(i)]
@@ -1648,39 +1643,93 @@ isomorphic to $C(\chi^{n_\sigma})$.
 
 [Recall that $\chi$ is the character defined in chap. \ref{ch:i},
 \ref{sec:I_12}, and that $x_{\sigma E}$ is the one attached to the subfield
-$\sigma E$ off $K$, as in \ref{sec:III_A4}. Note that, since $\chi_{\sigma E}$
+$\sigma E$ of $K$, as in \ref{sec:III_A4}. Note that, since $\chi_{\sigma E}$
 restricted to the inertia group depends only on $\sigma E$, (i) is meaningful.]
+
+\dpage
 
 \begin{cor}
 $V$ is of Hodge-Tate type if and only if there exist $n_\sigma \in \Z$ such that
-$p \equiv \prod_{\sigma \in \Gamma_E} \sigma^{-1} \circ \chi_{\sigma
+$\rho \equiv \prod_{\sigma \in \Gamma_E} \sigma^{-1} \circ \chi_{\sigma
 E}^{n_\sigma}$
 \end{cor}
 
-This follows from (iii) and the fact that $W = C \oplus V$ is the direct sum of
+This follows from (iii) and the fact that $W = C \otimes V$ is the direct sum of
 the $W_\sigma$'s.
 
-\begin{proof}[Proof of Theorem 2]
+\subsubsection{Proof of Theorem 2}
 
+We prove first:
+
+\begin{lem}\label{lem:III_A5_2}
+\begin{enumerate}[(a)]
+	\item $\chi_E \sim \chi$
+	\item If $\sigma \in \Gamma_E$ is not the inclusion map, $\sigma \chi_E
+\sim 1$.
+\end{enumerate}
+\end{lem}
+
+\begin{proof}
+Let $\pi$ be a uniformizing parameter of $E$, let $F_\pi$ be Lubin- Tate group
+associated to $E$ and $\pi$, let $T_\pi$ be its Tate module, and $V_\pi = T_\pi
+\otimes \Q_p$. Since $V_\pi$ is a one-dimensional vector space over $E$, and $G$
+acts on $V_\pi$ through $\chi_E \colon G \to U_E$ (cf.\ \ref{sec:III_A4}, Prop.
+4), the above constructions apply to $V_\pi$ and $\chi_E$. By a theorem of Tate
+(\ref{39}, \S4, Cor. 2 to Th. 3), $W_\pi = C \otimes_{\Q_p} V_\pi$ has a
+Hodge-Tate decomposition of the type
+\[
+	W_\pi = W_\pi(0) \oplus W_\pi(1)
+\]
+
+where $\dim W_\pi(0) = d - 1$, $\dim W_\pi (1) = 1$. More precisely, Tate
+defines canonical isomorphisms $W_\pi(0) = C \otimes_K \Hom_E(t',K)$, where $t'$ 
+\dpage 
+is the $(d-1)$-dimensional tangent space of the dual of $F_\pi$, $W_\pi(1) = (C
+\otimes_{\Q_p} V(\mu)) \otimes_K t$, where $t$ is the one-dimensional
+\todo[pinktask]{ver cuadro vacío en el original}
+tangent space to $F_\pi$, and $V_p(\mu)$ is the $\Q_p$-vector space of dimension
+$1$ defined in Chap.~\ref{ch:i}, \ref{sec:I_12}.
+
+Note that $C \otimes_{\Q_p} V_p(\mu)$ is isomorphic to $C(\chi)$, hence one gets
+an isomorphism
+\[
+	W_\pi(1) \cong C(\chi) \otimes_K t. 
+\]
+These isomorphism commute with the action of $E$.
+
+Since $E$ acts on $t$ by the inclusion map $\sigma_1 \colon  E \to K$, this
+shows that the component $(W_\pi)_{\sigma_1}$ of $W_\pi$ is $W_\pi(1)$. Hence,
+using Lemma \ref{lem:III_A5_1}, we have $C(\chi) \cong C(\chi_E)$, and this
+implies $\chi_E \sim \chi$, whence (a). On the other hand, the same argument
+shows that $(W_\pi)_\sigma$, $\sigma \neq \sigma_1$, are contained in the other
+factor $W_\pi(0)$ of $W_\pi$; hence $C(\sigma \circ \chi_E) \cong C(1)$, (where
+$1$ stands, of course, for the unit character), and this proves (b).
 \end{proof}
 
-\todo[section]{Belén.}
+We now go back to the proof of Theorem \ref{thm:III_A5_2}. The equivalence of
+(ii) and (iii) follows from Lemma \ref{lem:III_A5_1}. To show (i)$\iff$(ii),
+note first that $\chi_{\sigma E}$ takes values in $\sigma E^*$, hence
+$\sigma^{-1} \circ \chi_{\sigma E}$ takes values $\rho_1 = \prod_{\sigma \in
+\Gamma_E} \sigma^{-1} \circ \chi^{n_\sigma}_{\sigma E}$.
+\dpage
 
-\begin{thm}\label{thm:III_A5_2}
-Let $\rho$, $V$, $W$ be as above and, for each $\sigma \in \Gamma_E$, let
-$n_\sigma$ be an integer. The following are equivalent:
-\begin{enumerate}[(i), series=thm_IIIA5_2]
-	\item\label{thm:III_A5_2i}
-		$\displaystyle \rho \equiv \prod_{\sigma \in \Gamma_E}
-		\sigma^{-1} \circ \chi_{\sigma E}^{n_\sigma},$
-	\item\label{thm:III_A5_2ii}
-		$\sigma\circ \rho \sim \chi^{n_\sigma}$ for all $\sigma \in
-		\Gamma_E$,
-	\item\label{thm:III_A5_2iii}
-		for every $\sigma \in \Gamma_E$ the Galois-module $W_\sigma$ is
-		isomorphic to $C(\chi^{n_\sigma})$.
-\end{enumerate}
-\end{thm}
+Let $\tau \in \Gamma_E$. We have
+\[
+	\tau \circ \rho_1 = \prod_{\sigma \in \Gamma_E} \tau \circ \sigma^{-1}
+\circ \chi_{\sigma E}^{n_\sigma}.
+\]
+From Lemma \ref{lem:III_A5_2}, applied to the field $\sigma E$, we see that
+$\tau \circ \sigma^{-1} \circ \chi_{\sigma E} \sim 1$ if $\tau \circ
+\sigma^{-1}$ is not the identity on $\sigma E$, i.e.\ if $\tau \neq \sigma$; if
+$\tau = \sigma$, we have $\tau \circ \sigma^{-1} \circ \chi_{\sigma E} =
+\chi_{\sigma E} \sim \chi$. Hence $\tau \circ \rho_1 \sim \chi^{n_\tau}$, and
+(ii) is equivalent to 
+\[
+	\tau \circ \rho_1 \sim \tau \circ \rho, \qquad \text{for all $\tau \in
+\Gamma_E$}
+\]
+By Prop. \ref{prop:III_A3_3} of \ref{sec:III_A3}, this is equivalent to $\rho_1 \equiv \rho$ q. e.
+d.\todo[pinktask]{agregar cuadradito}
 
 \subsection{Locally compact case}
 \label{sec:III_A6}

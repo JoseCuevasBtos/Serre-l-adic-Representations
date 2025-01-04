@@ -41,7 +41,7 @@ and elliptic curves" (Addison-Wesley, 1989) into modern LaTeX.
     - [x] A. Killing arithmetic groups in tori
         - [x] A.1 Arithmetic groups in tori
         - [x] A.2 Killing arithmetic subgroups
-- [ ] Chapter III. Locally Algebraic Abelian Representations
+- [x] Chapter III. Locally Algebraic Abelian Representations
     - [x] 1 The local case
         - [x] 1.1 Definitions
         - [x] 1.2 Alternative definition of "locally algebraic" via Hodge-Tate modules
@@ -56,12 +56,12 @@ and elliptic curves" (Addison-Wesley, 1989) into modern LaTeX.
         - [x] 3.2 A criterion for local algebraicity
         - [x] 3.3 An auxiliary result on tori
         - [x] 3.4 Proof of the theorem
-    - [ ] A. Hodge-Tate decompositions and locally algebraic representations
+    - [x] A. Hodge-Tate decompositions and locally algebraic representations
         - [x] A.1 Invariance of Hodge-Tate decompositions
         - [x] A.2 Admissible characters
         - [x] A.3 A criterion for local triviality
         - [x] A.4 The character xi
-        - [ ] A.5 Characters associated with Hodge-Tate decompositions
+        - [x] A.5 Characters associated with Hodge-Tate decompositions
         - [x] A.6 Locally compact case
         - [x] A.7 Tate's theorem
 - [ ] Chapter IV. l-adic Representations Attached to Elliptic Curves
@@ -75,9 +75,9 @@ and elliptic curves" (Addison-Wesley, 1989) into modern LaTeX.
         - [x] 2.2 Determination of the Lie algebra of Gl
         - [x] 2.3 The isogeny theorem
     - [ ] 3 Variation of Gl and Gl with l
-        - [ ] 3.1 Preliminaries
+        - [x] 3.1 Preliminaries
         - [x] 3.2 The case of a non integral j
-        - [ ] 3.3 Numerical example
+        - [x] 3.3 Numerical example
         - [x] 3.4 Proof of the main lemma of 3.1
     - [ ] A. Local results
         - [ ] A.1 The case v(j) < 0
