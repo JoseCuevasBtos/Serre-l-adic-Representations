@@ -74,20 +74,20 @@ and elliptic curves" (Addison-Wesley, 1989) into modern LaTeX.
         - [x] 2.1 The irreducibility theorem
         - [x] 2.2 Determination of the Lie algebra of Gl
         - [x] 2.3 The isogeny theorem
-    - [ ] 3 Variation of Gl and Gl with l
+    - [x] 3 Variation of Gl and Gl with l
         - [x] 3.1 Preliminaries
         - [x] 3.2 The case of a non integral j
         - [x] 3.3 Numerical example
         - [x] 3.4 Proof of the main lemma of 3.1
-    - [ ] A. Local results
-        - [ ] A.1 The case v(j) < 0
+    - [x] A. Local results
+        - [x] A.1 The case v(j) < 0
             - [x] A.1.1 The elliptic curves of Tate
             - [x] A.1.2 An exact sequence
             - [x] A.1.3 Determination of gl and il
-            - [ ] A.1.4 Application to isogenies
-            - [ ] A.1.5 Existence of transvections in the inertia group
-        - [ ] A.2 The case v(j) >= 0
-            - [ ] A.2.1 The case l /= p
+            - [x] A.1.4 Application to isogenies
+            - [x] A.1.5 Existence of transvections in the inertia group
+        - [x] A.2 The case v(j) >= 0
+            - [x] A.2.1 The case l /= p
             - [x] A.2.2 The case l = p with good reduction of height 2
             - [x] A.2.3 Auxiliary results on abelian varieties
             - [x] A.2.4 The case l = p with good reduction of height 1
