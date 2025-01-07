@@ -1434,17 +1434,17 @@ z = q^{v(q')}/q'^{v(q)}
 \]
 \dpage
 is a root of unity. First of all, the image of $z$ in $\varprojlim K^\times /
-K^\times^{p^n}$ is a $p^a$-th root of unity; in fact, this image is
+{K^\times}^{p^n}$ is a $p^a$-th root of unity; in fact, this image is
 \[
 v(q')x - v(q)x'
 \]
 
 and multiplying by $s$, we find $0$ in virtue of the above formula (note that
-$\varprojlim K^\times / K^\times^{p^n}$ is a $\Z_p$-module, hence multiplication
+$\varprojlim {K^\times} / {K^\times}^{p^n}$ is a $\Z_p$-module, hence multiplication
 by $s$ makes sense). We then use the fact that the kernel of $K^\times \to
-\varprojlim K^\times / K^\times^{p^n}$ is $k^\times$ (viewed, as usual as a
+\varprojlim K^\times / {K^\times}^{p^n}$ is $k^\times$ (viewed, as usual as a
 subgroup of $K^\times$). To see this, one decomposes $K^\times$ as a product $\Z
-\times k^\times \times U^1$ \todo[pinktask]{$\times$ vs $\otimes$?? notación??}, where
+\times k^\times \times U^1$, where
 $U^1$ is the group of units congruent to $1$. The functor $A \mapsto \varprojlim
 A/ A^{p^n}$ transforms $\Z$ into $\Z_p$, kills $k^\times$ and leaves $U^1$
 unchanged, since $U^1$ is a finitely generated $\Z_p$-module. Hence, we have $z
@@ -1467,14 +1467,15 @@ over $\F_p?$''.\todo[pinktask]{Hay un punto reculiao}
 
 
 Let $E$ be the elliptic curve $E_q$ (cf. \ref{sec:IV_A11}), let
-$\tilde{G}__\ell$ be the image of $\Gal({K}_s/K)$ in $\Aut(T_\ell / \ell
+$\tilde{G}_\ell$ be the image of $\Gal({K}_s/K)$ in $\Aut(T_\ell / \ell
 T_\ell)$, and let $\tilde{I}_\ell$ be the inertia subgroup of $\tilde{G}_\ell$.
 We assume that $v$ is normalized, i.e.\ that $v(K^\times) = \Z$
 \dpage
 \begin{prop}
 If $\ell$ does not divide $v(q)$, then $\tilde{I}_\ell$ contains a transvection,
-i.e.\ an element whose matrix is $\smallpmatrix{1,1\\0,1}$ for a suitable
-$F_\ell$-basis of $T_\ell / \ell T_\ell$.
+i.e.\ an element whose matrix is
+$\begin{psmallmatrix} 1, 1 \\ 0, 1 \end{psmallmatrix}$
+for a suitable $F_\ell$-basis of $T_\ell / \ell T_\ell$.
 \end{prop}
 
 \begin{proof}

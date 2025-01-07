@@ -1518,14 +1518,6 @@ Define $\chi_{E, \pi}$ (abbr.\ $\chi_E$) to be the composite homomorphism
 where $i(x) = x^{-1}$ for $x \in U_E$.
 Observe that the restriction of $\chi_E$ to the intertia group of $G$ is $x
 \mapsto r_E(x^{-1})$, and hence \emph{is independent of the choice of} $\pi$.
-\[
-	G \rightarrow \abcl{\Gal(\overline{K}/K)} \rightarrow U_E
-\overset{i}{\rightarrow} U_E,
-\]
-
-where $i(x) = x^{-1}$ for $x \in U_E$. Observe that the restriction of $\chi_E$
-to the inertia group of $G$ is $x \mapsto r_e(x^{-1})$, and hence \emph{is
-independent of the choice of} $ \pi$.
 
 \begin{prop}
 Let $F_\pi$ be the Lubin-Tate formal group (\cite{17}, see also \cite{6},
@@ -1576,7 +1568,7 @@ Hence $V$ is a $G$-module. Let $W = C \otimes_{\Q_p} V$, where $C =
 \hat{\algcl{K}}$ as before.
 \dpage
 This is a $d$-dimensional vector space over $C$,
-\todo[pinktaks]{¿Es $C$ o $\C$?} where $d = [E : \Q_p]$. Every element $x$ of
+\todo[pinktask]{¿Es $C$ o $\C$?} where $d = [E : \Q_p]$. Every element $x$ of
 $E$ defines a $C$-endomorphism $a_x$ of $W$ by
 \[
 	a_x(\sum c_i \otimes y_i) = \sum c_i \otimes xy_i, c_i \in C, y_i \in V.
@@ -1615,7 +1607,7 @@ For such a $w$, say $w = \sum k_i \oplus y_i \quad (k_i \in K, y_i \in V)$ we
 have
 
 \begin{align*}
-	a(w) &= \sum_k_i \oplu s(y_i)\\
+	a(w) &= \sum k_i \oplus s(y_i)\\
 	&= \sum k_i \oplus \rho(s)y_i\\
 	&= a_{\rho(s)}w\\
 	&= \sigma \circ \rho(s)w, \qquad \text{since $w$ belongs to $W_\sigma$,}
@@ -1631,12 +1623,15 @@ subgroup of the inertia group of $G$.
 \begin{thm}\label{thm:III_A5_2}
 Let $\rho,~V,~W$ be as above and, for each $\sigma \in \Gamma_E$, let $n_\sigma$
 be an integer. The following are equivalent:
-\begin{enumerate}[(i)]
-	\item $\rho \equiv \prod_{\sigma \in \Gamma_E} \sigma^{-1} \circ
+\begin{enumerate}[(i), series=thm_IIIA5_2]
+	\item\label{thm:III_A5_2i}
+		$\rho \equiv \prod_{\sigma \in \Gamma_E} \sigma^{-1} \circ
 \chi_{\sigma E}^{n_\sigma}$.
-	\item $\sigma \circ \rho \sim \chi^{n_\sigma}$ for all $\sigma \in
+	\item\label{thm:III_A5_2ii}
+		$\sigma \circ \rho \sim \chi^{n_\sigma}$ for all $\sigma \in
 \Gamma_E$
-	\item for every $\sigma \in \Gamma_E$ the Galois-module $W_\sigma$ is
+	\item\label{thm:III_A5_2iii}
+		for every $\sigma \in \Gamma_E$ the Galois-module $W_\sigma$ is
 isomorphic to $C(\chi^{n_\sigma})$.
 \end{enumerate}
 \end{thm}
