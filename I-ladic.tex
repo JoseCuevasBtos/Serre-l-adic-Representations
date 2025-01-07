@@ -372,27 +372,48 @@ semi-simple, rational, and compatible with $\rho$; it is the
 ``semi-simplification''\break of $V$. 
 
 \begin{thm}
-Let $\rho$ be a rational $\ell$-adic representation of $K$, let $\ell'$ be a prime. Then there exists at most one (up to isomorphism) $\ell'$-adic rational representation $\rho'$ of $K$ which is semi-simple and compatible with $\rho$.
+Let $\rho$ be a rational $\ell$-adic representation of $K$, let $\ell'$ be a
+prime.
+Then there exists at most one (up to isomorphism) $\ell'$-adic rational
+representation $\rho'$ of $K$ which is semi-simple and compatible with $\rho$.
 \end{thm}
-
-(Hence there exists a unique (up to isomorphism) rational semi-simple $\ell$-adic representation compatible with $\rho$.)
-
+(Hence there exists a unique (up to isomorphism) rational semi-simple
+$\ell$-adic representation compatible with $\rho$.)
 \begin{proof}
-Let $\rho_1'$, $\rho_2'$ be semi-simple $\ell$-adic representations of $K$ 
+Let $\rho_1^\prime$, $\rho_2^\prime$ be semi-simple $\ell$-adic representations
 \dpage
-which are rational and compatible with $\rho$.
+of $K$ which are rational and compatible with $\rho$.
 
-We first prove that $\Tr(\rho_1'(g)) = \Tr(\rho_2'(g))$ for all $g \in G$. Let $H = G/(\Ker(\rho_1') \cap \Ker(\rho_2'))$; the representations $\rho_1'$, $\rho_2'$ may be regarded as representations of $H$, and it suffices to show that $\Tr(\rho_1'(h)) = \Tr(\rho_2'(h))$ for all $h \in H$. Let $K' \subset \algcl{K}$ be the fixed field of $H$. Then by the compatibility of $\rho_1'$, $\rho_2'$ there is a finite subset $S$ of $M_K^0$ such that for all $v \in M_K^0 \setminus S$, $w \in M_K'^0$, $w \mid v$, we have $\Tr(\rho_1'(F_w)) = \Tr(\rho_2'(F_w))$. But, by cor. \ref{thm-chebotarev} to \v{C}ebotarev's theorem (cf.\ \ref{sec:I_22}) the $F_w$ are dense in $H$. Hence $\Tr(\rho_1'(h)) = \Tr(\rho_2'(h))$ for all $h \in H$ since $\Tr \circ \rho_1'$, $\Tr \circ \rho_2'$ are continuous.
+We first prove that $\Tr(\rho_1^\prime(g)) = \Tr(\rho_2^\prime(g))$ for all $g
+\in G$.  Let $H = G/(\Ker(\rho_1^\prime) \cap \Ker(\rho_2^\prime))$; the
+representations $\rho_1^\prime$, $\rho_2^\prime$ may be regarded as
+representations of $H$, and it suffices to show that $\Tr(\rho_1^\prime(h)) =
+\Tr(\rho_2^\prime(h))$ for all $h \in H$.
+Let $K' \subset \algcl{K}$ be the fixed field of $H$.
+Then by the compatibility of $\rho_1^\prime$, $\rho_2^\prime$ there is a finite
+subset $S$ of $M_K^0$ such that for all $v \in M_K^0 \setminus S$, $w \in
+M_{K'}^0$, $w \mid v$, we have $\Tr(\rho_1^\prime(F_w)) =
+\Tr(\rho_2^\prime(F_w))$.
+But, by Cor.~\ref{thm-chebotarev} to \v{C}ebotarev's theorem (cf.\
+\ref{sec:I_22}) the $F_w$ are dense in $H$. Hence $\Tr(\rho_1^\prime(h)) =
+\Tr(\rho_2^\prime(h))$ for all $h \in H$ since $\Tr \circ \rho_1^\prime$, $\Tr \circ
+\rho_2^\prime$ are continuous.
 
-The theorem now follows from the following result applied to the group ring $\Lambda = \Q_{\ell}[H]$.
+The theorem now follows from the following result applied to the group ring
+$\Lambda = \Q_{\ell}[H]$.
 \end{proof}
 
 \begin{lem}
-Let $k$ be a field of characteristic zero, let $\Lambda$ be a $k$-algebra, and let $\rho_1$, $\rho_2$ be two finite-dimensional linear representations of $\Lambda$. If $\rho_1$, $\rho_2$ are semi-simple and have the same trace ($\Tr \circ \rho_1 = \Tr \circ \rho_2)$, then they are isomorphic.
+Let $k$ be a field of characteristic zero, let $\Lambda$ be a $k$-algebra, and
+let $\rho_1$, $\rho_2$ be two finite-dimensional linear representations of
+$\Lambda$.
+If $\rho_1$, $\rho_2$ are semi-simple and have the same trace ($\Tr \circ \rho_1
+= \Tr \circ \rho_2)$, then they are isomorphic.
 \end{lem}
 
-For the proof see Bourbaki, Alg., ch. 8, \S12, n°1, prop.~3.
-\todo[pinktask]{Cómo citar esto}
+For the proof see Bourbaki, \cite{bourbaki:alg}, ch.~8, \S12,
+n.\textsuperscript{o}~1, prop.~3.
+% \todo[pinktask]{Cómo citar esto}
 
 \begin{mydef}
 For each prime $\ell$ let $\rho_\ell$ be a rational $\ell$-adic representation
@@ -403,16 +424,19 @@ two primes $\ell$, $\ell'$. The system $(\rho_\ell)$ is said \strong{to be
 strictly compatible}\index{Strictly compatible (system of representations)} if
 there exists a finite subset $S$ of $M_K^0$ such that:
 \begin{enumerate}[(a)]
-\item Let $S_\ell = \{ v \mid \rho_v = \ell \}$. Then, for every $v \not\in S
+\item\label{def:I_23_a}
+	Let $S_\ell = \{ v \mid \rho_v = \ell \}$. Then, for every $v \not\in S
 	\cup S_\ell$, $\rho_\ell$ is unramified at $v$ and $P_{v,\rho_\ell}(T)$
 	has rational coefficients.
-\item $P_{v,\rho_\ell}(T) = P_{v,\rho_{\ell'}}(T)$ if $v \not\in S \cup S_\ell \cup S_{\ell'}$.
+\item\label{def:I_23_b}
+	$P_{v,\rho_\ell}(T) = P_{v,\rho_{\ell'}}(T)$ if $v \not\in S \cup S_\ell \cup S_{\ell'}$.
 \end{enumerate}
-\end{mydef}
 \dpage
 When a system $(\rho_\ell)$ is strictly compatible, there is a smallest finite
-set $S$ having properties (a) and (b) above. We call it the \strong{exceptional
-set}\index{Exceptional set (of a strictly compatible system)} of the system.
+set $S$ having properties \ref{def:I_23_a} and \ref{def:I_23_b} above.
+We call it the \strong{exceptional set}\index{Exceptional set (of a strictly
+compatible system)} of the system.
+\end{mydef}
 
 \begin{ex}
 The systems of $\ell$-adic representations given in examples \ref{sec:I_121},
@@ -430,8 +454,10 @@ $P_{v,\rho}$ has coefficients for all $v$ such that $\rho$ is unramified
 at $v$?
 
 A somewhat similar question is:
+\begin{displayquote}
+	Is any compatible system strictly compatible?
+\end{displayquote}
 
-Is any compatible system strictly compatible?
 \item Can any rational $\ell$-adic representation be obtained (by tensor
 	products, direct sums, etc.) from ones coming from $\ell$-adic
 	cohomology?
@@ -442,7 +468,7 @@ Is any compatible system strictly compatible?
 \item Let $\rho$, $\rho'$ be rational $\ell$, $\ell'$-adic representations of
 	$K$ which are compatible and semi-simple.
 \begin{enumerate}[(i)]
-\item If $\rho$ is abelian (i.e.\ , if $\Img(\rho)$ is abelian), is it
+\item If $\rho$ is abelian (i.e., if $\Img(\rho)$ is abelian), is it
 	true that $\rho'$ is abelian? (We shall see in
 	chapter~\ref{ch:iii} that this is true at least if $\rho$ is
 	``locally algebraic''.) $\rightarrow$ [yes: this follows from
@@ -481,25 +507,26 @@ be defined in a way similar to the $\ell$-adic case.
 	for $\Img(\rho')$ and that $\Ker(\rho) = \Ker(\rho')$. (Apply exer.~3 of
 	\ref{sec:I_11} to $\rho'$ and to $U = \Ker(\rho)$.) Generalize this to
 	$\lambda$-adic representations (with respect to a number field $E$).
-\item Let $\rho$ (resp.\ $\rho'$) be a rational $\ell$-adic (resp. $\ell'$-adic)
-	representation of $K$, of degree $n$. Assume $\rho$ and $\rho'$ are
-	compatible. If $s \in G = \Gal(\algcl{K}/K)$, let $\sigma_i(s)$ (resp.
-	$\sigma_i'(s)$) be the
+\item Let $\rho$ (resp.\ $\rho'$) be a rational $\ell$-adic (resp.\
+	$\ell'$-adic) representation of $K$, of degree $n$. Assume $\rho$ and
+	$\rho'$ are compatible. If $s \in G = \Gal(\algcl{K}/K)$, let
+	$\sigma_i(s)$ (resp.\ $\sigma_i^\prime(s)$) be the
 	\dpage 
-	$i$-th coefficient of the characteristic polynomial of $\rho(s)$ (resp.
-	$\rho'(s)$). Let $P(X_0,\hdots,X_n)$ be a polynomial with rational
-	coefficients, and let $X_P$ (resp. $X'_P$) be the set of $s \in G$ such
-	that $P(\sigma_0(s),\hdots,\sigma_n(s)) = 0$ (resp.
-	$P(\sigma_0'(s),\hdots,\sigma_n'(s)) = 0$).
+	$i$-th coefficient of the characteristic polynomial of $\rho(s)$ (resp.\
+	$\rho'(s)$).
+	Let $P(X_0,\hdots,X_n)$ be a polynomial with rational coefficients, and
+	let $X_P$ (resp.\ $X'_P$) be the set of $s \in G$ such that
+	$P(\sigma_0(s), \dots, \sigma_n(s)) = 0$ (resp.\ $P(\sigma_0^\prime(s),
+	\dots, \sigma_n^\prime(s)) = 0$).
 \begin{enumerate}
-\item Show that the boundaries of $X_P$ and $X_P'$ have measure zero for the
+\item Show that the boundaries of $X_P$ and $X_P^\prime$ have measure zero for the
 	Haar measure $\mu$ of $G$ (use Exer.\ of \ref{sec:I_22}).
 \item Assume that $\mu$ is normalized, i.e.\ $\mu(G) = 1$. Let $T_P$ be the set
 	of $v \in M_K^0$ at which $\rho$ is unramified, and for which the
 	coefficients $\sigma_0,\hdots,\sigma_n$ of characteristic polynomial of
 	$F_{v,\rho}$ satisfy the equation $P(\sigma_0,\hdots,\sigma_n) = 0$.
 	Show that $T_P$ has density equal to $\mu(X_P)$.
-\item Show that $\mu(X_P) = \mu(X_P')$.
+\item Show that $\mu(X_P) = \mu(X_P^\prime)$.
 \end{enumerate}
 \end{enumerate}
 
@@ -605,9 +632,11 @@ properties of Frobenius elements, cf.\ Appendix~\ref{sec:I_A}.
 
 \begin{obs}
 \begin{enumerate}
-	\item\label{rmk:I_24_1} One can also associate $L$-functions to $E$-\emph{rational} systems of $\lambda$-adic representations (\ref{rmk:I_23_1}, Remark), where $E$ is a number field, once an embedding of $E$ into $\C$ has been chosen.
-\todo[pinktask]{No cacho si el C es los complejos o qué weá}
-	\item We have given a definition of the local factors of $L_\rho$ only at 
+\item\label{rmk:I_24_1}
+	One can also associate $L$-functions to $E$-\emph{rational} systems of
+	$\lambda$-adic representations (\ref{rmk:I_23_1}, Remark), where $E$ is
+	a number field, once an embedding of $E$ into $\C$ has been chosen.
+\item We have given a definition of the local factors of $L_\rho$ only at 
 	the places $v \not\in S$. One can give a more sophisticated definition in 
 	which local factors are defined for all places, even (with suitable 
 	hypotheses) for primes at infinity (gamma factors); this is necessary when 
@@ -617,14 +646,23 @@ properties of Frobenius elements, cf.\ Appendix~\ref{sec:I_A}.
 	\item Let $\phi(s) = \sum a_n / n^s $ be a Dirichlet series. Using the 
 	theorem in~\ref{sec:I_23}, one sees that there is (up to isomorphism) at 
 	most one semi-simple system $\rho = (\rho_\ell)$ over $\Q$ such that 
-	$L_\rho = \phi$. Whether there does exist one (for a given $\phi$) is often a quite interesting question. For instance, is it so for Ramanujan's $\phi(s) = \sum_{n = 1}^{\infty} \tau(n)/n^s$, where $\tau(n)$ is defined by the identity
+	$L_\rho = \phi$.
+	Whether there does exist one (for a given $\phi$) is often a quite
+	interesting question.
+	For instance, is it so for Ramanujan's $\phi(s) = \sum_{n=1}^{\infty}
+	\tau(n)/n^s$, where $\tau(n)$ is defined by the identity
 	\[
-	x \prod_{n=1}^{\infty}(1 - x^n)^24 = \sum_{n=1}^{\infty}\tau(n)x^n ?
+		x \prod_{n=1}^{\infty}(1 - x^n)^{24} =
+		% \overset{?}{=}
+		\sum_{n=1}^{\infty}\tau(n)x^n?
 	\]
-	There is considerable numerical evidence for this, based on the congruence 
-	properties of $\tau$ (Swinnerton-Dyer, unpublished); of course,
-	\todo[pinktask]{¿Seguirá así?}
-	such a $\rho$ would be of dimension $2$, and its exceptional set $S$ would be empty. $\rightarrow$ [proved by Deligne: see \cite{49}, \cite{50}, \cite{65},\dots]
+	There is considerable numerical evidence for this, based on the
+	congruence properties of $\tau$ (Swinnerton-Dyer, unpublished; but see
+	\cite{81}); of course,
+	% \todo[pinktask]{¿Seguirá así?}
+	such a $\rho$ would be of dimension $2$, and its exceptional set $S$
+	would be empty. $\rightarrow$
+	[proved by Deligne: see \cite{49}, \cite{50}, \cite{65}, \dots]
 \end{enumerate}
 \end{obs}
 
