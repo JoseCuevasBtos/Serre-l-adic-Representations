@@ -31,12 +31,12 @@ to $\GG_{m, \algcl{\Q}} \times \hdots \times \GG_{m, \algcl{\Q}}$ ($d$ times).
 More precisely, let $\Gamma$ be the set of embeddings of $K$ into $\algcl{\Q}$;
 each $\sigma \in \Gamma$ extends to a homomorphism $K \otimes_{\Q} \algcl{\Q}
 \to \algcl{\Q}$, hence defines a morphism $[\sigma]\colon \TT_{/\algcl{\Q}} \to
-\GG_{m, \algcl{Q}}$. The collection of all $[\sigma]$'s gives the isomorphism
-$T_{/ \algcl{\Q}} \to G_{m/\algcl{\Q}} \times \hdots \times G_{m/\algcl{\Q}}$.
+\GG_{m, \algcl{\Q}}$. The collection of all $[\sigma]$'s gives the isomorphism
+$\TT_{/ \algcl{\Q}} \to \GG_{m,\algcl{\Q}} \times \hdots \times \GG_{m,\algcl{\Q}}$.
 Moreover, the $[\sigma]$'s form a basis of the \strong{character
-group}\index{Character group} $X(T) = \Hom_{\algcl{\Q}}(\TT_{/\algcl{\Q}},
-\GG_{m, \algcl{\Q}})$ of $T$. Note that the Galois group $\Gal(\algcl{\Q} / \Q)$
-acts in a natural way on $X(T)$, viz.\ by permuting the $[\sigma]'s$. (For the
+group}\index{Character group} $X(\TT) = \Hom_{\algcl{\Q}}(\TT_{/\algcl{\Q}},
+\GG_{m, \algcl{\Q}})$ of $\TT$. Note that the Galois group $\Gal(\algcl{\Q} / \Q)$
+acts in a natural way on $X(\TT)$, viz.\ by permuting the $[\sigma]'s$. (For the
 dictionary between tori and Galois modules, see for instance T. Ono \cite{21}.)
 
 \subsection{Cutting down $\TT$}
@@ -54,12 +54,12 @@ $\prod_{\sigma \in \Gamma} [\sigma]^{n_\sigma} = 1$, for all $x \in E$.
 
 \subsubsection*{Exercise}
 \begin{enumerate}[label=\textit{\alph*}.]
-\item Let $K$ be quadratic over $\Q$, so that $\dim T = 2$. Let $E$ be the
-	group of units of $K$. Show that $T$ is of dimension 2 (resp.\ 1) if
+\item Let $K$ be quadratic over $\Q$, so that $\dim \TT = 2$. Let $E$ be the
+	group of units of $K$. Show that $\TT_E$ is of dimension 2 (resp.\ 1) if
 	$K$ is imaginary (resp.\ real).
 \item Take for $K$ a cubic field with one real place and one complex one, and
-	let again $E$ be its group of units (of rank 1). Show that $\dim T = 3$
-	and $\dim T_E = 1$.
+	let again $E$ be its group of units (of rank 1). Show that $\dim \TT = 3$
+	and $\dim \TT_E = 1$.
 
 	(For more examples, see \ref{sec:II_33}.)\dpage
 \end{enumerate}
@@ -120,7 +120,7 @@ then checks easily that $B$ has the required universal  property, the maps $A
 $A \to B$ is the natural map $A \to A_0$ followed by translation by $- c(0,0)$,
 
 $Y_2 \to B(k)$ maps an element $\overline{y} + z$, $y \in Y_3$, $z \in Y_1$ 
-onto the image of z in $A_y$.
+onto the image of $z$ in $A_y$.
 
 Note that for any extension \emph{field} $k'$ of $k$ we have an \emph{exact 
 sequence}
@@ -141,11 +141,11 @@ and a \emph{commutative diagram}
 The algebraic group $B$ is thus an \emph{extension} of the ``constant'' algebraic group $Y_3$ by $A$.
 \begin{obs}
 \begin{enumerate}
-	\item Let $k'$ be an extension of $k$ and $A' = A \times_k k'$. We may 
+	\item Let $k'$ be an extension of $k$ and $A' = A \otimes_k k'$. We may 
 	apply the above construction to the $k'$-algebraic group $A'$, with respect 
 	to the exact sequence~\eqref{eq:II_13} and to the map $Y_1 \to A(k) \to
 	A'(k') $. The group $B'$ thus obtained is canonically isomorphic to $B
-	\times_k k'$; this follows, for instance, from the explicit construction
+	\otimes_k k'$; this follows, for instance, from the explicit construction
 	of $B$ and $B'$.
 	
 	\item We will only use the above construction when $\char(k) = 0$ and $A$ 
@@ -239,6 +239,7 @@ $C_{\mathfrak{m}}$'s. Class field theory (cf.\ for instance
 \citeauthor{6}~\cite{6}), gives \emph{an isomorphism of $C/D = \invlim
 C_{\mathfrak{m}}$ onto the Galois group $\abcl G$} of the maximal abelian
 extension of $K$.
+\todo{actualizar notación de Galois}
 
 \begin{obs}
 A more classical definition of $C_{\mathfrak{m}}$ is as follows. Let $\Id_S$ be
@@ -382,7 +383,8 @@ is a continuous homomorphism.
 \begin{lem}
 	$\alpha_\ell$ and $\varepsilon$ coincide on $K^\times$.
 \end{lem}
-This is trivial from the commutativity of the diagram (**) of \ref{sec:II_22}.
+This is trivial from the commutativity of the diagram \eqref{eq:II_22} of
+\ref{sec:II_22}.
 
 Now, let \index{el@$\varepsilon_\ell$}$\varepsilon_\ell \colon I \to
 S_{\mathfrak{m}}(\Q_\ell)$ be defined by
@@ -847,7 +849,7 @@ $I/U_{\mathfrak{m}} \to \Aut(V_0)$. On the other hand, since $f$ and $\psi$ agre
 the morphism $\psi$ is equal to 1 on $E_{\mathfrak{m}} = K^\times \cap U_{\mathfrak{m}}$, hence on its
 Zariski-closure $\overline{E}_{\mathfrak{m}}$. This means that $\psi$ factors through
 \[\begin{tikzcd}[sep=large]
-	T \rar & T_{\mathfrak{m}} \rar & \GL_{V_0}.
+	\TT \rar & T_{\mathfrak{m}} \rar & \GL_{V_0}.
 \end{tikzcd}\]
 By the universal property of $S_{\mathfrak{m}}$ (cf.\ \ref{sec:II_13} and
 \ref{sec:II_22}), the maps $I/U_{\mathfrak{m}} \to \GL_{V_0}(\Q)$ and
@@ -894,7 +896,7 @@ $\TT(R)$ with a direct factor of the idèle group $I$. Let $\pr_\infty$ be the
 projection on this factor; the map 
 \dpage
 \[\begin{tikzcd}
-	\alpha_\infty = \pi_\infty \circ \pr_\infty \colon I \arrow[r] & T(R) 
+	\alpha_\infty = \pi_\infty \circ \pr_\infty \colon I \arrow[r] & \TT(R) 
 	\arrow[r] & S_\mathfrak{m}(R)
 \end{tikzcd}\]
 is continuous, and one checks as in~\ref{sec:II_23} that $\alpha_\infty$ 
@@ -934,7 +936,7 @@ be the map defined by $\varepsilon_\infty$ and the $\varepsilon_\ell$'s.
 	S_\mathfrak{m}(\Q_\ell)$, where $A$ denote the ring of adèles of $\Q$,
 	and that $e \colon I \to S_\mathfrak{m}(A)$ is continuous (for the
 	natural topology of the adelized group $S_\mathfrak{m}(A)$).
-\item Let $\pi_A \colon T(A) \to S_\mathfrak{m}(A)$ be the map defined
+\item Let $\pi_A \colon \TT(A) \to S_\mathfrak{m}(A)$ be the map defined
 	by $\pi \colon \TT \to S_\mathfrak{m}$. Show that, if one
 	identifies $\TT(A)$ with $I$ in the obvious way, one has 
 	\[
