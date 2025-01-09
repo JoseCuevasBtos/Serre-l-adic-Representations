@@ -86,11 +86,9 @@ $\rho(U')$, hence by $r(T)$. But every linear representation of a torus is
 semi-simple. Hence, there exists a projector $\pi \colon V \to W$ which commutes
 with the action of $\TT$. If we put $\pi' = \frac{1}{[U_K:U']}\sum_{s \in U_K
 \setminus U'} \rho(S) \pi \rho(s^{-1})$,
-% \todo[pinktask]{qué notación es (:)}
 we obtain a projector $\pi' \colon V \to W$ which commutes with all $\rho(s)$,
 $s \in U_K$. 
 \end{proof}
-\todo[pinktask]{aquí termina la dem??}
 
 Conversely, let us start from a representation $\rho$ whose restriction to $U_K$
 is semi-simple. If we make a suitable large finite extension $E$ of $\Q_p$, the
@@ -126,7 +124,6 @@ over $\Q_p$ (cf.\ Chap. \ref{ch:ii}, \ref{sec:II_24}). But the trace $\theta_r =
 Let $K'$ be a finite extension of $K$, and let $\rho'$ be the restriction of the
 given representation $\rho$ to $\Gal(algcl{K}/K')$. Then $\rho'$ is locally
 algebraic if and only if
-% \todo[pinktask]{falta un if?}
 $\rho$ is; moreover, if this is so, the associated algebraic morphisms
 \[
 r \colon \TT \to \GL_V, \qquad r' \colon \TT' \to \GL_V
@@ -458,33 +455,33 @@ case of rational representations:
 	associated to $\phi_0$ (cf.\ chap.~\ref{ch:ii}, \ref{sec:II_25}).
 \end{thm}
 (The condition $V_\ell = V_0 \otimes_\Q \Q_\ell$ means that $V_0$ is a
-\textquote{$\Q$-structure} on $V_\ell$, cf.\ Bourbaki Alg., chap.~II,
-3\textsuperscript{rd} ed.)
+\textquote{$\Q$-structure} on $V_\ell$, cf.\ Bourbaki \cite{bourbaki:alg},
+ch.~II, 3\textsuperscript{rd} ed.)
 
 \begin{proof}
 	Let $r \colon \TT_{/\Q_\ell} \to \GL_{V_\ell}$ be the algebraic
 	morphism associated with $\rho$. We have
 	\[
-		\rho\circ i(x) = r(x^{-1}) \qquad \text{for } x\in
-		K_\ell^\times \cap U_{\mathfrak{m}} = \prod_{v\mid\ell} U_{v,
-		\mathfrak{m}}
+		\rho\circ i(\vec x) = r(\vec{x}^{-1}) \qquad \text{for } \vec
+		x\in K_\ell^\times \cap U_{\mathfrak{m}} = \prod_{v\mid\ell}
+		U_{v, \mathfrak{m}}
 	\]
 	Define a map $\psi \colon I \to \Aut(V_\ell)$ by
 	\dpage
 	\[
-		\psi(x) = \rho\circ i(x) \cdot r(x_\ell)
+		\psi(\vec x) = \rho\circ i(\vec x) \cdot r(x_\ell)
 	\]
 	where $x_\ell$ is the $\ell$\textsuperscript{th} component of the idèle
-	$x$.
-	\todo[bluetask]{¿Estandarizar notación $\vec x$ para idèles?}
+	$\vec x$.
+	% \todo[bluetask]{¿Estandarizar notación $\vec x$ para idèles?}%
 	One checks immediately that \emph{$\psi$ is trivial on
 	$U_{\mathfrak{m}}$ and coincides with $r$ on $K^\times$.}
 	Hence $r$ is trivial on $E_{\mathfrak{m}} = K^\times \cap
 	U_{\mathfrak{m}}$ and factors through an algebraic morphism
-	$r_{\mathfrak{m}} \colon T_{\mathfrak{m}/\Q_\ell} \to \GL_{V_\ell}$. By
-	the universal property
-	of the $\Q_\ell$-algebraic group $S_{\mathfrak{m}/\Q_\ell}$ (cf.\ chap.~\ref{ch:ii}, \ref{sec:II_13} and \ref{sec:II_22}),
-	there exists an algebraic morphism
+	$r_{\mathfrak{m}} \colon T_{\mathfrak{m}/\Q_\ell} \to \GL_{V_\ell}$.
+	By the universal property of the $\Q_\ell$-algebraic group
+	$S_{\mathfrak{m}/\Q_\ell}$ (cf.\ chap.~\ref{ch:ii}, \ref{sec:II_13} and
+	\ref{sec:II_22}), there exists an algebraic morphism
 	\[
 		\phi \colon S_{\mathfrak{m}/\Q_\ell} \longrightarrow
 		\GL_{V_\ell}
@@ -506,15 +503,16 @@ case of rational representations:
 	\end{enumerate}
 	It is trivial to check that the $\ell$-adic representation
 	$\phi_\ell$ attached to $\phi$ as above coincides with $\rho$.
-	Indeed, if $a \in I$, we have (with the notations of chap.~\ref{ch:ii})
+	Indeed, if $\vec a \in I$, we have (with the notations of
+	chap.~\ref{ch:ii})
 	\begin{align*}
-		\phi_\ell\circ i(a) &= \phi(\varepsilon_\ell(a))
-		= \phi(\varepsilon(a))
+		\phi_\ell\circ i(\vec a)
+		&= \phi(\varepsilon_\ell(\vec a))
+		= \phi(\varepsilon(\vec a))
 		\phi\big( \pi_\ell(a_\ell^{-1}) \big)
-		= \psi(a) \phi\big( \pi_\ell(a_\ell^{-1}) \big) \\
-				       &= \rho\circ i(a) r(a_\ell)
-				       \phi\big( \pi_\ell(a_\ell^{-1}) \big)
-				       = \rho\circ i(a).
+		= \psi(\vec a) \phi\big( \pi_\ell(a_\ell^{-1}) \big) \\
+		&= \rho\circ i(\vec a) r(a_\ell)
+		\phi\big( \pi_\ell(a_\ell^{-1}) \big) = \rho\circ i(\vec a).
 	\end{align*}
 	since $\phi\circ\pi_\ell = r$ by \ref{thm:III_23_2a} above.
 	\dpage
@@ -568,10 +566,10 @@ we take for ground field of the linear representation a number field $E$
 let $E_\lambda$ be the $\lambda$-adic completion of $E$. The notion of an
 $E$-rational $\lambda$-adic representation of $K$ has been defined in
 chap.~\ref{ch:i}, \ref{sec:I_23}, Remark.
-\todo[pinktask]{referenciar el remark?}
+% \todo[pinktask]{referenciar el remark?}%
 Let
 \[
-	\rho \colon \Gal(algcl{K}/K) \to \Aut(V_\lambda)
+	\rho \colon \Gal(\algcl{K}/K) \to \Aut(V_\lambda)
 \]
 be such a representation, and assume $r$ is abelian. Let $\ell$ be the residue
 characteristic of $\lambda$, so that $E_\lambda$ contains $\Q_\ell$. As in
@@ -729,7 +727,7 @@ $K$. Assume
 \begin{center}
 	\textnormal{(*)} $K$ is a composite of quadratic extensions of $\Q$.
 \end{center}
-\todo[pinktask]{¿está bien el formato de (*)?}
+\todo[pinktask]{¿está bien el formato de (*)?}%
 
 Then $\rho$ is locally algebraic (and hence stems from a linear representation
 of some $S_\mathfrak{m}$, cf.\ \ref{sec:III_23}).
@@ -1400,7 +1398,8 @@ Indeed, $L\bar{\phi} = \frac{1}{n} L\bar{\phi}^n = 0$.
 
 \begin{obs}
 Springer has proved that $H^l(G,C)$ is of dimension $1$ over $C$
-\todo[pinktask]{$C$ son los complejos o qué} (cf.\ Tate \cite{39}, \S3.3). Hence,
+% \todo[pinktask]{$C$ son los complejos o qué}%
+(cf.\ Tate \cite{39}, \S3.3). Hence,
 one can take for basis of $H^l(G,C)$ the element $L\bar{\chi}$, where $\chi$ is
 the fundamental character defined in chap.~\ref{ch:i}, \ref{sec:I_12}.
 In particular, for any $\phi \colon G \to K^\times$, there is an element
@@ -1563,17 +1562,16 @@ we make $G$ act on $V$ by
 \[
 	(s,y) \mapsto \rho(s)y, \qquad s \in G, y \in V.
 \]
-
 Hence $V$ is a $G$-module. Let $W = C \otimes_{\Q_p} V$, where $C =
 \hat{\algcl{K}}$ as before.
 \dpage
 This is a $d$-dimensional vector space over $C$,
-\todo[pinktask]{¿Es $C$ o $\C$?} where $d = [E : \Q_p]$. Every element $x$ of
+% \todo[pinktask]{¿Es $C$ o $\C$?}
+where $d = [E : \Q_p]$. Every element $x$ of
 $E$ defines a $C$-endomorphism $a_x$ of $W$ by
 \[
 	a_x(\sum c_i \otimes y_i) = \sum c_i \otimes xy_i, c_i \in C, y_i \in V.
 \]
-
 We get in this way a representation of $E$ in the $C$-vector space $W$; note
 that the action of $a_x$ commutes with the action of $G$. 
 
@@ -1592,27 +1590,25 @@ $G$.
 isomorphic to $C(\sigma \circ \rho)$.
 \end{enumerate}
 \end{lem}
+
 [For the definition of the ``twisted'' module $C(\sigma \circ \rho)$ see
-\ref{sec:III_A2}, Remark 3.]
+\ref{sec:III_A2}, Remark~\ref{rmk:III_A2_3}.]
 
 \begin{proof}
 The assertions (a) and (b) are consequences of the well-known fact that $C
 \oplus_{\Q_p} E$ is a product of $d$ copies of $C$, the projections $C
 \oplus_{\Q_p} V$, since $K$ contains all the $\Q_p$-conjugates of $E$; hence for
 each $\sigma \in \Gamma_E$, there exists a $w \in W_\sigma$ contained in $V_K$.
-
 \dpage
 
 For such a $w$, say $w = \sum k_i \oplus y_i \quad (k_i \in K, y_i \in V)$ we
 have
-
 \begin{align*}
 	a(w) &= \sum k_i \oplus s(y_i)\\
 	&= \sum k_i \oplus \rho(s)y_i\\
 	&= a_{\rho(s)}w\\
 	&= \sigma \circ \rho(s)w, \qquad \text{since $w$ belongs to $W_\sigma$,}
 \end{align*}
-
 and this implies that $W_\sigma$ is isomorphic to $C(\sigma \circ \rho)$.
 \end{proof}
 
@@ -1649,8 +1645,8 @@ $\rho \equiv \prod_{\sigma \in \Gamma_E} \sigma^{-1} \circ \chi_{\sigma
 E}^{n_\sigma}$
 \end{cor}
 
-This follows from (iii) and the fact that $W = C \otimes V$ is the direct sum of
-the $W_\sigma$'s.
+This follows from \ref{thm:III_A5_2iii} and the fact that $W = C \otimes V$ is
+the direct sum of the $W_\sigma$'s.
 
 \subsubsection{Proof of Theorem 2}
 
@@ -1670,18 +1666,17 @@ associated to $E$ and $\pi$, let $T_\pi$ be its Tate module, and $V_\pi = T_\pi
 \otimes \Q_p$. Since $V_\pi$ is a one-dimensional vector space over $E$, and $G$
 acts on $V_\pi$ through $\chi_E \colon G \to U_E$ (cf.\ \ref{sec:III_A4}, Prop.
 4), the above constructions apply to $V_\pi$ and $\chi_E$. By a theorem of Tate
-(\ref{39}, \S4, Cor. 2 to Th. 3), $W_\pi = C \otimes_{\Q_p} V_\pi$ has a
+(\cite{39}, \S4, Cor.~2 to Th.~3), $W_\pi = C \otimes_{\Q_p} V_\pi$ has a
 Hodge-Tate decomposition of the type
 \[
 	W_\pi = W_\pi(0) \oplus W_\pi(1)
 \]
-
 where $\dim W_\pi(0) = d - 1$, $\dim W_\pi (1) = 1$. More precisely, Tate
 defines canonical isomorphisms $W_\pi(0) = C \otimes_K \Hom_E(t',K)$, where $t'$ 
 \dpage 
 is the $(d-1)$-dimensional tangent space of the dual of $F_\pi$, $W_\pi(1) = (C
 \otimes_{\Q_p} V(\mu)) \otimes_K t$, where $t$ is the one-dimensional
-\todo[pinktask]{ver cuadro vacío en el original}
+% \todo[pinktask]{ver cuadro vacío en el original}
 tangent space to $F_\pi$, and $V_p(\mu)$ is the $\Q_p$-vector space of dimension
 $1$ defined in Chap.~\ref{ch:i}, \ref{sec:I_12}.
 
@@ -1702,7 +1697,8 @@ $1$ stands, of course, for the unit character), and this proves (b).
 \end{proof}
 
 We now go back to the proof of Theorem \ref{thm:III_A5_2}. The equivalence of
-(ii) and (iii) follows from Lemma \ref{lem:III_A5_1}. To show (i)$\iff$(ii),
+\ref{thm:III_A5_2ii} and \ref{thm:III_A5_2iii} follows from Lemma
+\ref{lem:III_A5_1}. To show \ref{thm:III_A5_2i} $\iff$ \ref{thm:III_A5_2ii},
 note first that $\chi_{\sigma E}$ takes values in $\sigma E^*$, hence
 $\sigma^{-1} \circ \chi_{\sigma E}$ takes values $\rho_1 = \prod_{\sigma \in
 \Gamma_E} \sigma^{-1} \circ \chi^{n_\sigma}_{\sigma E}$.
@@ -1710,21 +1706,22 @@ $\sigma^{-1} \circ \chi_{\sigma E}$ takes values $\rho_1 = \prod_{\sigma \in
 
 Let $\tau \in \Gamma_E$. We have
 \[
-	\tau \circ \rho_1 = \prod_{\sigma \in \Gamma_E} \tau \circ \sigma^{-1}
-\circ \chi_{\sigma E}^{n_\sigma}.
+	\tau \circ \rho_1
+	= \prod_{\sigma \in \Gamma_E} \tau \circ \sigma^{-1} \circ \chi_{\sigma
+	E}^{n_\sigma}.
 \]
 From Lemma \ref{lem:III_A5_2}, applied to the field $\sigma E$, we see that
 $\tau \circ \sigma^{-1} \circ \chi_{\sigma E} \sim 1$ if $\tau \circ
 \sigma^{-1}$ is not the identity on $\sigma E$, i.e.\ if $\tau \neq \sigma$; if
 $\tau = \sigma$, we have $\tau \circ \sigma^{-1} \circ \chi_{\sigma E} =
 \chi_{\sigma E} \sim \chi$. Hence $\tau \circ \rho_1 \sim \chi^{n_\tau}$, and
-(ii) is equivalent to 
+\ref{thm:III_A5_2ii} is equivalent to 
 \[
 	\tau \circ \rho_1 \sim \tau \circ \rho, \qquad \text{for all $\tau \in
 \Gamma_E$}
 \]
-By Prop. \ref{prop:III_A3_3} of \ref{sec:III_A3}, this is equivalent to $\rho_1 \equiv \rho$ q. e.
-d.\todo[pinktask]{agregar cuadradito}
+By Prop.~\ref{prop:III_A3_3} of \ref{sec:III_A3}, this is equivalent to $\rho_1
+\equiv \rho$ \hfill q.e.d.
 
 \subsection{Locally compact case}
 \label{sec:III_A6}

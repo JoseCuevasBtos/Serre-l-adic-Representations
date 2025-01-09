@@ -232,4 +232,11 @@
 \RequirePackage{imakeidx}
 \makeindex[intoc]
 
+\DeclareOption{hidetodo}{
+\renewcommand{\todo}[2][blank]{}
+\renewcommand{\listoftodos}{}
+}
+\DeclareOption*{\PackageWarning{template}{Unknown ‘\CurrentOption’}}
+\ProcessOptions\relax
+
 % TODO

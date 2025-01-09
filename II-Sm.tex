@@ -237,9 +237,9 @@ $D$\index{D@$D$} of $C$, and the group $C/D$ is known to be compact (see
 $U_{\mathfrak{m}}$'s, hence \emph{$C/D$ is the projective limit} of the
 $C_{\mathfrak{m}}$'s. Class field theory (cf.\ for instance
 \citeauthor{6}~\cite{6}), gives \emph{an isomorphism of $C/D = \invlim
-C_{\mathfrak{m}}$ onto the Galois group $\abcl G$} of the maximal abelian
-extension of $K$.
-\todo{actualizar notación de Galois}
+C_{\mathfrak{m}}$ onto the Galois group $\Gal(\abcl K/K)$} of the maximal
+abelian $\abcl K$ extension of $K$.
+% \todo{actualizar notación de Galois}
 
 \begin{obs}
 A more classical definition of $C_{\mathfrak{m}}$ is as follows. Let $\Id_S$ be
@@ -253,11 +253,12 @@ $\Cl_{\mathfrak{m}} = \Id_S/P_{S, \mathfrak{m}}$. We have the exact sequence:
 	1 \rar & P_{S, \mathfrak{m}} \rar & \Id_S \rar & \Cl_{\mathfrak{m}}
 	\rar & 1.
 \end{tikzcd}\]
-For each \vec $a = \prod_{v\notin S} v^{a_v} \in \Id_S$, choose an idèle
-$\alpha = (\alpha_v)$, with $\alpha_v \in U_{v, \mathfrak{m}}$ if $v \in S$ or
-$v \in M_K^\infty$, and $v(\alpha_v) = a_v$ if $v \in M_K^\infty \setminus S$.
-The image of $\alpha$ in $I_{\mathfrak{m}} = I/U_{\mathfrak{m}}$ depends only
-on $\vec a$. We then get a homomorphism $g \colon \Id_S \to I_{\mathfrak{m}}$.
+For each $\vec a = \prod_{v\notin S} v^{a_v} \in \Id_S$, choose an idèle
+$\vec\alpha = (\alpha_v)$, with $\alpha_v \in U_{v, \mathfrak{m}}$ if $v \in S$
+or $v \in M_K^\infty$, and $v(\alpha_v) = a_v$ if $v \in M_K^\infty \setminus
+S$. The image of $\vec\alpha$ in $I_{\mathfrak{m}} = I/U_{\mathfrak{m}}$
+depends only on $\vec a$. We then get a homomorphism $g \colon \Id_S \to
+I_{\mathfrak{m}}$.
 One checks readily that $g$ extends to a commutative diagram
 % https://q.uiver.app/#q=WzAsMTAsWzAsMCwiXFxidWxsZXQiXSxbMSwwLCJcXGJ1bGxldCJdLFsxLDEsIlxcYnVsbGV0Il0sWzAsMSwiXFxidWxsZXQiXSxbMiwxLCJcXGJ1bGxldCJdLFsyLDAsIlxcYnVsbGV0Il0sWzMsMCwiXFxidWxsZXQiXSxbMywxLCJcXGJ1bGxldCJdLFs0LDEsIlxcYnVsbGV0Il0sWzQsMCwiXFxidWxsZXQiXSxbMCwxXSxbMSwyXSxbMywyXSxbMiw0XSxbMSw1XSxbNSw2XSxbNSw0LCJnIl0sWzYsNywiZiJdLFs0LDddLFs3LDhdLFs2LDldXQ==
 \[\begin{tikzcd}[row sep=large]
@@ -403,9 +404,9 @@ By the lemma, $\varepsilon_\ell$ is trivial on $K$ and, hence, defines a map
 $C \to S_{\mathfrak{m}}(\Q_\ell)$; since $S_{\mathfrak{m}}(\Q_\ell)$ is
 totally disconnected (it is an $\ell$-adic Lie group), the latter homomorphism is
 trivial on the connected component $D$ of $C$. We have already recalled that $C/D$
-may be identified with the Galois group $\abcl G$ of the maximal abelian
+may be identified with the Galois group $\Gal(\abcl K/K)$ of the maximal abelian
 extension of $K$. So we end up with a homomorphism $\varepsilon_\ell \colon
-\abcl G \to S_{\mathfrak{m}}(\Q_\ell)$, i.e.\ with an \emph{$\ell$-adic
+\Gal(\abcl K/K) \to S_{\mathfrak{m}}(\Q_\ell)$, i.e.\ with an \emph{$\ell$-adic
 representation of $K$ with values in $S_{\mathfrak{m}}$} (cf.\ 
 Chap.~\ref{ch:i}, \ref{sec:I_23}).
 
@@ -417,7 +418,7 @@ in $S_{\mathfrak{m}}(\Q_\ell)$. With these notations we have:
 
 \begin{prop}
 \begin{enumerate}[a)]
-\item The representation $\varepsilon_\ell, \colon \abcl G \to
+\item The representation $\varepsilon_\ell, \colon \Gal(\abcl K/K) \to
 	S_{\mathfrak{m}}(\Q_\ell)$ is a rational representation with values in
 	$S_{\mathfrak{m}}$.
 \item $\varepsilon_\ell$ is unramified outside $\Supp(\mathfrak{m}) \cup
@@ -432,12 +433,12 @@ in $S_{\mathfrak{m}}(\Q_\ell)$. With these notations we have:
 \begin{proof}
 It is known that the class field isomorphism 
 \begin{tikzcd}[cramped, sep=small]
-	C/D \rar["\sim"] & \abcl G
+	C/D \rar["\sim"] & \Gal(\abcl K/K)
 \end{tikzcd}
 maps $K_v^\times$ (resp.\ $U_v$) onto a dense subgroup of the decomposition
-group of $v$ in $\abcl G$ (resp.\ onto the inertia group of $v$ in $\abcl G$),
-and that a uniformizing element $f_v$ of $K_v^\times$ is mapped onto the
-Frobenius class of $v$.
+group of $v$ in $\Gal(\abcl K/K)$ (resp.\ onto the inertia group of $v$ in
+$\Gal(\abcl K/K)$), and that a uniformizing element $f_v$ of $K_v^\times$ is
+mapped onto the Frobenius class of $v$.
 
 If $v \notin \Supp(\mathfrak{m})$ and $a \in U_v$, then $\varepsilon(a) = 1$;
 if moreover $p_v \ne \ell$, $\alpha_\ell(a) = 1$, hence $\varepsilon_\ell(a) =
@@ -684,11 +685,12 @@ defines a homomorphism
 \]
 which is continuous for the $\ell$-adic topologies of those groups.
 
-By composition with the map $\varepsilon_\ell \colon \abcl{G} \to
-S_{\mathfrak{m}} (\Q_\ell)$ defined in~\ref{sec:II_23}, we get a map
-\todo[pinktask]{Lo dejo cómo $G$ o como galois de algo}
+By composition with the map $\varepsilon_\ell \colon \abcl{\Gal(\algcl k/k)}
+\to S_{\mathfrak{m}} (\Q_\ell)$ defined in~\ref{sec:II_23}, we get a map
+% \todo[pinktask]{Lo dejo cómo $G$ o como galois de algo}
 \[
-	\phi_\ell = \phi \circ \varepsilon \colon \abcl{G} \to \Aut(V_\ell),
+	\phi_\ell = \phi \circ \varepsilon \colon \abcl{\Gal(\algcl k/k)} \to
+	\Aut(V_\ell),
 \]
 i.e.\ an \emph{abelian $\ell$-adic representation of} $K$ in $V_\ell$.
 
@@ -743,8 +745,8 @@ $S_\mathfrak{m}$. For each prime number $\ell$ we may apply the preceding
 construction to the representation $\phi_{0/\ell} \colon S_{\mathfrak{m}/
 \Q_{\ell}} \to \GL(V_\ell)$, where $V_\ell = V_0 \otimes \Q_\ell$; 
 \dpage
-we then get an $\ell$-adic representation $\phi_\ell \colon \abcl{G} \to \Aut
-(V_\ell)$.
+we then get an $\ell$-adic representation $\phi_\ell \colon \abcl{\Gal(\algcl
+k/k)} \to \Aut (V_\ell)$.
 
 \begin{thm}
 \begin{enumerate}[1)]
@@ -834,7 +836,7 @@ Conversely:
 Let $f \colon I \to \Aut(V_0)$ be a homomorphism. There exists a $\phi_0
 \colon S_{\mathfrak{m}} \to \GL_{V_0}$ such that $\phi_0 \circ \varepsilon =
 f$ if and only if the following conditions are satisfied:
-\begin{enumerate}
+\begin{enumerate}[(a)]
 	\item The kernel of $f$ contains $U_{\mathfrak{m}}$.
 	\item There exists an algebraic homomorphism $\psi\colon \TT \to
 		\GL_{V_0}$ such that $\psi(x) = f(x)$ for every $x \in K^\times
@@ -888,7 +890,7 @@ However, they have an archimedean analogue, as follows:
 Let $\pi \colon \TT \to S_\mathfrak{m}$ be the canonical map defined 
 in~\ref{sec:II_23}, and let 
 \[
-	\pi_{\infty} \colon \TT(R) \to S_\mathfrak{m}(R)
+	\pi_{\infty} \colon \TT(R) \longrightarrow S_\mathfrak{m}(R)
 \]
 be the corresponding homomorphism of real Lie groups. Since $\TT(R) = (K
 \otimes R)^{\times} = \prod_{v \in M_K^\infty} K_v^{\times}$, we can identify
@@ -902,7 +904,7 @@ projection on this factor; the map
 is continuous, and one checks as in~\ref{sec:II_23} that $\alpha_\infty$ 
 coincides with $\varepsilon$ on $K^{\times}$. One may then define a map
 \[
-	\varepsilon_{\infty} \colon I \rightarrow S_{\mathfrak{m}}(R)
+	\varepsilon_{\infty} \colon I \longrightarrow S_{\mathfrak{m}}(R)
 \]
 by 
 \[
@@ -927,7 +929,8 @@ coincide with the ``Gr\"o\ss encharakter of type ($A_0$)'' of Weil (cf.\
 Let 
 \dpage
 \[
-	e \colon I \to S_\mathfrak{m}(R) \times \prod_{\ell} S_\mathfrak{m}(\Q_\ell)
+	e \colon I \longrightarrow S_\mathfrak{m}(R) \times
+	\prod_{\ell} S_\mathfrak{m}(\Q_\ell)
 \]
 be the map defined by $\varepsilon_\infty$ and the $\varepsilon_\ell$'s.
 \begin{enumerate}[a)]
@@ -963,7 +966,7 @@ $\End_K(A)_0 = \End_K(A) \otimes \Q$.
 Let $E$ be a number field of degree $2d$, and
 \dpage
 \[
-	i \colon E \to \End_K(A)_0
+	i \colon E \longrightarrow \End_K(A)_0
 \]
 be an injection of $E$ into $\End_K(A)_0$. The variety $A$ is then said to
 have \textquote{complex multiplication} by $E$; in the terminology of
@@ -985,23 +988,23 @@ $\rho(s)$ commutes with $E$, hence with $E_\ell$. But the lemma above implies
 that the commuting algebra of $E_\ell$ in $\End_K(V_\ell)$ is $E_\ell$ itself.
 Hence, $\rho$ may be identified with a homomorphism
 \[
-	\rho_\ell\colon \Gal(\algcl K/K) \longrightarrow E^\times_\ell
+	\rho_\ell\colon \Gal(\algcl K/K) \longrightarrow E^\times_\ell.
 \]
 Let now $T_E$ be the $2d$-dimensional torus attached to $E$ (as $\TT$ is
-attached to $K$), so that $T_E(\Q_\ell) = E_\ell^\times$, and $\rho$ takes
-values in $T_E(\Q_\ell)$.
+attached to $K$), so that $\TT_E(\Q_\ell) = E_\ell^\times$, and $\rho$ takes
+values in $\TT_E(\Q_\ell)$.
 
 \begin{thm}\label{thm:II_28_1}
 \begin{enumerate}[(a)]
 \item\label{thm:II_28_1a}
 	The system $(\rho_\ell)$ is a strictly compatible system of rational
-	$\ell$-adic representations of $K$ with values in $T_E$ (in the sense
+	$\ell$-adic representations of $K$ with values in $\TT_E$ (in the sense
 	\dpage
 	of Chap.~\ref{ch:i}, \ref{sec:I_24}).
 \item\label{thm:II_28_1b}
 	There is a modulus $\mathfrak{m}$ and a morphism
 	\[
-		\varphi \colon S_{\mathfrak{m}} \longrightarrow T_E
+		\varphi \colon S_{\mathfrak{m}} \longrightarrow \TT_E
 	\]
 	such that $\rho$ is the image by $\varphi$ of the canonical system
 	$(\varepsilon_\ell)$ attached to $S_{\mathfrak{m}}$, cf.\ 
@@ -1017,14 +1020,14 @@ which $E$ acts, i.e.\ an \emph{$(E, K)$-bimodule}. If we view it as an
 $E$-vector space, the action of $K$ is given by a homomorphism $j\colon K \to
 \End_E(t)$. In particular, if $x \in K^\times$, $\det_E j(x)$ is an element of
 $E^\times$; the map $\det_E j\colon K^\times \to E^\times$ is clearly the
-restriction of an algebraic morphism $\delta\colon \TT \to T_E$.
+restriction of an algebraic morphism $\delta\colon \TT \to \TT_E$.
 
 \begin{thm}\label{thm:II_28_2}
-The map $\delta\colon \TT \to T_E$ coincides with the composition
+The map $\delta\colon \TT \to \TT_E$ coincides with the composition
 map 
 \begin{tikzcd}[cramped, sep=small]
 	\TT \rar & T_{\mathfrak{m}} \rar & S_{\mathfrak{m}} \rar["\varphi"] &
-	T_E.
+	\TT_E.
 \end{tikzcd}
 \end{thm}
 
@@ -1046,7 +1049,7 @@ element $F_{v, \rho_\ell}$ may be identified with the Frobenius endomorphism
 $F_v$ of the reduced variety $\widetilde{A}_v$. But $F_v$ commutes with $E$ in
 $\End(\widetilde{A}_v)_0$ and the commuting algebra of $E$ in
 $\End(\widetilde{A}_v)_0$ is $E$ itself (cf.\ \cite[39]{34}). Hence $F_v$
-belongs to $E^\times = T_E(\Q)$ and this implies \ref{thm:II_28_1a}.
+belongs to $E^\times = \TT_E(\Q)$ and this implies \ref{thm:II_28_1a}.
 
 Theorem~\ref{thm:II_28_2} and part \ref{thm:II_28_1b} of
 Theorem~\ref{thm:II_28_1} are less easy; they are proved, in a somewhat
@@ -1072,16 +1075,18 @@ Another possible way of proving Theorems~\ref{thm:II_28_1} and
 
 Let $\ell$ be a prime integer distinct from any of the $p_v$, $v \in S$.  One
 then sees that the Galois-module $V_\ell$ is of Hodge-Tate type in the sense of
-Chapter III, 1.2 (indeed, the corresponding local modules
+Chapter~\ref{ch:iii}, \ref{sec:III_12} (indeed, the corresponding local modules
 \dpage
 are associated with \emph{$\ell$-divisible groups}, and one may apply Tate's
-theorem \cite{39}). Hence $\rho_\ell$ is \textquote{locally algebraic} (Chapter
-III, \emph{loc.\ cit.}), and using the theorem of Chapter III, 2.3 one sees it
-defines a morphism $\varphi \colon S_{\mathfrak{m}} \to T_E$. One has
-$\varphi\circ\varepsilon_\ell = \rho_\ell$ by construction; the same is true
-for any prime number $\ell'$, since $\varphi\circ\varepsilon_{\ell'}$ and
-$\rho_{\ell'}$ have the same Frobenius elements for almost all $v$. This proves
-part \ref{thm:II_28_1b} of Theorem~\ref{thm:II_28_1}. As for
+theorem \cite{39}).
+Hence $\rho_\ell$ is \textquote{locally algebraic} (Chapter~\ref{ch:iii},
+\emph{loc.\ cit.}), and using the theorem of Chapter~\ref{ch:iii},
+\ref{sec:III_23} one sees it defines a morphism $\varphi \colon
+S_{\mathfrak{m}} \to \TT_E$.
+One has $\varphi\circ\varepsilon_\ell = \rho_\ell$ by construction; the same is
+true for any prime number $\ell'$, since $\varphi\circ\varepsilon_{\ell'}$ and
+$\rho_{\ell'}$ have the same Frobenius elements for almost all $v$.
+This proves part \ref{thm:II_28_1b} of Theorem~\ref{thm:II_28_1}. As for
 Theorem~\ref{thm:II_28_2}, one uses the explicit form of the Hodge-Tate
 decomposition of $V_\ell$, as given by \citeauthor{39}~\cite{39}, combined with
 the results of the Appendix to Chapter III.
@@ -1092,7 +1097,7 @@ the results of the Appendix to Chapter III.
 \subsection{Structure of \texorpdfstring{$X(T_{\mathfrak{m}})$}{X(Tm)}}
 \label{sec:II_31}
 If $w$ is a complex place of $\algcl\Q$, the completion of $\algcl\Q$ with
-respect to $w$ is isomorphic to $\C$; the decomposition group of $\omega$ is
+respect to $w$ is isomorphic to $\C$; the decomposition group of $w$ is
 thus cyclic of order 2; its non-trivial element will be denoted by $c_w$ (the
 \textquote{Frobenius at the infinite place $w$}). The $c_w$'s are conjugate in
 $G = \Gal(\algcl\Q/\Q)$; let $C_\infty$ denote their conjugacy class. (By a

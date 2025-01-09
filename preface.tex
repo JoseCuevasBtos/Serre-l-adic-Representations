@@ -54,7 +54,20 @@ congruence properties (Ribet \cite{69}, \cite{71}; Swinnerton-Dyer \cite{81};
 \cite{73}, \cite{77}). Some generalizations are known (e.g.\ Carayol \cite{49};
 Ohta \cite{68}; Wiles \cite{84}), but one can hope for much more, in the
 setting of \textquote{Langlands' program}: there should exist a
-\missingfigure{Diagram of Langlands' program.}
+% \missingfigure{Diagram of Langlands' program.}
+\begin{figure}[!hbt]
+	\centering
+	\begin{tikzpicture}
+		\node (mot) at (0, 0) {motives};
+		\node (l_adic) at (0, -1) {rational $\ell$-adic representations};
+		\node[anchor=west, align=center] (auto) at (3.5, -.5) {automorphic representations of\\reductive groups};
+		% \draw (mot) --node[sloped, above]{$\sim$} (l_adic);
+		\draw (mot) -- (l_adic);
+		\draw[thick, -stealth] (2.5, -.5) +(-.5, 0) -- +(.5, 0);
+	\end{tikzpicture}
+\end{figure}
+
+\noindent
 where the vertical line is (essentially) bijective and the horizontal arrow
 injective with a precise description of its image (Deligne \cite{51}; Langlands
 \cite{66}; \cite{78}). Such a diagram would incorporate, among other things,
