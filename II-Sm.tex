@@ -426,7 +426,7 @@ in $S_{\mathfrak{m}}(\Q_\ell)$. With these notations we have:
 \item If $v \notin \Supp(\mathfrak{m}) \cup S_\ell$,
 	\dpage
 	then the Frobenius element $F_{v, \varepsilon_\ell}$ (cf.\ 
-	Chap.~\ref{ch:i}, \ref{sec:I_23}) is equal to $F_v \in
+	Chap.~\ref{ch:i}, \ref{sec:I_24}) is equal to $F_v \in
 	S_{\mathfrak{m}}(\Q_\ell)$.
 \end{enumerate}
 \end{prop}
@@ -444,7 +444,7 @@ If $v \notin \Supp(\mathfrak{m})$ and $a \in U_v$, then $\varepsilon(a) = 1$;
 if moreover $p_v \ne \ell$, $\alpha_\ell(a) = 1$, hence $\varepsilon_\ell(a) =
 1$ and $\varepsilon_\ell$ is unramified at $v$; this proves b). For such a $v$,
 we have $\varepsilon_\ell(f_v) = \varepsilon(f_v) = F_v$; hence
-c), and a) follows from c).
+c), and a) follows from b).\label{errata:follows_from_c}
 \end{proof}
 
 \begin{corp}
@@ -554,8 +554,8 @@ We recall first some well known facts on representations.
 	$k_1$ is an extension of $k$, then scalar extension from $k$ to $k_1$
 	defines a map $\Rep_k(H) \to \Rep_{k_1}(H_{/k_1})$ which is easily seen
 	to be \emph{injective}. We say that an element of
-	\emph{$\Rep_{k_1}(H_{/k_1})$ can be defined over $k$}, if it is in the
-	image of this map.
+	\strong{$\Rep_{k_1}(H_{/k_1})$ can be defined over $k$},\index{Defined
+	over $k$ (representation)} if it is in the image of this map.
 
 \begin{prop}
 The map $\phi \mapsto \theta_\phi$ defines a bijection between
@@ -614,7 +614,6 @@ Let $k_1$ be an extension of $k$ and let $\phi \in
 \begin{proof}
 The implications (i) $\implies$ (ii) $\implies$ (iii) are trivial.
 To prove (iii) $\implies$ (i) we need the following lemma.
-\end{proof}
 
 \begin{lem}
 	The set of Frobeniuses $F_v$, $v \in M$, is dense in $S$ for
@@ -647,8 +646,9 @@ we get $\lambda_\alpha(F_v) = 0$ for all $\alpha \ne \alpha_0$. By the lemma,
 the $F_v$'s, $v \in M$, are Zariski-dense in $H$; hence $\lambda_\alpha = 0$
 for $\alpha \ne \alpha_0$ and $\theta_\phi = \lambda_{\alpha_0}$ belongs to
 $\Lambda$ and (i) follows from the corollary~\ref{cor:II_24_1}.
-\hfill
-\qedsymbol
+\end{proof}
+% \hfill
+% \qedsymbol
 \end{enumerate}
 
 \subsubsection*{Exercise}
@@ -912,7 +912,7 @@ by
 \]
 One has $\varepsilon_\infty(a) = 1$ if $a \in K^{\times}$, hence 
 $\varepsilon_\infty$ may be viewed as \emph{a homomorphism of the idèle 
-class group} $C = I/K^{\times}$ \emph{into the real Lie gruop} $S_\mathfrak{m}
+class group} $C = I/K^{\times}$ \emph{into the real Lie group} $S_\mathfrak{m}
 (R)$.
 
 The main difference with the ``finite'' case is that $\varepsilon_\infty$ 
@@ -920,9 +920,9 @@ The main difference with the ``finite'' case is that $\varepsilon_\infty$
 group interpretation.
 
 When one composes $\varepsilon_\infty \colon C \to S_\mathfrak{m}(R)$ with a 
-complex character $S_{\mathfrak{m}/C} \to \GG_{m, C}$, one gets a 
-homomorphism $C \to C^{\times}$, i.e.\ that the characters obtained in this way 
-coincide with the ``Gr\"o\ss encharakter of type ($A_0$)'' of Weil (cf.\ 
+complex character $S_{\mathfrak{m}/\C} \to \GG_{m, \C}$, one gets a 
+homomorphism $C \to \C^{\times}$, i.e.\ that the characters obtained in this
+way coincide with the ``Gr\"o\ss encharakter of type ($A_0$)'' of Weil (cf.\ 
 \cite{35}, \cite{41}), whose conductor divide $\mathfrak{m}$.
 
 \subsubsection*{Exercise}
@@ -969,8 +969,9 @@ Let $E$ be a number field of degree $2d$, and
 	i \colon E \longrightarrow \End_K(A)_0
 \]
 be an injection of $E$ into $\End_K(A)_0$. The variety $A$ is then said to
-have \textquote{complex multiplication} by $E$; in the terminology of
-Shimura-Taniyama, it is a variety of \textquote{type (CM)}.
+have \textquote{complex multiplication}\index{Complex multiplication} by $E$;
+in the terminology of Shimura-Taniyama, it is a variety of \textquote{type
+(CM)}.
 
 Let $\ell$ be a prime integer and define $T_\ell(A)$ and $V_\ell = T_\ell(A)
 \otimes \Q_\ell$ as in Chapter~\ref{ch:i}, \ref{sec:I_12}. These are free
@@ -1454,7 +1455,7 @@ S$, the eigenvalues of $F_{v,\rho_\ell}$, $\ell \neq p_v$, are $p_v$-units.
 \subsection{Arithmetic groups in tori}
 Let $A$ be a linear algebraic group over $\Q$, and let $\Gamma$ be a subgroup
 of the group $A(\Q)$ of rational points of $A$. Then $\Gamma$ is said to be an
-\strong{arithmetic subgroup}\index{Arithmetic subgroup} if for any algebraic
+\strong{arithmetic subgroup}\index{Arithmetic (subgroup)} if for any algebraic
 embedding
 \dpage
 $A \subseteq \GL_n$ ($n$ arbitrary) the groups $\Gamma$ and $A(\Q) \cap
