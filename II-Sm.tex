@@ -16,28 +16,35 @@ abelian rational representations are of the form described here.
 
 \subsection{The torus $\TT$}
 \label{sec:II_11}
-Let $\TT = \WRes_{K/\Q}(\GG_{m, K})$\index{Tz@$\TT = \WRes_{K/\Q}(\GG_{m, K})$}
-be the algebraic group over $\Q$, obtained from the multiplicative group
-$\GG_m$\index{Gm@$\GG_m$} by restriction of scalars from $K$ to $\Q$, cf.\ 
-\citeauthor{43}~\cite{43}, \S 1.3. If $A$ is a commutative $\Q$-algebra, the
-points of $\TT$ with values in $A$ form by definition the multiplicative group
-$(K \otimes_\Q A)^\times$ of invertible elements of $K \otimes_\Q A$.
-In particular, $\TT(\Q) = K^\times$. If $d = [K : \Q]$, the group $\TT$ is a
-\strong{torus}\index{Torus} of dimension $d$; this means that the group
-$\TT_{/\algcl\Q} = \TT \otimes_\Q \algcl\Q$ obtained from $\TT$ by extending
-the scalars from $\Q$ to $\algcl\Q$, is isomorphic
+Let $\TT = \WRes_{K/\Q}(\subbch{\GG}{m}{K})$\index{Tz@$\TT =
+\WRes_{K/\Q}(\subbch{\GG}{m}{K})$} be the algebraic group over $\Q$, obtained
+from the multiplicative group $\GG_m$\index{Gm@$\GG_m$} by restriction of
+scalars from $K$ to $\Q$, cf.\ \citeauthor{43}~\cite{43}, \S 1.3.
+If $A$ is a commutative $\Q$-algebra, the points of $\TT$ with values in $A$
+form by definition the multiplicative group $(K \otimes_\Q A)^\times$ of
+invertible elements of $K \otimes_\Q A$.  In particular, $\TT(\Q) = K^\times$.
+If $d = [K : \Q]$, the group $\TT$ is a \strong{torus}\index{Torus} of
+dimension $d$; this means that the group $\TT_{/\algcl\Q} = \TT \basechg_\Q
+\algcl\Q$ obtained from $\TT$ by extending the scalars from $\Q$ to $\algcl\Q$,
+is isomorphic
 \dpage
-to $\GG_{m, \algcl{\Q}} \times \hdots \times \GG_{m, \algcl{\Q}}$ ($d$ times).
+to $\subbch{\GG}{m}{\algcl{\Q}} \times \hdots \times
+\subbch{\GG}{m}{\algcl{\Q}}$ ($d$ times).
 More precisely, let $\Gamma$ be the set of embeddings of $K$ into $\algcl{\Q}$;
 each $\sigma \in \Gamma$ extends to a homomorphism $K \otimes_{\Q} \algcl{\Q}
 \to \algcl{\Q}$, hence defines a morphism $[\sigma]\colon \TT_{/\algcl{\Q}} \to
-\GG_{m, \algcl{\Q}}$. The collection of all $[\sigma]$'s gives the isomorphism
-$\TT_{/ \algcl{\Q}} \to \GG_{m,\algcl{\Q}} \times \hdots \times \GG_{m,\algcl{\Q}}$.
+\subbch{\GG}{m}{\algcl{\Q}}$. The collection of all $[\sigma]$'s gives the isomorphism
+\[\begin{tikzcd}
+	\TT_{/ \algcl{\Q}} \rar["\sim"] & \subbch{\GG}{m}{\algcl{\Q}} \times
+	\hdots \times \subbch{\GG}{m}{\algcl{\Q}}.
+\end{tikzcd}\]
 Moreover, the $[\sigma]$'s form a basis of the \strong{character
 group}\index{Character group} $X(\TT) = \Hom_{\algcl{\Q}}(\TT_{/\algcl{\Q}},
-\GG_{m, \algcl{\Q}})$ of $\TT$. Note that the Galois group $\Gal(\algcl{\Q} / \Q)$
-acts in a natural way on $X(\TT)$, viz.\ by permuting the $[\sigma]'s$. (For the
-dictionary between tori and Galois modules, see for instance T. Ono \cite{21}.)
+\break \subbch{\GG}{m}{\algcl{\Q}})$ of $\TT$.
+Note that the Galois group $\Gal(\algcl{\Q} / \Q)$ acts in a natural way on
+$X(\TT)$, viz.\ by permuting the $[\sigma]'s$.
+(For the dictionary between tori and Galois modules, see for instance T. Ono
+\cite{21}.)
 
 \subsection{Cutting down $\TT$}
 \label{sec:II_12}
@@ -140,7 +147,7 @@ and a \emph{commutative diagram}
 \]
 The algebraic group $B$ is thus an \emph{extension} of the ``constant'' algebraic group $Y_3$ by $A$.
 \begin{obs}
-\begin{enumerate}
+\begin{enumerate}[wide]
 	\item Let $k'$ be an extension of $k$ and $A' = A \otimes_k k'$. We may 
 	apply the above construction to the $k'$-algebraic group $A'$, with respect 
 	to the exact sequence~\eqref{eq:II_13} and to the map $Y_1 \to A(k) \to
@@ -153,7 +160,7 @@ The algebraic group $B$ is thus an \emph{extension} of the ``constant'' algebrai
 	type''; this means that, after a suitable finite extension of the ground 
 	field, $B$ becomes isomorphic to the product of a torus and a finite 
 	abelian group. Such a group is uniquely determined by its character group $X
-	(B) = \Hom_{\algcl{k}} (B_{/\algcl{k}}, \GG_{m, \algcl{k}})$, which is a 
+(B) = \Hom_{\algcl{k}} (B_{/\algcl{k}}, \subbch{\GG}{m}{\algcl{k}})$, which is a 
 	Galois-module of finite type over $\Z$. Here $X(B)$ can be described as the 
 	set of pairs $(\phi, \chi)$, where $\phi \colon Y_2 \to
 	{\algcl{k}}^\times$ is a homomorphism and $\chi \in Z(A)$ is such that
@@ -238,7 +245,7 @@ $U_{\mathfrak{m}}$'s, hence \emph{$C/D$ is the projective limit} of the
 $C_{\mathfrak{m}}$'s. Class field theory (cf.\ for instance
 \citeauthor{6}~\cite{6}), gives \emph{an isomorphism of $C/D = \invlim
 C_{\mathfrak{m}}$ onto the Galois group $\Gal(\abcl K/K)$} of the maximal
-abelian $\abcl K$ extension of $K$.
+abelian $\abcl K$ extension\break of $K$.
 % \todo{actualizar notación de Galois}
 
 \begin{obs}
@@ -296,7 +303,7 @@ We take for exact sequence~\eqref{eq:II_13} the sequence
 and for $A$ the algebraic group $T_\mathfrak{m} = \TT / \algcl{E_\mathfrak{m}}$,%
 \index{Tm@$T_{\mathfrak{m}}$}
 where $E_\mathfrak{m}$ is as before, $\TT$ is the torus $\WRes_{K/\Q}(
-\GG_{m, K})$ defined in~\ref{sec:II_11}, and $\algcl{E_\mathfrak{m}}$ is the 
+\subbch{\GG}{m}{K})$ defined in~\ref{sec:II_11}, and $\algcl{E_\mathfrak{m}}$ is the 
 \dpage
 Zariski closure of $E_\mathfrak{m}$ in $\TT$, cf.\ ~\ref{sec:II_12}.
 
@@ -443,8 +450,8 @@ mapped onto the Frobenius class of $v$.
 If $v \notin \Supp(\mathfrak{m})$ and $a \in U_v$, then $\varepsilon(a) = 1$;
 if moreover $p_v \ne \ell$, $\alpha_\ell(a) = 1$, hence $\varepsilon_\ell(a) =
 1$ and $\varepsilon_\ell$ is unramified at $v$; this proves b). For such a $v$,
-we have $\varepsilon_\ell(f_v) = \varepsilon(f_v) = F_v$; hence
-c), and a) follows from b).\label{errata:follows_from_c}
+we have $\varepsilon_\ell(f_v) = \varepsilon(f_v) = F_v$; hence c),
+and a) follows from b) and c).\label{errata:follows_from_c}
 \end{proof}
 
 \begin{corp}
@@ -512,7 +519,7 @@ We recall first some well known facts on representations.
 \item Let $k$ be a field of characteristic 0; let $H$ be an affine
 	\dpage
 	commutative algebraic group over $k$. Let $X(H) = \Hom_{\algcl
-	k}(H_{/\algcl k}, \GG_{m, \algcl k})$ be the group of characters of $H$
+k}(H_{/\algcl k}, \subbch{\GG}{m}{\algcl k})$ be the group of characters of $H$
 	(of degree 1). Here we write the characters of $X(H)$ multiplicatively.
 	The group $G = \Gal(\algcl k/k)$ acts on $X(H)$.
 
@@ -675,9 +682,10 @@ linear representation of \texorpdfstring{$S_{\mathfrak{m}}$}{Sm}}
 
 Let $V_\ell$ be a finite-dimensional $\Q_\ell$-vector space and
 \[
-	\phi \colon S_{\mathfrak{m} / \Q_\ell} \rightarrow \GL_{V_\ell}
+	\phi \colon \subbch{S}{\mathfrak{m}}{\Q_\ell} \rightarrow
+	\GL_{V_\ell}
 \]
-a linear representation of $S_{\mathfrak{m} / \Q_\ell}$ in $V_\ell$. This 
+a linear representation of $\subbch{S}{\mathfrak{m}}{\Q_\ell}$ in $V_\ell$. This 
 defines a homomorphism
 \[
 	\phi \colon S_\mathfrak{m}(\Q_\ell) \rightarrow \GL_{V_\ell}(\Q_\ell) = 
@@ -738,6 +746,7 @@ These properties follow readily from those of $\varepsilon_\ell$.
 \end{obs}
 
 \subsubsection{The rational case}
+\label{sec:II_25_2}
 
 Let now $V_0$ be a finite dimensional vector space over $\Q$ and 
 $\phi_0 \colon S_\mathfrak{m} \to \GL_{V_0}$ a linear representation of 
@@ -920,7 +929,7 @@ The main difference with the ``finite'' case is that $\varepsilon_\infty$
 group interpretation.
 
 When one composes $\varepsilon_\infty \colon C \to S_\mathfrak{m}(R)$ with a 
-complex character $S_{\mathfrak{m}/\C} \to \GG_{m, \C}$, one gets a 
+complex character $S_{\mathfrak{m}/\C} \to \subbch{\GG}{m}{\C}$, one gets a 
 homomorphism $C \to \C^{\times}$, i.e.\ that the characters obtained in this
 way coincide with the ``Gr\"o\ss encharakter of type ($A_0$)'' of Weil (cf.\ 
 \cite{35}, \cite{41}), whose conductor divide $\mathfrak{m}$.
@@ -1278,9 +1287,9 @@ image of the norm map.
 	The tori $T_{\mathfrak{m}}$ attached to $K$ and $K_1$ are isogenous to
 	each other.
 \end{corp}
-There remains to describe the tori $T_{\mathfrak{m}}$ attached to $K_1$.  There
-are two cases:
-\begin{enumerate}[(1)]
+There remains to describe the tori $T_{\mathfrak{m}}$ attached to $K_1$.
+There are two cases:
+\begin{enumerate}[(1), wide]
 \item $K_1 = K_0$.
 	\emph{In this case, we have $Y^- = 0$ and $T_{\mathfrak{m}}$ is
 	one-dimensional, and isomorphic to $\GG_m$.}

@@ -84,8 +84,7 @@ homomorphism $\rho \colon G \to \Aut(V)$.
 		\item Either $T'$ is a sublattice of index $\ell$ of $T$ and
 			\dpage
 			$G$ acts trivially on $T/T'$ or $T$ is a sublattice of
-			index $\ell$ of $T'$ and $G$ acts trivially on $T/T'$.
-			\label{errata:t't}
+			index $\ell$ of $T'$ and $G$ acts trivially on $T'/T$.
 
 			(Apply exercise~\ref{ex:basis_triangular_grp} above to
 			$k = \F_\ell$ and $V = T/\ell T$.)
@@ -380,10 +379,11 @@ representation $\rho'$ of $K$ which is semi-simple and compatible with $\rho$.
 \end{thm}
 (Hence there exists a unique (up to isomorphism) rational semi-simple
 $\ell$-adic representation compatible with $\rho$.)
+
 \begin{proof}
-Let $\rho_1^\prime$, $\rho_2^\prime$ be semi-simple $\ell$-adic representations
+Let $\rho_1^\prime$, $\rho_2^\prime$ be semi-simple $\ell'$-adic
 \dpage
-of $K$ which are rational and compatible with $\rho$.
+representations of $K$ which are rational and compatible with $\rho$.
 
 We first prove that $\Tr(\rho_1^\prime(g)) = \Tr(\rho_2^\prime(g))$ for all $g
 \in G$.  Let $H = G/(\Ker(\rho_1^\prime) \cap \Ker(\rho_2^\prime))$; the
@@ -401,8 +401,8 @@ But, by Cor.~\ref{thm-chebotarev} to \v{C}ebotarev's theorem (cf.\
 \rho_2^\prime$ are continuous.
 
 The theorem now follows from the following result applied to the group ring
-$\Lambda = \Q_{\ell}[H]$.
-\end{proof}
+$\Lambda = \Q_{\ell'}[H]$.
+\label{errata:LambdaQellprime}
 
 \begin{lem}
 Let $k$ be a field of characteristic zero, let $\Lambda$ be a $k$-algebra, and
@@ -416,6 +416,7 @@ For the proof see Bourbaki, \cite{bourbaki:alg}, ch.~8, \S12,
 n.\textsuperscript{o}~1, prop.~3.
 \addtocategory{new}{bourbaki:alg}
 % \todo[pinktask]{Cómo citar esto}
+\end{proof}
 
 \begin{mydef}
 For each prime $\ell$ let $\rho_\ell$ be a rational $\ell$-adic representation
@@ -479,8 +480,8 @@ A somewhat similar question is:
 \dpage		
 	same dimension? More optimistically, is it true that there exists a Lie
 	algebra $\mathfrak{g}$ over $\Q$ such that $\Lie(\Img(\rho)) =
-	\mathfrak{g} \otimes_\Q \Q_{\ell}$ and $\Lie(\Img(\rho')) = \mathfrak{g}
-	\otimes_\Q \Q_{\ell'}$?
+	\mathfrak{g} \basechg_\Q \Q_{\ell}$ and $\Lie(\Img(\rho')) = \mathfrak{g}
+	\basechg_\Q \Q_{\ell'}$?
 \end{enumerate}
 \item Let $X$ be a non-singular projective variety defined over $K$, and
 let $i$ be an integer. Is the $i$-th cohomology representation
@@ -860,7 +861,7 @@ $$ \mu(\chi) = c_\chi. $$
 \end{cor}
 
 \begin{ex}
-\begin{enumerate}[series=ex_IA3]
+\begin{enumerate}[series=ex_IA3, wide]
 \item Let $G$ be the Galois group of a \emph{finite} Galois extension
 	$L/K$ of the number field $K$, let $M$ be the set of unramified places
 	of $K$, let $x_v$ be the Frobenius conjugacy class defined by $v \in M$,
@@ -902,8 +903,7 @@ $$ \mu(\chi) = c_\chi. $$
 	to the irreducible characters $\chi$ of $G$ are Hecke $L$-functions
 	with Grössencharakters; these $L$-functions are holomorphic and
 	non-zero for $\Re(s) \ge 1$ if $\chi \ne 1$, see \cite{13}, chap.\ VII.
-\end{enumerate}
-\end{ex}
+% \end{enumerate}
 
 \begin{obs}
 This example (essentially due to Hecke) is given in Lang
@@ -916,7 +916,7 @@ one knows that this sequence is not uniformly distributed for any
 measure on $\R/\Z$ (cf.\ \citeauthor{22}~\cite[179-180]{22}).
 \end{obs}
 
-\begin{enumerate}[resume*=ex_IA3]
+% \begin{enumerate}[resume*=ex_IA3]
 \item (Conjectural example).
 	Let $E$ be an elliptic curve defined over a number field $K$ and let
 	$M$ be the set of finite places $v$ of $K$ such that $E$ has good
@@ -960,8 +960,9 @@ measure on $\R/\Z$ (cf.\ \citeauthor{22}~\cite[179-180]{22}).
 	\dpage
 	we have
 	\[
-		L_{\rho_m}(s) = L_m^1(s - m/2).
+		L_{\rho_m}(s) = L_m^1(s + m/2).
 	\]
+	\label{errata:Ls+m2}
 	The function $L$ has been considered by \citeauthor{36}~\cite{36}. He
 	conjectures that $L_m^1$, for $m \ge 1$, is holomorphic and non zero
 	for $\Re(s) \ge 1 + m/2$, provided that $E$ has no complex
@@ -975,6 +976,7 @@ measure on $\R/\Z$ (cf.\ \citeauthor{22}~\cite[179-180]{22}).
 	One can expect analogous results to be true for other $\ell$-adic
 	representations.
 \end{enumerate}
+\end{ex}
 
 \subsection{Proof of theorem~\ref{thm:I_A2_1}}
 \label{sec:I_A3}

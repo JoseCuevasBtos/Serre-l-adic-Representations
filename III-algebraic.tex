@@ -25,7 +25,7 @@ Appendix, together with some complements.
 \subsection{Definitions}
 \label{sec:III_11}
 Let $p$ be a prime number and $K$ a finite extension of $\Q_p$; let $\TT =
-\WRes_{K/\Q_p}(\GG_{m, K})$ be the corresponding algebraic torus over
+\WRes_{K/\Q_p}(\subbch{\GG}{m}{K})$ be the corresponding algebraic torus over
 \dpage
 $\Q_p$ (cf.\ \citeauthor{43}~\cite{43}, Chap.~I).
 
@@ -54,7 +54,7 @@ unique; this follows from the fact that any non-empty open set of $K^\times =
 with a locally algebraic representation)}.
 
 \begin{ex}
-\begin{enumerate}
+	\begin{enumerate}[wide]
 \item Take $K = \Q_p$, and $\dim V = 1$, so that $\rho$ is given by a
 	continuous homomorphism $\abcl{\Gal(\overline{\Q}/\Q)} \to U_p$, where
 	$U_p$ is the group of $p$-adic units. It is easy to see there exists an
@@ -63,7 +63,7 @@ with a locally algebraic representation)}.
 	only if $v$ belongs to $\Z$.  This happens for instance when $V =
 	V_p(\mu)$, cf.\ Chap. \ref{ch:i}, \ref{sec:I_12}, in which case $v = -1$
 	and $r$ is the canonical one-dimensional representation of $\TT =
-	\GG_{m, \Q_p}$. 
+	\subbch{\GG}{m}{\Q_p}$. 
 \item The abelian representation associated to a Lubin-Tate formal group
 	\dpage
 	(cf.\ \cite{17} and \cite{6}, Chap. VI, \S 3) is locally algebraic (and
@@ -94,9 +94,10 @@ Conversely, let us start from a representation $\rho$ whose restriction to $U_K$
 is semi-simple. If we make a suitable large finite extension $E$ of $\Q_p$, the
 restriction of $\rho$ to $U_K$ may be brought into diagonal form, i.e.\ is given
 by continuous characters $\chi_i \colon U_K \to E^{\times}$, $i = 1,\dots,n$.
-We assume $E$ large enough to contain all conjugates of $K$ into $E$. Recall
-(cf.\ Chap. \ref{ch:ii}, \ref{sec:II_11}) that the $[\sigma]$, $\sigma\in
-\Gamma_K$, make a basis of the character group $X(\TT)$ of $\TT$.
+We assume $E$ large enough to contain all conjugates of $K$, and we denote by
+$\Gamma_K$ the set of all $\Q_p$-embeddings\label{errata:Qp_embed} of $K$ into $E$.
+Recall (cf.\ Chap. \ref{ch:ii}, \ref{sec:II_11}) that the $[\sigma]$,
+$\sigma\in \Gamma_K$, make a basis of the character group $X(\TT)$ of $\TT$.
 
 \begin{prop}\label{prop:III_11_2}
 The representation $\rho$ is locally algebraic if and only if there exists
@@ -122,7 +123,7 @@ over $\Q_p$ (cf.\ Chap. \ref{ch:ii}, \ref{sec:II_24}). But the trace $\theta_r =
  
 \subsubsection*{Extension of the ground field}
 Let $K'$ be a finite extension of $K$, and let $\rho'$ be the restriction of the
-given representation $\rho$ to $\Gal(algcl{K}/K')$. Then $\rho'$ is locally
+given representation $\rho$ to $\Gal(\algcl{K}/K')$. Then $\rho'$ is locally
 algebraic if and only if
 $\rho$ is; moreover, if this is so, the associated algebraic morphisms
 \[
@@ -265,8 +266,8 @@ sense defined in \ref{sec:III_11}, with $p = \ell$).
 \end{mydef}
 
 It is convenient to reformulate this definition, using the torus $T =
-\WRes_{K/\Q} (\GG_{m, K})$ of Chap.~\ref{ch:ii},~\ref{sec:II_11}. Let
-$\TT_{/\Q_\ell} = \TT \otimes_{\Q} \Q_\ell$ be the $\Q_\ell$-torus obtained
+\WRes_{K/\Q} (\subbch{\GG}{m}{K})$ of Chap.~\ref{ch:ii},~\ref{sec:II_11}. Let
+$\TT_{/\Q_\ell} = \TT \basechg_{\Q} \Q_\ell$ be the $\Q_\ell$-torus obtained
 from $\TT$ by extending the ground field from $\Q$ to $\Q_\ell$. We have
 \[
 \TT_{/\Q_\ell}(\Q_\ell) = (K \otimes \Q_\ell)^{\times} = K_{\ell}^\times,
@@ -315,7 +316,8 @@ We assume that $\rho$ is locally algebraic and we denote by $f$ the associated
 \dpage
 algebraic morphism $\TT_{/\Q_\ell} \to \GL_{V_\ell}$.
 \begin{mydef}
-Let $\mathfrak{m}$ be a modulus (chap.~\ref{ch:ii}, \ref{sec:II_11}).
+Let $\mathfrak{m}$ be a modulus (chap.~\ref{ch:ii}, \ref{sec:II_21}).
+\label{errata:modulus21}%
 One says that $\rho$ is defined mod $\mathfrak{m}$ (or that
 $\mathfrak{m}$ is a modulus of definition for $\rho$) if
 \begin{enumerate}[(i)]
@@ -435,7 +437,7 @@ be the corresponding $\ell$-adic representation (cf.\ chap.~\ref{ch:ii},
 	\]
 	is $\phi \circ \pi$, where $\pi$ denotes the canonical morphism of
 	$\TT$ into $S_{\mathfrak{m}}$ (cf.\ chap.~\ref{ch:ii},
-	\ref{sec:II_22}).
+	\ref{sec:II_23}).\label{errata:refIII23}
 \end{thm}
 This is trivial from the construction of $\phi_\ell$ as $\phi \circ
 \varepsilon$ (chap.~\ref{ch:ii}, \ref{sec:II_25}) and the corresponding
@@ -519,8 +521,8 @@ ch.~II, 3\textsuperscript{rd} ed.)
 
 	Hence $\phi_\ell = \rho$; the fact that $\rho$ is \emph{rational}
 	then implies that \emph{$\phi$ can be defined over $\Q$}
-	(chap.~\ref{ch:ii}, \ref{sec:II_24}, Prop.), and this gives $V_0$ and
-	$\phi_0$.
+	(chap.~\ref{ch:ii}, \ref{sec:II_25},\label{errata:refIII24} Prop.), and
+	this gives $V_0$ and $\phi_0$.
 \end{proof}
 
 \begin{obs}
@@ -545,7 +547,8 @@ ch.~II, 3\textsuperscript{rd} ed.)
 	chap.~\ref{ch:i}, \ref{sec:I_23}. For the existence, take
 	$\rho_{\ell'}$ to be the $\phi_{\ell'}$ associated to $\phi$ as
 	in chapter~\ref{ch:ii}, \ref{sec:II_25}. The remaining assertion
-	follows from the proposition in chap.~\ref{ch:ii}, \ref{sec:II_25}.
+	follows from the theorem\label{errata:III_prop_to_thm} in
+	chap.~\ref{ch:ii}, \ref{sec:II_25}.
 \end{proof}
 
 \begin{cor}
@@ -554,7 +557,8 @@ ch.~II, 3\textsuperscript{rd} ed.)
 	$\Q$.
 \end{cor}
 This follows from the corresponding property of $\phi_\ell$, cf.\
-chapter~\ref{ch:ii}, \ref{sec:II_25}, Remark~\ref{sec:II_25_1}.
+chapter~\ref{ch:ii}, \ref{sec:II_25}, Remark~\ref{sec:II_25_2}.%
+\label{errata:III_rmk1_2}
 
 \dpage
 \subsection{A mild generalization}
@@ -569,14 +573,14 @@ chap.~\ref{ch:i}, \ref{sec:I_23}, Remark.
 % \todo[pinktask]{referenciar el remark?}%
 Let
 \[
-	\rho \colon \Gal(\algcl{K}/K) \to \Aut(V_\lambda)
+	\rho \colon \Gal(\algcl{K}/K) \longrightarrow \Aut(V_\lambda)
 \]
 be such a representation, and assume $r$ is abelian. Let $\ell$ be the residue
 characteristic of $\lambda$, so that $E_\lambda$ contains $\Q_\ell$. As in
 \ref{sec:III_21}, we say that $\rho$ is \strong{locally algebraic} if there
 exists an algebraic morphism
 \[
-	f \colon \TT_{/E_\lambda} \to GL_{V_\lambda}
+	f \colon \TT_{/E_\lambda} \longrightarrow \GL_{V_\lambda}
 \]
 such that $\rho \circ i_\lambda(x) = f(x^{-1})$ for $x \in K^\times_\ell$ close
 enough to $1$ (note that $K^\times_\ell = \TT(\Q_p)$ is subgroup of
@@ -764,7 +768,7 @@ the ones now available.
 	characters occurring in $\rho^N$. Since $\rho^N$ is locally algebraic,
 	to each $\chi_i^N$ corresponds an algebraic character $\chi_i^{\rm alg}
 	\in X(\TT)$ of the torus $\TT$ (here we identify $X(\TT)$ with
-	$\Hom(\TT_{/\algcl\Q_\ell}, \GG_{m, \algcl\Q_\ell})$, since
+	$\Hom(\TT_{/\algcl\Q_\ell}, \subbch{\GG}{m}{\algcl\Q_\ell})$, since
 	$\algcl\Q_\ell$ is algebraically closed). Each $\chi_i^{\rm alg}$ is of
 	the form $\prod_{\sigma \in \Gamma} [\sigma]^{n_\sigma(i)}$, where
 	$\Gamma$ is the set of embeddings of $K$ into $\algcl\Q_\ell$, cf.\ 
@@ -896,10 +900,10 @@ For the proof, see \cite{15}, Appendix, or \cite{30}, \S 1.
 
 We will apply this result to tori, taking for $E$ the completion
 of $\algcl{\Q}_\ell$. We need a few definitions first:
-\begin{enumerate}[a/]
+\begin{enumerate}[a/, wide]
 \item Let $T$ be an $n$-dimensional torus over $\Q$, with character
 	group $X(T)$. As before, we identify $X(T)$ with the group of morphisms
-	of $T_{/E}$ into $\GG_{m, E}$. We say that \emph{$T$ is a sum of
+	of $T_{/E}$ into $\subbch{\GG}{m}{E}$. We say that \emph{$T$ is a sum of
 	one-dimensional tori} if there exist one-dimensional subtori $T_i$ of
 	$T$, $1 \le i \le n$, such that the sum map $T_1 \times \cdots \times
 	T_n \to T$ is surjective (and hence has a finite kernel). An equivalent
@@ -939,7 +943,7 @@ With these notations, we have:
 	Then $f$ is almost locally algebraic.
 \end{prop}
 \begin{proof}
-\begin{enumerate}[i)]
+\begin{enumerate}[i), wide]
 \item\label{item:III_33_2i}
 	We suppose first that $T$ is \emph{one-dimensional}, and we denote by
 	$\chi$ a generator of $X(T)$. If $\chi$ is invariant by
@@ -1060,10 +1064,10 @@ according to the descomposition of $I$ in
 \[
 	I = K_\infty^\times \times K_\ell^\times \times K_S^\times \times I'.
 \]
-(Here $K^\times = (K \otimes R)^\times$, $K_S^\times = \prod_{p \in S}
-K^\times_p$ and $I'$ is the restricted product of the $K_v^\times$, for $v \in
-M_K$, and $p_v \neq \ell$, $p_v \not\in S$.) The relation $\psi_i(x)=1$,
-together with $\psi_i(x_\ell) = f_i(x)$, gives
+(Here $K_\infty^\times = (K \otimes \R)^\times$,\label{errata:Kinfty}
+$K_S^\times = \prod_{p \in S} K^\times_p$ and $I'$ is the restricted product of
+the $K_v^\times$, for $v \in M_K$, and $p_v \neq \ell$, $p_v \not\in S$.)
+The relation $\psi_i(x)=1$, together with $\psi_i(x_\ell) = f_i(x)$, gives
 \[
 	f_i(x)^{-1} = \psi_i(x_\infty) \psi_i(x_S) \psi_i(x').
 \]
@@ -1388,10 +1392,10 @@ $H^l(G,C^\times)$.
 This follows from the injectivity of $L$.
 \end{proof}
 
-\begin{cor}
+\begin{corp}
 If there exists a non-zero integer $n$ such that $\phi^n \sim 1$, then $\phi
 \sim 1$.
-\end{cor}
+\end{corp}
 \begin{proof}
 Indeed, $L\bar{\phi} = \frac{1}{n} L\bar{\phi}^n = 0$.
 \end{proof}
@@ -1439,10 +1443,11 @@ The following two properties are equivalent:
 \end{prop}
 
 \begin{proof}
-(1) $\implies$ (2) is trivial from the result of \ref{sec:III_A1} (since we know that
-admissibility can be seen on an open subgroup of the inertia group).
+(1) $\implies$ (2) is trivial from the result of \ref{sec:III_A2}%
+\label{errata:III_A2} (since we know that admissibility can be seen on an open
+subgroup of the inertia group).
 
-(2= $\implies$ (1). We use the $\log$ map defined in A2. Note that $\psi$ takes
+(2) $\implies$ (1). We use the $\log$ map defined in \ref{sec:III_A2}. Note that $\psi$ takes
 values in the group $U_E$ of units of $E$, hence $\log \psi \colon G \to E$ is
 well defined. Let $I$ be the inertia group of $G$; the subgroup $\log \psi(I)$
 of $E$ is compact, and hence isomorphic to $\Z_p^n$ for some $n$. If $W$ is the
@@ -1518,7 +1523,7 @@ where $i(x) = x^{-1}$ for $x \in U_E$.
 Observe that the restriction of $\chi_E$ to the intertia group of $G$ is $x
 \mapsto r_E(x^{-1})$, and hence \emph{is independent of the choice of} $\pi$.
 
-\begin{prop}
+\begin{prop}\label{sec:III_A4_4}
 Let $F_\pi$ be the Lubin-Tate formal group (\cite{17}, see also \cite{6},
 chap.~VI, \S3) associated to $E$ and $\pi$.
 Let $T$ be its Tate-module, which is free of rank $1$ over the ring
@@ -1664,10 +1669,10 @@ We prove first:
 Let $\pi$ be a uniformizing parameter of $E$, let $F_\pi$ be Lubin- Tate group
 associated to $E$ and $\pi$, let $T_\pi$ be its Tate module, and $V_\pi = T_\pi
 \otimes \Q_p$. Since $V_\pi$ is a one-dimensional vector space over $E$, and $G$
-acts on $V_\pi$ through $\chi_E \colon G \to U_E$ (cf.\ \ref{sec:III_A4}, Prop.
-4), the above constructions apply to $V_\pi$ and $\chi_E$. By a theorem of Tate
-(\cite{39}, \S4, Cor.~2 to Th.~3), $W_\pi = C \otimes_{\Q_p} V_\pi$ has a
-Hodge-Tate decomposition of the type
+acts on $V_\pi$ through $\chi_E \colon G \to U_E$ (cf.\ \ref{sec:III_A4},
+Prop.~\ref{sec:III_A4_4}), the above constructions apply to $V_\pi$ and
+$\chi_E$. By a theorem of Tate (\cite{39}, \S4, Cor.~2 to Th.~3), $W_\pi = C
+\otimes_{\Q_p} V_\pi$ has a Hodge-Tate decomposition of the type
 \[
 	W_\pi = W_\pi(0) \oplus W_\pi(1)
 \]
@@ -1803,6 +1808,7 @@ Assertion \ref{prop:III_A6_5b} then follows from:
 		r = \prod_{\sigma \in \Gamma_E} r_\sigma^{n_\sigma}.
 	\]
 	The equivalent properties \ref{thm:III_A5_2i}, \ref{thm:III_A5_2ii},
+	\dpage
 	\ref{thm:III_A5_2iii} of Th.~\ref{thm:III_A5_2} are equivalent to:
 	\begin{enumerate}[resume*=thm_IIIA5_2]
 	\item\label{thm:III_A5_2iv}
@@ -1885,7 +1891,8 @@ compact.
 
 \begin{thm}
 	Let $V$ be a finite dimensional vector space over $\Q_p$ and let $\rho
-	\colon G \to \Aut(V)$ be an abelian $p$-adic representation of $K$.
+	\colon \abcl{\Gal(\algcl K/K)} \to \Aut(V)$\label{errata:Gal_to_Gab} be
+	an abelian $p$-adic representation of $K$.
 	The following are equivalent:
 	\begin{enumerate}[(1)]
 	\item\label{thm:III_A7_1} $\rho$ is locally algebraic
