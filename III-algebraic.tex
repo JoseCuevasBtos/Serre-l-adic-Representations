@@ -157,15 +157,15 @@ modules}
 Let us recall first the notion of a \strong{Hodge-Tate module} (cf.\ \cite{27},
 \S 2); here $K$ is only assumed to be complete with respect to a discrete
 valuation, with perfect residue field $k$ and $\char(K) = 0$, $\char(k) = p$.
-Denote by $C$ the \emph{completion $\widehat{\algcl K}$ of the algebraic
-closure}\index{CKbar@$C = \widehat{\algcl K}$} of $K$.
+Denote by $\Cp$ the \emph{completion $\widehat{\algcl K}$ of the algebraic
+closure}\index{CKbar@$\Cp = \widehat{\algcl K}$} of $K$.
 
 The group $G = \Gal(\algcl K/K)$ acts continuously on $K$. This action extends
-continuously to $C$. Let $W$ be a $C$-vector space of finite dimension upon
+continuously to $\Cp$. Let $W$ be a $\Cp$-vector space of finite dimension upon
 which $G$ acts continuously and semi-linearly according to the formula
 \[
 	s(cw) = s(c) \cdot s(w) \qquad
-	(s \in G, \, c \in C \text{ and } w \in W).
+	(s \in G, \, c \in \Cp \text{ and } w \in W).
 \]
 Let $\chi\colon G \to U_p$ be the homomorphism of $G$ into the group $U_p =
 \Z_p^\times$ of $p$-adic units, defined by its action on the $p^\nu$-th roots
@@ -178,10 +178,10 @@ Define for every $i \in \Z$ the subspace
 \[
 	W^i = \{ w \in W \mid sw = \chi(s)^i w \text{ for all } s\in G \}
 \]
-of $W$. This is a $K$-vector subspace of $W$. Let $W(i) = C \otimes_K W^i$.
-This is a $C$-vector space upon which $G$ acts in a natural way (i.e.\ by the
+of $W$. This is a $K$-vector subspace of $W$. Let $W(i) = \Cp \otimes_K W^i$.
+This is a $\Cp$-vector space upon which $G$ acts in a natural way (i.e.\ by the
 formula $s(c \otimes y) = s(c) \otimes s(y)$). The inclusion $W^i \to W$
-extends uniquely to a $C$-linear map $\alpha_i\colon W(i) \to W$, which
+extends uniquely to a $\Cp$-linear map $\alpha_i\colon W(i) \to W$, which
 commutes with the action of $G$.
 
 \begin{prop}[Tate]
@@ -192,7 +192,7 @@ commutes with the action of $G$.
 For the proof see \cite{27}, \S 2, prop.~4.
 \begin{corp}
 	The $K$-spaces $W^i$ ($i \in \Z$) are of finite dimension.
-	They are linearly independent over $C$.
+	They are linearly independent over $\Cp$.
 \end{corp}
 
 \begin{mydef}\label{def:III_12_1}
@@ -204,16 +204,16 @@ For the proof see \cite{27}, \S 2, prop.~4.
 
 Let now $V$ be as in \ref{sec:III_11}, a vector space over $\Q_p$, of finite
 dimension. Let $\rho\colon G \to \Aut(V)$ be a $p$-adic representation. Let $W
-= C \otimes_{\Q_p} V$ and let $G$ act on $W$ by the formula
+= \Cp \otimes_{\Q_p} V$ and let $G$ act on $W$ by the formula
 \dpage
 \[
 	s(c\otimes v) = s(c) \otimes s(v) \qquad
-	s\in \Gamma, \; c\in C, \; v\in V.
+	s\in \Gamma, \; c\in \Cp, \; v\in V.
 \]
 \begin{mydef}
 	The representation $\rho$ is of \strong{Hodge-Tate type}%
 	\index{Hodge-Tate representation}\index{Hodge-Tate type
-	(representation)} if the $C$-space $W = C \otimes_{\Q_p} V$ is of
+	(representation)} if the $\Cp$-space $W = C \otimes_{\Q_p} V$ is of
 	Hodge-Tate type (cf.\ def.~\ref{def:III_12_1}).
 \end{mydef}
 
@@ -222,7 +222,7 @@ dimension. Let $\rho\colon G \to \Aut(V)$ be a $p$-adic representation. Let $W
 	\cite{39}); let $T$ be its Tate module (\emph{loc. cit.}) and $V = \Q_p
 	\otimes T$. The group $G$ acts on $V$, and Tate has proved (\cite{39},
 	Cor.~2 to Th.~3) that this Galois module is of Hodge-Tate type; more
-	precisely, one has $W = W(0) \oplus W(1)$, where $W = C \otimes V$ as
+	precisely, one has $W = W(0) \oplus W(1)$, where $W = \Cp \otimes V$ as
 	above.
 \end{ex}
 \begin{thm}[Tate]

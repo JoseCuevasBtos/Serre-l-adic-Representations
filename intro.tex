@@ -39,32 +39,35 @@ Chapter~\ref{ch:ii} gives the construction of some abelian $\ell$-adic
 representations of a number field $K$. As indicated above, this construction is
 essentially due to Shimura, Taniyama and Weil. However, I have found it
 convenient to present their results in a slightly different way, by defining
-first some algebraic groups over $\Q$ (the groups $\mathbb{S}$) whose
+first some algebraic groups over $\Q$ (the groups $S_{\mathfrak{m}}$) whose
 representations -- in the usual algebraic sense -- correspond to the sought for
-$\ell$-adic representations of $K$.  The same groups had been considered before
-by Grothendieck in his still conjectural theory of \textquote{motives} (indeed,
-motives are supposed to be \textquote{$\ell$-adic cohomology without $\ell$} so
-the connection is not surprising). The construction of these groups
-$\mathbb{S}$ and of the $\ell$-adic representations attached to them, is given
-in \S\ref{sec:II_2} (\S\ref{sec:II_1} contains some preliminary constructions
-on algebraic groups, of a rather elementary kind). I have also briefly
-indicated what relations these groups have with complex multiplication (cf.\
-\ref{sec:II_28}). The last \S{} contains some more properties of the
-$S_{\mathfrak{m}}$'s.
+$\ell$-adic representations of $K$.
+The same groups had been considered before by Grothendieck in his still
+conjectural theory of \textquote{motives} (indeed, motives are supposed to be
+\textquote{$\ell$-adic cohomology without $\ell$} so the connection is not
+surprising).
+The construction of these groups $\mathbb{S}$ and of the $\ell$-adic
+representations attached to them, is given in \S\ref{sec:II_2}
+(\S\ref{sec:II_1} contains some preliminary constructions on algebraic groups,
+of a rather elementary kind).
+I have also briefly indicated what relations these groups have with complex
+multiplication (cf.\ \ref{sec:II_28}).
+The last \S{} contains some more properties of the $S_{\mathfrak{m}}$'s.
 
-Chapter~\ref{ch:iii} is concerned with the following question: let $p$ be an
-abelian $\ell$-adic representation of the number field $K$; can $p$ be obtained
-by the method of chap.~\ref{ch:ii}?  The answer is: this is so if and only if
-$p$ is \emph{\textquote{locally algebraic}} in the sense defined in
-\S\ref{sec:III_1}.  In most applications, local algebraicity can be checked
-using a result of Tate saying that it is equivalent to the existence of a
-\textquote{Hodge-Tate} decomposition, at least when the representation is
-semi-simple. The proof of this result of Tate is rather long, and relies
-heavily on his theorems on $p$-divisible groups \cite{39}; it is given in the
-Appendix.  One may also ask whether any abelian rational semi-simple
-$\ell$-adic representation of $K$ is \emph{ipso facto} locally algebraic; this
-may well be so, but I can prove it only when $K$ is a composite of quadratic
-fields; the proof relies on a transcendency result of Siegel and Lang (cf.\
+Chapter~\ref{ch:iii} is concerned with the following question: let $\rho$ be an
+abelian $\ell$-adic representation of the number field $K$; can $\rho$ be
+obtained by the method of chap.~\ref{ch:ii}?
+The answer is: this is so if and only if $\rho$ is \emph{\textquote{locally
+algebraic}} in the sense defined in \S\ref{sec:III_1}.
+In most applications, local algebraicity can be checked using a result of Tate
+saying that it is equivalent to the existence of a \textquote{Hodge-Tate}
+decomposition, at least when the representation is semi-simple.
+The proof of this result of Tate is rather long, and relies heavily on his
+theorems on $p$-divisible groups \cite{39}; it is given in the Appendix.
+One may also ask whether any abelian rational semi-simple $\ell$-adic
+representation of $K$ is \emph{ipso facto} locally algebraic; this may well be
+so, but I can prove it only when $K$ is a composite of quadratic fields; the
+proof relies on a transcendency result of Siegel and Lang (cf.\
 \S\ref{sec:III_3}).
 
 Chapter~\ref{ch:iv} is concerned with the $\ell$-adic representation
@@ -88,3 +91,44 @@ $\rho_\ell$, if abelian, is locally algebraic, but this is a consequence of the
 result of Tate given in chap.~\ref{ch:iii}. The variation of $\Img(\rho_\ell)$
 with $\ell$ is dealt with in \S\ref{sec:IV_3}. Similar results for the local
 case are given in the Appendix.
+
+\chapter*{Notations}
+\subsection*{General notations}
+Positive means $\ge 0$.
+
+$\Z$ (resp.\ $\Q$, $\R$, $\C$) is the ring (resp.\ the field) of integers
+(resp.\ of rational numbers, of real numbers, of complex numbers).  If $p$ is a
+prime number, $\F_p$ denotes the prime field $\Z/p\Z$ and $\Z_p$ (resp.\
+$\Q_p$) the ring of $p$-adic integers (resp.\ the field of $p$-adic rational
+numbers). One has:
+\[
+	\Z_p = \invlim_n \Z/p^n\Z, \qquad \Q_p = \Z_p[1/p].
+\]
+
+\subsection*{Prime numbers}
+They are denoted by $\ell$, $\ell'$, $p$, \ldots; we mostly use the letter
+$\ell$ for ``$\ell$-adic representations'' and the letter $p$ for the residue
+characteristic of some valuation.
+
+\subsection*{Fields}
+If $K$ is a field, we denote by $\algcl K$ an algebraic closure of $K$, and by
+$\sepcl K$ the separable closure of $K$ in $\algcl K$; most of the fields we
+consider are perfect, in which case $\sepcl K = \algcl K$.
+
+If $L/K$ is a (possibly infinite) Galois extension, we denote its Galois group
+by $\Gal(L/K)$; it is a projective limit of finite groups.
+
+\subsection*{Algebraic groups}
+If $G$ is an algebraic group over a field $K$, and if $K'$ is a commutative
+$K$-algebra, we denote by $G(K')$ the group of $K'$-points of $G$ (the
+``$K'$-rational'' points of $G$).
+When $K'$ is a field, we denote by $G_{/K'}$, the $K'$-algebraic group $G
+\basechg_K K'$ obtained from $G$ by extending the ground field from $K$ to
+$K'$.
+
+Let $V$ be a finite dimensional $K$-vector space. We denote by $\Aut_K(V)$, or
+$\Aut(V)$, the group of its $K$-linear automorphisms, and by $\GL_V$ the
+corresponding $K$-algebraic group (cf.\ chap.~\ref{ch:i}, \ref{sec:I_24}).
+For any commutative $K$-algebra $K'$, the group $\GL_V(K')$ of
+$K'$-points of $\GL_V$ is $\Aut_{K'}(V \otimes_K K')$; for instance,
+$\GL_V(K) = \Aut(V)$.

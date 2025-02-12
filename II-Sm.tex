@@ -50,10 +50,12 @@ $X(\TT)$, viz.\ by permuting the $[\sigma]'s$.
 \label{sec:II_12}
 Let $E$ be a subgroup of $K = \TT(\Q)$ and let $\overline{E}$ be the Zariski
 closure of $E$ in $\TT$. Using the formula $\overline{E} \times \overline{E} =
-\overline{E \times E}$, one sees that $E$ is an algebraic subgroup of $\TT$.
-Let $\TT_E$ be the quotient group $\TT/E$; then $\TT_E$ is also a torus over
-$\Q$. Its character group $X_E = X(\TT_E)$ is the subgroup of $X = X(T)$
-consisting of those characters which take the value 1 on $E$.
+\overline{E \times E}$, one sees that $\overline{E}$ is an \emph{algebraic
+subgroup} of $\TT$.
+Let $\TT_E$ be the quotient group $\TT/\overline{E}$; then $\TT_E$ is also a
+torus over $\Q$.
+Its character group $X_E = X(\TT_E)$ is the subgroup of $X = X(T)$ consisting
+of those characters which take the value 1 on $E$.
 If $\lambda = \prod_{\sigma \in \Gamma} [\sigma]^{n_\sigma}$ denotes a
 character of $\TT$, then $X_E$ is the subgroup of those $\lambda \in X$ for 
 which
@@ -944,26 +946,26 @@ whose conductor divide $\mathfrak{m}$.
 Let 
 \dpage
 \[
-	e \colon I \longrightarrow S_\mathfrak{m}(R) \times
+	e \colon I \longrightarrow S_\mathfrak{m}(\R) \times
 	\prod_{\ell} S_\mathfrak{m}(\Q_\ell)
 \]
 be the map defined by $\varepsilon_\infty$ and the $\varepsilon_\ell$'s.
 \begin{enumerate}[a)]
 \item Show that the image of $e$ is contained in the subgroup
-	$S_\mathfrak{m}(A)$ of $S_\mathfrak{m}(R) \times \prod_{\ell}
-	S_\mathfrak{m}(\Q_\ell)$, where $A$ denote the ring of adèles of $\Q$,
-	and that $e \colon I \to S_\mathfrak{m}(A)$ is continuous (for the
-	natural topology of the adelized group $S_\mathfrak{m}(A)$).
-\item Let $\pi_A \colon \TT(A) \to S_\mathfrak{m}(A)$ be the map defined
+	$S_\mathfrak{m}(\A_\Q)$ of $S_\mathfrak{m}(\R) \times \prod_{\ell}
+	S_\mathfrak{m}(\Q_\ell)$, where $\A_\Q$ denote the ring of adèles of $\Q$,
+	and that $e \colon I \to S_\mathfrak{m}(\A_\Q)$ is continuous (for the
+	natural topology of the adelized group $S_\mathfrak{m}(\A_\Q)$).
+\item Let $\pi_\A \colon \TT(\A_\Q) \to S_\mathfrak{m}(\A_\Q)$ be the map defined
 	by $\pi \colon \TT \to S_\mathfrak{m}$. Show that, if one
-	identifies $\TT(A)$ with $I$ in the obvious way, one has 
+	identifies $\TT(\A_\Q)$ with $I$ in the obvious way, one has 
 	\[
-		e(x) = \varepsilon(x) \pi_A(x^{-1})
+		e(x) = \varepsilon(x) \pi_\A(x^{-1})
 	\]
 	where $\varepsilon \colon I \to S_\mathfrak{m}(\Q) \subset
 	S_\mathfrak{m}$ is the map defined in~\ref{sec:II_23}. [Note that this
 	gives an alternate definition of the $\varepsilon_\ell$'s.]
-\item Show that $\varepsilon(I)$ is not open in $S_\mathfrak{m}(A)$ if
+\item Show that $\varepsilon(I)$ is not open in $S_\mathfrak{m}(\A_\Q)$ if
 	$C_\mathfrak{m} \neq \{1\}$.
 \end{enumerate}
 
@@ -1387,7 +1389,8 @@ Hence the result.
 \begin{corp}\label{corp:II_34_3}
 Let $\ell$ be a prime number and let $\phi_\ell \colon \Gal(\algcl{K}
 /K) \rightarrow \Aut(V_\ell)$ be the $\ell$-adic representation of $K$ 
-associated to $\phi$. Then $\phi_\ell$ is integral (cf.\ Ch.~\ref{ch:i},~\ref{sec:I_22}) if
+associated to $\phi$.
+Then $\phi_\ell$ is integral (cf.\ Ch.~\ref{ch:i},~\ref{sec:I_22}) if
 and only if all the characteres $\chi_i$ occuring in $\phi$ are positive.
 \end{corp}
 
@@ -1423,9 +1426,8 @@ of $\algcl{\Q}$ extending the usual absolute value of $\algcl{\Q}$, we have
 	\omega(\chi (F_v)) = (\numnorm_v)^{i/2}.
 \]
 \end{prop}
-
 \begin{proof}
-Si $\chi = a \sum_{\sigma \in \Gamma} [\sigma] + \sum_{\sigma \in \Gamma}
+If $\chi = a \sum_{\sigma \in \Gamma} [\sigma] + \sum_{\sigma \in \Gamma}
 b_\sigma[\sigma]$ as in \ref{sec:II_31}, we have
 \[
 \omega(\chi(F_v))^N = \omega(\chi(F_v^N))
