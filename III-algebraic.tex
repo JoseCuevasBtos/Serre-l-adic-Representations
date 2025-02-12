@@ -333,7 +333,7 @@ $K_\ell^\times = \TT_{/\Q_\ell}(\Q_\ell)$.)
 In order to prove the existence of a modulus of definition, we
 need the following auxiliary result:
 \begin{prop}\label{prop:III_22_1}
-Let $H$ be a Lie group over $Q_\ell$ (resp.\ $\R$) and let
+Let $H$ be a Lie group over $\Q_\ell$ (resp.\ $\R$) and let
 $\alpha$ be a continuous homomorphism of the idèle group $I$ into $H$.
 \begin{enumerate}[(a)]
 \item\label{prop:III_22a}
@@ -1309,19 +1309,16 @@ with the group of multiplicative representatives, so that $U_C = U_C^1 \times
 	\end{cases}
 \end{align*}
 This is a continuous homomorphism and even a local isomorphism.
-
 \dpage
 
 Moreover:
-
 \begin{lem}
 \begin{enumerate}[(a)]
-	\item $\log$ is surjective.
-	\item The kernel of $\log \colon U_C \to C$ is $\algcl{k}^\times \times
-\mu_{p^\infty}$,
+\item $\log$ is surjective.
+\item The kernel of $\log \colon U_C \to C$ is $\algcl{k}^\times \times
+	\mu_{p^\infty}$, where $\mu_{p^\infty}$ is the set of all $p^n$-th
+	roots of unity, for $n = 1,2, \hdots$
 \end{enumerate}
-where $\mu_{p^\infty}$ is the set of all $p^n$-th roots of unity, for $n =
-1,2, \hdots$
 \end{lem}
 
 \begin{proof}
@@ -1350,38 +1347,38 @@ hence an exact sequence
 \dpage
 or equivalently: 
 \[\begin{tikzcd}
-	0 \rar & \Q / \Z \rar["\delta"] & H^l(G, U_C) \rar["i"] & H^l(G,
+	0 \rar & \Q / \Z \rar["\delta"] & H^1(G, U_C) \rar["i"] & H^1(G,
 	C^\times) \rar & 0.
 \end{tikzcd}\]
 Let $N = \Ker(\log)$. We have the exact sequence
 \[\begin{tikzcd}
-	H^l(G,N) \rar["j"] & H^l(G,U_C) \rar["\lambda"] & H^l(G,C),
+	H^1(G,N) \rar["j"] & H^1(G,U_C) \rar["\lambda"] & H^1(G,C),
 \end{tikzcd}\]
-where $\lambda$ is induced by the $\log$. Since $H^l(G,C)$ is a $C$-vector
-space, the composite $\lambda \circ \delta \colon \Q / \Z \to H^l(G,C)$ is $0$,
+where $\lambda$ is induced by the $\log$. Since $H^1(G,C)$ is a $C$-vector
+space, the composite $\lambda \circ \delta \colon \Q / \Z \to H^1(G,C)$ is $0$,
 hence there is a unique map
 \[
-	L \colon H^l(G,C^\times) \longrightarrow H^l(G,C)  
+	L \colon H^1(G,C^\times) \longrightarrow H^1(G,C)  
 \]
 such that $L \circ i = \lambda$.
 
 \begin{prop}
-The map $L \colon H^l(G,C^\times) \to H^l(G,C)$ is injective. 
+The map $L \colon H^1(G,C^\times) \to H^1(G,C)$ is injective. 
 \end{prop}
 
 \begin{proof}
 Using the exact sequence above, one sees it is enough to prove that $i \circ j
-\colon H^l(G,N) \to H^l(G,C^\times)$ is trivial. But $N$ is a discrete subgroup
-of $\algcl{K}^\times$, hence $i \circ j$ factors through $H^l(G,
-\algcl{K}^\times$, where now $\algcl{K}^\times$ is viewes as a discrete group;
-by Theorem~90 $H^l(G, \algcl{K}^\times)$ is trivial, hence also $i \circ j$.
+\colon H^1(G,N) \to H^1(G,C^\times)$ is trivial. But $N$ is a discrete subgroup
+of $\algcl{K}^\times$, hence $i \circ j$ factors through $H^1(G,
+\algcl{K}^\times)$, where now $\algcl{K}^\times$ is viewes as a discrete group;
+by Theorem~90 $H^1(G, \algcl{K}^\times)$ is trivial, hence also $i \circ j$.
 \end{proof}
 
 Let now $\phi \colon G \to K^\times$ be a continuous character. Since $\phi(G)$
 is compact, it is contained in $U_K$, hence in $U_C$, and $\log \phi \colon G
-\to C$ is an additive $1$-cocycle. Its cohomology class in $H^l(G,C)$ is
+\to C$ is an additive $1$-cocycle. Its cohomology class in $H^1(G,C)$ is
 $L\bar{\phi}$, where $\bar{\phi}$ is the cohomology class of $\phi$ in
-$H^l(G,C^\times)$.
+$H^1(G,C^\times)$.
 
 \dpage
 
@@ -1401,11 +1398,12 @@ Indeed, $L\bar{\phi} = \frac{1}{n} L\bar{\phi}^n = 0$.
 \end{proof}
 
 \begin{obs}
-Springer has proved that $H^l(G,C)$ is of dimension $1$ over $C$
+Springer has proved that $H^1(G,C)$ is of dimension $1$ over $C$
 % \todo[pinktask]{$C$ son los complejos o qué}%
-(cf.\ Tate \cite{39}, \S3.3). Hence,
-one can take for basis of $H^l(G,C)$ the element $L\bar{\chi}$, where $\chi$ is
-the fundamental character defined in chap.~\ref{ch:i}, \ref{sec:I_12}.
+(cf.\ Tate \cite{39}, \S3.3).
+Hence, one can take for basis of $H^1(G,C)$ the element $L\bar{\chi}$, where
+$\chi$ is the fundamental character defined in chap.~\ref{ch:i},
+\ref{sec:I_12}.
 In particular, for any $\phi \colon G \to K^\times$, there is an element
 $c(\phi)$ of $C$ such that $L\bar{\phi} = c(\phi)L\bar{\chi}$; when $K$ is
 locally compact, this $c(\phi)$ may be computed explicitly, see
